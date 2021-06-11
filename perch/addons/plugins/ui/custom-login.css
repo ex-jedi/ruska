@@ -1,10 +1,9 @@
 h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700 !important;
+  font-weight: 800 !important;
 }
 
 .topbar h1 {
-  color: #756c91;
+  color: #77442F;
 }
 
 label,
@@ -12,11 +11,14 @@ label,
 .input-simple,
 .button-simple,
 .reset-link {
+  font-family: 'sofia-pro', sans-serif;
   font-size: 17px !important;
-  color: #756c91 !important;
+  color: #77442F !important;
   font-weight: bold;
 }
 
 .button-simple {
   border: 1px solid #ccc !important;
+  font-family: 'sofia-pro', sans-serif;
+
 }
