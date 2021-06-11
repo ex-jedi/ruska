@@ -1,0 +1,253 @@
+// *=======================================================================================
+// ** Styles for all pages  **
+// ** Reset based on https://hankchizljaw.com/wrote/a-modern-css-reset/  **
+// *=======================================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+// *=========================================
+// ** Page & Site Wrappers **
+// *=========================================
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  font-size: 10px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+// * Box sizing rules
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  position: relative;
+  min-width: 320px;
+  max-width: 1920px;
+  overflow-x: hidden;
+}
+
+// *=========================================
+// ** Content container and block **
+// *=========================================
+
+//********** Headings**********
+
+//********** Containers **********
+
+section,
+main {
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+  /*
+  * Fixes IOS Bug where scrolling breaks z-index
+  https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
+  */
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+//********** Paragraphs **********
+
+// *=========================================
+// ** Inline **
+// *=========================================
+
+//********** Images **********
+
+//* Make images easier to work with
+img {
+  max-width: 100%;
+  display: block;
+}
+
+//********** Links **********
+
+// Better to leave underlining on by default and switch it off where you don't want it
+
+a {
+  text-decoration: underline;
+  color: $link-colour;
+}
+
+// *=========================================
+// ** Main Nav  **
+// *=========================================
+
+.main-nav-trigger-wrapper {
+  display: none;
+}
+
+//********** Responsive Styles **********
+
+// *=========================================
+// ** Body **
+// *=========================================
+
+// *=========================================
+// ** Forms  **
+// *=========================================
+
+//* Inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+//********** Honeypot **********
+
+.form-identification-number {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+// *=========================================
+// ** Footer  **
+// *=========================================
+
+//*=========================================
+//** Utility & Accessibility  **
+//*=========================================
+
+//* Remove all animations and transitions for people that prefer not to see them
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+//*Skip to content link
+.show-on-focus {
+  position: absolute;
+  color: $dark-font-colour;
+  background-color: $light-background-colour;
+  padding: 10px;
+  font-size: $font-size;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  margin: 0.5rem 0 0 0.5rem;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  text-decoration: none;
+
+  &:focus {
+    z-index: 20;
+    width: auto;
+    height: auto;
+    clip: auto;
+  }
+}
+
+//* Hides outline unless tab key is pressed
+
+body:not(.user-is-tabbing) button:focus,
+body:not(.user-is-tabbing) input:focus,
+body:not(.user-is-tabbing) select:focus,
+body:not(.user-is-tabbing) textarea:focus {
+  outline: none;
+}
+
+.user-is-tabbing {
+  a:focus,
+  button:focus,
+  input:focus,
+  textarea:focus {
+    outline: 3px dashed #ff5e00;
+  }
+}
+
+//*=========================================
+//** Cookie Warning **
+//*=========================================
+
+.cookie-warning-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  font-size: 30px;
+  //TODO: Add variables for cookie warning colour
+  background-color: #fff;
+  opacity: 0;
+  z-index: 10;
+  transition: all 0.5s 0.25s;
+
+  @include breakpoint(1100) {
+    font-size: 20px;
+  }
+
+  @include breakpoint(850) {
+    @include flex(column);
+  }
+}
+
+.cookie-warning-paragraph {
+  //TODO: Add variables for cookie warning spacing
+  margin: 0 $section-spacing-small 0 0;
+  color: #000;
+
+  @include breakpoint(1300) {
+    //TODO: Add variables for cookie warning spacing
+    margin: 0 $paragraph-spacing-small 0 0;
+  }
+
+  @include breakpoint(850) {
+    text-align: center;
+    //TODO: Add variables for cookie warning spacing
+    margin: 0 0 $paragraph-spacing-small;
+  }
+}
+
+.cookie-warning-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.cookie-warning-button {
+  //TODO: Add variables for cookie warning spacing & colour
+
+  background-color: transparent;
+  border: 2px solid #000;
+  color: #000;
+  font-size: inherit;
+  padding: 5px 20px;
+  width: fit-content;
+  flex: 0 0 auto;
+  text-align: center;
+}
+
+.cookie-warning-wrapper.show-cookie-warning {
+  opacity: 1;
+}
+
+//*=========================================
+//** Browser Specific Styles  **
+//*=========================================
