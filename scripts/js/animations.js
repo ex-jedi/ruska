@@ -5,12 +5,17 @@
 import { gsap } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
 // *=========================================
 // ** GSAP  **
 // *=========================================
 
-gsap.registerPlugin(CSSRulePlugin, ScrollTrigger);
+gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
+
+// *=========================================
+// ** Logo Animation  **
+// *=========================================
 
 // *=========================================
 // ** Main Nav  **
@@ -162,7 +167,6 @@ function scrollColourChange() {
 // *==============================================================================
 // ** Homepage  **
 // *==============================================================================
-
 
 ScrollTrigger.batch('.fade-in-rotate', {
   start: 'top 98%',

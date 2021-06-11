@@ -1,35 +1,31 @@
 // *==============================================================================
+// ** Homepage  **
+// *==============================================================================
+
+// *==============================================================================
 // ** Imports  **
 // *==============================================================================
 
-import * as Flickity from 'flickity';
-import 'flickity-imagesloaded';
-import { homepageParallax } from './animations';
-import { displayInstagramFeed } from './utils';
+import { gsap } from 'gsap';
+import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
-// *==============================================================================
-// ** Page JS  **
-// *==============================================================================
+// *=========================================
+// ** GSAP  **
+// *=========================================
 
-// *==============================================================================
-// ** Imported  **
-// *==============================================================================
+const animationOne = document.querySelector('#Animation_1');
+const animationOnePaths = animationOne.querySelectorAll('path');
+console.log(animationOnePaths);
 
-// ********** Homepage Parallax **********
-
-homepageParallax();
-
-// ********** Instagram Feed **********
-
-displayInstagramFeed();
-
-// ********** Flickity **********
-const carousel = document.querySelector('.main-carousel');
-const flkty = new Flickity(carousel, {
-  imagesLoaded: true,
-  autoPlay: 10000,
-  prevNextButtons: false,
-  wrapAround: true,
-  selectedAttraction: 0.006,
-  friction: 0.15,
+animationOnePaths.forEach((paths) => {
+  if (!paths.classList.contains('cls-1')) {
+    gsap.fromTo(paths, { drawSVG: 0 }, { drawSVG: '100%', delay: 2, duration: 3 });
+  }
 });
+
+gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
+
+// gsap.set('.cls-1', { opacity: 0 });
+// gsap.fromTo('.cls-1', { drawSVG: 0 }, { drawSVG: '100%', delay: 2, duration: 3 });
