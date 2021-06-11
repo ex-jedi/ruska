@@ -35,6 +35,8 @@ body {
   min-width: 320px;
   max-width: 1920px;
   overflow-x: hidden;
+  @include main-font-stack;
+
 }
 
 // *=========================================

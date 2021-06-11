@@ -22,6 +22,8 @@ body {
   min-width: 320px;
   max-width: 1920px;
   overflow-x: hidden;
+  font-family: "sofia-pro", sans-serif;
+  font-style: normal;
 }
 
 section,
