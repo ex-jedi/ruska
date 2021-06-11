@@ -40,6 +40,18 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 // const animationFive = document.querySelector('#Animation_5');
 // const animationFivePaths = animationFive.querySelectorAll('path');
 
+// const flipReverse = gsap.timeline({
+//   defaults: { duration: 8 },
+//   repeat: -1,
+// });
+
+// flipReverse
+//   .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+//   .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+//   .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+//   .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+//   .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+
 //* Find which paths run the wrong way and flip them
 //* https://greensock.com/forums/topic/14946-drawsvg-start-from-the-other-end/
 
@@ -51,7 +63,7 @@ console.log('Testing > ', animationTest.id);
 const animationTestPaths = animationTest.querySelectorAll('path');
 console.log({ animationTestPaths });
 
-const animationTestPath = animationTest.querySelector('.cls-9');
+const animationTestPath = animationTest.querySelector('.cls-7');
 console.log({ animationTestPath });
 
 gsap.fromTo(animationTestPath, { drawSVG: 0 }, { drawSVG: '100%', duration: 5, repeat: -1 });
@@ -59,15 +71,4 @@ gsap.fromTo(animationTestPath, { drawSVG: 0 }, { drawSVG: '100%', duration: 5, r
 // gsap.fromTo(animationTestPath, { drawSVG: '100% 100%' }, { drawSVG: '0% 100%', duration: 5, repeat: -1 });
 
 //* List of paths to flip - Animation 2 .cls-17
-
-const flipReverse = gsap.timeline({
-  defaults: { duration: 8 },
-  repeat: -1,
-});
-
-// flipReverse
-//   .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
-//   .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
-//   .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
-//   .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
-//   .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+//* List of paths to flip - Animation 3
