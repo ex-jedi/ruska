@@ -17,8 +17,8 @@
 										    'add-trailing-slash' => false,
 										    'include-domain'     => true,
 										), true);
-	$mainsitename      = "XXXX";
-	$pagetitlename = " - XXXX";
+	$mainsitename      = "Ruska";
+	$pagetitlename = " - Ruska";
 	$sharing_image = '/images/default-sharing-image.jpg';
 
 	PerchSystem::set_var('domain',$domain);
@@ -51,6 +51,5 @@
 							'hide-extensions' => true,
 							'levels'    => 1
 					)); ?>
-
         <?php perch_content("Header Content"); ?>
 			</header>
