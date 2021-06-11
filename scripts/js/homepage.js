@@ -26,7 +26,7 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 // gsap.fromTo(logoPaths, { drawSVG: 0 }, { drawSVG: '100%', delay: 2, duration: 2 });
 
 // const animationOne = document.querySelector('#Animation_1');
-// const animationOnePaths = animationOne.querySelectorAll('path');
+// animationTestPath
 
 // const animationTwo = document.querySelector('#Animation_2');
 // const animationTwoPaths = animationTwo.querySelectorAll('path');
@@ -46,12 +46,17 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 //* https://greensock.com/forums/topic/21132-drawsvg-path-draws-from-right-point-to-left-point-but-i-am-looking-for-left-to-right-have-i-drawn-all-my-paths-the-wrong-direction/?do=findComment&comment=98969&_rid=75370
 
 const animationTest = document.querySelector('#Animation_2');
-console.log({ animationTest });
+console.log('Testing > ', animationTest.id);
 
-const animationTestPath = animationTest.querySelector('.cls-17');
+const animationTestPaths = animationTest.querySelectorAll('path');
+console.log({ animationTestPaths });
+
+const animationTestPath = animationTest.querySelector('.cls-9');
 console.log({ animationTestPath });
 
-gsap.fromTo(animationTestPath, { drawSVG: '100% 100%' }, { drawSVG: '0% 100%', duration: 5, repeat: -1 });
+gsap.fromTo(animationTestPath, { drawSVG: 0 }, { drawSVG: '100%', duration: 5, repeat: -1 });
+//* Reversed
+// gsap.fromTo(animationTestPath, { drawSVG: '100% 100%' }, { drawSVG: '0% 100%', duration: 5, repeat: -1 });
 
 //* List of paths to flip - Animation 2 .cls-17
 
