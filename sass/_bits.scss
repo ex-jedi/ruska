@@ -93,14 +93,14 @@ $background-colour-two: #6c9184;
 $background-colour-three: #756c91;
 
 //Main Font Colours
-$font-colour-main: #756c91;
-$font-colour-two: #6c9184;
-$font-colour-three: #91736c;
-$font-colour-four: #918f73;
 $font-colour-light: #f4f1f0;
+$font-colour-dark: #252525;
 
 $link-colour: #3c3cf6;
 $link-visited: #8608fb;
+
+//General Colours
+$light-background-colour: $background-colour-main;
 
 //*=========================================
 //** Effects and Animation  **

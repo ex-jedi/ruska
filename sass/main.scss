@@ -141,10 +141,10 @@ select {
 //*Skip to content link
 .show-on-focus {
   position: absolute;
-  color: $dark-font-colour;
+  color: $font-colour-dark;
   background-color: $light-background-colour;
   padding: 10px;
-  font-size: $font-size;
+  font-size: $font-size-main;
   top: 0;
   left: 0;
   width: 1px;
