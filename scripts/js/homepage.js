@@ -44,16 +44,17 @@ const animationFive = document.querySelector('#Animation_5');
 const animationFivePaths = animationFive.querySelectorAll('path');
 
 const flipReverse = gsap.timeline({
-  defaults: { duration: 3, ease: 'none' },
+  defaults: { duration: 1, ease: 'circ.out' },
   repeat: -1,
 });
 
 // gsap.set([animationOnePaths, animationTwoPaths, animationFourPaths, animationFivePaths], { opacity: 0 });
-flipReverse.fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
-// .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
-// .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
-// .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
-// .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+flipReverse
+  .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+  .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+  .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+  .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+  .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
 
 //* Find which paths run the wrong way and flip them
 //* https://greensock.com/forums/topic/14946-drawsvg-start-from-the-other-end/

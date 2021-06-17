@@ -52,15 +52,6 @@ a {
   display: none;
 }
 
-.main-logo-wrapper .cls-1,
-.main-logo-wrapper .cls-3,
-.main-logo-wrapper .cls-4,
-.main-logo-wrapper .cls-5,
-.main-logo-wrapper .cls-7,
-.main-logo-wrapper .cls-6 {
-  opacity: 0;
-}
-
 input,
 button,
 textarea,
