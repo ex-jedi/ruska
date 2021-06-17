@@ -36,7 +36,7 @@ const animationFive = document.querySelector('#Animation_5');
 const animationFivePaths = animationFive.querySelectorAll('path');
 
 const flipReverse = gsap.timeline({
-  defaults: { duration: 1, ease: 'circ.out' },
+  defaults: { duration: 1, ease: 'power3.inOut' },
   repeat: -1,
 });
 
