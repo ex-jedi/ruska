@@ -25,50 +25,63 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 
 // gsap.fromTo(logoPaths, { drawSVG: 0 }, { drawSVG: '100%', delay: 2, duration: 2 });
 
-// const animationOne = document.querySelector('#Animation_1');
-// animationTestPath
+//* List of paths to flip - Animation 2 .cls-17
+//* List of paths to flip - Animation 5 .cls-53
 
-// const animationTwo = document.querySelector('#Animation_2');
-// const animationTwoPaths = animationTwo.querySelectorAll('path');
+const animationOne = document.querySelector('#Animation_1');
+const animationOnePaths = animationOne.querySelectorAll('path');
 
-// const animationThree = document.querySelector('#Animation_3');
-// const animationThreePaths = animationThree.querySelectorAll('path');
+const animationTwo = document.querySelector('#Animation_2');
+const animationTwoPaths = animationTwo.querySelectorAll('.cls-9, .cls-15');
+const animationTwoReversePaths = animationTwo.querySelectorAll('.cls-6, .cls-7, .cls-17, .cls-1');
 
-// const animationFour = document.querySelector('#Animation_4');
-// const animationFourPaths = animationFour.querySelectorAll('path');
+console.log({ animationTwoPaths });
 
-// const animationFive = document.querySelector('#Animation_5');
-// const animationFivePaths = animationFive.querySelectorAll('path');
+const animationThree = document.querySelector('#Animation_3');
+const animationThreePaths = animationThree.querySelectorAll('path');
 
-// const flipReverse = gsap.timeline({
-//   defaults: { duration: 8 },
-//   repeat: -1,
-// });
+const animationFour = document.querySelector('#Animation_4');
+const animationFourPaths = animationFour.querySelectorAll('path');
 
-// flipReverse
-//   .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
-//   .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
-//   .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
-//   .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
-//   .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+const animationFive = document.querySelector('#Animation_5');
+const animationFivePaths = animationFive.querySelectorAll('path');
+
+const flipReverse = gsap.timeline({
+  defaults: { duration: 8 },
+  repeat: -1,
+});
+
+flipReverse
+  .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+  .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+  .fromTo(animationTwoReversePaths, { drawSVG: '100% 100%' }, { drawSVG: '0% 100%' }, '<')
+  .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+  .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+  .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
 
 //* Find which paths run the wrong way and flip them
 //* https://greensock.com/forums/topic/14946-drawsvg-start-from-the-other-end/
 
 //* https://greensock.com/forums/topic/21132-drawsvg-path-draws-from-right-point-to-left-point-but-i-am-looking-for-left-to-right-have-i-drawn-all-my-paths-the-wrong-direction/?do=findComment&comment=98969&_rid=75370
 
-const animationTest = document.querySelector('#Animation_2');
-console.log('Testing > ', animationTest.id);
+//* Multiple class selector
+//* https://stackoverflow.com/questions/7184562/how-to-get-elements-with-multiple-classes/7184581
 
-const animationTestPaths = animationTest.querySelectorAll('path');
-console.log({ animationTestPaths });
+// const animationTest = document.querySelector('#Animation_4');
+// console.log('Testing > ', animationTest.id);
 
-const animationTestPath = animationTest.querySelector('.cls-7');
-console.log({ animationTestPath });
+// const animationTestPaths = Array.from(animationTest.querySelectorAll('path'));
+// console.log({ animationTestPaths });
 
-gsap.fromTo(animationTestPath, { drawSVG: 0 }, { drawSVG: '100%', duration: 5, repeat: -1 });
+// const animationTestPath = animationTest.querySelector('.cls-9');
+// console.log({ animationTestPath });
+
+// gsap.fromTo(animationTestPath, { drawSVG: 0 }, { drawSVG: '100%', duration: 5, repeat: -1 });
 //* Reversed
 // gsap.fromTo(animationTestPath, { drawSVG: '100% 100%' }, { drawSVG: '0% 100%', duration: 5, repeat: -1 });
 
 //* List of paths to flip - Animation 2 .cls-17
-//* List of paths to flip - Animation 3
+//* List of paths to flip - Animation 5 .cls-53
+
+//* Paths to hide - Animation 4 .cls-3
+//* Paths to hide - Animation 4 .cls-4
