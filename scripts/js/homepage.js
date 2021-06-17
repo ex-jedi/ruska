@@ -32,10 +32,7 @@ const animationOne = document.querySelector('#Animation_1');
 const animationOnePaths = animationOne.querySelectorAll('path');
 
 const animationTwo = document.querySelector('#Animation_2');
-const animationTwoPaths = animationTwo.querySelectorAll('.cls-9, .cls-15');
-const animationTwoReversePaths = animationTwo.querySelectorAll('.cls-6, .cls-7, .cls-17, .cls-1');
-
-console.log({ animationTwoPaths });
+const animationTwoPaths = animationTwo.querySelectorAll('path');
 
 const animationThree = document.querySelector('#Animation_3');
 const animationThreePaths = animationThree.querySelectorAll('path');
@@ -47,17 +44,16 @@ const animationFive = document.querySelector('#Animation_5');
 const animationFivePaths = animationFive.querySelectorAll('path');
 
 const flipReverse = gsap.timeline({
-  defaults: { duration: 8 },
+  defaults: { duration: 3, ease: 'none' },
   repeat: -1,
 });
 
-flipReverse
-  .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
-  .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
-  .fromTo(animationTwoReversePaths, { drawSVG: '100% 100%' }, { drawSVG: '0% 100%' }, '<')
-  .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
-  .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
-  .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+// gsap.set([animationOnePaths, animationTwoPaths, animationFourPaths, animationFivePaths], { opacity: 0 });
+flipReverse.fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+// .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+// .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+// .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+// .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
 
 //* Find which paths run the wrong way and flip them
 //* https://greensock.com/forums/topic/14946-drawsvg-start-from-the-other-end/
