@@ -46,3 +46,6 @@ flipReverse
   .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
   .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
   .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+
+console.log({ animationTwo });
+console.log({ animationTwoPaths });

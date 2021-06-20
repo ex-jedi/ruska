@@ -26,6 +26,10 @@ body {
   font-style: normal;
 }
 
+.main-logo-wrapper {
+  background-color: #000;
+}
+
 section,
 main {
   position: relative;
