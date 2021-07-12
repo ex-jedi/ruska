@@ -23,7 +23,6 @@ $grid-gap: 0 1rem;
 @mixin main-font-stack {
   font-family: 'sofia-pro', sans-serif;
   font-style: normal;
-
 }
 
 //********** Sizing & spacing **********
@@ -208,4 +207,20 @@ $transition-two-cubic: $timing-duration-slow $cubic-one 0s;
   @media (max-height: $point) and (orientation: $orientation) {
     @content;
   }
+}
+
+//*=========================================
+//** Accessability **
+//*=========================================
+
+//********** Visually Hidden  **********
+
+@mixin visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

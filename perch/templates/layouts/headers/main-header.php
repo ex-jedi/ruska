@@ -8,12 +8,11 @@
 				<!-- Skip to main content link  -->
 				<a class="show-on-focus"  href="#main-content">Skip to main content</a>
 				<!-- For SVG logo. Delete if not needed -->
+				<?php perch_content("Hidden Logo"); ?>
 				<div class="main-logo-wrapper">
-					<!-- TODO: Restore link -->
-					<!-- <a class="main-logo-wrapper" itemprop="url" href="<?php echo $domain ?>"> -->
-					<img class="hidden-main-logo" aria-hidden="true" itemprop="logo" src="/images/main-logo.png" alt="XXXX main logo">
+					<a class="main-logo-link"  href="/">
 					<?php perch_content("Main Logo"); ?>
-				<!-- </a> -->
+				</a>
 				</div>
 					<?php perch_pages_navigation(array(
 							'hide-extensions' => true,

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://use.typekit.net/qpt3ahb.css">
 	<!-- Perch Meta -->
 	<?php
-	$domain        = 'https://'.$_SERVER["HTTP_HOST"];
+	$domain = 'https://'.$_SERVER["HTTP_HOST"];
 	$mainurl           = perch_page_url(array(
 											'hide-extensions'    => true,
 											'hide-default-doc'   => true,
@@ -19,7 +19,7 @@
 									), true);
 	$mainsitename      = "Ruska";
 	$pagetitlename = " - Ruska";
-	$sharing_image = '/images/default-sharing-image.jpg';
+	$sharing_image = '/images/default-sharing-image.png';
 
 	PerchSystem::set_var('domain',$domain);
 	PerchSystem::set_var('mainurl',$mainurl);
