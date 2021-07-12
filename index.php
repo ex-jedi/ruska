@@ -2,8 +2,12 @@
 <?php perch_layout('heads/main-head'); ?>
 <?php perch_layout('headers/main-header'); ?>
 <main class="main-content homepage-main-content" id="main-content">
-<h1>Ahoy</h1>
-	  <?php perch_content('Placeholder'); ?>
+	<?php perch_content("Section One"); ?>
+	<?php perch_content("Section Two"); ?>
+	<?php perch_content("Section Three"); ?>
+	<?php perch_content("Contact Form"); ?>
+	<?php perch_content("Featured Articles"); ?>
+	<?php perch_content("Instagram Feed"); ?>
 </main>
 <?php perch_layout('footers/main-footer'); ?>
 <?php perch_layout('footer-ends/main-footer-end'); ?>
