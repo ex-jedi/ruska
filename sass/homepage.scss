@@ -39,4 +39,7 @@
   @include flex(column);
   justify-content: center;
   align-items: center;
+  font-size: $font-size-large;
+  color: $font-colour-dark;
+  font-weight: 700;
 }
