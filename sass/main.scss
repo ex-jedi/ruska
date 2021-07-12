@@ -37,7 +37,6 @@ body {
   max-width: 1920px;
   overflow-x: hidden;
   @include main-font-stack;
-
 }
 
 // *=========================================
@@ -83,7 +82,6 @@ a {
   color: $link-colour;
 }
 
-
 //*=========================================
 //** Header **
 //*=========================================
@@ -100,7 +98,7 @@ a {
 .main-logo-wrapper {
   width: 150px;
   background-color: $light-background-colour;
-  margin: 0 auto;
+  margin: 0 auto $header-spacing-large;
 }
 
 // *=========================================
@@ -110,9 +108,6 @@ a {
 .main-nav-trigger-wrapper {
   display: none;
 }
-
-
-
 
 //********** Responsive Styles **********
 

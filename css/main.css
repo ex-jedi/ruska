@@ -7,7 +7,7 @@ html {
   font-size: 10px;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-color: #FAF6F1;
+  background-color: #faf6f1;
 }
 
 *,
@@ -73,8 +73,8 @@ a {
 
 .main-logo-wrapper {
   width: 150px;
-  background-color: #FAF6F1;
-  margin: 0 auto;
+  background-color: #faf6f1;
+  margin: 0 auto 20rem;
 }
 
 .main-nav-trigger-wrapper {
@@ -114,7 +114,7 @@ select {
 .show-on-focus {
   position: absolute;
   color: #252525;
-  background-color: #FAF6F1;
+  background-color: #faf6f1;
   padding: 10px;
   font-size: 4rem;
   top: 0;

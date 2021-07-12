@@ -28,8 +28,9 @@ $grid-gap: 0 1rem;
 //********** Sizing & spacing **********
 
 //* Header
-$header-spacing: 5rem;
-$header-spacing-large: 10rem;
+$header-spacing-large: 20rem;
+$header-spacing-medium: 15rem;
+$header-spacing-tiny: 1rem;
 
 //* Headings
 
@@ -87,7 +88,8 @@ $input-spacing: 1rem;
 //TODO: Customise brand colours
 
 //Main brand Colours
-$light-background-colour: #FAF6F1;
+$light-background-colour: #faf6f1;
+$dark-background-colour: #d08a70;
 
 //Main Font Colours
 $font-colour-light: #f4f1f0;
@@ -105,23 +107,6 @@ $link-visited: #8608fb;
 //TODO: Customise Timings
 
 //* Timings
-$timing-duration-fast: 0.2s;
-$timing-duration-medium: 0.4s;
-$timing-duration-slower: 0.6s;
-$timing-duration-slow: 0.8s;
-
-//* Timing Function
-$cubic-one: cubic-bezier(0.8, -0.72, 0.37, 1.71);
-$cubic-two: cubic-bezier(0.13, 0.1, 0.12, 0.93);
-
-//* Combined
-
-$transition-one: $timing-duration-slower ease-in 0s;
-$transition-two: $timing-duration-fast ease-out 0s;
-$transition-three: $timing-duration-medium ease-out 0s;
-
-$transition-one-cubic: $timing-duration-medium $cubic-one 0s;
-$transition-two-cubic: $timing-duration-slow $cubic-one 0s;
 
 //********** Scrollbar Mixin **********
 
