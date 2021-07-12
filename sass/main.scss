@@ -20,6 +20,7 @@ html {
   font-size: 10px;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-color: $light-background-colour;
 }
 
 // * Box sizing rules
@@ -42,9 +43,6 @@ body {
 // *=========================================
 // ** Content container and block **
 // *=========================================
-.main-logo-wrapper {
-  background-color: #000;
-}
 
 //********** Headings**********
 
@@ -89,6 +87,21 @@ a {
 //*=========================================
 //** Header **
 //*=========================================
+
+.main-header {
+  @include flex(column);
+  margin-top: 10px;
+}
+
+.hidden-logo {
+  @include visually-hidden;
+}
+
+.main-logo-wrapper {
+  width: 150px;
+  background-color: $light-background-colour;
+  margin: 0 auto;
+}
 
 // *=========================================
 // ** Main Nav  **
