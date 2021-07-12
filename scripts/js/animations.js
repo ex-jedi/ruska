@@ -40,12 +40,12 @@ function mainLogoAnimation() {
   const logoImage = document.querySelector('.main-logo-wrapper image');
 
   const flipReverse = gsap.timeline({
-    defaults: { duration: 1, ease: 'power3.inOut' },
-    repeat: -1,
+    defaults: { duration: 0.4, ease: 'power3.inOut' },
+    // repeat: -1,
   });
 
   flipReverse
-    .fromTo(logoImage, { opacity: 0 }, { opacity: 1, ease: 'power4.in' })
+    .fromTo(logoImage, { opacity: 0 }, { opacity: 1, ease: 'power4.in', duration: 0.75 })
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -234,6 +234,7 @@ function homepageTreeAnimation() {
     },
   });
 
+  // TODO: Change name as they go the right way
   flipReverse
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -267,7 +268,7 @@ function homepageTreeAnimationTwo() {
       id: 'Tree Animation',
       start: 'bottom bottom',
       end: 'top 5%',
-      markers: true,
+      // markers: true,
       scrub: 1,
     },
   });
