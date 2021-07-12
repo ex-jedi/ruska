@@ -10,10 +10,14 @@
 // ** Page & Site Wrappers **
 // *=========================================
 
+.main-header {
+  margin-bottom: $section-spacing-small;
+}
+
 .header-content-wrapper {
   @include flex(row);
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .header-image-wrapper,
@@ -44,15 +48,47 @@
   font-weight: 700;
 }
 
-
 //*=========================================
 //** Section One **
 //*=========================================
+
 .homepage-section-one {
-  margin-bottom: 1000px;
+  position: relative;
+  padding: calc(#{$section-spacing-large} + 3rem) $section-spacing-small
+    $section-spacing-large;
 }
 
+//********** Tree Animation **********
+
 .tree-animation-wrapper {
-  width: 400px;
+  width: 350px;
+  position: absolute;
+  top: 0;
+  right: 500px;
+}
+
+//********** Images **********
+
+.section-one-double-image-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $section-spacing-small;
+}
+
+.homepage-section-one-double-image {
+  flex: 0 1 auto;
+  width: 47%;
+}
+
+.homepage-section-one-image-two {
+  margin-top: calc(#{$section-spacing-extra-large + 1rem});
+}
+
+.homepage-section-one-single-image-wrapper {
+  margin: 0 auto $section-spacing-large;
+}
+
+.homepage-section-one-single-image {
   margin: 0 auto;
 }

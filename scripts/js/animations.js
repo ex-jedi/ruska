@@ -226,7 +226,7 @@ function homepageTreeAnimation() {
       trigger: '.tree-animation-wrapper',
       id: 'Tree Animation',
       start: 'bottom bottom',
-      end: 'top top',
+      end: 'top 100px',
       markers: true,
       scrub: 1,
     },

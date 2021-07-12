@@ -52,6 +52,7 @@ main {
   position: relative;
   overflow: hidden;
   z-index: 3;
+  width: 100%;
   /*
   * Fixes IOS Bug where scrolling breaks z-index
   https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
