@@ -225,8 +225,8 @@ function homepageTreeAnimation() {
     scrollTrigger: {
       trigger: '.tree-animation-wrapper',
       id: 'Tree Animation',
-      start: 'top 90%',
-      end: 'top 10%',
+      start: 'bottom bottom',
+      end: 'top top',
       markers: true,
       scrub: 1,
     },
