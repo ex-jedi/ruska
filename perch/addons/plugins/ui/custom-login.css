@@ -1,0 +1,24 @@
+h1 {
+  font-weight: 800 !important;
+}
+
+.topbar h1 {
+  color: #77442F;
+}
+
+label,
+.field-wrap,
+.input-simple,
+.button-simple,
+.reset-link {
+  font-family: 'sofia-pro', sans-serif;
+  font-size: 17px !important;
+  color: #77442F !important;
+  font-weight: bold;
+}
+
+.button-simple {
+  border: 1px solid #ccc !important;
+  font-family: 'sofia-pro', sans-serif;
+
+}

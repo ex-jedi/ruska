@@ -1,0 +1,119 @@
+// *=======================================================================================
+// ** Homepage  **
+// *=======================================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+// *=========================================
+// ** Page & Site Wrappers **
+// *=========================================
+
+.main-header {
+  margin-bottom: $section-spacing-small;
+}
+
+.header-content-wrapper {
+  @include flex(row);
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.header-image-wrapper,
+.header-text-wrapper {
+  flex: 0 1 auto;
+  width: 40%;
+}
+
+//********** Header Images **********
+
+.header-image-wrapper {
+  position: relative;
+}
+
+.swapping-images {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+//********** Header Text **********
+.header-text-wrapper {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size-large;
+  color: $font-colour-dark;
+  font-weight: 700;
+}
+
+//*=========================================
+//** Section One **
+//*=========================================
+
+.homepage-section-one {
+  position: relative;
+  padding: calc(#{$section-spacing-large} + 3rem) $section-spacing-small
+    $section-spacing-large;
+  margin-bottom: 1000px;
+}
+
+//********** Tree Animations **********
+
+.tree-animation-wrapper {
+  width: 350px;
+  position: absolute;
+  top: 0;
+  right: 500px;
+}
+
+.shop-tree-animation-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+
+  svg {
+    opacity: 0.6;
+  }
+}
+
+.shop-tree-text {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  font-size: $font-size-large;
+  font-weight: 700;
+  color: $font-colour-dark;
+  text-align: center;
+  line-height: 1;
+}
+
+//********** Images **********
+
+.section-one-double-image-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $section-spacing-small;
+}
+
+.homepage-section-one-double-image {
+  flex: 0 1 auto;
+  width: 47%;
+}
+
+.homepage-section-one-image-two {
+  margin-top: calc(#{$section-spacing-extra-large + 1rem});
+}
+
+.homepage-section-one-single-image-wrapper {
+  margin: 0 auto $section-spacing-large;
+}
+
+.homepage-section-one-single-image {
+  margin: 0 auto;
+}
