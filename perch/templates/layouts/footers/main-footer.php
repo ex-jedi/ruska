@@ -1,5 +1,4 @@
 <footer class="main-footer">
-		<?php perch_content("Footer Social Media"); ?>
 		<p class="footer-privacy">
 			<a href="/privacy-and-cookie-policy.php">Privacy &amp; cookie policy</a>
 		</p>
