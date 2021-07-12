@@ -228,7 +228,7 @@ function homepageTreeAnimation() {
       id: 'Tree Animation',
       start: 'bottom bottom',
       end: 'top 5%',
-      // markers: true,
+      markers: true,
       scrub: 1,
     },
   });
