@@ -87,8 +87,8 @@ a {
 //*=========================================
 
 .main-header {
+  position: relative;
   @include flex(column);
-  margin-top: 10px;
 }
 
 .hidden-logo {
@@ -98,7 +98,7 @@ a {
 .main-logo-wrapper {
   width: 150px;
   background-color: $light-background-colour;
-  margin: 0 auto $header-spacing-large;
+  margin: $header-spacing-tiny auto $header-spacing-large;
 }
 
 // *=========================================
@@ -106,7 +106,33 @@ a {
 // *=========================================
 
 .main-nav-trigger-wrapper {
-  display: none;
+  @include flex(row);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $dark-background-colour;
+  height: 100vh;
+}
+
+.main-nav-trigger {
+  width: 8.5rem;
+  border: none;
+  appearance: none;
+  margin: auto 0;
+  background-color: transparent;
+  padding: $font-size-medium 0;
+  cursor: pointer;
+}
+
+.sideways-text {
+  position: relative;
+  left: -10px;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  font-size: $font-size-medium;
+  color: $font-colour-light;
+  font-weight: 700;
 }
 
 .main-nav {
