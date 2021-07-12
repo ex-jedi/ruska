@@ -21,6 +21,13 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: $light-background-colour;
+
+  @include styled-scrollbar(
+    2rem,
+    $medium-background-colour,
+    $light-background-colour,
+    $light-background-colour
+  );
 }
 
 // * Box sizing rules
