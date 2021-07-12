@@ -41,7 +41,6 @@ function mainLogoAnimation() {
 
   const flipReverse = gsap.timeline({
     defaults: { duration: 0.4, ease: 'power3.inOut' },
-    // repeat: -1,
   });
 
   flipReverse
@@ -268,7 +267,7 @@ function homepageTreeAnimationTwo() {
       id: 'Tree Animation',
       start: 'bottom bottom',
       end: 'top 5%',
-      // markers: true,
+      markers: true,
       scrub: 1,
     },
   });
