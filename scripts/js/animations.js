@@ -204,6 +204,7 @@ function menuOpenerHandler() {
 // ** Tree Animation  **
 // *=========================================
 
+// TODO: Add to all tree elements
 function homepageTreeAnimation() {
   const animationOne = document.querySelector('.tree-animation-wrapper [data-name="Animation 1"]');
   const animationOnePaths = animationOne.querySelectorAll('path');
@@ -220,13 +221,52 @@ function homepageTreeAnimation() {
   const animationFive = document.querySelector('.tree-animation-wrapper [data-name="Animation 5"]');
   const animationFivePaths = animationFive.querySelectorAll('path');
 
+  // TODO: Remove markers
   const flipReverse = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
     scrollTrigger: {
       trigger: '.tree-animation-wrapper',
       id: 'Tree Animation',
       start: 'bottom bottom',
-      end: 'top 100px',
+      end: 'top 5%',
+      // markers: true,
+      scrub: 1,
+    },
+  });
+
+  flipReverse
+    .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+}
+
+// TODO: Make more modular... roll this and above into single function
+function homepageTreeAnimationTwo() {
+  const animationOne = document.querySelector('.shop-tree-animation-wrapper [data-name="Animation 1"]');
+  const animationOnePaths = animationOne.querySelectorAll('path');
+
+  const animationTwo = document.querySelector('.shop-tree-animation-wrapper [data-name="Animation 2"]');
+  const animationTwoPaths = animationTwo.querySelectorAll('path');
+
+  const animationThree = document.querySelector('.shop-tree-animation-wrapper [data-name="Animation 3"]');
+  const animationThreePaths = animationThree.querySelectorAll('path');
+
+  const animationFour = document.querySelector('.shop-tree-animation-wrapper [data-name="Animation 4"]');
+  const animationFourPaths = animationFour.querySelectorAll('path');
+
+  const animationFive = document.querySelector('.shop-tree-animation-wrapper [data-name="Animation 5"]');
+  const animationFivePaths = animationFive.querySelectorAll('path');
+
+  // TODO: Remove markers
+  const flipReverse = gsap.timeline({
+    defaults: { duration: 1, ease: 'power3.inOut' },
+    scrollTrigger: {
+      trigger: '.shop-tree-animation-wrapper',
+      id: 'Tree Animation',
+      start: 'bottom bottom',
+      end: 'top 5%',
       markers: true,
       scrub: 1,
     },
@@ -270,4 +310,4 @@ function homepageTreeAnimation() {
 // ** Exports **
 // *=========================================
 
-export { menuOpenerHandler, mainNavTrigger, mainLogoAnimation, homepageTreeAnimation };
+export { menuOpenerHandler, mainNavTrigger, mainLogoAnimation, homepageTreeAnimation, homepageTreeAnimationTwo };

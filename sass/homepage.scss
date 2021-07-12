@@ -56,15 +56,22 @@
   position: relative;
   padding: calc(#{$section-spacing-large} + 3rem) $section-spacing-small
     $section-spacing-large;
+  margin-bottom: 1000px;
 }
 
-//********** Tree Animation **********
+//********** Tree Animations **********
 
 .tree-animation-wrapper {
   width: 350px;
   position: absolute;
   top: 0;
   right: 500px;
+}
+
+.shop-tree-animation-wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 //********** Images **********
