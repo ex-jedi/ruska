@@ -9,3 +9,34 @@
 // *=========================================
 // ** Page & Site Wrappers **
 // *=========================================
+
+.header-content-wrapper {
+  @include flex(row);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-image-wrapper,
+.header-text-wrapper {
+  flex: 0 1 auto;
+  width: 40%;
+}
+
+//********** Header Images **********
+
+.header-image-wrapper {
+  position: relative;
+}
+
+.swapping-images {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+//********** Header Text **********
+.header-text-wrapper {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+}

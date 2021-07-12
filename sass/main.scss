@@ -169,7 +169,8 @@ select {
   color: $font-colour-dark;
   background-color: $light-background-colour;
   padding: 10px;
-  font-size: $font-size-main;
+  //TODO: Add font size variable
+  font-size: 30px;
   top: 0;
   left: 0;
   width: 1px;
@@ -236,18 +237,18 @@ body:not(.user-is-tabbing) textarea:focus {
 
 .cookie-warning-paragraph {
   //TODO: Add variables for cookie warning spacing
-  margin: 0 $section-spacing-small 0 0;
+  margin: 0 $section-spacing-large 0 0;
   color: #000;
 
   @include breakpoint(1300) {
     //TODO: Add variables for cookie warning spacing
-    margin: 0 $paragraph-spacing-small 0 0;
+    margin: 0 $paragraph-spacing-large 0 0;
   }
 
   @include breakpoint(850) {
     text-align: center;
     //TODO: Add variables for cookie warning spacing
-    margin: 0 0 $paragraph-spacing-small;
+    margin: 0 0 $paragraph-spacing-large;
   }
 }
 

@@ -12,9 +12,6 @@
   flex-direction: $direction;
 }
 
-//* Layout Variables
-$grid-gap: 0 1rem;
-
 //*=========================================
 //** Typography **
 //*=========================================
@@ -35,51 +32,22 @@ $header-spacing-tiny: 1rem;
 //* Headings
 
 //Sizing
-$h1-size: 8rem;
-$h1-size-medium: 6rem;
-$h1-size-small: 5rem;
-$h2-size: 8rem;
-$h3-size: 1rem;
+$heading-size-large: 10rem;
 
 //Spacing
-$h1-spacing-large: 5rem;
-$h1-spacing: 20rem;
-$h2-spacing: 20rem;
-$h3-spacing: 1rem;
+$heading-spacing-large: 5rem;
 
 //* Sections
 $section-spacing-extra-large: 40rem;
-$section-spacing-very-large: 35rem;
 $section-spacing-large: 30rem;
-$section-spacing-medium: 25rem;
-$section-spacing-small: 20rem;
-$section-spacing-smaller: 15rem;
-$section-spacing-extra-small: 10rem;
 
 //* Paragraphs
 
 //Font sizing
-$font-size-large: 7rem;
-$font-size-larger: 6rem;
-$font-size-medium: 5rem;
-$font-size-main: 4rem;
-$font-size-small: 3rem;
-$font-size-extra-small: 2rem;
-$font-size-tiny: 1rem;
+$font-size-large: 10rem;
 
 //Spacing
 $paragraph-spacing-large: 10rem;
-$paragraph-spacing-medium: 5rem;
-$paragraph-spacing-small: 2.5rem;
-$paragraph-spacing-smaller: 2rem;
-
-//* Forms
-
-//Sizing
-$input-font-size: $font-size-small;
-
-//Spacing
-$input-spacing: 1rem;
 
 //*=========================================
 //** Colours  **
