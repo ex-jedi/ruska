@@ -222,7 +222,14 @@ function homepageTreeAnimation() {
 
   const flipReverse = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
-    repeat: -1,
+    scrollTrigger: {
+      trigger: '.tree-animation-wrapper',
+      id: 'Tree Animation',
+      start: 'top 90%',
+      end: 'top 10%',
+      markers: true,
+      scrub: 1,
+    },
   });
 
   flipReverse
@@ -260,7 +267,7 @@ function homepageTreeAnimation() {
 // }
 
 // *=========================================
-// ** Exports  **
+// ** Exports **
 // *=========================================
 
 export { menuOpenerHandler, mainNavTrigger, mainLogoAnimation, homepageTreeAnimation };
