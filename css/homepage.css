@@ -49,3 +49,8 @@
   color: #77442f;
   font-weight: 700;
 }
+
+.tree-animation-wrapper {
+  width: 400px;
+  margin: 0 auto;
+}
