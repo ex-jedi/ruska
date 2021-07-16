@@ -204,27 +204,27 @@ function menuOpenerHandler() {
 // *=========================================
 
 // TODO: Add to all tree elements
-function homepageTreeAnimation() {
-  const animationOne = document.querySelector('.tree-animation-wrapper [data-name="Animation 1"]');
+function homepageTreeAnimationOne() {
+  const animationOne = document.querySelector('#tree-animation-one [data-name="Animation 1"]');
   const animationOnePaths = animationOne.querySelectorAll('path');
 
-  const animationTwo = document.querySelector('.tree-animation-wrapper [data-name="Animation 2"]');
+  const animationTwo = document.querySelector('#tree-animation-one [data-name="Animation 2"]');
   const animationTwoPaths = animationTwo.querySelectorAll('path');
 
-  const animationThree = document.querySelector('.tree-animation-wrapper [data-name="Animation 3"]');
+  const animationThree = document.querySelector('#tree-animation-one [data-name="Animation 3"]');
   const animationThreePaths = animationThree.querySelectorAll('path');
 
-  const animationFour = document.querySelector('.tree-animation-wrapper [data-name="Animation 4"]');
+  const animationFour = document.querySelector('#tree-animation-one [data-name="Animation 4"]');
   const animationFourPaths = animationFour.querySelectorAll('path');
 
-  const animationFive = document.querySelector('.tree-animation-wrapper [data-name="Animation 5"]');
+  const animationFive = document.querySelector('#tree-animation-one [data-name="Animation 5"]');
   const animationFivePaths = animationFive.querySelectorAll('path');
 
   // TODO: Remove markers
   const flipReverse = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
     scrollTrigger: {
-      trigger: '.tree-animation-wrapper',
+      trigger: '#tree-animation-one',
       id: 'Tree Animation',
       start: 'bottom bottom',
       end: 'top 5%',
@@ -242,7 +242,6 @@ function homepageTreeAnimation() {
     .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
 }
 
-// TODO: Make more modular... roll this and above into single function
 function homepageTreeAnimationTwo() {
   const animationOne = document.querySelector('.shop-tree-animation-wrapper [data-name="Animation 1"]');
   const animationOnePaths = animationOne.querySelectorAll('path');
@@ -310,4 +309,4 @@ function homepageTreeAnimationTwo() {
 // ** Exports **
 // *=========================================
 
-export { menuOpenerHandler, mainNavTrigger, mainLogoAnimation, homepageTreeAnimation, homepageTreeAnimationTwo };
+export { menuOpenerHandler, mainNavTrigger, mainLogoAnimation, homepageTreeAnimationOne, homepageTreeAnimationTwo };
