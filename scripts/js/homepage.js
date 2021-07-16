@@ -11,7 +11,13 @@ import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 
-import { mainLogoAnimation, homepageTreeAnimationOne, homepageTreeAnimationTwo } from './animations';
+import {
+  mainLogoAnimation,
+  homepageTreeAnimationOne,
+  homepageTreeAnimationTwo,
+  homepageTreeAnimationThree,
+  scrollTriggerRefresh,
+} from './animations';
 
 // *=========================================
 // ** GSAP  **
@@ -22,3 +28,6 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 mainLogoAnimation();
 homepageTreeAnimationOne();
 homepageTreeAnimationTwo();
+homepageTreeAnimationThree();
+
+scrollTriggerRefresh();

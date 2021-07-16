@@ -117,89 +117,6 @@ function menuOpenerHandler() {
 }
 
 // *=========================================
-// ** Fading in paragraphs  **
-// *=========================================
-
-// function fadeInRotateParagraphs() {
-//   // * Adding class to paragraphs created by Perch to set them up for fading in.
-//   // Grabbing paragraphs from multiple pages
-//   const aboutMeParagraphs = Array.from(document.querySelectorAll('.about-me-section p'));
-//   const servicesParagraphs = Array.from(document.querySelectorAll('.services-section p'));
-//   // Merge the paragraphs into one array
-//   const fadeInParagraph = [...aboutMeParagraphs, ...servicesParagraphs];
-//   // Add class to paragraphs
-//   fadeInParagraph.forEach((paragraph) => paragraph.classList.add('fade-in-rotate'));
-
-//   // Grabbing all paragraphs to fade in
-//   const fadeInParagraphs = gsap.utils.toArray('.fade-in-rotate');
-
-//   fadeInParagraphs.forEach((paragraph) => {
-//     ScrollTrigger.matchMedia({
-//       // desktop
-//       '(min-width: 1100px)': function () {
-//         ScrollTrigger.create({
-//           trigger: paragraph,
-//           toggleClass: 'fade-in-rotate-reveal',
-//           start: 'top 95%',
-//           end: 'bottom top',
-//         });
-//       },
-
-//       // Tablet
-//       '(max-width: 1099px) and (min-width: 700px)': function () {
-//         ScrollTrigger.create({
-//           trigger: paragraph,
-//           toggleClass: 'fade-in-rotate-reveal',
-//           start: 'top bottom',
-//           end: 'bottom -100px',
-//         });
-//       },
-
-//       // Mobile
-//       '(max-width: 699px) and (min-width: 450px)': function () {
-//         ScrollTrigger.create({
-//           trigger: paragraph,
-//           toggleClass: 'fade-in-rotate-reveal',
-//           start: 'top bottom',
-//           end: 'bottom -300px',
-//         });
-//       },
-
-//       // Small Mobile
-//       '(max-width: 449px)': function () {
-//         ScrollTrigger.create({
-//           trigger: paragraph,
-//           toggleClass: 'fade-in-rotate-reveal',
-//           start: 'top bottom',
-//           end: 'bottom -450px',
-//         });
-//       },
-//     });
-//   });
-// }
-
-// *=========================================
-// ** Contact form color change  **
-// *=========================================
-
-// function scrollColourChange() {
-//   ScrollTrigger.create({
-//     trigger: '.general-contact-form-section',
-//     start: 'top center',
-//     end: 'bottom center',
-//     id: 'Contact Form',
-//     toggleClass: {
-//       targets: '.general-contact-form-section, .general-contact-form-input, .main-contact-submit-button',
-//       className: 'contact-form-colour-change',
-//     },
-//   });
-// }
-
-// *==============================================================================
-// ** Homepage  **
-// *==============================================================================
-
-// *=========================================
 // ** Tree Animation  **
 // *=========================================
 
@@ -279,8 +196,78 @@ function homepageTreeAnimationTwo() {
     .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
 }
 
+function homepageTreeAnimationThree() {
+  const animationOne = document.querySelector('#homepage-tree-animation-three [data-name="Animation 1"]');
+  const animationOnePaths = animationOne.querySelectorAll('path');
+
+  const animationTwo = document.querySelector('#homepage-tree-animation-three [data-name="Animation 2"]');
+  const animationTwoPaths = animationTwo.querySelectorAll('path');
+
+  const animationThree = document.querySelector('#homepage-tree-animation-three [data-name="Animation 3"]');
+  const animationThreePaths = animationThree.querySelectorAll('path');
+
+  const animationFour = document.querySelector('#homepage-tree-animation-three [data-name="Animation 4"]');
+  const animationFourPaths = animationFour.querySelectorAll('path');
+
+  const animationFive = document.querySelector('#homepage-tree-animation-three [data-name="Animation 5"]');
+  const animationFivePaths = animationFive.querySelectorAll('path');
+
+  // TODO: Remove markers
+  const treeAnimationTimeline = gsap.timeline({
+    defaults: { duration: 1, ease: 'power3.inOut' },
+    scrollTrigger: {
+      trigger: '#homepage-tree-animation-three',
+      id: 'Tree Animation',
+      start: 'bottom bottom',
+      end: 'top 5%',
+      markers: true,
+      scrub: 1,
+    },
+  });
+
+  treeAnimationTimeline
+    .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+}
+
+// *==============================================================================
+// ** Utilities  **
+// *==============================================================================
+// * ScrollTrigger Refresh Initial
+function scrollTriggerRefresh(time = 1000) {
+  const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      console.log(`✨ ScrollTrigger refresh created after ${time}ms ✨`);
+      scrollTriggerRefreshTarget.forEach((triggerElem) => {
+        ScrollTrigger.create({
+          trigger: triggerElem,
+          start: 'top bottom',
+          once: true,
+          id: 'ScrollTrigger Refresh',
+          onEnter: () => {
+            ScrollTrigger.refresh();
+            console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
+          },
+        });
+      });
+    }, time);
+  });
+}
+
 // *=========================================
 // ** Exports **
 // *=========================================
 
-export { menuOpenerHandler, mainNavTrigger, mainLogoAnimation, homepageTreeAnimationOne, homepageTreeAnimationTwo };
+export {
+  menuOpenerHandler,
+  mainNavTrigger,
+  mainLogoAnimation,
+  homepageTreeAnimationOne,
+  homepageTreeAnimationTwo,
+  homepageTreeAnimationThree,
+  scrollTriggerRefresh,
+};

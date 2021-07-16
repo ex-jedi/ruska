@@ -56,7 +56,6 @@
   position: relative;
   padding: calc(#{$section-spacing-large} + 3rem) $section-spacing-small
     $section-spacing-large;
-  margin-bottom: 1000px;
 }
 
 //********** Tree Animations **********
@@ -143,7 +142,7 @@
 //********** Image **********
 .section-two-image {
   width: 100%;
-  height: 50vh;
+  height: 55vh;
   object-fit: cover;
   object-position: center;
 }
