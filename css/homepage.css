@@ -189,3 +189,19 @@
 .section-two-tree-text {
   color: #faf6f1;
 }
+
+.homepage-section-three {
+  padding: 20rem;
+}
+
+.section-three-tree-wrapper {
+  margin-left: 10rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  position: relative;
+  width: 350px;
+}
+.section-three-tree-wrapper svg {
+  opacity: 0.6;
+}

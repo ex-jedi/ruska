@@ -16,6 +16,7 @@ import {
   homepageTreeAnimationOne,
   homepageTreeAnimationTwo,
   homepageTreeAnimationThree,
+  homepageTreeAnimationFour,
   scrollTriggerRefresh,
 } from './animations';
 
@@ -29,5 +30,6 @@ mainLogoAnimation();
 homepageTreeAnimationOne();
 homepageTreeAnimationTwo();
 homepageTreeAnimationThree();
+homepageTreeAnimationFour();
 
 scrollTriggerRefresh();

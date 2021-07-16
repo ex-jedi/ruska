@@ -163,3 +163,21 @@
 .section-two-tree-text {
   color: $font-colour-light;
 }
+
+//********** Section Three **********
+
+.homepage-section-three {
+  padding: $section-spacing-large;
+}
+
+//********** Tree Animation **********
+.section-three-tree-wrapper {
+  margin-left: $section-spacing-small;
+  flex: 1 0 auto;
+  position: relative;
+  width: 350px;
+
+  svg {
+    opacity: 0.6;
+  }
+}

@@ -233,6 +233,43 @@ function homepageTreeAnimationThree() {
     .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
 }
 
+function homepageTreeAnimationFour() {
+  const animationOne = document.querySelector('#homepage-tree-animation-four [data-name="Animation 1"]');
+  const animationOnePaths = animationOne.querySelectorAll('path');
+
+  const animationTwo = document.querySelector('#homepage-tree-animation-four [data-name="Animation 2"]');
+  const animationTwoPaths = animationTwo.querySelectorAll('path');
+
+  const animationThree = document.querySelector('#homepage-tree-animation-four [data-name="Animation 3"]');
+  const animationThreePaths = animationThree.querySelectorAll('path');
+
+  const animationFour = document.querySelector('#homepage-tree-animation-four [data-name="Animation 4"]');
+  const animationFourPaths = animationFour.querySelectorAll('path');
+
+  const animationFive = document.querySelector('#homepage-tree-animation-four [data-name="Animation 5"]');
+  const animationFivePaths = animationFive.querySelectorAll('path');
+
+  // TODO: Remove markers
+  const treeAnimationTimeline = gsap.timeline({
+    defaults: { duration: 1, ease: 'power3.inOut' },
+    scrollTrigger: {
+      trigger: '#homepage-tree-animation-four',
+      id: 'Tree Animation',
+      start: 'bottom bottom',
+      end: 'top 5%',
+      markers: true,
+      scrub: 1,
+    },
+  });
+
+  treeAnimationTimeline
+    .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+}
+
 // *==============================================================================
 // ** Utilities  **
 // *==============================================================================
@@ -269,5 +306,6 @@ export {
   homepageTreeAnimationOne,
   homepageTreeAnimationTwo,
   homepageTreeAnimationThree,
+  homepageTreeAnimationFour,
   scrollTriggerRefresh,
 };
