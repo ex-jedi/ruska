@@ -75,9 +75,10 @@ function treeAnimationFunction() {
 
   const treeSVGs = gsap.utils.toArray(document.querySelectorAll('.tree-animation-wrapper'));
 
-  treeSVGs.forEach((tree) => {
+  treeSVGs.forEach(function (tree) {
     // * Select target paths in each tree
-    const treePathsArray = getTreePath(tree);
+
+    const treePaths = getTreePath(tree);
     // * Create scrolltrigger for each tree
 
     ScrollTrigger.create({
@@ -87,7 +88,7 @@ function treeAnimationFunction() {
       end: 'top 5%',
       markers: true,
       scrub: 1,
-      onEnter: () => treeAnimationTimelineFunction(treePathsArray).play,
+      onEnter: () => treeAnimationTimelineFunction(treePaths).play,
     });
   });
 }
