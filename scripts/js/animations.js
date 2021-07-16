@@ -221,7 +221,7 @@ function homepageTreeAnimation() {
   const animationFivePaths = animationFive.querySelectorAll('path');
 
   // TODO: Remove markers
-  const flipReverse = gsap.timeline({
+  const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
     scrollTrigger: {
       trigger: '.tree-animation-wrapper',
@@ -234,7 +234,7 @@ function homepageTreeAnimation() {
   });
 
   // TODO: Change name as they go the right way
-  flipReverse
+  treeAnimationTimeline
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
