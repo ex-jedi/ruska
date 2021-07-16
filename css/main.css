@@ -95,6 +95,12 @@ a {
   background-color: #faf6f1;
   margin: 1rem auto 20rem;
 }
+.main-logo-wrapper image {
+  opacity: 0;
+}
+.main-logo-wrapper svg path {
+  opacity: 0;
+}
 
 .main-nav-trigger-wrapper {
   display: -webkit-box;

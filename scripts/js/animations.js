@@ -45,11 +45,11 @@ function mainLogoAnimation() {
 
   treeAnimationTimeline
     .fromTo(logoImage, { opacity: 0 }, { opacity: 1, ease: 'power4.in', duration: 0.75 })
-    .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
-    .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
-    .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
-    .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
-    .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+    .fromTo(animationOnePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
+    .fromTo(animationTwoPaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
+    .fromTo(animationThreePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
+    .fromTo(animationFourPaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
+    .fromTo(animationFivePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' });
 }
 
 // *=========================================
