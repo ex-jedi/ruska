@@ -164,10 +164,26 @@
   color: $font-colour-light;
 }
 
-//********** Section Three **********
+//*=========================================
+//** Section Three **
+//*=========================================
+
+.section-three-flex-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $section-spacing-large;
+}
 
 .homepage-section-three {
   padding: $section-spacing-large;
+}
+
+.homepage-section-three-text {
+  color: $font-colour-dark;
+  font-size: $font-size-large;
+  text-align: center;
+  margin: 0;
 }
 
 //********** Tree Animation **********
