@@ -122,12 +122,13 @@
 //*=========================================
 //** Section Two **
 //*=========================================
-.homepage-section-two {
+
+.section-two-flex-wrapper {
+  background-color: $medium-background-colour;
+  padding: $section-spacing-large;
   @include flex(row);
   justify-content: space-between;
   align-items: center;
-  background-color: $medium-background-colour;
-  padding: $section-spacing-large;
 }
 
 .homepage-section-two-text {
@@ -137,6 +138,14 @@
   text-align: center;
   padding: 0;
   margin: 0;
+}
+
+//********** Image **********
+.section-two-image {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  object-position: center;
 }
 
 //********** Tree Animation **********

@@ -1,11 +1,22 @@
 <section class="homepage-section homepage-section-two">
-  <p class="homepage-section-two-text">
-    <perch:content id="homepageSectionTwoText" type="textarea" size="s" label="Section Two Text" required>
-  </p>
-  <div class="section-two-tree-wrapper" id="homepage-tree-animation-three">
-          <perch:template path="../svg/tree_svg.html">
-      <p class="shop-tree-text section-two-tree-text">
-        ruska shop
-      </p>
+  <div class="section-two-flex-wrapper">
+    <p class="homepage-section-two-text">
+      <perch:content id="homepageSectionTwoText" type="textarea" size="s" label="Section Two Text" required>
+    </p>
+    <div class="section-two-tree-wrapper" id="homepage-tree-animation-three">
+            <perch:template path="../svg/tree_svg.html">
+        <p class="shop-tree-text section-two-tree-text">
+          ruska shop
+        </p>
+    </div>
+  </div>
+  <div class="section-two-image-wrapper">
+    <img class="section-two-image" itemprop="image" loading="lazy" src="<perch:content id="sectionTwoImage" type="image" width="2000" label="Section Two Image">" alt="<perch:content id="altOne" type="text" label="Image Description">"
+    sizes="(max-width: 100px) 100vw, 100vw"
+    srcset="<perch:content type="image" id="sectionTwoImage" width="2000"> 2000w,
+    <perch:content type="image" id="sectionTwoImage" width="1500"> 1500w,
+    <perch:content type="image" id="sectionTwoImage" width="1200"> 1200w,
+    <perch:content type="image" id="sectionTwoImage" width="800"> 800w,
+    <perch:content type="image" id="sectionTwoImage" width="600"> 600w">
   </div>
 </section>
