@@ -76,6 +76,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 4;
 }
 
 .hidden-logo {

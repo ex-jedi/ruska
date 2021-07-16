@@ -97,6 +97,7 @@ a {
 .main-header {
   position: relative;
   @include flex(column);
+  z-index: 4;
 }
 
 .hidden-logo {

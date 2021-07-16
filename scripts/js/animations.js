@@ -39,11 +39,11 @@ function mainLogoAnimation() {
 
   const logoImage = document.querySelector('.main-logo-wrapper image');
 
-  const flipReverse = gsap.timeline({
+  const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 0.4, ease: 'power3.inOut' },
   });
 
-  flipReverse
+  treeAnimationTimeline
     .fromTo(logoImage, { opacity: 0 }, { opacity: 1, ease: 'power4.in', duration: 0.75 })
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -221,7 +221,7 @@ function homepageTreeAnimationOne() {
   const animationFivePaths = animationFive.querySelectorAll('path');
 
   // TODO: Remove markers
-  const flipReverse = gsap.timeline({
+  const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
     scrollTrigger: {
       trigger: '#homepage-tree-animation-one',
@@ -234,7 +234,7 @@ function homepageTreeAnimationOne() {
   });
 
   // TODO: Change name as they go the right way
-  flipReverse
+  treeAnimationTimeline
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -259,7 +259,7 @@ function homepageTreeAnimationTwo() {
   const animationFivePaths = animationFive.querySelectorAll('path');
 
   // TODO: Remove markers
-  const flipReverse = gsap.timeline({
+  const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
     scrollTrigger: {
       trigger: '#homepage-tree-animation-two',
@@ -271,7 +271,7 @@ function homepageTreeAnimationTwo() {
     },
   });
 
-  flipReverse
+  treeAnimationTimeline
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })

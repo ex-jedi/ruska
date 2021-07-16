@@ -43,7 +43,7 @@
   @include flex(column);
   justify-content: center;
   align-items: center;
-  font-size: $font-size-large;
+  font-size: $font-size-extra-large;
   color: $font-colour-dark;
   font-weight: 700;
 }
@@ -85,11 +85,12 @@
   align-items: center;
   position: absolute;
   inset: 0;
-  font-size: $font-size-large;
+  font-size: $font-size-extra-large;
   font-weight: 700;
   color: $font-colour-dark;
   text-align: center;
   line-height: 1;
+  margin: 0;
 }
 
 //********** Images **********
@@ -116,4 +117,41 @@
 
 .homepage-section-one-single-image {
   margin: 0 auto;
+}
+
+//*=========================================
+//** Section Two **
+//*=========================================
+.homepage-section-two {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+  background-color: $medium-background-colour;
+  padding: $section-spacing-large;
+}
+
+.homepage-section-two-text {
+  flex: 0 1 auto;
+  color: $font-colour-light;
+  font-size: $font-size-large;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+//********** Tree Animation **********
+.section-two-tree-wrapper {
+  margin-left: $section-spacing-small;
+  flex: 1 0 auto;
+  position: relative;
+  width: 350px;
+  svg {
+    path {
+      stroke: #dca794;
+    }
+  }
+}
+
+.section-two-tree-text {
+  color: $font-colour-light;
 }
