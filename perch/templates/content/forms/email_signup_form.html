@@ -5,24 +5,20 @@
    </h2>
   <div class="email-signup-form-wrapper">
       <perch:form class="general-contact-form" id="contact" method="post" app="perch_forms">
-          <div class="general-contact-form-input-wrapper">
-              <perch:label class="general-contact-form-label" for="phone">Phone<span class="required-marker" title="Required"> *</span></perch:label>
-              <perch:input class="general-contact-form-input phone-input"  type="tel" id="phone" label="Phone" required>
-          </div>
-          <div class="general-contact-form-input-wrapper">
-              <perch:label class="general-contact-form-label" for="email">Email</perch:label>
+          <div class="email-signup-form-input-wrapper email-input-wrapper">
+              <perch:label class="email-label" for="email">Your email address</perch:label>
               <perch:input class="general-contact-form-input email-input"  type="email" id="email" label="Email">
           </div>
           <div class="form-identification-number">
               <perch:label for="messageAreaOne">Message: Leave this field blank if you are a human</perch:label>
               <perch:input type="textarea" id="messageAreaOne" aria-hidden="true" autocomplete="off" antispam="honeypot"/>
           </div>
-          <div class="general-contact-form-input-wrapper checkbox-div consent-checkbox-div">
+          <div class="checkbox-div consent-checkbox-div">
             <perch:label class="contact-form-consent" for="contactListConsent">By checking this box you accept the <a class="contact-consent-link"  target="_blank" title="Opens in new window" href="/privacy-and-cookie-policy">XXXX Privacy and Cookie Policy</a></perch:label>
             <perch:input class="mailing-list-check-checkbox contact-form-consent" id="contactListConsent" type="checkbox" label="Contact Form Consent" value="Yes" required>
           </div>
-          <div class="general-contact-form-input-wrapper submit-wrapper">
-            <perch:input class="submit" type="submit" id="submit" value="Send">
+          <div class="email-signup-form-input-wrapper submit-wrapper">
+            <perch:input class="submit" type="submit" id="submit" value="Sign me up!">
           </div>
           <perch:success>
               <div class="success">
