@@ -235,7 +235,7 @@
 .homepage-featured-articles-wrapper {
   @include flex(row);
   justify-content: space-between;
-  margin: 0 0 $section-spacing-large;
+  margin: 0;
 }
 
 .homepage-featured-article {

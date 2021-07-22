@@ -258,7 +258,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 0 20rem;
+  margin: 0;
 }
 
 .homepage-featured-article {

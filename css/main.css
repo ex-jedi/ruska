@@ -296,6 +296,54 @@ select {
   white-space: nowrap;
 }
 
+.instagram-feed-section {
+  padding: 0 20rem 20rem;
+  background-color: #faf6f1;
+  overflow: visible;
+}
+.instagram-feed-section .instagram-feed-heading {
+  color: #d08a70;
+  margin: 0 auto 10rem;
+}
+
+.instagram-profile-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.instagram-feed-images-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.instagram-feed-image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  width: 20%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.instagram-feed-background-image {
+  position: absolute;
+  z-index: -1;
+  top: -200px;
+  right: 20rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     -webkit-animation-duration: 0.01ms !important;
