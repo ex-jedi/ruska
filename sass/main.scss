@@ -20,7 +20,14 @@ html {
   font-size: 10px;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-color: $light-background-colour;
+  background-color: $background-colour-light;
+
+  @include styled-scrollbar(
+    2rem,
+    $background-colour-medium,
+    $background-colour-light,
+    $background-colour-light
+  );
 }
 
 // * Box sizing rules
@@ -44,6 +51,12 @@ body {
 // *=========================================
 
 //********** Headings**********
+
+h2 {
+  font-size: $heading-size-large;
+  font-weight: 700;
+  text-align: center;
+}
 
 //********** Containers **********
 
@@ -90,6 +103,7 @@ a {
 .main-header {
   position: relative;
   @include flex(column);
+  z-index: 4;
 }
 
 .hidden-logo {
@@ -98,8 +112,18 @@ a {
 
 .main-logo-wrapper {
   width: 150px;
-  background-color: $light-background-colour;
+  background-color: $background-colour-light;
   margin: $header-spacing-tiny auto $header-spacing-large;
+
+  image {
+    opacity: 0;
+  }
+
+  svg {
+    path {
+      opacity: 0;
+    }
+  }
 }
 
 // *=========================================
@@ -111,7 +135,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: $dark-background-colour;
+  background-color: $background-colour-dark;
   height: 100vh;
 }
 
@@ -150,12 +174,116 @@ a {
 // ** Forms  **
 // *=========================================
 
+.email-signup-form-section {
+  padding: $section-spacing-large;
+  background-color: $background-colour-medium-lighter;
+  color: $font-colour-dark;
+}
+
+.email-signup-form {
+  padding: 0 $section-spacing-tiny;
+}
+
+.contact-form-heading {
+  margin: 0 auto $heading-spacing-large;
+}
+
+.email-signup-form-input-wrapper {
+  font-size: $font-size-medium;
+  font-weight: 700;
+}
+
+.email-input-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  margin: 0 auto $section-spacing-small;
+
+  input {
+    flex: 1 1 auto;
+    margin-left: $section-spacing-extra-tiny;
+    background-color: $background-colour-medium-lighter;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 3px solid $font-colour-dark;
+  }
+}
+
+.checkbox-div {
+  @include flex(row);
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: $font-size-tiny;
+  margin: 0 auto $section-spacing-large;
+
+  input {
+    position: relative;
+    width: fit-content;
+    font-size: 0;
+    top: 0.5rem;
+    margin-left: $font-size-tiny;
+    margin-top: 7px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: $font-size-tiny;
+      height: $font-size-tiny;
+      border: 3px solid $font-colour-dark;
+      border-radius: 0.25em;
+      background: $background-colour-medium-lighter;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 0.7rem;
+      width: 1.6rem;
+      color: $font-colour-dark;
+      border-left: 3px solid;
+      border-bottom: 3px solid;
+      top: 8px;
+      left: 4px;
+      transform: rotate(-25deg) scale(0.75);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.18, 1.96, 1, 1.96);
+    }
+
+    &:checked:after {
+      opacity: 1;
+      transform: rotate(-45deg) scale(1);
+    }
+  }
+}
+
+.contact-consent-link {
+  color: inherit;
+}
+
+.submit-wrapper {
+  text-align: center;
+}
+
+.submit {
+  background-color: $background-colour-medium-lighter;
+  border: 3px solid $font-colour-dark;
+  margin: 0;
+  // Fixes font top spacing
+  padding: 1.2rem 2rem 2rem;
+  transition: 0.3s ease all;
+  &:hover {
+    background-color: $background-colour-dark;
+    color: $background-colour-medium-lighter;
+  }
+}
+
 //* Inherit fonts for inputs and buttons
 input,
 button,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
 //********** Honeypot **********
@@ -170,6 +298,48 @@ select {
   position: absolute;
   width: 1px;
   white-space: nowrap;
+}
+
+//*=========================================
+//** Instagram Feed **
+//*=========================================
+
+.instagram-feed-section {
+  padding: 0 $section-spacing-large $section-spacing-large;
+  background-color: $background-colour-light;
+  overflow: visible;
+
+  .instagram-feed-heading {
+    color: $font-colour-medium;
+    margin: 0 auto $section-spacing-small;
+  }
+}
+
+.instagram-profile-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.instagram-feed-images-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instagram-feed-image {
+  flex: 0 1 auto;
+  width: 20%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.instagram-feed-background-image {
+  //TODO: See if this can span two sections
+
+  position: absolute;
+  z-index: -1;
+  top: -200px;
+  right: $section-spacing-large;
 }
 
 // *=========================================
@@ -194,7 +364,7 @@ select {
 .show-on-focus {
   position: absolute;
   color: $font-colour-dark;
-  background-color: $light-background-colour;
+  background-color: $background-colour-light;
   padding: 10px;
   //TODO: Add font size variable
   font-size: 30px;

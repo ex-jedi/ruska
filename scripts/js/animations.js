@@ -39,18 +39,17 @@ function mainLogoAnimation() {
 
   const logoImage = document.querySelector('.main-logo-wrapper image');
 
-  const flipReverse = gsap.timeline({
+  const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 0.4, ease: 'power3.inOut' },
-    // repeat: -1,
   });
 
-  flipReverse
+  treeAnimationTimeline
     .fromTo(logoImage, { opacity: 0 }, { opacity: 1, ease: 'power4.in', duration: 0.75 })
-    .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
-    .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
-    .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
-    .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
-    .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+    .fromTo(animationOnePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
+    .fromTo(animationTwoPaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
+    .fromTo(animationThreePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
+    .fromTo(animationFourPaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' })
+    .fromTo(animationFivePaths, { drawSVG: 0 }, { opacity: 1, drawSVG: '100%' });
 }
 
 // *=========================================
@@ -118,124 +117,41 @@ function menuOpenerHandler() {
 }
 
 // *=========================================
-// ** Fading in paragraphs  **
-// *=========================================
-
-// function fadeInRotateParagraphs() {
-//   // * Adding class to paragraphs created by Perch to set them up for fading in.
-//   // Grabbing paragraphs from multiple pages
-//   const aboutMeParagraphs = Array.from(document.querySelectorAll('.about-me-section p'));
-//   const servicesParagraphs = Array.from(document.querySelectorAll('.services-section p'));
-//   // Merge the paragraphs into one array
-//   const fadeInParagraph = [...aboutMeParagraphs, ...servicesParagraphs];
-//   // Add class to paragraphs
-//   fadeInParagraph.forEach((paragraph) => paragraph.classList.add('fade-in-rotate'));
-
-//   // Grabbing all paragraphs to fade in
-//   const fadeInParagraphs = gsap.utils.toArray('.fade-in-rotate');
-
-//   fadeInParagraphs.forEach((paragraph) => {
-//     ScrollTrigger.matchMedia({
-//       // desktop
-//       '(min-width: 1100px)': function () {
-//         ScrollTrigger.create({
-//           trigger: paragraph,
-//           toggleClass: 'fade-in-rotate-reveal',
-//           start: 'top 95%',
-//           end: 'bottom top',
-//         });
-//       },
-
-//       // Tablet
-//       '(max-width: 1099px) and (min-width: 700px)': function () {
-//         ScrollTrigger.create({
-//           trigger: paragraph,
-//           toggleClass: 'fade-in-rotate-reveal',
-//           start: 'top bottom',
-//           end: 'bottom -100px',
-//         });
-//       },
-
-//       // Mobile
-//       '(max-width: 699px) and (min-width: 450px)': function () {
-//         ScrollTrigger.create({
-//           trigger: paragraph,
-//           toggleClass: 'fade-in-rotate-reveal',
-//           start: 'top bottom',
-//           end: 'bottom -300px',
-//         });
-//       },
-
-//       // Small Mobile
-//       '(max-width: 449px)': function () {
-//         ScrollTrigger.create({
-//           trigger: paragraph,
-//           toggleClass: 'fade-in-rotate-reveal',
-//           start: 'top bottom',
-//           end: 'bottom -450px',
-//         });
-//       },
-//     });
-//   });
-// }
-
-// *=========================================
-// ** Contact form color change  **
-// *=========================================
-
-// function scrollColourChange() {
-//   ScrollTrigger.create({
-//     trigger: '.general-contact-form-section',
-//     start: 'top center',
-//     end: 'bottom center',
-//     id: 'Contact Form',
-//     toggleClass: {
-//       targets: '.general-contact-form-section, .general-contact-form-input, .main-contact-submit-button',
-//       className: 'contact-form-colour-change',
-//     },
-//   });
-// }
-
-// *==============================================================================
-// ** Homepage  **
-// *==============================================================================
-
-// *=========================================
 // ** Tree Animation  **
 // *=========================================
 
 // TODO: Add to all tree elements
-function homepageTreeAnimation() {
-  const animationOne = document.querySelector('.tree-animation-wrapper [data-name="Animation 1"]');
+function homepageTreeAnimationOne() {
+  const animationOne = document.querySelector('#homepage-tree-animation-one [data-name="Animation 1"]');
   const animationOnePaths = animationOne.querySelectorAll('path');
 
-  const animationTwo = document.querySelector('.tree-animation-wrapper [data-name="Animation 2"]');
+  const animationTwo = document.querySelector('#homepage-tree-animation-one [data-name="Animation 2"]');
   const animationTwoPaths = animationTwo.querySelectorAll('path');
 
-  const animationThree = document.querySelector('.tree-animation-wrapper [data-name="Animation 3"]');
+  const animationThree = document.querySelector('#homepage-tree-animation-one [data-name="Animation 3"]');
   const animationThreePaths = animationThree.querySelectorAll('path');
 
-  const animationFour = document.querySelector('.tree-animation-wrapper [data-name="Animation 4"]');
+  const animationFour = document.querySelector('#homepage-tree-animation-one [data-name="Animation 4"]');
   const animationFourPaths = animationFour.querySelectorAll('path');
 
-  const animationFive = document.querySelector('.tree-animation-wrapper [data-name="Animation 5"]');
+  const animationFive = document.querySelector('#homepage-tree-animation-one [data-name="Animation 5"]');
   const animationFivePaths = animationFive.querySelectorAll('path');
 
   // TODO: Remove markers
-  const flipReverse = gsap.timeline({
+  const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
     scrollTrigger: {
-      trigger: '.tree-animation-wrapper',
+      trigger: '#homepage-tree-animation-one',
       id: 'Tree Animation',
       start: 'bottom bottom',
       end: 'top 5%',
-      // markers: true,
+      markers: true,
       scrub: 1,
     },
   });
 
   // TODO: Change name as they go the right way
-  flipReverse
+  treeAnimationTimeline
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -243,37 +159,36 @@ function homepageTreeAnimation() {
     .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
 }
 
-// TODO: Make more modular... roll this and above into single function
 function homepageTreeAnimationTwo() {
-  const animationOne = document.querySelector('.shop-tree-animation-wrapper [data-name="Animation 1"]');
+  const animationOne = document.querySelector('#homepage-tree-animation-two [data-name="Animation 1"]');
   const animationOnePaths = animationOne.querySelectorAll('path');
 
-  const animationTwo = document.querySelector('.shop-tree-animation-wrapper [data-name="Animation 2"]');
+  const animationTwo = document.querySelector('#homepage-tree-animation-two [data-name="Animation 2"]');
   const animationTwoPaths = animationTwo.querySelectorAll('path');
 
-  const animationThree = document.querySelector('.shop-tree-animation-wrapper [data-name="Animation 3"]');
+  const animationThree = document.querySelector('#homepage-tree-animation-two [data-name="Animation 3"]');
   const animationThreePaths = animationThree.querySelectorAll('path');
 
-  const animationFour = document.querySelector('.shop-tree-animation-wrapper [data-name="Animation 4"]');
+  const animationFour = document.querySelector('#homepage-tree-animation-two [data-name="Animation 4"]');
   const animationFourPaths = animationFour.querySelectorAll('path');
 
-  const animationFive = document.querySelector('.shop-tree-animation-wrapper [data-name="Animation 5"]');
+  const animationFive = document.querySelector('#homepage-tree-animation-two [data-name="Animation 5"]');
   const animationFivePaths = animationFive.querySelectorAll('path');
 
   // TODO: Remove markers
-  const flipReverse = gsap.timeline({
+  const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
     scrollTrigger: {
-      trigger: '.shop-tree-animation-wrapper',
+      trigger: '#homepage-tree-animation-two',
       id: 'Tree Animation',
       start: 'bottom bottom',
       end: 'top 5%',
-      // markers: true,
+      markers: true,
       scrub: 1,
     },
   });
 
-  flipReverse
+  treeAnimationTimeline
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -281,34 +196,116 @@ function homepageTreeAnimationTwo() {
     .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
 }
 
-// ScrollTrigger.batch('.fade-in-rotate', {
-//   start: 'top 98%',
-//   markers: true,
-//   // interval: 0.1, // time window (in seconds) for batching to occur.
-//   // batchMax: 3,   // maximum batch size (targets)
-//   onEnter: (batch) => gsap.to(batch, { opacity: 1, rotateX: 0, ease: 'power1.in' }),
-//   onLeaveBack: (batch) => gsap.to(batch, { opacity: 0, rotateX: 90, ease: 'power1.in' }),
-//   onEnterBack: (batch) => gsap.to(batch, { opacity: 1, rotateX: 0, ease: 'power1.in' }),
-//   // you can also define things like start, end, etc.
-// });
+function homepageTreeAnimationThree() {
+  const animationOne = document.querySelector('#homepage-tree-animation-three [data-name="Animation 1"]');
+  const animationOnePaths = animationOne.querySelectorAll('path');
 
-// // ********** Homepage Parallax Image **********
+  const animationTwo = document.querySelector('#homepage-tree-animation-three [data-name="Animation 2"]');
+  const animationTwoPaths = animationTwo.querySelectorAll('path');
 
-// function homepageParallax() {
-//   gsap.to('.parallax-image', {
-//     yPercent: -30,
-//     ease: 'none',
-//     scrollTrigger: {
-//       trigger: '.parallax-image-section',
-//       start: 'top bottom',
-//       end: 'bottom',
-//       scrub: 0.5,
-//     },
-//   });
-// }
+  const animationThree = document.querySelector('#homepage-tree-animation-three [data-name="Animation 3"]');
+  const animationThreePaths = animationThree.querySelectorAll('path');
+
+  const animationFour = document.querySelector('#homepage-tree-animation-three [data-name="Animation 4"]');
+  const animationFourPaths = animationFour.querySelectorAll('path');
+
+  const animationFive = document.querySelector('#homepage-tree-animation-three [data-name="Animation 5"]');
+  const animationFivePaths = animationFive.querySelectorAll('path');
+
+  // TODO: Remove markers
+  const treeAnimationTimeline = gsap.timeline({
+    defaults: { duration: 1, ease: 'power3.inOut' },
+    scrollTrigger: {
+      trigger: '#homepage-tree-animation-three',
+      id: 'Tree Animation',
+      start: 'bottom bottom',
+      end: 'top 5%',
+      markers: true,
+      scrub: 1,
+    },
+  });
+
+  treeAnimationTimeline
+    .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+}
+
+function homepageTreeAnimationFour() {
+  const animationOne = document.querySelector('#homepage-tree-animation-four [data-name="Animation 1"]');
+  const animationOnePaths = animationOne.querySelectorAll('path');
+
+  const animationTwo = document.querySelector('#homepage-tree-animation-four [data-name="Animation 2"]');
+  const animationTwoPaths = animationTwo.querySelectorAll('path');
+
+  const animationThree = document.querySelector('#homepage-tree-animation-four [data-name="Animation 3"]');
+  const animationThreePaths = animationThree.querySelectorAll('path');
+
+  const animationFour = document.querySelector('#homepage-tree-animation-four [data-name="Animation 4"]');
+  const animationFourPaths = animationFour.querySelectorAll('path');
+
+  const animationFive = document.querySelector('#homepage-tree-animation-four [data-name="Animation 5"]');
+  const animationFivePaths = animationFive.querySelectorAll('path');
+
+  // TODO: Remove markers
+  const treeAnimationTimeline = gsap.timeline({
+    defaults: { duration: 1, ease: 'power3.inOut' },
+    scrollTrigger: {
+      trigger: '#homepage-tree-animation-four',
+      id: 'Tree Animation',
+      start: 'bottom bottom',
+      end: 'top 5%',
+      markers: true,
+      scrub: 1,
+    },
+  });
+
+  treeAnimationTimeline
+    .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationFourPaths, { drawSVG: 0 }, { drawSVG: '100%' })
+    .fromTo(animationFivePaths, { drawSVG: 0 }, { drawSVG: '100%' });
+}
+
+// *==============================================================================
+// ** Utilities  **
+// *==============================================================================
+// * ScrollTrigger Refresh Initial
+function scrollTriggerRefresh(time = 1000) {
+  const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      console.log(`✨ ScrollTrigger refresh created after ${time}ms ✨`);
+      scrollTriggerRefreshTarget.forEach((triggerElem) => {
+        ScrollTrigger.create({
+          trigger: triggerElem,
+          start: 'top bottom',
+          once: true,
+          id: 'ScrollTrigger Refresh',
+          onEnter: () => {
+            ScrollTrigger.refresh();
+            console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
+          },
+        });
+      });
+    }, time);
+  });
+}
 
 // *=========================================
 // ** Exports **
 // *=========================================
 
-export { menuOpenerHandler, mainNavTrigger, mainLogoAnimation, homepageTreeAnimation, homepageTreeAnimationTwo };
+export {
+  menuOpenerHandler,
+  mainNavTrigger,
+  mainLogoAnimation,
+  homepageTreeAnimationOne,
+  homepageTreeAnimationTwo,
+  homepageTreeAnimationThree,
+  homepageTreeAnimationFour,
+  scrollTriggerRefresh,
+};

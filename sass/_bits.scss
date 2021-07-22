@@ -33,9 +33,10 @@ $header-spacing-tiny: 1rem;
 
 //Sizing
 $heading-size-large: 10rem;
+$heading-size-medium: 5rem;
 
 //Spacing
-$heading-spacing-large: 5rem;
+$heading-spacing-large: 20rem;
 
 //* Sections
 $section-spacing-extra-large: 40rem;
@@ -43,14 +44,17 @@ $section-spacing-large: 20rem;
 $section-spacing-medium: 15rem;
 $section-spacing-small: 10rem;
 $section-spacing-extra-small: 7.5rem;
+$section-spacing-tiny: 5rem;
 $section-spacing-extra-tiny: 2.5rem;
 
 //* Paragraphs
 
 //Font sizing
-$font-size-large: 10rem;
+$font-size-extra-large: 10rem;
+$font-size-large: 7.5rem;
 $font-size-medium: 5rem;
 $font-size-small: 3.8rem;
+$font-size-tiny: 2.5rem;
 
 //Spacing
 $paragraph-spacing-large: 10rem;
@@ -62,12 +66,14 @@ $paragraph-spacing-large: 10rem;
 //TODO: Customise brand colours
 
 //Main brand Colours
-$light-background-colour: #faf6f1;
-$medium-background-colour: #d08a70;
-$dark-background-colour: #77442f;
+$background-colour-light: #faf6f1;
+$background-colour-medium: #d08a70;
+$background-colour-medium-lighter: #f2bba7;
+$background-colour-dark: #77442f;
 
 //Main Font Colours
 $font-colour-light: #faf6f1;
+$font-colour-medium: #d08a70;
 $font-colour-dark: #77442f;
 
 $link-colour: #3c3cf6;

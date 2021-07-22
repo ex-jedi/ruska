@@ -9,6 +9,23 @@ html {
   scroll-behavior: smooth;
   background-color: #faf6f1;
 }
+html::-webkit-scrollbar {
+  width: 2rem;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: #d9a18d;
+  position: relative;
+  bottom: 10rem;
+  border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #d08a70;
+}
+html::-webkit-scrollbar-track {
+  background: #faf6f1;
+  -webkit-box-shadow: inset 0 0 3px #faf6f1;
+          box-shadow: inset 0 0 3px #faf6f1;
+}
 
 *,
 *:before,
@@ -25,6 +42,12 @@ body {
   overflow-x: hidden;
   font-family: "sofia-pro", sans-serif;
   font-style: normal;
+}
+
+h2 {
+  font-size: 10rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 section,
@@ -59,6 +82,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 4;
 }
 
 .hidden-logo {
@@ -76,6 +100,12 @@ a {
   width: 150px;
   background-color: #faf6f1;
   margin: 1rem auto 20rem;
+}
+.main-logo-wrapper image {
+  opacity: 0;
+}
+.main-logo-wrapper svg path {
+  opacity: 0;
 }
 
 .main-nav-trigger-wrapper {
@@ -123,11 +153,135 @@ a {
   display: none;
 }
 
+.email-signup-form-section {
+  padding: 20rem;
+  background-color: #f2bba7;
+  color: #77442f;
+}
+
+.email-signup-form {
+  padding: 0 5rem;
+}
+
+.contact-form-heading {
+  margin: 0 auto 20rem;
+}
+
+.email-signup-form-input-wrapper {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.email-input-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto 10rem;
+}
+.email-input-wrapper input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  margin-left: 2.5rem;
+  background-color: #f2bba7;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 3px solid #77442f;
+}
+
+.checkbox-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 2.5rem;
+  margin: 0 auto 20rem;
+}
+.checkbox-div input {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0;
+  top: 0.5rem;
+  margin-left: 2.5rem;
+  margin-top: 7px;
+}
+.checkbox-div input:before {
+  content: "";
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 3px solid #77442f;
+  border-radius: 0.25em;
+  background: #f2bba7;
+}
+.checkbox-div input:after {
+  content: "";
+  position: absolute;
+  height: 0.7rem;
+  width: 1.6rem;
+  color: #77442f;
+  border-left: 3px solid;
+  border-bottom: 3px solid;
+  top: 8px;
+  left: 4px;
+  -webkit-transform: rotate(-25deg) scale(0.75);
+          transform: rotate(-25deg) scale(0.75);
+  opacity: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.18, 1.96, 1, 1.96);
+  transition: all 0.3s cubic-bezier(0.18, 1.96, 1, 1.96);
+}
+.checkbox-div input:checked:after {
+  opacity: 1;
+  -webkit-transform: rotate(-45deg) scale(1);
+          transform: rotate(-45deg) scale(1);
+}
+
+.contact-consent-link {
+  color: inherit;
+}
+
+.submit-wrapper {
+  text-align: center;
+}
+
+.submit {
+  background-color: #f2bba7;
+  border: 3px solid #77442f;
+  margin: 0;
+  padding: 1.2rem 2rem 2rem;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+.submit:hover {
+  background-color: #77442f;
+  color: #f2bba7;
+}
+
 input,
 button,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
 .form-identification-number {
@@ -140,6 +294,54 @@ select {
   position: absolute;
   width: 1px;
   white-space: nowrap;
+}
+
+.instagram-feed-section {
+  padding: 0 20rem 20rem;
+  background-color: #faf6f1;
+  overflow: visible;
+}
+.instagram-feed-section .instagram-feed-heading {
+  color: #d08a70;
+  margin: 0 auto 10rem;
+}
+
+.instagram-profile-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.instagram-feed-images-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.instagram-feed-image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  width: 20%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.instagram-feed-background-image {
+  position: absolute;
+  z-index: -1;
+  top: -200px;
+  right: 20rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
