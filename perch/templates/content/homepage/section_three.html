@@ -1,16 +1,27 @@
 <section class="homepage-section homepage-section-three">
-  <div class="section-three-flex-wrapper">
-    <div class="section-three-tree-wrapper" id="homepage-tree-animation-four">
-      <perch:template path="../svg/tree_svg.html">
-      <p class="shop-tree-text section-three-tree-text">
-        blog
+  <div class="section-three-inner-wrapper">
+    <div class="section-three-flex-wrapper">
+      <div class="section-three-tree-wrapper" id="homepage-tree-animation-four">
+        <perch:template path="../svg/tree_svg.html">
+        <p class="shop-tree-text section-three-tree-text">
+          blog
+        </p>
+      </div>
+      <p class="homepage-body-text-large homepage-section-three-text">
+        <perch:content id="homepageSectionTwoText" type="textarea" size="s" label="Section Two Text - First" required>
       </p>
     </div>
     <p class="homepage-body-text-large homepage-section-three-text">
-      <perch:content id="homepageSectionTwoText" type="textarea" size="s" label="Section Two Text - First" required>
+      <perch:content id="homepageSectionTwoTextTwo" type="textarea" size="s" label="Section Two Text - Second" required>
     </p>
   </div>
-  <p class="homepage-body-text-large homepage-section-three-text">
-    <perch:content id="homepageSectionTwoTextTwo" type="textarea" size="s" label="Section Two Text - Second" required>
-  </p>
+  <div class="homepage-full-width-image-wrapper-wrapper">
+    <img class="homepage-full-width-image-wrapper" itemprop="image" loading="lazy" src="<perch:content id="sectionThreeImage" type="image" width="2000" label="Section Two Image">" alt="<perch:content id="sectionThreeImgAlt" type="text" label="Image Description">"
+    sizes="(max-width: 100px) 100vw, 100vw"
+    srcset="<perch:content type="image" id="sectionThreeImage" width="2000"> 2000w,
+    <perch:content type="image" id="sectionThreeImage" width="1500"> 1500w,
+    <perch:content type="image" id="sectionThreeImage" width="1200"> 1200w,
+    <perch:content type="image" id="sectionThreeImage" width="800"> 800w,
+    <perch:content type="image" id="sectionThreeImage" width="600"> 600w">
+  </div>
 </section>
