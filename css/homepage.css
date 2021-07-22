@@ -225,15 +225,24 @@
 }
 
 .homepage-featured-articles-section {
+  position: relative;
   padding: 20rem;
   background-color: #faf6f1;
-  background-image: url("/images/pale-pink-circle.svg");
-  background-repeat: no-repeat;
-  background-position: top -5rem center;
-  background-size: contain;
+}
+
+.featured-articles-background-image {
+  position: absolute;
+  z-index: -1;
+  top: -100px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  max-width: 700px;
 }
 
 .homepage-featured-articles-heading {
   color: #77442f;
   margin: 0 auto 20rem;
+  z-index: 1;
 }
