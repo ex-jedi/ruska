@@ -41,11 +41,17 @@
 }
 
 .homepage-body-text-large {
-  font-size: 10rem;
+  font-size: 7.5rem;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .homepage-body-text-medium {
-  font-size: 7.5rem;
+  font-size: 5rem;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .homepage-section-one {
@@ -153,10 +159,6 @@
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
   color: #faf6f1;
-  font-size: 7.5rem;
-  text-align: center;
-  padding: 0;
-  margin: 0;
 }
 
 .section-two-image {

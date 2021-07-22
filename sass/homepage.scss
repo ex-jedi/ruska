@@ -47,11 +47,17 @@
 //********** Body Text **********
 
 .homepage-body-text-large {
-  font-size: $font-size-extra-large;
+  font-size: $font-size-large;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .homepage-body-text-medium {
-  font-size: $font-size-large;
+  font-size: $font-size-medium;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 //*=========================================
@@ -139,10 +145,6 @@
 .homepage-section-two-text {
   flex: 0 1 auto;
   color: $font-colour-light;
-  font-size: $font-size-large;
-  text-align: center;
-  padding: 0;
-  margin: 0;
 }
 
 //********** Image **********
