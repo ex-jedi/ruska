@@ -42,6 +42,7 @@
 
 .homepage-body-text-large {
   font-size: 7.5rem;
+  font-weight: 400;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -212,7 +213,7 @@
 }
 
 .section-three-tree-wrapper {
-  margin-left: 10rem;
+  margin-right: 10rem;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;

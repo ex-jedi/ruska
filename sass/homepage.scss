@@ -48,6 +48,7 @@
 
 .homepage-body-text-large {
   font-size: $font-size-large;
+  font-weight: 400;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -193,7 +194,7 @@
 
 //********** Tree Animation **********
 .section-three-tree-wrapper {
-  margin-left: $section-spacing-small;
+  margin-right: $section-spacing-small;
   flex: 1 0 auto;
   position: relative;
   width: 350px;
