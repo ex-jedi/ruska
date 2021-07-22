@@ -21,7 +21,7 @@
 }
 
 .header-image-wrapper,
-.header-text-wrapper {
+.header-subheading-wrapper {
   flex: 0 1 auto;
   width: 40%;
 }
@@ -39,13 +39,19 @@
 }
 
 //********** Header Text **********
-.header-text-wrapper {
-  @include flex(column);
-  justify-content: center;
-  align-items: center;
-  font-size: $font-size-extra-large;
+.header-subheading-wrapper {
   color: $font-colour-dark;
-  font-weight: 700;
+  margin: 0;
+}
+
+//********** Body Text **********
+
+.homepage-body-text-large {
+  font-size: $font-size-extra-large;
+}
+
+.homepage-body-text-medium {
+  font-size: $font-size-large;
 }
 
 //*=========================================

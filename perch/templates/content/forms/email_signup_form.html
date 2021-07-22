@@ -1,0 +1,38 @@
+<!-- Includes consent check  -->
+<section class="general-contact-form-section" id="contact-us">
+   <h2 class="section-heading contact-form-heading">
+     <perch:content id="contactFormHeading" type="text" label="Contact Form Heading" required>
+   </h2>
+  <div class="general-contact-form-wrapper">
+      <perch:form class="general-contact-form" id="contact" method="post" app="perch_forms">
+          <div class="general-contact-form-input-wrapper">
+              <perch:label class="general-contact-form-label" for="name">Name<span class="required-marker" title="Required"> *</span></perch:label>
+              <perch:input class="general-contact-form-input name-input" type="text" id="name" label="Name" required >
+
+          <div class="general-contact-form-input-wrapper">
+              <perch:label class="general-contact-form-label" for="phone">Phone<span class="required-marker" title="Required"> *</span></perch:label>
+              <perch:input class="general-contact-form-input phone-input"  type="tel" id="phone" label="Phone" required>
+          </div>
+          <div class="general-contact-form-input-wrapper">
+              <perch:label class="general-contact-form-label" for="email">Email</perch:label>
+              <perch:input class="general-contact-form-input email-input"  type="email" id="email" label="Email">
+          </div>
+          <div class="form-identification-number">
+              <perch:label for="messageAreaOne">Message: Leave this field blank if you are a human</perch:label>
+              <perch:input type="textarea" id="messageAreaOne" aria-hidden="true" autocomplete="off" antispam="honeypot"/>
+          </div>
+          <div class="general-contact-form-input-wrapper checkbox-div consent-checkbox-div">
+            <perch:label class="contact-form-consent" for="contactListConsent">By checking this box you accept the <a class="contact-consent-link"  target="_blank" title="Opens in new window" href="/privacy-and-cookie-policy">XXXX Privacy and Cookie Policy</a></perch:label>
+            <perch:input class="mailing-list-check-checkbox contact-form-consent" id="contactListConsent" type="checkbox" label="Contact Form Consent" value="Yes" required>
+          </div>
+          <div class="general-contact-form-input-wrapper submit-wrapper">
+            <perch:input class="submit" type="submit" id="submit" value="Send">
+          </div>
+          <perch:success>
+              <div class="success">
+                  <perch:content id="success" type="textarea" label="Thank you message" html="true" editor="redactor" />
+              </div>
+          </perch:success>
+      </perch:form>
+  </div>
+</section>
