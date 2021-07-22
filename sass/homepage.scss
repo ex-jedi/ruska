@@ -224,8 +224,38 @@
   max-width: 700px;
 }
 
-.homepage-featured-articles-heading {
+.homepage-featured-articles-section-heading {
   color: $font-colour-dark;
   margin: 0 auto $heading-spacing-large;
   z-index: 1;
+}
+
+//********** Articles **********
+
+.homepage-featured-articles-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  margin: 0 0 $section-spacing-large;
+}
+
+.homepage-featured-article {
+  @include flex(column);
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 1 auto;
+  width: 30%;
+}
+
+.homepage-featured-article-image {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  margin: 0 0 4rem;
+}
+
+.homepage-featured-article-heading {
+  width: 100%;
+  word-break: break-word;
+  font-weight: 400;
+  color: $font-colour-dark;
 }
