@@ -1,14 +1,10 @@
 <!-- Includes consent check  -->
-<section class="general-contact-form-section" id="contact-us">
-   <h2 class="section-heading contact-form-heading">
+<section class="email-signup-form-section" id="contact-us">
+   <h2 class="contact-form-heading">
      <perch:content id="contactFormHeading" type="text" label="Contact Form Heading" required>
    </h2>
-  <div class="general-contact-form-wrapper">
+  <div class="email-signup-form-wrapper">
       <perch:form class="general-contact-form" id="contact" method="post" app="perch_forms">
-          <div class="general-contact-form-input-wrapper">
-              <perch:label class="general-contact-form-label" for="name">Name<span class="required-marker" title="Required"> *</span></perch:label>
-              <perch:input class="general-contact-form-input name-input" type="text" id="name" label="Name" required >
-
           <div class="general-contact-form-input-wrapper">
               <perch:label class="general-contact-form-label" for="phone">Phone<span class="required-marker" title="Required"> *</span></perch:label>
               <perch:input class="general-contact-form-input phone-input"  type="tel" id="phone" label="Phone" required>

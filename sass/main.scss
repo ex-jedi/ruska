@@ -55,6 +55,7 @@ body {
 h2 {
   font-size: $heading-size-large;
   font-weight: 700;
+  text-align: center;
 }
 
 //********** Containers **********
@@ -172,6 +173,10 @@ a {
 // *=========================================
 // ** Forms  **
 // *=========================================
+
+.email-signup-form-section {
+  padding: $section-spacing-large;
+}
 
 //* Inherit fonts for inputs and buttons
 input,
