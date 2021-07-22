@@ -144,7 +144,7 @@
 //*=========================================
 
 .section-two-flex-wrapper {
-  background-color: $medium-background-colour;
+  background-color: $background-colour-medium;
   padding: $section-spacing-large;
   @include flex(row);
   justify-content: space-between;

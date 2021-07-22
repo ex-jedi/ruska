@@ -20,13 +20,13 @@ html {
   font-size: 10px;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  background-color: $light-background-colour;
+  background-color: $background-colour-light;
 
   @include styled-scrollbar(
     2rem,
-    $medium-background-colour,
-    $light-background-colour,
-    $light-background-colour
+    $background-colour-medium,
+    $background-colour-light,
+    $background-colour-light
   );
 }
 
@@ -112,7 +112,7 @@ a {
 
 .main-logo-wrapper {
   width: 150px;
-  background-color: $light-background-colour;
+  background-color: $background-colour-light;
   margin: $header-spacing-tiny auto $header-spacing-large;
 
   image {
@@ -135,7 +135,7 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: $dark-background-colour;
+  background-color: $background-colour-dark;
   height: 100vh;
 }
 
@@ -176,6 +176,7 @@ a {
 
 .email-signup-form-section {
   padding: $section-spacing-large;
+  background-color: $background-colour-light;
 }
 
 //* Inherit fonts for inputs and buttons
@@ -222,7 +223,7 @@ select {
 .show-on-focus {
   position: absolute;
   color: $font-colour-dark;
-  background-color: $light-background-colour;
+  background-color: $background-colour-light;
   padding: 10px;
   //TODO: Add font size variable
   font-size: 30px;
