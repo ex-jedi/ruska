@@ -300,6 +300,48 @@ select {
   white-space: nowrap;
 }
 
+//*=========================================
+//** Instagram Feed **
+//*=========================================
+
+.instagram-feed-section {
+  padding: 0 $section-spacing-large $section-spacing-large;
+  background-color: $background-colour-light;
+  overflow: visible;
+
+  .instagram-feed-heading {
+    color: $font-colour-medium;
+    margin: 0 auto $section-spacing-small;
+  }
+}
+
+.instagram-profile-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.instagram-feed-images-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.instagram-feed-image {
+  flex: 0 1 auto;
+  width: 20%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.instagram-feed-background-image {
+  //TODO: See if this can span two sections
+
+  position: absolute;
+  z-index: -1;
+  top: -200px;
+  right: $section-spacing-large;
+}
+
 // *=========================================
 // ** Footer  **
 // *=========================================
