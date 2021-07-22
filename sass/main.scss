@@ -176,9 +176,14 @@ a {
 
 .email-signup-form-section {
   padding: $section-spacing-large;
-  background-color: $background-colour-medium;
+  background-color: $background-colour-medium-lighter;
   color: $font-colour-dark;
 }
+
+.email-signup-form {
+  padding: 0 $section-spacing-tiny;
+}
+
 .contact-form-heading {
   margin: 0 auto $heading-spacing-large;
 }
@@ -196,17 +201,63 @@ a {
   input {
     flex: 1 1 auto;
     margin-left: $section-spacing-extra-tiny;
-    background-color: $background-colour-medium;
+    background-color: $background-colour-medium-lighter;
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-bottom: 4px solid $font-colour-dark;
+    border-bottom: 3px solid $font-colour-dark;
   }
 }
 
 .checkbox-div {
+  @include flex(row);
+  justify-content: flex-start;
+  align-items: flex-start;
   font-size: $font-size-tiny;
   margin: 0 auto $section-spacing-large;
+
+  input {
+    position: relative;
+    width: fit-content;
+    font-size: 0;
+    top: 0.5rem;
+    margin-left: $font-size-tiny;
+    margin-top: 7px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: $font-size-tiny;
+      height: $font-size-tiny;
+      border: 3px solid $font-colour-dark;
+      border-radius: 0.25em;
+      background: $background-colour-medium-lighter;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      height: 0.7rem;
+      width: 1.6rem;
+      color: $font-colour-dark;
+      border-left: 3px solid;
+      border-bottom: 3px solid;
+      top: 8px;
+      left: 4px;
+      transform: rotate(-25deg) scale(0.75);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.18, 1.96, 1, 1.96);
+    }
+
+    &:checked:after {
+      opacity: 1;
+      transform: rotate(-45deg) scale(1);
+    }
+  }
+}
+
+.contact-consent-link {
+  color: inherit;
 }
 
 .submit-wrapper {
@@ -214,11 +265,16 @@ a {
 }
 
 .submit {
-  background-color: $background-colour-medium;
-  border: 4px solid $font-colour-dark;
+  background-color: $background-colour-medium-lighter;
+  border: 3px solid $font-colour-dark;
   margin: 0;
   // Fixes font top spacing
   padding: 1.2rem 2rem 2rem;
+  transition: 0.3s ease all;
+  &:hover {
+    background-color: $background-colour-dark;
+    color: $background-colour-medium-lighter;
+  }
 }
 
 //* Inherit fonts for inputs and buttons
