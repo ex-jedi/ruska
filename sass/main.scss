@@ -176,7 +176,31 @@ a {
 
 .email-signup-form-section {
   padding: $section-spacing-large;
-  background-color: $background-colour-light;
+  background-color: $background-colour-medium;
+  color: $font-colour-dark;
+}
+.contact-form-heading {
+  margin: 0 auto $heading-spacing-large;
+}
+
+.email-signup-form-input-wrapper {
+  font-size: $font-size-medium;
+  font-weight: 700;
+}
+
+.email-input-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+
+  input {
+    flex: 1 1 auto;
+    margin-left: $section-spacing-extra-tiny;
+    background-color: $background-colour-medium;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: px solid $font-colour-dark;
+  }
 }
 
 //* Inherit fonts for inputs and buttons
@@ -185,6 +209,7 @@ button,
 textarea,
 select {
   font: inherit;
+  color: inherit;
 }
 
 //********** Honeypot **********
