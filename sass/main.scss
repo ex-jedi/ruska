@@ -305,7 +305,7 @@ select {
 //*=========================================
 
 .instagram-feed-section {
-  padding: 0 $section-spacing-large $section-spacing-large;
+  padding: 0 $section-spacing-large calc(#{$section-spacing-large} + 265px);
   background-color: $background-colour-light;
   overflow: visible;
 
@@ -335,7 +335,6 @@ select {
 
 .instagram-feed-background-image {
   //TODO: See if this can span two sections
-
   position: absolute;
   z-index: -1;
   top: -200px;
@@ -349,8 +348,9 @@ select {
 .svg-pyramid-divider {
   position: absolute;
   width: calc(100% - 8.5rem);
+  height: auto;
   left: 8.5rem;
-  bottom: -9px;
+  bottom: -1px;
   margin: 0;
   padding: 0;
 }

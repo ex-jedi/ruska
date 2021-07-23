@@ -297,7 +297,7 @@ select {
 }
 
 .instagram-feed-section {
-  padding: 0 20rem 20rem;
+  padding: 0 20rem calc(20rem + 265px);
   background-color: #faf6f1;
   overflow: visible;
 }
@@ -347,8 +347,9 @@ select {
 .svg-pyramid-divider {
   position: absolute;
   width: calc(100% - 8.5rem);
+  height: auto;
   left: 8.5rem;
-  bottom: -9px;
+  bottom: -1px;
   margin: 0;
   padding: 0;
 }
