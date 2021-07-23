@@ -346,14 +346,19 @@ select {
 
 .svg-pyramid-divider {
   position: absolute;
-  width: calc(100% - 8.5rem);
+  width: 100%;
   height: auto;
-  left: 8.5rem;
+  right: 0;
   bottom: -1px;
   margin: 0;
   padding: 0;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
+}
+@media (max-width: 1920px) {
+  .svg-pyramid-divider {
+    width: calc(100% - 8.5rem);
+  }
 }
 
 .main-footer {

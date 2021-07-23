@@ -347,13 +347,17 @@ select {
 
 .svg-pyramid-divider {
   position: absolute;
-  width: calc(100% - 8.5rem);
+  width: 100%;
   height: auto;
-  left: 8.5rem;
+  right: 0;
   bottom: -1px;
   margin: 0;
   padding: 0;
   transform: translateY(100%);
+
+  @include breakpoint(1920) {
+    width: calc(100% - 8.5rem);
+  }
 }
 
 .main-footer {

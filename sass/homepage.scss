@@ -18,18 +18,38 @@
   @include flex(row);
   justify-content: space-around;
   align-items: flex-start;
+
+  @include breakpoint(1750) {
+    justify-content: space-between;
+  }
 }
 
 .header-image-wrapper,
 .header-subheading-wrapper {
   flex: 0 1 auto;
   width: 40%;
+
+  @include breakpoint(1750) {
+    width: 45%;
+  }
+}
+
+.header-subheading-wrapper {
+  line-height: 1.2;
+
+  @include breakpoint(1800) {
+    line-height: 1.1;
+  }
 }
 
 //********** Header Images **********
 
 .header-image-wrapper {
   position: relative;
+
+  @include breakpoint(1750) {
+    margin-left: 8.5rem;
+  }
 }
 
 .swapping-images {
