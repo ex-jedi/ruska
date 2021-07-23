@@ -188,8 +188,8 @@
 
 //********** Images **********
 
-.section-one-double-image-wrapper {
-  @include flex(row);
+.section-one-images-wrapper {
+  @include flex(column);
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: $section-spacing-small;
@@ -198,10 +198,22 @@
 .homepage-section-one-double-image {
   flex: 0 1 auto;
   width: 47%;
+
+  @include breakpoint(1300) {
+    width: 60%;
+  }
 }
 
 .homepage-section-one-image-two {
-  margin-top: calc(#{$section-spacing-extra-large + 1rem});
+  margin: -$section-spacing-extra-large 0 $section-spacing-small auto;
+
+  @include breakpoint(1750) {
+    margin-top: -$section-spacing-large;
+  }
+
+  @include breakpoint(1300) {
+    margin-top: $section-spacing-extra-small;
+  }
 }
 
 .homepage-section-one-single-image-wrapper {
