@@ -173,6 +173,10 @@
     font-size: $font-size-large;
     width: 50%;
   }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-medium;
+  }
 }
 
 //********** Images **********

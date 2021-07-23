@@ -192,6 +192,11 @@
     width: 50%;
   }
 }
+@media (max-width: 1300px) {
+  .tree-animation-text {
+    font-size: 5rem;
+  }
+}
 
 .section-one-double-image-wrapper {
   display: -webkit-box;
