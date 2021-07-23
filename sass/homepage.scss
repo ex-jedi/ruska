@@ -162,6 +162,10 @@
   max-width: 400px;
   margin: 0 auto;
 
+  @include breakpoint(1300) {
+    width: 200px;
+  }
+
   svg {
     opacity: 0.6;
   }
