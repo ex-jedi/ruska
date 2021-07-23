@@ -346,6 +346,13 @@ select {
 // ** Footer  **
 // *=========================================
 
+.svg-pyramid-divider {
+  position: absolute;
+  width: calc(100% - 8.5rem);
+  left: 8.5rem;
+  bottom: 0;
+}
+
 //*=========================================
 //** Utility & Accessibility  **
 //*=========================================

@@ -344,6 +344,13 @@ select {
   right: 20rem;
 }
 
+.svg-pyramid-divider {
+  position: absolute;
+  width: calc(100% - 8.5rem);
+  left: 8.5rem;
+  bottom: 0;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     -webkit-animation-duration: 0.01ms !important;
