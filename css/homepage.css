@@ -113,7 +113,7 @@
   opacity: 0.6;
 }
 
-.section-one-tree-animation-wrapper-two-text {
+.tree-animation-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,7 +198,7 @@
   color: #faf6f1;
 }
 
-.section-two-tree-wrapper {
+.section-two-tree-animation-wrapper {
   margin-left: 10rem;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -206,7 +206,7 @@
   position: relative;
   width: 350px;
 }
-.section-two-tree-wrapper svg path {
+.section-two-tree-animation-wrapper svg path {
   stroke: #dca794;
 }
 
@@ -239,7 +239,7 @@
   color: #77442f;
 }
 
-.section-three-tree-wrapper {
+.section-three-tree-animation-wrapper {
   margin-right: 10rem;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
@@ -247,7 +247,7 @@
   position: relative;
   width: 350px;
 }
-.section-three-tree-wrapper svg {
+.section-three-tree-animation-wrapper svg {
   opacity: 0.6;
 }
 
