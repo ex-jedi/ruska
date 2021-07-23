@@ -211,6 +211,11 @@ a {
   font-size: 5rem;
   font-weight: 700;
 }
+@media (max-width: 1550px) {
+  .email-signup-form-input-wrapper {
+    font-size: 3.8rem;
+  }
+}
 
 .email-input-wrapper {
   display: -webkit-box;

@@ -225,6 +225,10 @@ a {
 .email-signup-form-input-wrapper {
   font-size: $font-size-medium;
   font-weight: 700;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-small;
+  }
 }
 
 .email-input-wrapper {
