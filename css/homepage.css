@@ -96,20 +96,20 @@
   padding: calc(20rem + 3rem) 10rem 20rem;
 }
 
-.tree-animation-wrapper {
+.section-one-tree-animation-wrapper-one {
   width: 350px;
   position: absolute;
   top: 0;
   right: 500px;
 }
 
-.shop-tree-animation-wrapper {
+.section-one-tree-animation-wrapper-two {
   position: relative;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
 }
-.shop-tree-animation-wrapper svg {
+.section-one-tree-animation-wrapper-two svg {
   opacity: 0.6;
 }
 
