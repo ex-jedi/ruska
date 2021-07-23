@@ -60,6 +60,10 @@ h2 {
   @include breakpoint(1550) {
     font-size: $heading-size-large;
   }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-medium;
+  }
 }
 
 //********** Containers **********

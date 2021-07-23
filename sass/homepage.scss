@@ -22,6 +22,11 @@
   @include breakpoint(1750) {
     justify-content: space-between;
   }
+
+  @include breakpoint(1300) {
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 .header-image-wrapper,
@@ -31,6 +36,10 @@
 
   @include breakpoint(1750) {
     width: 45%;
+  }
+
+  @include breakpoint(1300) {
+    width: 40%;
   }
 }
 
@@ -80,6 +89,10 @@
   @include breakpoint(1550) {
     font-size: $font-size-medium;
   }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-small;
+  }
 }
 
 .homepage-body-text-medium {
@@ -90,6 +103,10 @@
 
   @include breakpoint(1550) {
     font-size: $font-size-small;
+  }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-tiny;
   }
 }
 
