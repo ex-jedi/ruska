@@ -1,6 +1,11 @@
 .main-header {
   margin-bottom: 10rem;
 }
+@media (max-width: 1300px) {
+  .main-header {
+    margin-bottom: 7.5rem;
+  }
+}
 
 .header-content-wrapper {
   display: -webkit-box;
@@ -150,6 +155,11 @@
 @media (max-width: 1450px) {
   .section-one-tree-animation-wrapper-one {
     right: 20rem;
+  }
+}
+@media (max-width: 1300px) {
+  .section-one-tree-animation-wrapper-one {
+    width: 200px;
   }
 }
 

@@ -136,6 +136,11 @@ a {
   background-color: #faf6f1;
   margin: 1rem auto 20rem;
 }
+@media (max-width: 1300px) {
+  .main-logo-wrapper {
+    margin-bottom: 15rem;
+  }
+}
 .main-logo-wrapper image {
   opacity: 0;
 }

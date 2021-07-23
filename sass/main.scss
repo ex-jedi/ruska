@@ -146,10 +146,12 @@ a {
   background-color: $background-colour-light;
   margin: $header-spacing-tiny auto $header-spacing-large;
 
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
   image {
     opacity: 0;
   }
-
   svg {
     path {
       opacity: 0;

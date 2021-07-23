@@ -12,6 +12,9 @@
 
 .main-header {
   margin-bottom: $section-spacing-small;
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-extra-small;
+  }
 }
 
 .header-content-wrapper {
@@ -142,6 +145,10 @@
 
   @include breakpoint(1450) {
     right: $section-spacing-large;
+  }
+
+  @include breakpoint(1300) {
+    width: 200px;
   }
 }
 
