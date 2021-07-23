@@ -92,7 +92,7 @@ img {
 // Better to leave underlining on by default and switch it off where you don't want it
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
   color: $link-colour;
 }
 
@@ -350,7 +350,42 @@ select {
   position: absolute;
   width: calc(100% - 8.5rem);
   left: 8.5rem;
-  bottom: 0;
+  bottom: -9px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-footer {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  background-color: $background-colour-medium;
+  padding: $section-spacing-large 0 $section-spacing-extra-tiny;
+  color: $font-colour-light;
+
+  a {
+    color: inherit;
+  }
+}
+
+.footer-contact {
+  font-size: $font-size-medium;
+  font-weight: 700;
+  margin: 0 auto $section-spacing-large;
+}
+
+.footer-legals,
+.footer-credit {
+  font-size: $font-size-tiny;
+  text-align: center;
+}
+
+.footer-legals {
+  margin: 0 auto $section-spacing-large;
+}
+
+.footer-credit {
+  margin: 0 auto;
 }
 
 //*=========================================
