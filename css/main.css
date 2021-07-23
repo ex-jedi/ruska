@@ -352,6 +352,8 @@ select {
   bottom: -1px;
   margin: 0;
   padding: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .main-footer {

@@ -6,6 +6,7 @@
 // ** Imports  **
 // *==============================================================================
 
+// TODO: Remove GSAP Imports
 import { gsap } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -18,6 +19,7 @@ import {
   homepageTreeAnimationThree,
   homepageTreeAnimationFour,
   scrollTriggerRefresh,
+  pyramidDividerFunction,
 } from './animations';
 
 // *=========================================
@@ -25,11 +27,20 @@ import {
 // *=========================================
 gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 
+// !==============================================================================
+// FIXME:
+// !==============================================================================
+
 // ********** Main Logo **********
 mainLogoAnimation();
+
+// ********** Tree animations **********
 homepageTreeAnimationOne();
 homepageTreeAnimationTwo();
 homepageTreeAnimationThree();
 homepageTreeAnimationFour();
+
+// ********** Footer pyramid **********
+pyramidDividerFunction();
 
 scrollTriggerRefresh();
