@@ -192,6 +192,11 @@ a {
 .email-signup-form {
   padding: 0 5rem;
 }
+@media (max-width: 1550px) {
+  .email-signup-form {
+    padding: 0;
+  }
+}
 
 .contact-form-heading {
   margin: 0 auto 20rem;
@@ -210,15 +215,26 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin: 0 auto 10rem;
+}
+.email-input-wrapper label {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .email-input-wrapper input {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
+  width: 100%;
   margin-left: 2.5rem;
   background-color: #f2bba7;
   border-top: 0;

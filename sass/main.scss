@@ -209,6 +209,9 @@ a {
 
 .email-signup-form {
   padding: 0 $section-spacing-tiny;
+  @include breakpoint(1550) {
+    padding: 0;
+  }
 }
 
 .contact-form-heading {
@@ -222,11 +225,18 @@ a {
 
 .email-input-wrapper {
   @include flex(row);
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: flex-end;
   margin: 0 auto $section-spacing-small;
+
+  label {
+    flex: 1 0 auto;
+    width: fit-content;
+  }
 
   input {
     flex: 1 1 auto;
+    width: 100%;
     margin-left: $section-spacing-extra-tiny;
     background-color: $background-colour-medium-lighter;
     border-top: 0;
