@@ -40,6 +40,10 @@
   @include breakpoint(1800) {
     line-height: 1.1;
   }
+
+  @include breakpoint(1550) {
+    line-height: normal;
+  }
 }
 
 //********** Header Images **********
@@ -72,6 +76,10 @@
   text-align: center;
   padding: 0;
   margin: 0;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-medium;
+  }
 }
 
 .homepage-body-text-medium {
@@ -79,6 +87,10 @@
   text-align: center;
   padding: 0;
   margin: 0;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-small;
+  }
 }
 
 //********** Image **********
@@ -105,7 +117,15 @@
   width: 350px;
   position: absolute;
   top: 0;
-  right: 500px;
+  right: $section-spacing-extra-large;
+
+  @include breakpoint(1800) {
+    right: 30rem;
+  }
+
+  @include breakpoint(1450) {
+    right: $section-spacing-large;
+  }
 }
 
 .section-one-tree-animation-wrapper-two {

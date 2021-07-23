@@ -53,9 +53,13 @@ body {
 //********** Headings**********
 
 h2 {
-  font-size: $heading-size-large;
+  font-size: $heading-size-extra-large;
   font-weight: 700;
   text-align: center;
+
+  @include breakpoint(1550) {
+    font-size: $heading-size-large;
+  }
 }
 
 //********** Containers **********
@@ -74,6 +78,29 @@ main {
 }
 
 //********** Paragraphs **********
+
+.body-text-large {
+  font-size: $font-size-large;
+  font-weight: 400;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-medium;
+  }
+}
+
+.body-text-medium {
+  font-size: $font-size-medium;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-small;
+  }
+}
 
 // *=========================================
 // ** Inline **

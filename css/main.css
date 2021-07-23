@@ -49,6 +49,11 @@ h2 {
   font-weight: 700;
   text-align: center;
 }
+@media (max-width: 1550px) {
+  h2 {
+    font-size: 7.5rem;
+  }
+}
 
 section,
 main {
@@ -61,6 +66,31 @@ main {
   https://stackoverflow.com/questions/16033416/while-scrolling-on-an-ios-device-the-z-index-of-elements-isnt-working
   */
   -webkit-transform: translate3d(0, 0, 0);
+}
+
+.body-text-large {
+  font-size: 7.5rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 1550px) {
+  .body-text-large {
+    font-size: 5rem;
+  }
+}
+
+.body-text-medium {
+  font-size: 5rem;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 1550px) {
+  .body-text-medium {
+    font-size: 3.8rem;
+  }
 }
 
 img {
