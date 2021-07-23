@@ -129,6 +129,10 @@
   position: relative;
   padding: calc(#{$section-spacing-large} + 3rem) $section-spacing-small
     $section-spacing-large;
+
+  @include breakpoint(1300) {
+    padding: 33rem $section-spacing-extra-small $section-spacing-medium;
+  }
 }
 
 //********** Tree Animations **********
@@ -192,7 +196,12 @@
   @include flex(column);
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: $section-spacing-small;
+  margin-bottom: $section-spacing-large;
+  height: auto;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
 }
 
 .homepage-section-one-double-image {
@@ -212,12 +221,12 @@
   }
 
   @include breakpoint(1300) {
-    margin-top: $section-spacing-extra-small;
+    margin: $section-spacing-extra-small 0 $section-spacing-extra-small auto;
   }
 }
 
 .homepage-section-one-single-image-wrapper {
-  margin: 0 auto $section-spacing-large;
+  margin: 0 auto;
 }
 
 .homepage-section-one-single-image {
