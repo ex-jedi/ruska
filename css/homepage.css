@@ -37,6 +37,13 @@
             align-items: center;
   }
 }
+@media (max-width: 950px) {
+  .header-content-wrapper {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
 
 .header-image-wrapper,
 .header-subheading-wrapper {
@@ -55,6 +62,12 @@
   .header-image-wrapper,
 .header-subheading-wrapper {
     width: 40%;
+  }
+}
+@media (max-width: 950px) {
+  .header-image-wrapper,
+.header-subheading-wrapper {
+    width: 48%;
   }
 }
 
@@ -78,6 +91,11 @@
 @media (max-width: 1750px) {
   .header-image-wrapper {
     margin-left: 8.5rem;
+  }
+}
+@media (max-width: 950px) {
+  .header-image-wrapper {
+    margin-left: 0;
   }
 }
 
