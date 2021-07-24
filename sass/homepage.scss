@@ -34,6 +34,10 @@
   @include breakpoint(950) {
     justify-content: space-between;
   }
+
+  @include breakpoint(800) {
+    @include flex(column);
+  }
 }
 
 .header-image-wrapper,
@@ -51,6 +55,10 @@
 
   @include breakpoint(950) {
     width: 48%;
+  }
+
+  @include breakpoint(800) {
+    width: 100%;
   }
 }
 
@@ -77,6 +85,10 @@
 
   @include breakpoint(950) {
     margin-left: 0;
+  }
+
+  @include breakpoint(800) {
+    margin-bottom: 50rem;
   }
 }
 
@@ -133,24 +145,9 @@
   object-position: center;
 }
 
-//*=========================================
-//** Section One **
-//*=========================================
+//********** Tree Animation **********
 
-.homepage-section-one {
-  position: relative;
-  padding: calc(#{$section-spacing-large} + 3rem) $section-spacing-small
-    $section-spacing-large;
-
-  @include breakpoint(1300) {
-    padding: $section-spacing-extra-large $section-spacing-extra-small
-      $section-spacing-medium;
-  }
-}
-
-//********** Tree Animations **********
-
-.section-one-tree-animation-wrapper-one {
+.homepage-tree-animation-one {
   width: 350px;
   position: absolute;
   top: 1500px;
@@ -175,7 +172,49 @@
   @include breakpoint(1100) {
     top: 925px;
   }
+
+  @include breakpoint(800) {
+    top: 1320px;
+    right: $section-spacing-tiny;
+  }
+
+  @include breakpoint(700) {
+    top: 1200px;
+    right: $section-spacing-tiny;
+  }
+
+  @include breakpoint(625) {
+    top: 1100px;
+    right: $section-spacing-tiny;
+  }
+
+  @include breakpoint(530) {
+    top: 950px;
+    right: $section-spacing-tiny;
+  }
+
+  @include breakpoint(400) {
+    top: 850px;
+    right: $section-spacing-tiny;
+  }
 }
+
+//*=========================================
+//** Section One **
+//*=========================================
+
+.homepage-section-one {
+  position: relative;
+  padding: calc(#{$section-spacing-large} + 3rem) $section-spacing-small
+    $section-spacing-large;
+
+  @include breakpoint(1300) {
+    padding: $section-spacing-extra-large $section-spacing-extra-small
+      $section-spacing-medium;
+  }
+}
+
+//********** Tree Animations **********
 
 .section-one-tree-animation-wrapper-two {
   position: relative;

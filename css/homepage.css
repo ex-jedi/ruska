@@ -44,6 +44,17 @@
             justify-content: space-between;
   }
 }
+@media (max-width: 800px) {
+  .header-content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 .header-image-wrapper,
 .header-subheading-wrapper {
@@ -68,6 +79,12 @@
   .header-image-wrapper,
 .header-subheading-wrapper {
     width: 48%;
+  }
+}
+@media (max-width: 800px) {
+  .header-image-wrapper,
+.header-subheading-wrapper {
+    width: 100%;
   }
 }
 
@@ -96,6 +113,11 @@
 @media (max-width: 950px) {
   .header-image-wrapper {
     margin-left: 0;
+  }
+}
+@media (max-width: 800px) {
+  .header-image-wrapper {
+    margin-bottom: 50rem;
   }
 }
 
@@ -154,17 +176,7 @@
      object-position: center;
 }
 
-.homepage-section-one {
-  position: relative;
-  padding: calc(20rem + 3rem) 10rem 20rem;
-}
-@media (max-width: 1300px) {
-  .homepage-section-one {
-    padding: 40rem 7.5rem 15rem;
-  }
-}
-
-.section-one-tree-animation-wrapper-one {
+.homepage-tree-animation-one {
   width: 350px;
   position: absolute;
   top: 1500px;
@@ -172,26 +184,66 @@
   z-index: 2;
 }
 @media (max-width: 1800px) {
-  .section-one-tree-animation-wrapper-one {
+  .homepage-tree-animation-one {
     right: 30rem;
   }
 }
 @media (max-width: 1550px) {
-  .section-one-tree-animation-wrapper-one {
+  .homepage-tree-animation-one {
     top: 1300px;
     right: 20rem;
   }
 }
 @media (max-width: 1300px) {
-  .section-one-tree-animation-wrapper-one {
+  .homepage-tree-animation-one {
     width: 250px;
     top: 1000px;
     right: 10rem;
   }
 }
 @media (max-width: 1100px) {
-  .section-one-tree-animation-wrapper-one {
+  .homepage-tree-animation-one {
     top: 925px;
+  }
+}
+@media (max-width: 800px) {
+  .homepage-tree-animation-one {
+    top: 1320px;
+    right: 5rem;
+  }
+}
+@media (max-width: 700px) {
+  .homepage-tree-animation-one {
+    top: 1200px;
+    right: 5rem;
+  }
+}
+@media (max-width: 625px) {
+  .homepage-tree-animation-one {
+    top: 1100px;
+    right: 5rem;
+  }
+}
+@media (max-width: 530px) {
+  .homepage-tree-animation-one {
+    top: 950px;
+    right: 5rem;
+  }
+}
+@media (max-width: 400px) {
+  .homepage-tree-animation-one {
+    top: 850px;
+    right: 5rem;
+  }
+}
+
+.homepage-section-one {
+  position: relative;
+  padding: calc(20rem + 3rem) 10rem 20rem;
+}
+@media (max-width: 1300px) {
+  .homepage-section-one {
+    padding: 40rem 7.5rem 15rem;
   }
 }
 
