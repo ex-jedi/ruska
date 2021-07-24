@@ -170,6 +170,7 @@ a {
   left: 0;
   background-color: $background-colour-dark;
   height: 100vh;
+  z-index: 4;
 
   @include breakpoint(950) {
     justify-content: center;

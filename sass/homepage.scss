@@ -153,19 +153,27 @@
 .section-one-tree-animation-wrapper-one {
   width: 350px;
   position: absolute;
-  top: 0;
+  top: 1500px;
   right: $section-spacing-extra-large;
+  z-index: 2;
 
   @include breakpoint(1800) {
     right: 30rem;
   }
 
-  @include breakpoint(1450) {
+  @include breakpoint(1550) {
+    top: 1300px;
     right: $section-spacing-large;
   }
 
   @include breakpoint(1300) {
     width: 250px;
+    top: 1000px;
+    right: $section-spacing-small;
+  }
+
+  @include breakpoint(1100) {
+    top: 925px;
   }
 }
 

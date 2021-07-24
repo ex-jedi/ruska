@@ -108,7 +108,7 @@ function homepageTreeAnimationOne() {
       start: 'bottom bottom',
       end: 'top 5%',
       // markers: true,
-      scrub: 1,
+      scrub: 0.5,
     },
   });
 
@@ -146,7 +146,7 @@ function homepageTreeAnimationTwo() {
       start: 'bottom bottom',
       end: 'top 5%',
       // markers: true,
-      scrub: 1,
+      scrub: 0.5,
     },
   });
 
@@ -183,7 +183,7 @@ function homepageTreeAnimationThree() {
       start: 'bottom bottom',
       end: 'top 5%',
       // markers: true,
-      scrub: 1,
+      scrub: 0.5,
     },
   });
 
@@ -220,7 +220,7 @@ function homepageTreeAnimationFour() {
       start: 'bottom bottom',
       end: 'top 5%',
       // markers: true,
-      scrub: 1,
+      scrub: 0.5,
     },
   });
 

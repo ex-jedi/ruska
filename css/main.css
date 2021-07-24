@@ -161,6 +161,7 @@ a {
   left: 0;
   background-color: #77442f;
   height: 100vh;
+  z-index: 4;
 }
 @media (max-width: 950px) {
   .main-nav-trigger-wrapper {
