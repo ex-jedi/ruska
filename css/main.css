@@ -162,6 +162,22 @@ a {
   background-color: #77442f;
   height: 100vh;
 }
+@media (max-width: 950px) {
+  .main-nav-trigger-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: unset;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+  }
+}
 
 .main-nav-trigger {
   width: 8.5rem;
@@ -173,6 +189,12 @@ a {
   background-color: transparent;
   padding: 5rem 0;
   cursor: pointer;
+}
+@media (max-width: 950px) {
+  .main-nav-trigger {
+    width: auto;
+    padding: 2.5rem;
+  }
 }
 
 .sideways-text {
@@ -188,26 +210,6 @@ a {
   color: #faf6f1;
   font-weight: 700;
 }
-
-.main-nav {
-  display: none;
-}
-
-.main-nav-trigger-wrapper {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  top: unset;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: auto;
-  width: 100%;
-}
-
 @media (max-width: 950px) {
   .sideways-text {
     -webkit-writing-mode: horizontal-tb;
@@ -216,7 +218,13 @@ a {
     text-orientation: upright;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
+    left: 0;
+    font-size: 3.8rem;
   }
+}
+
+.main-nav {
+  display: none;
 }
 
 .email-signup-form-section {

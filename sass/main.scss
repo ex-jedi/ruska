@@ -170,6 +170,17 @@ a {
   left: 0;
   background-color: $background-colour-dark;
   height: 100vh;
+
+  @include breakpoint(950) {
+    justify-content: center;
+    align-items: center;
+    top: unset;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+  }
 }
 
 .main-nav-trigger {
@@ -180,6 +191,11 @@ a {
   background-color: transparent;
   padding: $font-size-medium 0;
   cursor: pointer;
+
+  @include breakpoint(950) {
+    width: auto;
+    padding: $font-size-tiny;
+  }
 }
 
 .sideways-text {
@@ -191,31 +207,18 @@ a {
   font-size: $font-size-medium;
   color: $font-colour-light;
   font-weight: 700;
-}
 
-.main-nav {
-  display: none;
-}
-
-//********** Responsive Styles **********
-
-.main-nav-trigger-wrapper {
-  justify-content: center;
-  align-items: center;
-  top: unset;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: auto;
-  width: 100%;
-}
-
-.sideways-text {
   @include breakpoint(950) {
     writing-mode: horizontal-tb;
     text-orientation: upright;
     transform: rotate(0deg);
+    left: 0;
+    font-size: $font-size-small;
   }
+}
+
+.main-nav {
+  display: none;
 }
 
 // *=========================================
