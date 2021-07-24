@@ -164,7 +164,7 @@
 }
 @media (max-width: 1300px) {
   .section-one-tree-animation-wrapper-one {
-    width: 200px;
+    width: 250px;
   }
 }
 
@@ -176,7 +176,7 @@
 }
 @media (max-width: 1300px) {
   .section-one-tree-animation-wrapper-two {
-    width: 200px;
+    width: 250px;
   }
 }
 .section-one-tree-animation-wrapper-two svg {
@@ -308,6 +308,11 @@
   position: relative;
   width: 350px;
 }
+@media (max-width: 1300px) {
+  .section-two-tree-animation-wrapper {
+    width: 250px;
+  }
+}
 .section-two-tree-animation-wrapper svg path {
   stroke: #dca794;
 }
@@ -348,6 +353,11 @@
           flex: 1 0 auto;
   position: relative;
   width: 350px;
+}
+@media (max-width: 1300px) {
+  .section-three-tree-animation-wrapper {
+    width: 250px;
+  }
 }
 .section-three-tree-animation-wrapper svg {
   opacity: 0.6;

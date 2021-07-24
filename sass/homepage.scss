@@ -152,7 +152,7 @@
   }
 
   @include breakpoint(1300) {
-    width: 200px;
+    width: 250px;
   }
 }
 
@@ -163,7 +163,7 @@
   margin: 0 auto;
 
   @include breakpoint(1300) {
-    width: 200px;
+    width: 250px;
   }
 
   svg {
@@ -260,6 +260,11 @@
   flex: 1 0 auto;
   position: relative;
   width: 350px;
+
+  @include breakpoint(1300) {
+    width: 250px;
+  }
+
   svg {
     path {
       stroke: #dca794;
@@ -296,6 +301,10 @@
   flex: 1 0 auto;
   position: relative;
   width: 350px;
+
+  @include breakpoint(1300) {
+    width: 250px;
+  }
 
   svg {
     opacity: 0.6;
