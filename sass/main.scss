@@ -199,6 +199,25 @@ a {
 
 //********** Responsive Styles **********
 
+.main-nav-trigger-wrapper {
+  justify-content: center;
+  align-items: center;
+  top: unset;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  width: 100%;
+}
+
+.sideways-text {
+  @include breakpoint(950) {
+    writing-mode: horizontal-tb;
+    text-orientation: upright;
+    transform: rotate(0deg);
+  }
+}
+
 // *=========================================
 // ** Body **
 // *=========================================
