@@ -211,6 +211,10 @@ a {
   padding: $section-spacing-large;
   background-color: $background-colour-medium-lighter;
   color: $font-colour-dark;
+
+  @include breakpoint(1300) {
+    padding: $section-spacing-medium;
+  }
 }
 
 .email-signup-form {
@@ -222,6 +226,10 @@ a {
 
 .contact-form-heading {
   margin: 0 auto $heading-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $heading-spacing-medium;
+  }
 }
 
 .email-signup-form-input-wrapper {
@@ -238,6 +246,10 @@ a {
   justify-content: space-around;
   align-items: flex-end;
   margin: 0 auto $section-spacing-small;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-extra-small;
+  }
 
   label {
     flex: 1 0 auto;
@@ -262,6 +274,10 @@ a {
   align-items: flex-start;
   font-size: $font-size-tiny;
   margin: 0 auto $section-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
 
   input {
     position: relative;
@@ -315,6 +331,7 @@ a {
   background-color: $background-colour-medium-lighter;
   border: 3px solid $font-colour-dark;
   margin: 0;
+  appearance: none;
   // Fixes font top spacing
   padding: 1.2rem 2rem 2rem;
   transition: 0.3s ease all;
@@ -356,9 +373,17 @@ select {
   background-color: $background-colour-light;
   overflow: visible;
 
+  @include breakpoint(1300) {
+    padding: 0 $section-spacing-large calc(#{$section-spacing-medium} + 174px);
+  }
+
   .instagram-feed-heading {
     color: $font-colour-medium;
     margin: 0 auto $section-spacing-small;
+
+    @include breakpoint(1300) {
+      margin-bottom: $section-spacing-extra-small;
+    }
   }
 }
 
@@ -369,23 +394,34 @@ select {
 
 .instagram-feed-images-wrapper {
   @include flex(row);
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
 .instagram-feed-image {
   flex: 0 1 auto;
-  width: 20%;
+  width: 23%;
   aspect-ratio: 1/1;
   object-fit: cover;
+
+  @include breakpoint(1300) {
+    width: 48%;
+
+    &:first-of-type,
+    &:nth-of-type(2) {
+      margin-bottom: $section-spacing-extra-tiny;
+    }
+  }
 }
 
 .instagram-feed-background-image {
   //TODO: See if this can span two sections
   position: absolute;
   z-index: -1;
-  top: -200px;
-  right: $section-spacing-large;
+  top: -$section-spacing-tiny;
+  right: $section-spacing-medium;
+  object-fit: contain;
 }
 
 // *=========================================
@@ -415,6 +451,10 @@ select {
   padding: $section-spacing-large 0 $section-spacing-extra-tiny;
   color: $font-colour-light;
 
+  @include breakpoint(1300) {
+    padding-top: $section-spacing-medium;
+  }
+
   a {
     color: inherit;
   }
@@ -424,6 +464,11 @@ select {
   font-size: $font-size-medium;
   font-weight: 700;
   margin: 0 auto $section-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+    font-size: $font-size-tiny;
+  }
 }
 
 .footer-legals,
@@ -434,6 +479,10 @@ select {
 
 .footer-legals {
   margin: 0 auto $section-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
 }
 
 .footer-credit {
