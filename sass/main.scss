@@ -274,6 +274,11 @@ a {
     margin-bottom: $section-spacing-extra-small;
   }
 
+  @include breakpoint(1100) {
+    @include flex(column);
+    align-items: flex-start;
+  }
+
   label {
     flex: 1 0 auto;
     width: fit-content;
@@ -288,6 +293,10 @@ a {
     border-left: 0;
     border-right: 0;
     border-bottom: 3px solid $font-colour-dark;
+
+    @include breakpoint(1100) {
+      margin: 0;
+    }
   }
 }
 
