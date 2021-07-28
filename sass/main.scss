@@ -246,6 +246,7 @@ a {
     url('/images/darker-pink-circle.svg'), url('/images/darker-pink-circle.svg');
   background-position: -350px -350px, center, bottom -350px right -350px;
   background-repeat: no-repeat;
+  transform: translateX(-100%);
 }
 
 .main-nav-link {
