@@ -32,7 +32,6 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 // FIXME: Temp Building 👇🏾
 // !==============================================================================
 
-
 addMenuListener();
 
 // !==============================================================================

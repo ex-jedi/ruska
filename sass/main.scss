@@ -260,6 +260,11 @@ a {
       bottom -380px right -380px;
   }
 
+  @include breakpoint(950) {
+    transform: translateX(0);
+    transform: translateY(100%);
+  }
+
   @include breakpoint(700) {
     background-size: 600px, 400px, 600px;
   }
@@ -276,7 +281,7 @@ a {
   font-size: $font-size-medium;
   font-weight: 700;
   text-transform: lowercase;
-  transform: translateY(70px);
+  transform: translateY(100px);
   opacity: 0;
 
   &:not(:last-of-type) {

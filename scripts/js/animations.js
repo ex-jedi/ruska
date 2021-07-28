@@ -17,6 +17,10 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 // ** GSAP Animations For Multiple Pages  **
 // *==============================================================================
 
+// ********** Globals **********
+// Media query for menu
+const mediaNineFifty = window.matchMedia('(max-width: 950px)');
+
 // *=========================================
 // ** Logo Animation  **
 // *=========================================
@@ -57,9 +61,8 @@ function mainLogoAnimation() {
 // *=========================================
 
 function pyramidDividerFunction() {
-  const mediaEightFifty = window.matchMedia('(max-width: 950px)');
   let triggerPoint = 'top 95%';
-  if (mediaEightFifty.matches) {
+  if (mediaNineFifty.matches) {
     triggerPoint = 'top 85%';
   }
 
@@ -92,6 +95,12 @@ function getNavElements() {
 // * Open Menu
 
 function menuOpenAnimation() {
+  let position = { x: '0%' };
+
+  if (mediaNineFifty.matches) {
+    position = { y: '0%' };
+  }
+
   const { mainNav, mainNavLinks, mainNavCloser } = getNavElements();
   const openMenuTl = gsap.timeline({
     paused: true,
@@ -101,12 +110,16 @@ function menuOpenAnimation() {
 
   return openMenuTl
     .addLabel('start')
-    .to(mainNav, { x: '0%', y: '0%' }, 'start')
+    .to(mainNav, position, 'start')
     .to(mainNavCloser, { rotate: 180 }, 'start')
     .to(mainNavLinks, { y: '0%', opacity: 1, stagger: 0.1 }, '-=25%');
 }
 
 function closeMenuAnimation() {
+  let position = { x: '-100%' };
+  if (mediaNineFifty.matches) {
+    position = { y: '100%' };
+  }
   const { mainNav, mainNavLinks, mainNavCloser } = getNavElements();
   const closeMenuTl = gsap.timeline({
     paused: true,
@@ -114,10 +127,10 @@ function closeMenuAnimation() {
   });
 
   return closeMenuTl
-  .to(mainNavLinks, { y: 50, opacity: 0, stagger: { each: 0.15, from: 'end' } })
-  .addLabel('end')
-  .to(mainNav, { x: '-100%' }, 'end-=60%')
-  .to(mainNavCloser, { rotate: -180 }, 'end-=60%');
+    .to(mainNavLinks, { y: 100, opacity: 0, stagger: { each: 0.15, from: 'end' } })
+    .addLabel('end')
+    .to(mainNav, position, 'end-=60%')
+    .to(mainNavCloser, { rotate: -180 }, 'end-=60%');
 }
 
 // TODO: Make inline if this is all you need
@@ -330,5 +343,5 @@ export {
   homepageTreeAnimationFour,
   scrollTriggerRefresh,
   pyramidDividerFunction,
-  addMenuListener
+  addMenuListener,
 };
