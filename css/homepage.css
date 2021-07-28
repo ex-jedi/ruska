@@ -219,26 +219,33 @@
 }
 @media (max-width: 700px) {
   .homepage-tree-animation-one {
-    top: 1200px;
+    top: 1025px;
     right: 5rem;
   }
 }
 @media (max-width: 625px) {
   .homepage-tree-animation-one {
-    top: 1100px;
+    top: 950px;
     right: 5rem;
   }
 }
 @media (max-width: 530px) {
   .homepage-tree-animation-one {
-    top: 950px;
+    top: 850px;
     right: 5rem;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 430px) {
   .homepage-tree-animation-one {
-    top: 850px;
-    right: 5rem;
+    top: 750px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+}
+@media (max-width: 350px) {
+  .homepage-tree-animation-one {
+    top: 650px;
   }
 }
 

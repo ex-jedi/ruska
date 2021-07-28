@@ -184,23 +184,28 @@
   }
 
   @include breakpoint(700) {
-    top: 1200px;
+    top: 1025px;
     right: $section-spacing-tiny;
   }
 
   @include breakpoint(625) {
-    top: 1100px;
-    right: $section-spacing-tiny;
-  }
-
-  @include breakpoint(530) {
     top: 950px;
     right: $section-spacing-tiny;
   }
 
-  @include breakpoint(400) {
+  @include breakpoint(530) {
     top: 850px;
     right: $section-spacing-tiny;
+  }
+
+  @include breakpoint(430) {
+    top: 750px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  @include breakpoint(350) {
+    top: 650px;
   }
 }
 

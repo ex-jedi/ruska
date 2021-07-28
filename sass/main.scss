@@ -149,6 +149,11 @@ a {
   @include breakpoint(1300) {
     margin-bottom: $section-spacing-medium;
   }
+
+  @include breakpoint(700) {
+    margin-bottom: $header-spacing-tiny;
+  }
+
   image {
     opacity: 0;
   }
