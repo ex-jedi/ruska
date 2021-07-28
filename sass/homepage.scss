@@ -303,6 +303,8 @@
   @include breakpoint(700) {
     flex: 1 0 auto;
     width: 400px;
+    aspect-ratio: 2.5/3;
+    object-fit: cover;
   }
 }
 
@@ -318,7 +320,7 @@
   }
 
   @include breakpoint(700) {
-    margin: 0;
+    margin: 0 $section-spacing-tiny;
   }
 }
 
@@ -333,6 +335,11 @@
 
 .homepage-section-one-single-image {
   margin: 0 auto;
+
+  @include breakpoint(700) {
+    aspect-ratio: 2.5/3;
+    object-fit: cover;
+  }
 }
 
 //*=========================================

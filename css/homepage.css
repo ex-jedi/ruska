@@ -371,6 +371,9 @@
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
     width: 400px;
+    aspect-ratio: 2.5/3;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -389,7 +392,7 @@
 }
 @media (max-width: 700px) {
   .homepage-section-one-image-two {
-    margin: 0;
+    margin: 0 5rem;
   }
 }
 
@@ -407,6 +410,13 @@
 
 .homepage-section-one-single-image {
   margin: 0 auto;
+}
+@media (max-width: 700px) {
+  .homepage-section-one-single-image {
+    aspect-ratio: 2.5/3;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 .section-two-flex-wrapper {
