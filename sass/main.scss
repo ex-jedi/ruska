@@ -464,6 +464,10 @@ select {
   @include breakpoint(1920) {
     width: calc(100% - 8.5rem);
   }
+
+  @include breakpoint(950) {
+    width: 100%;
+  }
 }
 
 .main-footer {

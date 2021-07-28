@@ -502,6 +502,11 @@ select {
     width: calc(100% - 8.5rem);
   }
 }
+@media (max-width: 950px) {
+  .svg-pyramid-divider {
+    width: 100%;
+  }
+}
 
 .main-footer {
   display: -webkit-box;
