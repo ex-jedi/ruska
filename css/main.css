@@ -244,6 +244,11 @@ a {
     padding: 15rem;
   }
 }
+@media (max-width: 700px) {
+  .email-signup-form-section {
+    padding: 10rem 2.5rem;
+  }
+}
 
 .email-signup-form {
   padding: 0 5rem;
@@ -260,6 +265,11 @@ a {
 @media (max-width: 1300px) {
   .contact-form-heading {
     margin-bottom: 15rem;
+  }
+}
+@media (max-width: 700px) {
+  .contact-form-heading {
+    margin-bottom: 10rem;
   }
 }
 
@@ -305,6 +315,11 @@ a {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+}
+@media (max-width: 700px) {
+  .email-input-wrapper {
+    margin-bottom: 5rem;
   }
 }
 .email-input-wrapper label {
@@ -353,6 +368,11 @@ a {
 @media (max-width: 1300px) {
   .checkbox-div {
     margin-bottom: 15rem;
+  }
+}
+@media (max-width: 700px) {
+  .checkbox-div {
+    margin-bottom: 10rem;
   }
 }
 .checkbox-div input {

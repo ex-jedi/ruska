@@ -371,6 +371,10 @@
   @include breakpoint(950) {
     @include flex(column);
   }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small $section-spacing-extra-tiny;
+  }
 }
 
 .homepage-section-two-text {
@@ -379,6 +383,10 @@
 
   @include breakpoint(1000) {
     margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-extra-small;
   }
 }
 
@@ -425,13 +433,21 @@
   @include breakpoint(950) {
     @include flex(column);
   }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
 }
 
 .section-three-inner-wrapper {
   padding: $section-spacing-large;
 
   @include breakpoint(1300) {
-    padding: $header-spacing-medium;
+    padding: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small $section-spacing-extra-tiny;
   }
 }
 
@@ -452,6 +468,10 @@
 
   @include breakpoint(950) {
     margin: 0 auto $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
   }
 
   svg {

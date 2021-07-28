@@ -227,6 +227,7 @@ a {
   display: none;
 }
 
+//TODO: Delete if not needed
 // *=========================================
 // ** Body **
 // *=========================================
@@ -243,6 +244,10 @@ a {
   @include breakpoint(1300) {
     padding: $section-spacing-medium;
   }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small $section-spacing-extra-tiny;
+  }
 }
 
 .email-signup-form {
@@ -257,6 +262,10 @@ a {
 
   @include breakpoint(1300) {
     margin-bottom: $heading-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
   }
 }
 
@@ -282,6 +291,10 @@ a {
   @include breakpoint(1100) {
     @include flex(column);
     align-items: flex-start;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-tiny;
   }
 
   label {
@@ -314,6 +327,10 @@ a {
 
   @include breakpoint(1300) {
     margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
   }
 
   input {
