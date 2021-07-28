@@ -244,9 +244,31 @@ a {
   background-color: $background-colour-medium;
   background-image: url('/images/darker-pink-circle.svg'),
     url('/images/darker-pink-circle.svg'), url('/images/darker-pink-circle.svg');
-  background-position: -350px -350px, center, bottom -350px right -350px;
+  background-position: -350px -350px, left 65% center,
+    bottom -350px right -350px;
+  background-size: 700px, 700px, 700px;
   background-repeat: no-repeat;
   transform: translateX(-100%);
+
+  @include breakpoint(1500) {
+    background-size: 600px, 600px, 600px;
+  }
+
+  @include breakpoint(1000) {
+    background-size: 600px, 500px, 600px;
+    background-position: -380px -380px, left 85% center,
+      bottom -380px right -380px;
+  }
+
+  @include breakpoint(700) {
+    background-size: 600px, 400px, 600px;
+  }
+
+  @include breakpoint(500) {
+    background-size: 600px, 90%, 600px;
+    background-position: -450px -450px, left 85% center,
+      bottom -450px right -450px;
+  }
 }
 
 .main-nav-link {
@@ -686,6 +708,9 @@ body:not(.user-is-tabbing) textarea:focus {
 //*=========================================
 
 .cookie-warning-wrapper {
+  display: none;
+  pointer-events: none;
+
   @include flex(row);
   justify-content: space-between;
   align-items: center;

@@ -101,7 +101,7 @@ function menuOpenAnimation() {
 
   return openMenuTl
     .addLabel('start')
-    .to(mainNav, { x: '0%' }, 'start')
+    .to(mainNav, { x: '0%', y: '0%' }, 'start')
     .to(mainNavCloser, { rotate: 180 }, 'start')
     .to(mainNavLinks, { y: '0%', opacity: 1, stagger: 0.1 }, '-=25%');
 }
