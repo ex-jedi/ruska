@@ -96,13 +96,15 @@ $link-visited: #8608fb;
 //********** Scrollbar Mixin **********
 
 @mixin styled-scrollbar(
-  $size,
+  $width,
   $color,
   $background-colour,
-  $track-shadow-colour
+  $track-shadow-colour,
+  $height: 1rem
 ) {
   &::-webkit-scrollbar {
-    width: $size;
+    width: $width;
+    height: $height;
   }
 
   &::-webkit-scrollbar-thumb {
