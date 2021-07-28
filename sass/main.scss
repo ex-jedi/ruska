@@ -288,11 +288,19 @@ a {
   position: absolute;
   top: $section-spacing-small;
   right: $section-spacing-small;
-  background-color: $background-colour-medium;
+  background-color: transparent;
   border: 0;
   height: 75px;
   width: 75px;
   cursor: pointer;
+
+  @include breakpoint(850) {
+    justify-self: flex-end;
+    top: unset;
+    left: 50%;
+    bottom: $section-spacing-tiny;
+    transform: translateX(-50%) !important;
+  }
 }
 
 //TODO: Delete if not needed
