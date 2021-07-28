@@ -57,11 +57,17 @@ function mainLogoAnimation() {
 // *=========================================
 
 function pyramidDividerFunction() {
+  const mediaEightFifty = window.matchMedia('(max-width: 950px)');
+  let triggerPoint = 'top 95%';
+  if (mediaEightFifty.matches) {
+    triggerPoint = 'top 85%';
+  }
+
   gsap.to('.svg-pyramid-divider', {
     y: 0,
     scrollTrigger: {
       trigger: '.svg-pyramid-divider',
-      start: 'top 95%',
+      start: triggerPoint,
       end: 'top 50%',
       id: 'Pyramid Divider',
       // markers: true,

@@ -432,12 +432,25 @@ select {
       calc(#{$section-spacing-medium} + 174px);
   }
 
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-extra-tiny
+      calc(#{$section-spacing-small} + 75px);
+  }
+
+  @include breakpoint(500) {
+    padding-bottom: calc(#{$section-spacing-small} + 40px);
+  }
+
   .instagram-feed-heading {
     color: $font-colour-medium;
     margin: 0 auto $section-spacing-small;
 
     @include breakpoint(1300) {
       margin-bottom: $section-spacing-extra-small;
+    }
+
+    @include breakpoint(700) {
+      margin-bottom: $section-spacing-tiny;
     }
   }
 }
@@ -452,6 +465,10 @@ select {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  @include breakpoint(700) {
+    @include flex(column);
+  }
 }
 
 .instagram-feed-image {
@@ -467,6 +484,11 @@ select {
     &:nth-of-type(2) {
       margin-bottom: $section-spacing-extra-tiny;
     }
+  }
+
+  @include breakpoint(700) {
+    width: 100%;
+    margin-bottom: $section-spacing-extra-tiny;
   }
 }
 
