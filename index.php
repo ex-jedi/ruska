@@ -10,7 +10,7 @@
 	<?php perch_content("Instagram Feed"); ?>
 </main>
 <?php perch_layout('footers/main-footer'); ?>
-<?php perch_layout('footer-ends/main-footer-end'); ?>
+<?php perch_layout('footer-ends/homepage-footer-end'); ?>
 <!-- TODO: Remove debug -->
 <?php PerchUtil::output_debug(); ?>
 <!-- TODO: Validate HTML -->

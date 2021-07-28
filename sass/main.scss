@@ -86,23 +86,31 @@ main {
 .body-text-large {
   font-size: $font-size-large;
   font-weight: 400;
-  text-align: center;
+  // text-align: center;
   padding: 0;
   margin: 0;
 
   @include breakpoint(1550) {
     font-size: $font-size-medium;
   }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-small;
+  }
 }
 
 .body-text-medium {
   font-size: $font-size-medium;
-  text-align: center;
+  // text-align: center;
   padding: 0;
   margin: 0;
 
   @include breakpoint(1550) {
     font-size: $font-size-small;
+  }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-tiny;
   }
 }
 
@@ -444,6 +452,7 @@ select {
   .instagram-feed-heading {
     color: $font-colour-medium;
     margin: 0 auto $section-spacing-small;
+    text-align: center;
 
     @include breakpoint(1300) {
       margin-bottom: $section-spacing-extra-small;

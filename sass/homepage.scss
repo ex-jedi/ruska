@@ -109,39 +109,6 @@
   margin: 0;
 }
 
-//********** Body Text **********
-
-.homepage-body-text-large {
-  font-size: $font-size-large;
-  font-weight: 400;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-
-  @include breakpoint(1550) {
-    font-size: $font-size-medium;
-  }
-
-  @include breakpoint(1300) {
-    font-size: $font-size-small;
-  }
-}
-
-.homepage-body-text-medium {
-  font-size: $font-size-medium;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-
-  @include breakpoint(1550) {
-    font-size: $font-size-small;
-  }
-
-  @include breakpoint(1300) {
-    font-size: $font-size-tiny;
-  }
-}
-
 //********** Image **********
 .homepage-full-width-image-wrapper {
   width: 100%;
@@ -452,6 +419,7 @@
 }
 
 .homepage-section-three-text {
+  text-align: center;
   color: $font-colour-dark;
 }
 
@@ -580,6 +548,7 @@
 .homepage-featured-article-heading {
   width: 100%;
   word-break: break-word;
+  text-align: center;
   font-weight: 400;
   color: $font-colour-dark;
 }

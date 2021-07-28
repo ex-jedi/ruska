@@ -77,7 +77,6 @@ main {
 .body-text-large {
   font-size: 7.5rem;
   font-weight: 400;
-  text-align: center;
   padding: 0;
   margin: 0;
 }
@@ -86,16 +85,25 @@ main {
     font-size: 5rem;
   }
 }
+@media (max-width: 1300px) {
+  .body-text-large {
+    font-size: 3.8rem;
+  }
+}
 
 .body-text-medium {
   font-size: 5rem;
-  text-align: center;
   padding: 0;
   margin: 0;
 }
 @media (max-width: 1550px) {
   .body-text-medium {
     font-size: 3.8rem;
+  }
+}
+@media (max-width: 1300px) {
+  .body-text-medium {
+    font-size: 2.5rem;
   }
 }
 
@@ -483,6 +491,7 @@ select {
 .instagram-feed-section .instagram-feed-heading {
   color: #d08a70;
   margin: 0 auto 10rem;
+  text-align: center;
 }
 @media (max-width: 1300px) {
   .instagram-feed-section .instagram-feed-heading {
