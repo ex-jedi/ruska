@@ -288,7 +288,18 @@
 
   @include breakpoint(700) {
     overflow-x: scroll;
+
     @include flex(row);
+    margin-bottom: calc(
+      #{$section-spacing-small} - #{$section-spacing-extra-tiny}
+    );
+    padding-bottom: $section-spacing-extra-tiny;
+    @include styled-scrollbar(
+      0.5rem,
+      $background-colour-medium,
+      $background-colour-light,
+      $background-colour-light
+    );
   }
 }
 
