@@ -28,7 +28,23 @@ import {
 gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 
 // !==============================================================================
-// FIXME:
+// FIXME: Temp Building 👇🏾
+// !==============================================================================
+function getNavElements() {
+  const mainNav = document.querySelector('.main-nav');
+  const mainNavLinks = gsap.utils.toArray(document.querySelectorAll('.main-nav-link'));
+  const mainNavTriggerWrapper = document.querySelector('.main-nav-trigger-wrapper');
+  const mainNavTrigger = document.querySelector('.main-nav-trigger');
+
+  console.log({ mainNav, mainNavLinks, mainNavTriggerWrapper, mainNavTrigger });
+
+  return { mainNav, mainNavLinks, mainNavTriggerWrapper, mainNavTrigger };
+}
+
+getNavElements();
+
+// !==============================================================================
+// FIXME: Temp Building 👆🏾
 // !==============================================================================
 
 // ********** Main Logo **********

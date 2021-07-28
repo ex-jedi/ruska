@@ -231,8 +231,18 @@ a {
   }
 }
 
+//********** Responsive Styles **********
+
 .main-nav {
-  display: none;
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  z-index: 5;
+  background-color: $background-colour-medium;
+  background-image: url('/images/darker-pink-circle.svg'),
+    url('/images/darker-pink-circle.svg'), url('/images/darker-pink-circle.svg');
+  background-position: -350px -350px, center, bottom -350px right -350px;
+  background-repeat: no-repeat;
 }
 
 //TODO: Delete if not needed
