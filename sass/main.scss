@@ -234,6 +234,9 @@ a {
 //********** Responsive Styles **********
 
 .main-nav {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
   position: fixed;
   inset: 0;
   height: 100vh;
@@ -243,6 +246,17 @@ a {
     url('/images/darker-pink-circle.svg'), url('/images/darker-pink-circle.svg');
   background-position: -350px -350px, center, bottom -350px right -350px;
   background-repeat: no-repeat;
+}
+
+.main-nav-link {
+  color: $font-colour-light;
+  font-size: $font-size-medium;
+  font-weight: 700;
+  text-transform: lowercase;
+
+  &:not(:last-of-type) {
+    margin-bottom: $section-spacing-tiny;
+  }
 }
 
 //TODO: Delete if not needed
