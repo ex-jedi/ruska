@@ -397,7 +397,8 @@ select {
   overflow: visible;
 
   @include breakpoint(1300) {
-    padding: 0 $section-spacing-large calc(#{$section-spacing-medium} + 174px);
+    padding: 0 $section-spacing-extra-small
+      calc(#{$section-spacing-medium} + 174px);
   }
 
   .instagram-feed-heading {

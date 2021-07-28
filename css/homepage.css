@@ -6,6 +6,11 @@
     margin-bottom: 7.5rem;
   }
 }
+@media (max-width: 800px) {
+  .main-header {
+    margin-bottom: 0;
+  }
+}
 
 .header-content-wrapper {
   display: -webkit-box;
@@ -244,6 +249,11 @@
 @media (max-width: 1300px) {
   .homepage-section-one {
     padding: 40rem 7.5rem 15rem;
+  }
+}
+@media (max-width: 800px) {
+  .homepage-section-one {
+    padding: 15rem 7.5rem 15rem;
   }
 }
 

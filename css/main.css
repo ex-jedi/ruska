@@ -423,7 +423,7 @@ select {
 }
 @media (max-width: 1300px) {
   .instagram-feed-section {
-    padding: 0 20rem calc(15rem + 174px);
+    padding: 0 7.5rem calc(15rem + 174px);
   }
 }
 .instagram-feed-section .instagram-feed-heading {
