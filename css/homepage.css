@@ -619,6 +619,11 @@
     padding: 15rem 0 calc(15rem - 2.5rem);
   }
 }
+@media (max-width: 700px) {
+  .homepage-featured-articles-section {
+    padding: 10rem 0 calc(10rem - 2.5rem);
+  }
+}
 
 .featured-articles-background-image {
   position: absolute;
@@ -650,6 +655,11 @@
 @media (max-width: 1300px) {
   .homepage-featured-articles-section-heading {
     margin-bottom: 15rem;
+  }
+}
+@media (max-width: 700px) {
+  .homepage-featured-articles-section-heading {
+    margin-bottom: 10rem;
   }
 }
 

@@ -496,6 +496,11 @@
     padding: $section-spacing-medium 0
       calc(#{$section-spacing-medium} - #{$section-spacing-extra-tiny});
   }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small 0
+      calc(#{$section-spacing-small} - #{$section-spacing-extra-tiny});
+  }
 }
 
 .featured-articles-background-image {
@@ -524,6 +529,10 @@
 
   @include breakpoint(1300) {
     margin-bottom: $heading-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $heading-spacing-small;
   }
 }
 
