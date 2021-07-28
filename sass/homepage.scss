@@ -227,6 +227,10 @@
     padding: $section-spacing-medium $section-spacing-extra-small
       $section-spacing-medium;
   }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small 0;
+  }
 }
 
 //********** Tree Animations **********
@@ -281,6 +285,11 @@
   @include breakpoint(1300) {
     margin-bottom: $section-spacing-medium;
   }
+
+  @include breakpoint(700) {
+    overflow-x: scroll;
+    @include flex(row);
+  }
 }
 
 .homepage-section-one-double-image {
@@ -289,6 +298,11 @@
 
   @include breakpoint(1300) {
     width: 60%;
+  }
+
+  @include breakpoint(700) {
+    flex: 1 0 auto;
+    width: 400px;
   }
 }
 
@@ -302,10 +316,19 @@
   @include breakpoint(1300) {
     margin: $section-spacing-extra-small 0 $section-spacing-extra-small auto;
   }
+
+  @include breakpoint(700) {
+    margin: 0;
+  }
 }
 
 .homepage-section-one-single-image-wrapper {
   margin: 0 auto;
+
+  @include breakpoint(700) {
+    flex: 1 0 auto;
+    width: 400px;
+  }
 }
 
 .homepage-section-one-single-image {
