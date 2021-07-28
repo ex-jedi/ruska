@@ -33,42 +33,56 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 function getNavElements() {
   const mainNav = document.querySelector('.main-nav');
   const mainNavLinks = gsap.utils.toArray(document.querySelectorAll('.main-nav-link'));
-  const mainNavTriggerWrapper = document.querySelector('.main-nav-trigger-wrapper');
   const mainNavTrigger = document.querySelector('.main-nav-trigger');
+  const mainNavCloser = document.querySelector('.main-nav-closer');
 
-  return { mainNav, mainNavLinks, mainNavTriggerWrapper, mainNavTrigger };
+  return { mainNav, mainNavLinks, mainNavTrigger, mainNavCloser };
 }
 
 // * Open Menu
 
 function menuOpenAnimation() {
-  const { mainNav, mainNavLinks, mainNavTriggerWrapper, mainNavTrigger } = getNavElements();
+  const { mainNav, mainNavLinks, mainNavCloser } = getNavElements();
   const openMenuTl = gsap.timeline({
     paused: true,
     // onComplete: navTextPointerEvents,
-    defaults: { ease: 'power3.out', duration: 0.75, delay: 0 },
+    defaults: { ease: 'power2.in', duration: 0.8, delay: 0 },
   });
 
-  return openMenuTl.to(mainNav, { x: '0%' });
+  return openMenuTl
+    .addLabel('start')
+    .to(mainNav, { x: '0%' }, 'start')
+    .to(mainNavCloser, { rotate: 180 }, 'start')
+    .to(mainNavLinks, { y: '0%', opacity: 1, stagger: 0.1 }, '-=25%');
 }
 
-function navTriggerHandler() {
-  const { mainNav, mainNavTrigger } = getNavElements();
-  if (mainNav.dataset.state === 'closed') {
-    mainNavTrigger.style.pointerEvents = 'none';
-    menuOpenAnimation().restart();
-    mainNav.dataset.state = 'open';
-  }
-  // else {
-  //   mainNavTrigger.style.pointerEvents = 'none';
-  //   closeMenuAnimation().restart();
-  //   mainNav.dataset.state = 'closed';
-  // }
+function closeMenuAnimation() {
+  const { mainNav, mainNavLinks, mainNavCloser } = getNavElements();
+  const closeMenuTl = gsap.timeline({
+    paused: true,
+    defaults: { ease: 'power2.out', duration: 0.8, delay: 0 },
+  });
+
+  return closeMenuTl
+  .to(mainNavLinks, { y: 50, opacity: 0, stagger: { each: 0.15, from: 'end' } })
+  .addLabel('end')
+  .to(mainNav, { x: '-100%' }, 'end-=60%')
+  .to(mainNavCloser, { rotate: -180 }, 'end-=60%');
+}
+
+// TODO: Make inline if this is all you need
+function navOpenerHandler() {
+  menuOpenAnimation().play();
+}
+
+function navCloserHandler() {
+  closeMenuAnimation().play();
 }
 
 function addMenuListener() {
-  const { mainNavTrigger } = getNavElements();
-  mainNavTrigger.addEventListener('click', navTriggerHandler);
+  const { mainNavTrigger, mainNavCloser } = getNavElements();
+  mainNavTrigger.addEventListener('click', navOpenerHandler);
+  mainNavCloser.addEventListener('click', navCloserHandler);
 }
 
 addMenuListener();
