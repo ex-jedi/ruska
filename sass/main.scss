@@ -246,7 +246,7 @@ a {
     url('/images/darker-pink-circle.svg'), url('/images/darker-pink-circle.svg');
   background-position: -350px -350px, center, bottom -350px right -350px;
   background-repeat: no-repeat;
-  transform: translateX(-100%);
+  // transform: translateX(-100%);
 }
 
 .main-nav-link {
@@ -258,6 +258,16 @@ a {
   &:not(:last-of-type) {
     margin-bottom: $section-spacing-tiny;
   }
+}
+
+.main-nav-closer {
+  position: absolute;
+  top: $section-spacing-small;
+  right: $section-spacing-small;
+  background-color: $background-colour-medium;
+  border: 0;
+  height: 50px;
+  width: 50px;
 }
 
 //TODO: Delete if not needed
