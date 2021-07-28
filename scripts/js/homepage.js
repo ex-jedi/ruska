@@ -36,12 +36,42 @@ function getNavElements() {
   const mainNavTriggerWrapper = document.querySelector('.main-nav-trigger-wrapper');
   const mainNavTrigger = document.querySelector('.main-nav-trigger');
 
-  console.log({ mainNav, mainNavLinks, mainNavTriggerWrapper, mainNavTrigger });
-
   return { mainNav, mainNavLinks, mainNavTriggerWrapper, mainNavTrigger };
 }
 
-getNavElements();
+// * Open Menu
+
+function menuOpenAnimation() {
+  const { mainNav, mainNavLinks, mainNavTriggerWrapper, mainNavTrigger } = getNavElements();
+  const openMenuTl = gsap.timeline({
+    paused: true,
+    // onComplete: navTextPointerEvents,
+    defaults: { ease: 'power3.out', duration: 0.75, delay: 0 },
+  });
+
+  return openMenuTl.to(mainNav, { x: '0%' });
+}
+
+function navTriggerHandler() {
+  const { mainNav, mainNavTrigger } = getNavElements();
+  if (mainNav.dataset.state === 'closed') {
+    mainNavTrigger.style.pointerEvents = 'none';
+    menuOpenAnimation().restart();
+    mainNav.dataset.state = 'open';
+  }
+  // else {
+  //   mainNavTrigger.style.pointerEvents = 'none';
+  //   closeMenuAnimation().restart();
+  //   mainNav.dataset.state = 'closed';
+  // }
+}
+
+function addMenuListener() {
+  const { mainNavTrigger } = getNavElements();
+  mainNavTrigger.addEventListener('click', navTriggerHandler);
+}
+
+addMenuListener();
 
 // !==============================================================================
 // FIXME: Temp Building 👆🏾
