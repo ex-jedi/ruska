@@ -311,11 +311,19 @@
   @include breakpoint(1300) {
     padding: $section-spacing-medium;
   }
+
+  @include breakpoint(950) {
+    @include flex(column);
+  }
 }
 
 .homepage-section-two-text {
   flex: 0 1 auto;
   color: $font-colour-light;
+
+  @include breakpoint(1000) {
+    margin-bottom: $section-spacing-medium;
+  }
 }
 
 //********** Tree Animation **********
@@ -327,6 +335,10 @@
 
   @include breakpoint(1300) {
     width: 250px;
+  }
+
+  @include breakpoint(950) {
+    margin: 0;
   }
 
   svg {
