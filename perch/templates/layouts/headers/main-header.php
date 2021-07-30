@@ -3,6 +3,7 @@
 	<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
 <!-- Cookie Warning -->
 <?php perch_content("Cookie Warning"); ?>
+	<?php perch_content("Header Content"); ?>
 	<div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
 		<header class="header main-header">
 			<!-- Skip to main content link  -->
@@ -18,5 +19,4 @@
 			'hide-extensions' => true,
 			'levels'    => 1
 			)); ?>
-			<?php perch_content("Header Content"); ?>
 		</header>

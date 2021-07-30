@@ -1,12 +1,12 @@
 // *==============================================================================
 // ** Error Page  **
 // *==============================================================================
-import { mainLogoAnimation } from './animations';
-
-console.log('Hello');
+import { mainLogoAnimation, addMenuListener } from './animations';
 
 // *=========================================
 // ** Imported Functions  **
 // *=========================================
 
 mainLogoAnimation();
+
+addMenuListener();

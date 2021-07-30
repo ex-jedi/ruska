@@ -5,3 +5,32 @@
 //********** Imports **********
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
+
+.main-logo-wrapper {
+  margin-bottom: 0;
+}
+
+.error-page-section {
+  padding: $section-spacing-large;
+  background-image: url('/images/pale-pink-circle.svg');
+  background-repeat: no-repeat;
+  background-position: top right -#{$section-spacing-small};
+}
+
+.error-page-text-wrapper {
+  font-size: $font-size-extra-large;
+  color: $font-colour-dark;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+
+  p {
+    margin-bottom: $paragraph-spacing-large;
+    text-align: center;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

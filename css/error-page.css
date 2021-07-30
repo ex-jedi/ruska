@@ -1,0 +1,26 @@
+.main-logo-wrapper {
+  margin-bottom: 0;
+}
+
+.error-page-section {
+  padding: 20rem;
+  background-image: url("/images/pale-pink-circle.svg");
+  background-repeat: no-repeat;
+  background-position: top right -10rem;
+}
+
+.error-page-text-wrapper {
+  font-size: 10rem;
+  color: #77442f;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+}
+.error-page-text-wrapper p {
+  margin-bottom: 10rem;
+  text-align: center;
+}
+.error-page-text-wrapper p:last-of-type {
+  margin-bottom: 0;
+}

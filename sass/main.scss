@@ -96,6 +96,10 @@ main {
 p {
   margin-inline: auto;
   margin-top: 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
 .body-text-large {
