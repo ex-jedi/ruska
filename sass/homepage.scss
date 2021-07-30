@@ -22,6 +22,20 @@
   }
 }
 
+.main-logo-wrapper {
+  width: 150px;
+  background-color: $background-colour-light;
+  margin: $header-spacing-tiny auto $header-spacing-large;
+
+  @include breakpoint(800) {
+    margin-bottom: $section-spacing-extra-small;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $header-spacing-tiny;
+  }
+}
+
 .header-content-wrapper {
   @include flex(row);
   justify-content: space-around;
