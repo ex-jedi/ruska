@@ -15,6 +15,10 @@
   background-image: url('/images/pale-pink-circle.svg');
   background-repeat: no-repeat;
   background-position: top right -#{$section-spacing-small};
+
+  @include breakpoint(1300) {
+    padding: $section-spacing-medium;
+  }
 }
 
 .error-page-text-wrapper {
@@ -32,5 +36,9 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+  }
+
+  @include breakpoint(1500) {
+    font-size: $font-size-large;
   }
 }

@@ -8,6 +8,11 @@
   background-repeat: no-repeat;
   background-position: top right -10rem;
 }
+@media (max-width: 1300px) {
+  .error-page-section {
+    padding: 15rem;
+  }
+}
 
 .error-page-text-wrapper {
   font-size: 10rem;
@@ -23,4 +28,9 @@
 }
 .error-page-text-wrapper p:last-of-type {
   margin-bottom: 0;
+}
+@media (max-width: 1500px) {
+  .error-page-text-wrapper {
+    font-size: 7.5rem;
+  }
 }
