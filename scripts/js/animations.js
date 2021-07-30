@@ -94,14 +94,9 @@ function getNavElements() {
 
 // * Open Menu
 
-function menuOpenAnimation() {
-  let position = { x: '0%' };
-
-  if (mediaNineFifty.matches) {
-    position = { y: '0%' };
-  }
-
+function menuOpenAnimation(startPosition, endPosition) {
   const { mainNav, mainNavLinks, mainNavCloser } = getNavElements();
+
   const openMenuTl = gsap.timeline({
     paused: true,
     // onComplete: navTextPointerEvents,
@@ -110,15 +105,27 @@ function menuOpenAnimation() {
 
   return openMenuTl
     .addLabel('start')
-    .to(mainNav, position, 'start')
+    .fromTo(mainNav, startPosition, endPosition, 'start')
     .to(mainNavCloser, { rotate: 180 }, 'start')
     .to(mainNavLinks, { y: '0%', opacity: 1, stagger: 0.1 }, '-=25%');
 }
 
-function closeMenuAnimation() {
-  let position = { x: '-100%' };
+function navOpenerHandler() {
+  let beginning = { x: '-100%', y: 0 };
+  let end = { x: '0%', y: '0%' };
   if (mediaNineFifty.matches) {
-    position = { y: '100%' };
+    beginning = { x: '0%', y: '100%' };
+    end = { y: '0%', x: '0%' };
+  }
+  menuOpenAnimation(beginning, end).play();
+}
+
+// * Close Menu
+
+function closeMenuAnimation() {
+  let endPosition = { x: '-100%', y: '0%' };
+  if (mediaNineFifty.matches) {
+    endPosition = { y: '100%', x: '0%' };
   }
   const { mainNav, mainNavLinks, mainNavCloser } = getNavElements();
   const closeMenuTl = gsap.timeline({
@@ -129,18 +136,15 @@ function closeMenuAnimation() {
   return closeMenuTl
     .to(mainNavLinks, { y: 100, opacity: 0, stagger: { each: 0.15, from: 'end' } })
     .addLabel('end')
-    .to(mainNav, position, 'end-=60%')
+    .to(mainNav, endPosition, 'end-=60%')
     .to(mainNavCloser, { rotate: -180 }, 'end-=60%');
-}
-
-// TODO: Make inline if this is all you need
-function navOpenerHandler() {
-  menuOpenAnimation().play();
 }
 
 function navCloserHandler() {
   closeMenuAnimation().play();
 }
+
+// TODO: Make inline if this is all you need
 
 function addMenuListener() {
   const { mainNavTrigger, mainNavCloser } = getNavElements();
