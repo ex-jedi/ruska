@@ -55,8 +55,12 @@ body {
 h1,
 h2 {
   font-size: $heading-size-extra-large;
+  margin-bottom: $heading-spacing-large;
   font-weight: 700;
   text-align: center;
+  margin: 0 auto $heading-spacing-large;
+  color: $font-colour-dark;
+  line-height: 1;
 
   @include breakpoint(1550) {
     font-size: $heading-size-large;
@@ -64,13 +68,8 @@ h2 {
 
   @include breakpoint(1300) {
     font-size: $font-size-medium;
+    margin-bottom: $heading-spacing-medium;
   }
-}
-
-h1 {
-  margin: 0 auto $heading-spacing-large;
-  color: $font-colour-dark;
-  line-height: 1;
 }
 
 //********** Containers **********
@@ -98,9 +97,9 @@ p {
 .body-text-large {
   font-size: $font-size-large;
   font-weight: 400;
-  // text-align: center;
   padding: 0;
   margin: 0;
+  line-height: normal;
 
   @include breakpoint(1550) {
     font-size: $font-size-medium;
@@ -113,9 +112,9 @@ p {
 
 .body-text-medium {
   font-size: $font-size-medium;
-  // text-align: center;
   padding: 0;
   margin: 0;
+  line-height: normal;
 
   @include breakpoint(1550) {
     font-size: $font-size-small;
