@@ -25,18 +25,29 @@
   background-repeat: no-repeat;
   background-position: center right $section-spacing-tiny;
 
+  p:not(:last-of-type) {
+    margin-bottom: $paragraph-spacing-large;
+  }
+
   @include breakpoint(1550) {
     padding-inline: $section-spacing-very-large;
   }
 
-  p:not(:last-of-type) {
-    margin-bottom: $paragraph-spacing-large;
+  @include breakpoint(1300) {
+    padding-block: $section-spacing-medium;
+    p:not(:last-of-type) {
+      margin-bottom: $paragraph-spacing-medium;
+    }
   }
 }
 
 .bio-image {
   margin: 0 auto $section-spacing-large;
   width: 100%;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
 }
 
 //*=========================================
