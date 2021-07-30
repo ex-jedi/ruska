@@ -1,0 +1,17 @@
+<section class="about-me">
+  <h1 class="page-heading">
+  <perch:content id="pageHeading" type="text" label="Main Page Heading" required>
+  </h1>
+  <div class="bio-image-wrapper">
+    <img class="bio-image" itemprop="image" loading="lazy" src="<perch:content id="bioImage" type="image" width="1500" label="Bio Image">" alt="<perch:content id="altOne" type="text" label="Image Description">"
+    sizes="(max-width: 1500px) 100vw, 70vw"
+    srcset="<perch:content type="image" id="bioImage" width="1500"> 1500w,
+    <perch:content type="image" id="bioImage" width="1200"> 1200w,
+    <perch:content type="image" id="bioImage" width="1000"> 1000w,
+    <perch:content type="image" id="bioImage" width="800"> 800w,
+    <perch:content type="image" id="bioImage" width="600"> 600w">
+  </div>
+  <div class="about-me-text-wrapper body-text-medium">
+    <perch:content id="aboutMeText" type="textarea" editor="redactor" label="Page Text" required html>
+  </div>
+</section>

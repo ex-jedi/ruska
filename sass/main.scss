@@ -52,6 +52,7 @@ body {
 
 //********** Headings**********
 
+h1,
 h2 {
   font-size: $heading-size-extra-large;
   font-weight: 700;
@@ -64,6 +65,11 @@ h2 {
   @include breakpoint(1300) {
     font-size: $font-size-medium;
   }
+}
+
+h1 {
+  margin: 0 auto $heading-spacing-large;
+  color: $font-colour-dark;
 }
 
 //********** Containers **********
