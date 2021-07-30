@@ -289,6 +289,11 @@ a {
   }
 }
 
+#main-nav-current {
+  display: none;
+  visibility: hidden;
+}
+
 .main-nav-closer {
   position: absolute;
   top: $section-spacing-small;
