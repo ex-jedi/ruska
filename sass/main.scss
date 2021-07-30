@@ -158,6 +158,10 @@ a {
     margin-bottom: $section-spacing-medium;
   }
 
+  @include breakpoint(800) {
+    margin-bottom: $section-spacing-extra-small;
+  }
+
   @include breakpoint(700) {
     margin-bottom: $header-spacing-tiny;
   }
