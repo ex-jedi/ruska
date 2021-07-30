@@ -18,6 +18,22 @@
 
   @include breakpoint(1300) {
     padding: $section-spacing-medium;
+    background-position: top center;
+    background-size: 50vh;
+  }
+
+  @include breakpoint(1100) {
+    background-size: 30vh;
+  }
+
+  @include breakpoint(950) {
+    padding-inline: $section-spacing-extra-small;
+    background-size: 50vh;
+  }
+
+  @include breakpoint(700) {
+    background-size: contain;
+    padding: $section-spacing-small $section-spacing-extra-tiny;
   }
 }
 
@@ -40,5 +56,16 @@
 
   @include breakpoint(1500) {
     font-size: $font-size-large;
+  }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-medium;
+    p {
+      margin-bottom: $paragraph-spacing-medium;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 }
