@@ -25,8 +25,12 @@
   background-repeat: no-repeat;
   background-position: center right $section-spacing-tiny;
 
-  p:not(:last-of-type) {
+  p {
     margin-bottom: $paragraph-spacing-large;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   @include breakpoint(1550) {
@@ -36,13 +40,29 @@
   @include breakpoint(1300) {
     padding: 0 $section-spacing-large $section-spacing-medium;
 
-    p:not(:last-of-type) {
+    p {
       margin-bottom: $paragraph-spacing-medium;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 
   @include breakpoint(1000) {
     padding-inline: $section-spacing-small;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-extra-tiny $section-spacing-small;
+
+    p {
+      margin-bottom: $paragraph-spacing-small;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 
@@ -52,6 +72,10 @@
 
   @include breakpoint(1300) {
     margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
   }
 }
 

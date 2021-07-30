@@ -70,6 +70,10 @@ h2 {
     font-size: $font-size-medium;
     margin-bottom: $heading-spacing-medium;
   }
+
+  @include breakpoint(700) {
+    margin-bottom: $heading-spacing-small;
+  }
 }
 
 //********** Containers **********
@@ -219,7 +223,11 @@ a {
 
   @include breakpoint(950) {
     width: auto;
-    padding: $font-size-tiny;
+    padding: 1.2rem $section-spacing-tiny 2rem;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-extra-tiny 1rem;
   }
 }
 
