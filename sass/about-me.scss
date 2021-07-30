@@ -34,10 +34,15 @@
   }
 
   @include breakpoint(1300) {
-    padding-block: $section-spacing-medium;
+    padding: 0 $section-spacing-large $section-spacing-medium;
+
     p:not(:last-of-type) {
       margin-bottom: $paragraph-spacing-medium;
     }
+  }
+
+  @include breakpoint(1000) {
+    padding-inline: $section-spacing-small;
   }
 }
 
