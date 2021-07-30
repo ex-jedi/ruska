@@ -323,11 +323,11 @@ a {
   width: 75px;
   cursor: pointer;
 
-  @include breakpoint(850) {
+  @include breakpoint(950) {
     justify-self: flex-end;
     top: unset;
     left: 50%;
-    bottom: $section-spacing-tiny;
+    bottom: $section-spacing-extra-small;
     transform: translateX(-50%) !important;
   }
 }
