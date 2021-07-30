@@ -7,10 +7,23 @@
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
 
+.about-me-section {
+  padding: 0 $section-spacing-extra-large $section-spacing-large;
+  color: $font-colour-dark;
+
+  p:not(:last-of-type) {
+    margin-bottom: $paragraph-spacing-large;
+  }
+}
+
+.bio-image {
+  margin: 0 auto $section-spacing-large;
+}
+
 //*=========================================
 //** Instagram Feed **
 //*=========================================
 .instagram-feed-section {
-  padding-top: $section-spacing-large;
+  padding-top: $section-spacing-medium;
   overflow: hidden;
 }

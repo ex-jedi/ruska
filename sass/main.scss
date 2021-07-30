@@ -70,6 +70,7 @@ h2 {
 h1 {
   margin: 0 auto $heading-spacing-large;
   color: $font-colour-dark;
+  line-height: 1;
 }
 
 //********** Containers **********
@@ -88,6 +89,11 @@ main {
 }
 
 //********** Paragraphs **********
+
+p {
+  margin-inline: auto;
+  margin-top: 0;
+}
 
 .body-text-large {
   font-size: $font-size-large;
