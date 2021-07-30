@@ -25,6 +25,10 @@
   background-repeat: no-repeat;
   background-position: center right $section-spacing-tiny;
 
+  @include breakpoint(1550) {
+    padding-inline: $section-spacing-very-large;
+  }
+
   p:not(:last-of-type) {
     margin-bottom: $paragraph-spacing-large;
   }
