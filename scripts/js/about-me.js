@@ -8,7 +8,7 @@ import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 // ** Imports  **
 // *=========================================
 
-import { pyramidDividerFunction } from './animations';
+import { pyramidDividerFunction, mainLogoAnimation, scrollTriggerRefresh, addMenuListener } from './animations';
 
 // *=========================================
 // ** GSAP  **
@@ -23,5 +23,14 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 // FIXME: Temp Building 👆🏾
 // !==============================================================================
 
-// ********** Import Functions **********
+// *=========================================
+// ** Import Functions  **
+// *=========================================
+
+mainLogoAnimation();
+
 pyramidDividerFunction();
+
+scrollTriggerRefresh();
+
+addMenuListener();

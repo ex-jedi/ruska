@@ -32,22 +32,23 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 // FIXME: Temp Building 👇🏾
 // !==============================================================================
 
-addMenuListener();
-
 // !==============================================================================
 // FIXME: Temp Building 👆🏾
 // !==============================================================================
 
-// ********** Main Logo **********
+// *=========================================
+// ** Import Functions  **
+// *=========================================
+
+addMenuListener();
+
 mainLogoAnimation();
 
-// ********** Tree animations **********
 homepageTreeAnimationOne();
 homepageTreeAnimationTwo();
 homepageTreeAnimationThree();
 homepageTreeAnimationFour();
 
-// ********** Footer pyramid **********
 pyramidDividerFunction();
 
 scrollTriggerRefresh();
