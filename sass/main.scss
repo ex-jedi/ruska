@@ -335,6 +335,10 @@ a {
     bottom: $section-spacing-extra-small;
     transform: translateX(-50%) !important;
   }
+
+  @include breakpoint(700) {
+    bottom: $section-spacing-small;
+  }
 }
 
 //TODO: Delete if not needed
