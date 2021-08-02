@@ -27,19 +27,24 @@
 //* Header
 $header-spacing-large: 20rem;
 $header-spacing-medium: 15rem;
+$header-spacing-small: 10rem;
 $header-spacing-tiny: 1rem;
 
 //* Headings
 
 //Sizing
-$heading-size-large: 10rem;
+$heading-size-extra-large: 10rem;
+$heading-size-large: 7.5rem;
 $heading-size-medium: 5rem;
 
 //Spacing
 $heading-spacing-large: 20rem;
+$heading-spacing-medium: 15rem;
+$heading-spacing-small: 10rem;
 
 //* Sections
 $section-spacing-extra-large: 40rem;
+$section-spacing-very-large: 30rem;
 $section-spacing-large: 20rem;
 $section-spacing-medium: 15rem;
 $section-spacing-small: 10rem;
@@ -55,9 +60,12 @@ $font-size-large: 7.5rem;
 $font-size-medium: 5rem;
 $font-size-small: 3.8rem;
 $font-size-tiny: 2.5rem;
+$font-size-teeny-tiny: 1.6rem;
 
 //Spacing
 $paragraph-spacing-large: 10rem;
+$paragraph-spacing-medium: 5rem;
+$paragraph-spacing-small: 2.5rem;
 
 //*=========================================
 //** Colours  **
@@ -92,13 +100,15 @@ $link-visited: #8608fb;
 //********** Scrollbar Mixin **********
 
 @mixin styled-scrollbar(
-  $size,
+  $width,
   $color,
   $background-colour,
-  $track-shadow-colour
+  $track-shadow-colour,
+  $height: 1rem
 ) {
   &::-webkit-scrollbar {
-    width: $size;
+    width: $width;
+    height: $height;
   }
 
   &::-webkit-scrollbar-thumb {

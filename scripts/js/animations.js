@@ -17,6 +17,10 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 // ** GSAP Animations For Multiple Pages  **
 // *==============================================================================
 
+// ********** Globals **********
+// Media query for menu
+const mediaNineFifty = window.matchMedia('(max-width: 950px)');
+
 // *=========================================
 // ** Logo Animation  **
 // *=========================================
@@ -53,68 +57,104 @@ function mainLogoAnimation() {
 }
 
 // *=========================================
+// ** Pyramid Divider  **
+// *=========================================
+
+function pyramidDividerFunction() {
+  let triggerPoint = 'top 95%';
+  if (mediaNineFifty.matches) {
+    triggerPoint = 'top 85%';
+  }
+
+  gsap.to('.svg-pyramid-divider', {
+    y: 0,
+    scrollTrigger: {
+      trigger: '.svg-pyramid-divider',
+      start: triggerPoint,
+      end: 'top 50%',
+      id: 'Pyramid Divider',
+      // markers: true,
+      scrub: 1,
+    },
+  });
+}
+
+// *=========================================
 // ** Main Nav  **
 // *=========================================
 
-const mainNavTriggerWrapper = document.querySelector('.main-nav-trigger-wrapper');
-const mainNavTrigger = document.querySelector('.main-nav-trigger');
-const mainNav = document.querySelector('.main-nav');
-const navLink = document.querySelectorAll('.main-nav-link');
+function getNavElements() {
+  const mainNav = document.querySelector('.main-nav');
+  const mainNavLinks = gsap.utils.toArray(document.querySelectorAll('.main-nav-link'));
+  const mainNavTrigger = document.querySelector('.main-nav-trigger');
+  const mainNavCloser = document.querySelector('.main-nav-closer');
 
-// Restore pointerevents
-function pointerEventsRestore() {
-  mainNavTrigger.style.pointerEvents = 'auto';
-  if (mainNav.dataset.state === 'open') {
-    mainNavTrigger.textContent = 'CLOSE MENU';
-    mainNavTrigger.style.padding = '0';
-  } else {
-    mainNavTrigger.textContent = 'MENU';
-    mainNavTrigger.style.padding = '0 5rem';
-    // Stripping out styles injected by GreenSock to show normal menu if screen is resized
-    mainNav.removeAttribute('style');
-    navLink.forEach((link) => link.removeAttribute('style'));
-  }
+  return { mainNav, mainNavLinks, mainNavTrigger, mainNavCloser };
 }
 
-// * Open menu
+// * Open Menu
 
-const openMenuTl = gsap.timeline({
-  paused: true,
-  defaults: { ease: 'power3.out', duration: 1, delay: 0 },
-});
+function menuOpenAnimation(startPosition, endPosition) {
+  const { mainNav, mainNavLinks, mainNavCloser } = getNavElements();
 
-openMenuTl
-  .to(mainNav, { y: '0%' })
-  .addLabel('colorChange', '-=0.3')
-  .to(navLink, { y: 0, opacity: 1, stagger: 0.2, duration: 0.5 }, 'colorChange')
-  .to(mainNavTriggerWrapper, { backgroundColor: '#f4f1f0' }, 'colorChange')
-  .to(mainNavTrigger, { color: '#6c9184', onComplete: pointerEventsRestore }, 'colorChange');
+  const openMenuTl = gsap.timeline({
+    paused: true,
+    // onComplete: navTextPointerEvents,
+    defaults: { ease: 'power2.in', duration: 0.8, delay: 0 },
+  });
 
-// * Close menu
-
-const closeMenuTl = gsap.timeline({
-  paused: true,
-  defaults: { ease: 'power3.in', duration: 1, delay: 0 },
-});
-
-closeMenuTl
-  .to(navLink, { y: 40, opacity: 0, stagger: -0.2, duration: 0.5 })
-  .addLabel('colorChange', '-=0.5')
-  .to(mainNavTriggerWrapper, { backgroundColor: '#6c9184' }, 'colorChange')
-  .to(mainNavTrigger, { color: '#f4f1f0' }, 'colorChange')
-  .to(mainNav, { y: '120%', onComplete: pointerEventsRestore }, 'colorChange');
-
-function menuOpenerHandler() {
-  if (mainNav.dataset.state === 'closed') {
-    openMenuTl.restart();
-    mainNavTrigger.style.pointerEvents = 'none';
-    mainNav.dataset.state = 'open';
-  } else {
-    closeMenuTl.restart();
-    mainNavTrigger.style.pointerEvents = 'none';
-    mainNav.dataset.state = 'closed';
-  }
+  return openMenuTl
+    .addLabel('start')
+    .fromTo(mainNav, startPosition, endPosition, 'start')
+    .to(mainNavCloser, { rotate: 180 }, 'start')
+    .to(mainNavLinks, { y: '0%', opacity: 1, stagger: 0.1 }, '-=25%');
 }
+
+function navOpenerHandler() {
+  let beginning = { x: '-100%', y: 0 };
+  let end = { x: '0%', y: '0%' };
+  if (mediaNineFifty.matches) {
+    beginning = { x: '0%', y: '100%' };
+    end = { y: '0%', x: '0%' };
+  }
+  menuOpenAnimation(beginning, end).play();
+}
+
+// * Close Menu
+
+function closeMenuAnimation() {
+  let endPosition = { x: '-100%', y: '0%' };
+  if (mediaNineFifty.matches) {
+    endPosition = { y: '100%', x: '0%' };
+  }
+  const { mainNav, mainNavLinks, mainNavCloser } = getNavElements();
+  const closeMenuTl = gsap.timeline({
+    paused: true,
+    defaults: { ease: 'power2.out', duration: 0.8, delay: 0 },
+  });
+
+  return closeMenuTl
+    .to(mainNavLinks, { y: 100, opacity: 0, stagger: { each: 0.15, from: 'end' } })
+    .addLabel('end')
+    .to(mainNav, endPosition, 'end-=60%')
+    .to(mainNavCloser, { rotate: -180 }, 'end-=60%');
+}
+
+function navCloserHandler() {
+  closeMenuAnimation().play();
+}
+
+// TODO: Make inline if this is all you need
+
+function addMenuListener() {
+  const { mainNavTrigger, mainNavCloser } = getNavElements();
+  mainNavTrigger.addEventListener('click', navOpenerHandler);
+  mainNavCloser.addEventListener('click', navCloserHandler);
+}
+
+// *==============================================================================
+// ** Homepage  **
+// *==============================================================================
 
 // *=========================================
 // ** Tree Animation  **
@@ -145,8 +185,8 @@ function homepageTreeAnimationOne() {
       id: 'Tree Animation',
       start: 'bottom bottom',
       end: 'top 5%',
-      markers: true,
-      scrub: 1,
+      // markers: true,
+      scrub: 0.5,
     },
   });
 
@@ -183,8 +223,8 @@ function homepageTreeAnimationTwo() {
       id: 'Tree Animation',
       start: 'bottom bottom',
       end: 'top 5%',
-      markers: true,
-      scrub: 1,
+      // markers: true,
+      scrub: 0.5,
     },
   });
 
@@ -220,8 +260,8 @@ function homepageTreeAnimationThree() {
       id: 'Tree Animation',
       start: 'bottom bottom',
       end: 'top 5%',
-      markers: true,
-      scrub: 1,
+      // markers: true,
+      scrub: 0.5,
     },
   });
 
@@ -257,8 +297,8 @@ function homepageTreeAnimationFour() {
       id: 'Tree Animation',
       start: 'bottom bottom',
       end: 'top 5%',
-      markers: true,
-      scrub: 1,
+      // markers: true,
+      scrub: 0.5,
     },
   });
 
@@ -300,12 +340,12 @@ function scrollTriggerRefresh(time = 1000) {
 // *=========================================
 
 export {
-  menuOpenerHandler,
-  mainNavTrigger,
   mainLogoAnimation,
   homepageTreeAnimationOne,
   homepageTreeAnimationTwo,
   homepageTreeAnimationThree,
   homepageTreeAnimationFour,
   scrollTriggerRefresh,
+  pyramidDividerFunction,
+  addMenuListener,
 };

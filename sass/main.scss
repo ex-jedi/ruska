@@ -52,10 +52,28 @@ body {
 
 //********** Headings**********
 
+h1,
 h2 {
-  font-size: $heading-size-large;
+  font-size: $heading-size-extra-large;
+  margin-bottom: $heading-spacing-large;
   font-weight: 700;
   text-align: center;
+  margin: 0 auto $heading-spacing-large;
+  color: $font-colour-dark;
+  line-height: 1;
+
+  @include breakpoint(1550) {
+    font-size: $heading-size-large;
+  }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-medium;
+    margin-bottom: $heading-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $heading-spacing-small;
+  }
 }
 
 //********** Containers **********
@@ -75,6 +93,46 @@ main {
 
 //********** Paragraphs **********
 
+p {
+  margin-inline: auto;
+  margin-top: 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.body-text-large {
+  font-size: $font-size-large;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-medium;
+  }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-small;
+  }
+}
+
+.body-text-medium {
+  font-size: $font-size-medium;
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-tiny;
+  }
+}
+
 // *=========================================
 // ** Inline **
 // *=========================================
@@ -92,7 +150,7 @@ img {
 // Better to leave underlining on by default and switch it off where you don't want it
 
 a {
-  text-decoration: underline;
+  text-decoration: none;
   color: $link-colour;
 }
 
@@ -115,10 +173,17 @@ a {
   background-color: $background-colour-light;
   margin: $header-spacing-tiny auto $header-spacing-large;
 
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $header-spacing-small;
+  }
+
   image {
     opacity: 0;
   }
-
   svg {
     path {
       opacity: 0;
@@ -137,6 +202,18 @@ a {
   left: 0;
   background-color: $background-colour-dark;
   height: 100vh;
+  z-index: 4;
+
+  @include breakpoint(950) {
+    justify-content: center;
+    align-items: center;
+    top: unset;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+  }
 }
 
 .main-nav-trigger {
@@ -147,6 +224,15 @@ a {
   background-color: transparent;
   padding: $font-size-medium 0;
   cursor: pointer;
+
+  @include breakpoint(950) {
+    width: auto;
+    padding: 1.2rem $section-spacing-tiny 2rem;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-extra-tiny 1rem;
+  }
 }
 
 .sideways-text {
@@ -158,14 +244,104 @@ a {
   font-size: $font-size-medium;
   color: $font-colour-light;
   font-weight: 700;
-}
 
-.main-nav {
-  display: none;
+  @include breakpoint(950) {
+    writing-mode: horizontal-tb;
+    text-orientation: upright;
+    transform: rotate(0deg);
+    left: 0;
+    font-size: $font-size-small;
+  }
 }
 
 //********** Responsive Styles **********
 
+.main-nav {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 5;
+  background-color: $background-colour-medium;
+  background-image: url('/images/darker-pink-circle.svg'),
+    url('/images/darker-pink-circle.svg'), url('/images/darker-pink-circle.svg');
+  background-position: -350px -350px, left 65% center,
+    bottom -350px right -350px;
+  background-size: 700px, 700px, 700px;
+  background-repeat: no-repeat;
+  transform: translateX(-100%);
+
+  @include breakpoint(1500) {
+    background-size: 600px, 600px, 600px;
+  }
+
+  @include breakpoint(1000) {
+    background-size: 600px, 500px, 600px;
+    background-position: -380px -380px, left 85% center,
+      bottom -380px right -380px;
+  }
+
+  @include breakpoint(950) {
+    transform: translateX(0);
+    transform: translateY(100%);
+  }
+
+  @include breakpoint(700) {
+    background-size: 600px, 400px, 600px;
+  }
+
+  @include breakpoint(500) {
+    background-size: 600px, 90%, 600px;
+    background-position: -450px -450px, left 85% center,
+      bottom -450px right -450px;
+  }
+}
+
+.main-nav-link {
+  color: $font-colour-light;
+  font-size: $font-size-medium;
+  font-weight: 700;
+  text-transform: lowercase;
+  transform: translateY(100px);
+  opacity: 0;
+
+  &:not(:last-of-type) {
+    margin-bottom: $section-spacing-tiny;
+  }
+}
+
+#main-nav-current {
+  display: none;
+  visibility: hidden;
+}
+
+.main-nav-closer {
+  position: absolute;
+  top: $section-spacing-small;
+  right: $section-spacing-small;
+  background-color: transparent;
+  border: 0;
+  height: 75px;
+  width: 75px;
+  cursor: pointer;
+
+  @include breakpoint(950) {
+    justify-self: flex-end;
+    top: unset;
+    left: 50%;
+    bottom: $section-spacing-extra-small;
+    transform: translateX(-50%) !important;
+  }
+
+  @include breakpoint(700) {
+    bottom: $section-spacing-small;
+  }
+}
+
+//TODO: Delete if not needed
 // *=========================================
 // ** Body **
 // *=========================================
@@ -178,34 +354,81 @@ a {
   padding: $section-spacing-large;
   background-color: $background-colour-medium-lighter;
   color: $font-colour-dark;
+
+  @include breakpoint(1300) {
+    padding: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    padding: $section-spacing-small $section-spacing-extra-tiny;
+  }
 }
 
 .email-signup-form {
   padding: 0 $section-spacing-tiny;
+  @include breakpoint(1550) {
+    padding: 0;
+  }
 }
 
 .contact-form-heading {
   margin: 0 auto $heading-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $heading-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
 }
 
 .email-signup-form-input-wrapper {
   font-size: $font-size-medium;
   font-weight: 700;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-small;
+  }
 }
 
 .email-input-wrapper {
   @include flex(row);
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: flex-end;
   margin: 0 auto $section-spacing-small;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-extra-small;
+  }
+
+  @include breakpoint(1100) {
+    @include flex(column);
+    align-items: flex-start;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-tiny;
+  }
+
+  label {
+    flex: 1 0 auto;
+    width: fit-content;
+  }
 
   input {
     flex: 1 1 auto;
+    width: 100%;
     margin-left: $section-spacing-extra-tiny;
     background-color: $background-colour-medium-lighter;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-bottom: 3px solid $font-colour-dark;
+
+    @include breakpoint(1100) {
+      margin: 0;
+    }
   }
 }
 
@@ -215,6 +438,14 @@ a {
   align-items: flex-start;
   font-size: $font-size-tiny;
   margin: 0 auto $section-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
 
   input {
     position: relative;
@@ -268,6 +499,7 @@ a {
   background-color: $background-colour-medium-lighter;
   border: 3px solid $font-colour-dark;
   margin: 0;
+  appearance: none;
   // Fixes font top spacing
   padding: 1.2rem 2rem 2rem;
   transition: 0.3s ease all;
@@ -305,13 +537,36 @@ select {
 //*=========================================
 
 .instagram-feed-section {
-  padding: 0 $section-spacing-large $section-spacing-large;
+  padding: 0 $section-spacing-large calc(#{$section-spacing-large} + 265px);
   background-color: $background-colour-light;
   overflow: visible;
+
+  @include breakpoint(1300) {
+    padding: 0 $section-spacing-extra-small
+      calc(#{$section-spacing-medium} + 174px);
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-extra-tiny
+      calc(#{$section-spacing-small} + 75px);
+  }
+
+  @include breakpoint(500) {
+    padding-bottom: calc(#{$section-spacing-small} + 40px);
+  }
 
   .instagram-feed-heading {
     color: $font-colour-medium;
     margin: 0 auto $section-spacing-small;
+    text-align: center;
+
+    @include breakpoint(1300) {
+      margin-bottom: $section-spacing-extra-small;
+    }
+
+    @include breakpoint(700) {
+      margin-bottom: $section-spacing-tiny;
+    }
   }
 }
 
@@ -322,29 +577,120 @@ select {
 
 .instagram-feed-images-wrapper {
   @include flex(row);
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  @include breakpoint(700) {
+    @include flex(column);
+  }
 }
 
 .instagram-feed-image {
   flex: 0 1 auto;
-  width: 20%;
+  width: 23%;
   aspect-ratio: 1/1;
   object-fit: cover;
+
+  @include breakpoint(1300) {
+    width: 48%;
+
+    &:first-of-type,
+    &:nth-of-type(2) {
+      margin-bottom: $section-spacing-extra-tiny;
+    }
+  }
+
+  @include breakpoint(700) {
+    width: 100%;
+    margin-bottom: $section-spacing-extra-tiny;
+  }
 }
 
 .instagram-feed-background-image {
   //TODO: See if this can span two sections
-
   position: absolute;
   z-index: -1;
-  top: -200px;
-  right: $section-spacing-large;
+  top: -$section-spacing-tiny;
+  right: $section-spacing-medium;
+  object-fit: contain;
 }
 
 // *=========================================
 // ** Footer  **
 // *=========================================
+
+.svg-pyramid-divider {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  right: 0;
+  bottom: -1px;
+  margin: 0;
+  padding: 0;
+  transform: translateY(100%);
+
+  @include breakpoint(1920) {
+    width: calc(100% - 8.5rem);
+  }
+
+  @include breakpoint(950) {
+    width: 100%;
+  }
+}
+
+.main-footer {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  background-color: $background-colour-medium;
+  padding: $section-spacing-large $section-spacing-small
+    $section-spacing-extra-tiny;
+  color: $font-colour-light;
+
+  @include breakpoint(1300) {
+    padding-top: $section-spacing-medium;
+  }
+
+  @include breakpoint(950) {
+    padding: $section-spacing-medium $section-spacing-extra-tiny
+      $section-spacing-medium;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.footer-contact {
+  font-size: $font-size-medium;
+  font-weight: 700;
+  margin: 0 auto $section-spacing-large;
+  text-align: center;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+    font-size: $font-size-tiny;
+  }
+}
+
+.footer-legals,
+.footer-credit {
+  font-size: $font-size-tiny;
+  text-align: center;
+}
+
+.footer-legals {
+  margin: 0 auto $section-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
+}
+
+.footer-credit {
+  margin: 0 auto;
+}
 
 //*=========================================
 //** Utility & Accessibility  **
@@ -408,6 +754,9 @@ body:not(.user-is-tabbing) textarea:focus {
 //*=========================================
 
 .cookie-warning-wrapper {
+  display: none;
+  pointer-events: none;
+
   @include flex(row);
   justify-content: space-between;
   align-items: center;

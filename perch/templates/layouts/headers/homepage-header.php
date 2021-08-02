@@ -3,8 +3,8 @@
 	<body class="<?php perch_page_attribute('bodyClass', array('template' => 'bits.html' )); ?>">
 <!-- Cookie Warning -->
 <?php perch_content("Cookie Warning"); ?>
-	<?php perch_content("Header Content"); ?>
 	<div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
+  <?php perch_content("SVG Tree"); ?>
 		<header class="header main-header">
 			<!-- Skip to main content link  -->
 			<a class="show-on-focus"  href="#main-content">Skip to main content</a>
@@ -19,4 +19,5 @@
 			'hide-extensions' => true,
 			'levels'    => 1
 			)); ?>
+			<?php perch_content("Header Content"); ?>
 		</header>

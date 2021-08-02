@@ -1,0 +1,88 @@
+// *=======================================================================================
+// ** About Me  **
+// *=======================================================================================
+
+//********** Imports **********
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+.about-me-top-backround-image {
+  position: absolute;
+  top: $section-spacing-tiny;
+  left: 45%;
+}
+
+.main-logo-wrapper {
+  background-color: transparent;
+}
+
+.about-me-section {
+  padding: 0 $section-spacing-extra-large $section-spacing-large;
+  color: $font-colour-dark;
+  background-color: transparent;
+  background-image: url('/images/pale-pink-circle.svg');
+  background-repeat: no-repeat;
+  background-position: center right $section-spacing-tiny;
+
+  p {
+    margin-bottom: $paragraph-spacing-large;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint(1550) {
+    padding-inline: $section-spacing-very-large;
+  }
+
+  @include breakpoint(1300) {
+    padding: 0 $section-spacing-large $section-spacing-medium;
+
+    p {
+      margin-bottom: $paragraph-spacing-medium;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include breakpoint(1000) {
+    padding-inline: $section-spacing-small;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-extra-tiny $section-spacing-small;
+
+    p {
+      margin-bottom: $paragraph-spacing-small;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.bio-image {
+  margin: 0 auto $section-spacing-large;
+  width: 100%;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
+}
+
+//*=========================================
+//** Instagram Feed **
+//*=========================================
+
+.instagram-feed-section {
+  padding-top: $section-spacing-medium;
+  overflow: hidden;
+}
