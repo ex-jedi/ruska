@@ -1,11 +1,13 @@
 <!-- Anything to include in head goes here  -->
 </head>
-	<body class="blog blog-post-page" >
-		<!-- Cookie Warning -->
-		<?php perch_content("Cookie Warning"); ?>
-		<!-- TODO: Delete if not using -->
-		<div class="site-wrapper">
-		<header class="header main-header">
+<!-- Google Analytics -->
+<?php perch_content('Analytics'); ?>
+
+<!-- Cookie Warning -->
+<?php perch_content("Cookie Warning"); ?>
+	<body class="blog blog-index">
+				<div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
+				<header class="header main-header">
 			<!-- Skip to main content link  -->
 			<a class="show-on-focus"  href="#main-content">Skip to main content</a>
 			<!-- For SVG logo. Delete if not needed -->
@@ -20,3 +22,4 @@
 			'levels'    => 1
 			)); ?>
 		</header>
+
