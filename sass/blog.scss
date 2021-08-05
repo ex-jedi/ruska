@@ -57,6 +57,7 @@
     color: $font-colour-dark;
     width: fit-content;
     margin: 0 auto $section-spacing-extra-small;
+    cursor: pointer;
 
     &::after {
       content: url('/images/down-arrow.svg');
@@ -65,11 +66,12 @@
       width: $font-size-teeny-tiny;
       transform: rotate(180deg);
       transform-origin: center 65%;
+      transition: all 0.4s ease;
     }
   }
 }
 
-.cat-ul-heading {
+.cat-ul-heading-reveal {
   &::after {
     transform: rotate(0);
   }

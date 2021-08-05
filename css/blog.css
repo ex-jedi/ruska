@@ -64,6 +64,7 @@
     width: -moz-fit-content;
     width: fit-content;
     margin: 0 auto 7.5rem;
+    cursor: pointer;
   }
   .cat-ul-heading::after {
     content: url("/images/down-arrow.svg");
@@ -74,10 +75,12 @@
             transform: rotate(180deg);
     -webkit-transform-origin: center 65%;
             transform-origin: center 65%;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
   }
 }
 
-.cat-ul-heading::after {
+.cat-ul-heading-reveal::after {
   -webkit-transform: rotate(0);
           transform: rotate(0);
 }
