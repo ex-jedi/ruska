@@ -4,7 +4,8 @@
 	<!-- Cookie Warning -->
 	<?php perch_content("Cookie Warning"); ?>
 	<div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
-		<header class="header main-header">
+	<header class="header main-header">
+			<?php perch_content("Header Content"); ?>
 			<!-- Skip to main content link  -->
 			<a class="show-on-focus"  href="#main-content">Skip to main content</a>
 			<!-- For SVG logo. Delete if not needed -->
@@ -18,6 +19,5 @@
 				'hide-extensions' => true,
 				'levels'    => 1
 				)); ?>
-				<?php perch_content("Header Content"); ?>
 		</header>
 
