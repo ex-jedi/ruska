@@ -39,10 +39,44 @@
     padding-inline: 5rem;
   }
 }
+@media (max-width: 700px) {
+  .blog-index-wrapper {
+    padding: 0 2.5rem 10rem;
+  }
+}
+
+.cat-ul-heading {
+  display: none;
+}
+@media (max-width: 950px) {
+  .cat-ul-heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: block;
+    font-size: 3.8rem;
+    color: #77442f;
+  }
+  .cat-ul-heading::after {
+    content: url("/images/down-arrow.svg");
+    display: inline-block;
+    margin-left: 1.6rem;
+    width: 1.6rem;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transform-origin: center 65%;
+            transform-origin: center 65%;
+  }
+}
 
 .blog-categories-ul {
   width: 70%;
   margin: 0 auto;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,12 +88,37 @@
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
+@media (max-width: 950px) {
+  .blog-categories-ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .blog-categories-ul li {
   list-style-type: none;
 }
 .blog-categories-ul a {
   color: #77442f;
   font-weight: 700;
+}
+
+.blog-categories-ul-reveal {
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0);
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .blog-index-subheading-link {
@@ -84,8 +143,21 @@
 }
 @media (max-width: 1300px) {
   .blog-index-item:nth-child(3n+1) {
-    width: 100%;
     margin: 15rem auto;
+  }
+}
+@media (max-width: 700px) {
+  .blog-index-item {
+    margin: 10rem auto 0;
+    width: 100%;
+  }
+  .blog-index-item:nth-child(3n+1) {
+    margin: 10rem auto 0;
+  }
+  .blog-index-item:nth-child(3n+1) img,
+.blog-index-item:nth-child(3n+1) h3 {
+    width: 100%;
+    margin: 0 auto;
   }
 }
 .blog-index-item:last-of-type {
