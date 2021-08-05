@@ -47,6 +47,7 @@
 
   @include breakpoint(700) {
     padding: 0 $section-spacing-extra-tiny $section-spacing-small;
+    margin-top: -250px;
   }
 }
 
