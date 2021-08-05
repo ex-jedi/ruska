@@ -40,11 +40,18 @@
 
   @include breakpoint(950) {
     padding-inline: $section-spacing-tiny;
+    position: relative;
+    margin-top: -300px;
+    transition: all 0.4s ease;
   }
 
   @include breakpoint(700) {
     padding: 0 $section-spacing-extra-tiny $section-spacing-small;
   }
+}
+
+.category-push-down {
+  margin-top: 0;
 }
 
 .cat-ul-heading {
@@ -58,6 +65,8 @@
     width: fit-content;
     margin: 0 auto $section-spacing-extra-small;
     cursor: pointer;
+    z-index: 5;
+    position: relative;
 
     &::after {
       content: url('/images/down-arrow.svg');
@@ -98,14 +107,13 @@
     justify-content: center;
     align-items: center;
     clip-path: inset(0 0 100% 0);
+    transition: all 0.4s ease;
 
     li:not(:last-of-type) {
       margin-bottom: $section-spacing-extra-tiny;
     }
   }
 }
-
-//* Blog reveal animation
 
 .blog-categories-ul-reveal {
   clip-path: inset(0 0 0 0);

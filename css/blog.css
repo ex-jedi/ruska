@@ -37,12 +37,20 @@
 @media (max-width: 950px) {
   .blog-index-wrapper {
     padding-inline: 5rem;
+    position: relative;
+    margin-top: -300px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
   }
 }
 @media (max-width: 700px) {
   .blog-index-wrapper {
     padding: 0 2.5rem 10rem;
   }
+}
+
+.category-push-down {
+  margin-top: 0;
 }
 
 .cat-ul-heading {
@@ -65,6 +73,8 @@
     width: fit-content;
     margin: 0 auto 7.5rem;
     cursor: pointer;
+    z-index: 5;
+    position: relative;
   }
   .cat-ul-heading::after {
     content: url("/images/down-arrow.svg");
@@ -124,6 +134,8 @@
             align-items: center;
     -webkit-clip-path: inset(0 0 100% 0);
             clip-path: inset(0 0 100% 0);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
   }
   .blog-categories-ul li:not(:last-of-type) {
     margin-bottom: 2.5rem;
