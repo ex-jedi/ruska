@@ -1,24 +1,19 @@
 <!-- Article Heading -->
 <h1 class="section-heading blog-heading blog-post-title" itemprop="headline">
-  <perch:blog id="postTitle" type="text" label="Article Heading" required="true" size="l" order="3" >
+  <perch:blog id="postTitle" type="text" label="Article Heading" divider-before="Article Title" required="true" size="l" order="1" >
 </h1>
 
-<!-- So the title and category order can be changed with flex order  -->
-<div class="post-body-wrapper">
-<!--Top  Image -->
-<div class="blog-post-image-wrapper">
-  <img class="blog-post-main-image blog-post-image" itemprop="image" src="<perch:blog id="blogPostMainImage" type="image" width="1700" label="Main Image" order="1">" alt="<perch:blog id="alt" type="text" label="Image Description" help="Briefly describe what the image is showing" size="l" order="2">"
-  sizes="75vw"
-  srcset="<perch:blog type="image" id="blogPostMainImage" width="1700" > 1700w,
-  <perch:blog type="image" id="blogPostMainImage" width="1500" > 1500w,
-  <perch:blog type="image" id="blogPostMainImage" width="1200" > 1200w,
-  <perch:blog type="image" id="blogPostMainImage" width="900" > 900w,
-  <perch:blog type="image" id="blogPostMainImage" width="600" > 600w">
-</div>
+  <!-- Cover Image -->
+  <perch:blog id="blogIndexImage" type="image" label="Blog Listing Image - This image will appear on the blog homepage with the title." divider-before="Cover Image"  order="3" required="true" width="1400" height="1400" help="Please use an image over 1400px x 1400px. This image will be cropped to a square." required suppress crop>
+    <perch:blog type="image" id="blogIndexImage" width="1000" height="1000" suppress crop>
+    <perch:blog type="image" id="blogIndexImage" width="800" height="800" suppress crop>
+    <perch:blog type="image" id="blogIndexImage" width="600" height="600" suppress crop>
+    <perch:blog type="image" id="blogIndexImage" width="400" height="400" suppress crop>
 
+<div class="post-wrapper">
 
 <!-- Edit Slug -->
-<perch:blog id="postSlug" type="slug" editable="true" label="Blog Post Slug" help="This is the text that goes after your web address (blossombooks.co/articles/this-bit-is-the-slug). This is generated automatically and incorporates the article title. You won't normally need to change this. If you do need to change this use numbers, letters and hyphens only. If you use spaces the link won't work. If the slug is changed after the page has been published, links using the previous slug won't work anymore." for="postTitle" suppress="true" order="4">
+<perch:blog id="postSlug" type="slug" editable="true" label="Blog Post Slug" help="This is the text that goes after your web address (blossombooks.co/articles/this-bit-is-the-slug). This is generated automatically and incorporates the article title. You won't normally need to change this. If you do need to change this use numbers, letters and hyphens only. If you use spaces the link won't work. If the slug is changed after the page has been published, links using the previous slug won't work anymore. Call us if this makes no sense!" for="postTitle" suppress="true" order="2">
 
 <!-- Perch Blocks -->
 <!-- Text block  -->
@@ -29,64 +24,51 @@
       </div>
     </perch:block>
 
-  <!-- Full width image -->
-  <perch:block type="fullwidthimage" icon="photo" label="Image" >
+  <!-- Image -->
+  <perch:block type="image" icon="photo" label="Image">
     <div class="blog-post-image-wrapper">
-      <img class="blog-post-body-image blog-post-image" loading="lazy" itemprop="image" src="<perch:blog id="fullWidthBlogImage" type="image" width="1350" help="This block can be dragged up or down to reorder">" alt="<perch:blog id="alt" type="text" label="Image alt description">"
-      sizes="100vw"
-      srcset="<perch:blog type="image" id="fullWidthBlogImage" width="1750"> 1750w,
-              <perch:blog type="image" id="fullWidthBlogImage" width="1500"> 1500w,
-              <perch:blog type="image" id="fullWidthBlogImage" width="1200"> 1200w,
-              <perch:blog type="image" id="fullWidthBlogImage" width="900"> 900w,
-              <perch:blog type="image" id="fullWidthBlogImage" width="600"> 600w">
+      <img class="blog-post-image" itemprop="image" loading="lazy" src="<perch:blog id="blogPostImage" type="image" width="1400" label="Blog Image" help="Image must be at least 1400px wide. This block can be dragged up or down to reorder">" alt="<perch:blog id="altOne" type="text" label="Image Description">"
+      sizes="(max-width: 800px) 100vw, 50vw"
+      srcset="<perch:blog type="image" id="blogPostImage" width="1400"> 1400w,
+      <perch:blog type="image" id="blogPostImage" width="1000"> 1000w,
+      <perch:blog type="image" id="blogPostImage" width="800"> 800w,
+      <perch:blog type="image" id="blogPostImage" width="600"> 600w,
+      <perch:blog type="image" id="blogPostImage" width="400"> 400w">
     </div>
   </perch:block>
 
-    <!-- Pull Quote -->
-    <perch:block type="pull-quote" icon="quote" label="Pull Quote With Optional Citation">
-      <!-- With Citation -->
-      <perch:if exists="citationLink">
-        <!-- And Link -->
-        <blockquote class="blog-pull-quote blog-pull-quote-with-citation" cite="<perch:blog id="citationLink" type="text" label="Optional Citation Link" help="Paste in full URL">">
-        <perch:else>
-          <!-- Without Link or Without Citation  -->
-          <blockquote class="blog-pull-quote">
-      </perch:if>
-
-      <div class="pull-quote-text">
-        <perch:blog id="pullQuoteText" type="textarea" editor="redactor" html="true" help="This block can be dragged up or down to reorder" count="words" order="1">
-      </div>
-
-      <perch:if exists="citationLink AND citationText">
-          <p class="pull-quote-citation">
-            <a class="pull-quote-citation-link"  href="<perch:blog id="citationLink">" target="_blank" title="Open in new tab">
-              <perch:blog id="citationText" type="text" label="Optional Citation" order="2">
-            </a>
-          </p>
-      <perch:else>
-        <perch:if exists="citationText">
-          <p class="pull-quote-citation">
-            <perch:blog id="citationText">
-          </p>
-        </perch:if>
+  <!-- Image with caption -->
+<perch:block type="imageWithCaption" icon="photo" label="Image with caption">
+  <figure class="blog-figure">
+    <img class="blog-post-image figure-image" itemprop="image" loading="lazy" src="<perch:blog id="blogPostFigImage" type="image" width="1400" label="Blog Image With Caption" help="Image must be at least 1400px wide. This block can be dragged up or down to reorder">" alt="<perch:blog id="altTwo" type="text" label="Image Description">"
+      sizes="(max-width: 800px) 100vw, 50vw"
+      srcset="<perch:blog type="image" id="blogPostFigImage" width="1400"> 1400w,
+      <perch:blog type="image" id="blogPostFigImage" width="1000"> 1000w,
+      <perch:blog type="image" id="blogPostFigImage" width="800"> 800w,
+      <perch:blog type="image" id="blogPostFigImage" width="600"> 600w,
+      <perch:blog type="image" id="blogPostFigImage" width="400"> 400w">
+    <perch:if exists="image-caption">
+      <figcaption class="blog-image-caption">
+        <perch:blog id="image-caption" type="textarea" editor="redactor" html="true" label="Image Caption" help="Add optional caption below image." size="small">
+      </figcaption>
     </perch:if>
+  </figure>
+</perch:block>
 
-      </blockquote>
-  	</perch:block>
 
-    <!-- Video Embed  -->
-    <perch:block type="embed" icon="video" label="Embed Videos">
-      <div class="blog-embed blog-video-embed">
-        <perch:blog id="videoEmbedBlock" type="textarea" editor="markitup" html="true" help="Paste the embed code into the box. This block can be dragged up or down to reorder" size="m">
-        </div>
-    </perch:block>
-
-    <!-- General Embed  -->
-    <perch:block type="socialMediaEmbed" icon="chat" label="General Embeds">
-    <div class="blog-embed blog-general-embed">
-      <perch:blog id="socialEmbedBlock" type="textarea" editor="markitup" html="true" help="For social media and other embedded content. Paste code into the box. This block can be dragged up or down to reorder" size="m">
+  <!-- Video Embed  -->
+  <perch:block type="embed" icon="video" label="Embed Videos">
+    <div class="blog-embed blog-video-embed">
+      <perch:blog id="videoEmbedBlock" type="textarea" editor="markitup" html="true" help="Paste the embed code into the box. This block can be dragged up or down to reorder" size="m">
       </div>
   </perch:block>
+
+  <!-- General Embed  -->
+  <perch:block type="socialMediaEmbed" icon="chat" label="General Embeds">
+  <div class="blog-embed blog-general-embed">
+    <perch:blog id="socialEmbedBlock" type="textarea" editor="markitup" html="true" help="For social media and other embedded content. Paste code into the box. This block can be dragged up or down to reorder" size="m">
+    </div>
+</perch:block>
 
 
   </perch:blocks> <!-- Perch blocks end -->
@@ -108,5 +90,5 @@
   <perch:categories id="categories" set="blog" label="Categories" suppress="true" max="1" size="m">
           <perch:category id="catTitle" type="text" suppress="true">
   </perch:categories>
-</div>
+</div> <!-- post wrapper -->
 
