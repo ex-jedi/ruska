@@ -144,8 +144,6 @@ function navCloserHandler() {
   closeMenuAnimation().play();
 }
 
-// TODO: Make inline if this is all you need
-
 function addMenuListener() {
   const { mainNavTrigger, mainNavCloser } = getNavElements();
   mainNavTrigger.addEventListener('click', navOpenerHandler);
