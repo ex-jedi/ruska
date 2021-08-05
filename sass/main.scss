@@ -170,7 +170,7 @@ a {
 
 .main-logo-wrapper {
   width: 150px;
-  background-color: $background-colour-light;
+  background-color: transparent;
   margin: $header-spacing-tiny auto $header-spacing-large;
 
   @include breakpoint(1300) {
@@ -340,11 +340,6 @@ a {
     bottom: $section-spacing-small;
   }
 }
-
-//TODO: Delete if not needed
-// *=========================================
-// ** Body **
-// *=========================================
 
 // *=========================================
 // ** Forms  **
