@@ -18,6 +18,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-image: url(/images/pale-pink-circle.svg), url(/images/pale-pink-circle.svg);
+  background-position: center right 5rem, center bottom 40rem;
+  background-repeat: no-repeat;
 }
 @media (max-width: 1700px) {
   .blog-index-wrapper {
@@ -41,12 +44,16 @@
     margin-top: -300px;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease;
+    background-position: center right 1rem, center bottom 20rem;
+    background-size: 70%;
   }
 }
 @media (max-width: 700px) {
   .blog-index-wrapper {
     padding: 0 2.5rem 10rem;
     margin-top: -250px;
+    background-position: center right 1rem, center bottom 55rem;
+    background-size: 50%;
   }
 }
 
