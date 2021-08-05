@@ -97,6 +97,7 @@
     @include flex(column);
     justify-content: center;
     align-items: center;
+    clip-path: inset(0 0 100% 0);
 
     li:not(:last-of-type) {
       margin-bottom: $section-spacing-extra-tiny;
