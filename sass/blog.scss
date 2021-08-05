@@ -55,6 +55,8 @@
     display: block;
     font-size: $font-size-small;
     color: $font-colour-dark;
+    width: fit-content;
+    margin: 0 auto $section-spacing-extra-small;
 
     &::after {
       content: url('/images/down-arrow.svg');
@@ -67,18 +69,18 @@
   }
 }
 
+.cat-ul-heading {
+  &::after {
+    transform: rotate(0);
+  }
+}
+
 .blog-categories-ul {
   width: 70%;
   margin: 0 auto;
   padding: 0;
   @include flex(row);
   justify-content: space-evenly;
-
-  @include breakpoint(950) {
-    @include flex(column);
-    justify-content: center;
-    align-items: center;
-  }
 
   li {
     list-style-type: none;
@@ -87,6 +89,16 @@
   a {
     color: $font-colour-dark;
     font-weight: 700;
+  }
+
+  @include breakpoint(950) {
+    @include flex(column);
+    justify-content: center;
+    align-items: center;
+
+    li:not(:last-of-type) {
+      margin-bottom: $section-spacing-extra-tiny;
+    }
   }
 }
 
