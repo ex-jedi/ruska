@@ -25,6 +25,11 @@
   @include flex(row);
   flex-wrap: wrap;
   justify-content: space-between;
+  background-image: url(/images/pale-pink-circle.svg),
+    url(/images/pale-pink-circle.svg);
+  background-position: center right #{$section-spacing-tiny},
+    center bottom #{$section-spacing-extra-large};
+  background-repeat: no-repeat;
 
   @include breakpoint(1700) {
     padding-inline: $section-spacing-very-large;
@@ -43,11 +48,16 @@
     position: relative;
     margin-top: -300px;
     transition: all 0.4s ease;
+    background-position: center right 1rem,
+      center bottom #{$section-spacing-large};
+    background-size: 70%;
   }
 
   @include breakpoint(700) {
     padding: 0 $section-spacing-extra-tiny $section-spacing-small;
     margin-top: -250px;
+    background-position: center right 1rem, center bottom 55rem;
+    background-size: 50%;
   }
 }
 
