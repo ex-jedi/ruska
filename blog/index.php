@@ -5,10 +5,11 @@
   <?php perch_content("Blog Index Heading"); ?>
       <?php
       $categories = perch_blog_categories(array(
-        'template' => 'index_category_link.html'
+        'template' => 'index_category_link.html',
+        'count' => '3'
       ));
       ?>
-    <?php perch_blog_recent_posts(5); ?>
+    <?php perch_blog_recent_posts(); ?>
     <?php perch_content("Instagram Feed"); ?>
   </main>
 <?php perch_layout('footers/main-footer'); ?>
