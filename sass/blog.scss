@@ -25,6 +25,22 @@
   @include flex(row);
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include breakpoint(1700) {
+    padding-inline: $section-spacing-very-large;
+  }
+
+  @include breakpoint(1500) {
+    padding-inline: $section-spacing-large;
+  }
+
+  @include breakpoint(1300) {
+    padding-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(950) {
+    padding-inline: $section-spacing-tiny;
+  }
 }
 
 .blog-categories-ul {
@@ -61,6 +77,17 @@
       width: 48%;
       margin: 0 auto;
     }
+  }
+
+  @include breakpoint(1300) {
+    &:nth-child(3n + 1) {
+      width: 100%;
+      margin: $section-spacing-medium auto;
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
   }
 }
 
