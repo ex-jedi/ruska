@@ -2,6 +2,7 @@
 <?php perch_layout('heads/blog-index-head'); ?>
 <?php perch_layout('headers/blog-index-header'); ?>
   <main class="blog-main-content blog-index-main-content" id="main-content">
+  <?php perch_content("Blog Index Heading"); ?>
   <div class="blog-index-category-list">
       <?php
       $categories = perch_blog_categories(array(
