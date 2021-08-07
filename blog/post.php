@@ -1,4 +1,41 @@
 <?php include('../perch/runtime.php'); ?>
+
+<!-- Data for previous and next posts  -->
+<?php
+// get the post data, put it into $post variable
+$post = perch_blog_custom([
+  'filter'        => 'postSlug',
+  'match'         => 'eq',
+  'value'         => perch_get('s'),
+  'skip-template' => true,
+  'return-html'   => true
+]);
+
+// write the values from the array stored in $post to variables
+  $date  = $post[0]['postDateTime'];
+
+	$prev = perch_blog_custom([
+      'count'=>1,
+      'filter'=>'postDateTime',
+      'match'=>'lt',
+      'sort'=>'postDateTime',
+      'sort-order'=>'DESC',
+      'value'=>$date,
+      'template'=>'blog/post_prev.html'
+        ], true); // stores prev post in a variable to use later
+
+$next = perch_blog_custom([
+      'count'=>1,
+      'filter'=>'postDateTime',
+      'match'=>'gt',
+      'sort'=>'postDateTime',
+      'sort-order'=>'ASC',
+      'value'=>$date,
+      'template'=>'blog/post_next.html'
+      ], true); // stores next post in a variable to use later
+?>
+<!-- Data for previous and next posts  -->
+
 <?php perch_layout('heads/blog-post-head'); ?>
 <?php perch_layout('headers/blog-post-header'); ?>
 	<main class="blog-main-content blog-post-main-content" id="main-content">
@@ -9,25 +46,18 @@
 			</section>
 			<section class="blog-section featured-posts-section">
 				<?php
-					perch_blog_custom(array(
-					'sort'=>'postDateTime',
-					'sort-order'=>'RAND',
-					'template'=>'blog/featured-posts.html',
-					'count'=>3,
-					'filter-mode' => 'ungrouped',
-					'filter' => array(
-					array(
-					'filter' => 'postSlug',
-					'match' => 'neq',
-					'value' => perch_get('s'),
-					),
-					array(
-					'filter' => 'featuredPosts',
-					'match' => 'eq',
-					'value' => 'yes'
-					)
-					)
-				)); ?>
+						// Previous and next post navigation
+						if (empty($prev)){
+						echo '<ul>';
+						} else {
+						echo $prev;
+						}
+						if (empty($next)){
+						echo '</ul>';
+						} else {
+						echo $next;
+						}
+				?>
 			</section>
 		</article>
 		<?php perch_content("Contact Form"); ?>
