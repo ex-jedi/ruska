@@ -185,10 +185,16 @@
 //** Blog Post **
 //*==============================================================================
 
+//********** Blog Top **********
+
 .blog-post-top-backround-image {
   position: absolute;
   left: 50%;
   top: $section-spacing-large;
+}
+
+.blog-post-article {
+  color: $font-colour-dark;
 }
 
 .blog-post-section {
@@ -207,6 +213,8 @@
   text-transform: uppercase;
 }
 
+//********** Blog Body **********
+
 .blog-post-body-wrapper {
   order: 3;
 }
@@ -215,6 +223,8 @@
   font-weight: bold;
   color: $font-colour-dark;
 }
+
+//********** Instagram Feed **********
 
 .instagram-feed-heading {
   margin-top: $section-spacing-medium;

@@ -212,6 +212,10 @@
   top: 20rem;
 }
 
+.blog-post-article {
+  color: #77442f;
+}
+
 .blog-post-section {
   display: -webkit-box;
   display: -ms-flexbox;
