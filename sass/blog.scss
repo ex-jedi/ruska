@@ -185,6 +185,29 @@
 //** Blog Post **
 //*==============================================================================
 
+.blog-post-section {
+  @include flex(column);
+}
+
+.blog-post-title {
+  order: 1;
+}
+
+.post-category-wrapper {
+  width: 100%;
+  text-align: center;
+  order: 2;
+}
+
+.blog-post-body-wrapper {
+  order: 3;
+}
+
+.post-category-link {
+  font-weight: bold;
+  color: $font-colour-dark;
+}
+
 .instagram-feed-heading {
- margin-top: $section-spacing-medium;
+  margin-top: $section-spacing-medium;
 }

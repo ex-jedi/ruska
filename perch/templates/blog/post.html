@@ -3,6 +3,10 @@
   <perch:blog id="postTitle" type="text" label="Article Heading" divider-before="Article Title" required="true" size="l" order="1" >
 </h1>
 
+  <perch:categories id="categories" set="blog" label="Categories" suppress="true" max="1" size="m">
+          <perch:category id="catTitle" type="text" suppress="true">
+  </perch:categories>
+
   <!-- Cover Image -->
   <perch:blog id="blogIndexImage" type="image" label="Blog Listing Image - This image will appear on the blog homepage with the title." divider-before="Cover Image"  order="3" required="true" width="1400" height="1400" help="Please use an image over 1400px x 1400px. This image will be cropped to a square." required suppress crop>
     <perch:blog type="image" id="blogIndexImage" width="1000" height="1000" suppress crop>
@@ -10,7 +14,7 @@
     <perch:blog type="image" id="blogIndexImage" width="600" height="600" suppress crop>
     <perch:blog type="image" id="blogIndexImage" width="400" height="400" suppress crop>
 
-<div class="post-wrapper">
+<div class="blog-post-body-wrapper">
 
 <!-- Edit Slug -->
 <perch:blog id="postSlug" type="slug" editable="true" label="Blog Post Slug" help="This is the text that goes after your web address (ruska.co/articles/this-bit-is-the-slug). This is generated automatically and incorporates the article title. You won't normally need to change this. If you do need to change this use numbers, letters and hyphens only. If you use spaces the link won't work. If the slug is changed after the page has been published, links using the previous slug won't work anymore. Call us if this makes no sense!" for="postTitle" suppress="true" order="2">
@@ -86,9 +90,5 @@
 		</span>
 	</perch:if>
   </div>
-
-  <perch:categories id="categories" set="blog" label="Categories" suppress="true" max="1" size="m">
-          <perch:category id="catTitle" type="text" suppress="true">
-  </perch:categories>
 </div> <!-- post wrapper -->
 
