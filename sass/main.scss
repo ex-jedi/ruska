@@ -744,6 +744,16 @@ body:not(.user-is-tabbing) textarea:focus {
   }
 }
 
+//********** Perch Debug **********
+
+//TODO: Remove debug styles
+
+html body table.perch-debug td,
+html body table.perch-debug th {
+  font-size: 20px !important;
+  padding: 5px;
+}
+
 //*=========================================
 //** Cookie Warning **
 //*=========================================
