@@ -60,7 +60,6 @@ h2 {
   text-align: center;
   margin: 0 auto $heading-spacing-large;
   color: $font-colour-dark;
-  line-height: 1;
 
   @include breakpoint(1550) {
     font-size: $heading-size-large;

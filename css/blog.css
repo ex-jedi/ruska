@@ -248,6 +248,9 @@
       -ms-flex-order: 3;
           order: 3;
 }
+.blog-post-body-wrapper:last-child {
+  margin-bottom: 0;
+}
 
 .post-category-link {
   font-weight: bold;
@@ -257,6 +260,10 @@
 .blog-post-image {
   width: 100%;
   margin: 0;
+}
+
+.blog-figure {
+  width: 100%;
 }
 
 .blog-embed {
@@ -278,6 +285,17 @@
 }
 .blog-embed iframe {
   max-width: 100% !important;
+}
+
+.blog-post-date-author {
+  font-size: 3.8rem;
+}
+
+.blog-text-block,
+.blog-post-image-wrapper,
+.blog-figure,
+.blog-embed {
+  margin: 0 auto 20rem;
 }
 
 .instagram-feed-heading {

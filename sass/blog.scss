@@ -218,6 +218,10 @@
 
 .blog-post-body-wrapper {
   order: 3;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .post-category-link {
@@ -230,7 +234,9 @@
   margin: 0;
 }
 
-//* Bottom spacing
+.blog-figure {
+  width: 100%;
+}
 
 .blog-embed {
   @include flex(column);
@@ -242,6 +248,18 @@
   iframe {
     max-width: 100% !important;
   }
+}
+
+.blog-post-date-author {
+  font-size: $font-size-small;
+}
+
+//* Bottom spacing
+.blog-text-block,
+.blog-post-image-wrapper,
+.blog-figure,
+.blog-embed {
+  margin: 0 auto $section-spacing-large;
 }
 
 //********** Instagram Feed **********
