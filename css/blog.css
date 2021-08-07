@@ -298,7 +298,7 @@
   margin: 0 auto 20rem;
 }
 
-.featured-posts-section {
+.previous-and-next-posts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -309,10 +309,17 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
 }
-.featured-posts-section a {
+.previous-and-next-posts a {
   font-weight: 700;
   color: #77442f;
+}
+
+.featured-posts-section {
+  width: 100%;
 }
 
 .instagram-feed-heading {

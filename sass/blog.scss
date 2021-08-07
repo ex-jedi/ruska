@@ -267,17 +267,25 @@
 }
 
 //*=========================================
-//** Featured Posts **
+//** Previous and Next Posts **
 //*=========================================
 
-.featured-posts-section {
+.previous-and-next-posts {
   @include flex(row);
   justify-content: space-between;
+  order: 4;
 
   a {
     font-weight: 700;
     color: $font-colour-dark;
   }
+}
+
+//*=========================================
+//** FEWatured Posts **
+//*=========================================
+.featured-posts-section {
+  width: 100%;
 }
 
 //*=========================================
