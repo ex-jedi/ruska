@@ -225,6 +225,25 @@
   color: $font-colour-dark;
 }
 
+.blog-post-image {
+  width: 100%;
+  margin: 0;
+}
+
+//* Bottom spacing
+
+.blog-embed {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto $paragraph-spacing-large;
+
+  iframe {
+    max-width: 100% !important;
+  }
+}
+
 //********** Instagram Feed **********
 
 .instagram-feed-heading {
