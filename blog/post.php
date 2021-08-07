@@ -31,6 +31,8 @@
 				)
 			)); ?>
 		</section>
+		<?php perch_content("Contact Form"); ?>
+		<?php perch_content("Instagram Feed"); ?>
 	</main>
-<?php perch_layout('blog-footer'); ?>
-<?php perch_layout('blog-post-footer-end'); ?>
+	<?php perch_layout('footers/main-footer'); ?>
+<?php perch_layout('footer-ends/blog-post-footer-end'); ?>

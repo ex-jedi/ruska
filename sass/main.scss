@@ -549,19 +549,19 @@ select {
   @include breakpoint(500) {
     padding-bottom: calc(#{$section-spacing-small} + 40px);
   }
+}
 
-  .instagram-feed-heading {
-    color: $font-colour-medium;
-    margin: 0 auto $section-spacing-small;
-    text-align: center;
+.instagram-feed-heading {
+  color: $font-colour-medium;
+  margin: 0 auto $section-spacing-small;
+  text-align: center;
 
-    @include breakpoint(1300) {
-      margin-bottom: $section-spacing-extra-small;
-    }
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-extra-small;
+  }
 
-    @include breakpoint(700) {
-      margin-bottom: $section-spacing-tiny;
-    }
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-tiny;
   }
 }
 
