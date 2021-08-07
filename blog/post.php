@@ -22,7 +22,7 @@
 					'value' => perch_get('s'),
 					),
 					array(
-					'filter' => 'featured',
+					'filter' => 'featuredPosts',
 					'match' => 'eq',
 					'value' => 'yes'
 					)

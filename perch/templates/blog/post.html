@@ -3,10 +3,6 @@
   <perch:blog id="postTitle" type="text" label="Article Heading" divider-before="Article Title" required="true" size="l" order="1" >
 </h1>
 
-  <perch:categories id="categories" set="blog" label="Categories" suppress="true" max="1" size="m">
-          <perch:category id="catTitle" type="text" suppress="true">
-  </perch:categories>
-
   <!-- Cover Image -->
   <perch:blog id="blogIndexImage" type="image" label="Blog Listing Image - This image will appear on the blog homepage with the title." divider-before="Cover Image"  order="3" required="true" width="1400" height="1400" help="Please use an image over 1400px x 1400px. This image will be cropped to a square." required suppress crop>
     <perch:blog type="image" id="blogIndexImage" width="1000" height="1000" suppress crop>
@@ -21,7 +17,7 @@
 
 <!-- Perch Blocks -->
 <!-- Text block  -->
-<perch:blocks order="5">
+<perch:blocks order="4">
   <perch:block type="textarea" icon="edit" label="Text Block">
     <div class="blog-text-block body-text-medium">
       <perch:blog id="blog-post-text" type="textarea" editor="redactor" html="true" help="This block can be dragged up or down to reorder" count="words">
@@ -74,12 +70,16 @@
     </div>
 </perch:block>
 
-
   </perch:blocks> <!-- Perch blocks end -->
+
+  <!-- Categories  -->
+  <perch:categories id="categories" set="blog" label="Categories" suppress="true" max="1" size="m" order="6">
+        <perch:category id="catTitle" type="text" suppress="true">
+  </perch:categories>
 
   <!-- Meta information  -->
   <div class="blog-post-date-author">
-    	<time class="dt-published" itemprop="dateCreated" datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" divider-before="Meta information" order="7">">
+    	<time class="dt-published" itemprop="dateCreated" datetime="<perch:blog id="postDateTime" type="date" label="Date." time="true" format="Y-m-d H:i:s" divider-before="Meta information" order="5">">
     		<perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y">
       </time>
   <perch:if exists="authorGivenName">
@@ -90,5 +90,7 @@
 		</span>
 	</perch:if>
   </div>
+
+  <perch:blog id="featuredPosts" label="Include in Featured Posts List." type="select" options="No|no,Yes|yes" suppress="true" order="7">
 </div> <!-- post wrapper -->
 
