@@ -206,6 +206,12 @@
   margin-bottom: 2.5rem;
 }
 
+.blog-post-top-backround-image {
+  position: absolute;
+  left: 50%;
+  top: 20rem;
+}
+
 .blog-post-section {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -3,6 +3,9 @@
 	<body class="blog blog-post-page" >
 		<!-- Cookie Warning -->
 		<?php perch_content("Cookie Warning"); ?>
+		<div class="blog-post-top-backround-image">
+  		<img src="/images/pale-pink-circle.svg" alt="Pale Pink Circle" />
+		</div>
 		<!-- TODO: Delete if not using -->
 		<div class="site-wrapper">
 		<header class="header main-header">

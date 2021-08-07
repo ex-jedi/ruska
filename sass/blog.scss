@@ -185,6 +185,12 @@
 //** Blog Post **
 //*==============================================================================
 
+.blog-post-top-backround-image {
+  position: absolute;
+  left: 50%;
+  top: $section-spacing-large;
+}
+
 .blog-post-section {
   @include flex(column);
 }
