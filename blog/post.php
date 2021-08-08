@@ -4,7 +4,6 @@
 	<main class="blog-main-content blog-post-main-content" id="main-content">
 		<article class="blog-post-article" itemscope itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
 			<section class="blog-post-section">
-				<?php perch_blog_post_categories(perch_get('s')); ?>
 				<?php perch_blog_post(perch_get('s')); ?>
 				<div class="previous-and-next-posts body-text-medium">
 					<!-- Data for previous and next posts  -->
@@ -59,12 +58,7 @@
 				<!-- Allmost there
 				Filter through array below to cet cat then set to variables
 				https://www.cvwdesign.com/blog/how-to-show-related-posts-with-perch-blog -->
-				<?php
-				$post_cat = perch_blog_post_categories(perch_get('s'), array(
-							'skip-template' => 'true',
-					), true);;
-				PerchSystem::set_var('postCat',$post_cat);
-				?>
+
 				<?php
 
 					perch_blog_custom(array(

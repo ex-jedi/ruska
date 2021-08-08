@@ -11,6 +11,12 @@
     <perch:blog type="image" id="blogIndexImage" width="400" height="400" suppress crop>
 
 <div class="blog-post-body-wrapper">
+  <!-- TODO: Use Below to display Category. Remove flex order and stuff. -->
+  <div class="post-category-wrapper">
+  	<a class="post-category-link body-text-medium" href="category/<perch:blog id="postCat" />">
+			<perch:blog id="postCat" replace="-|&nbsp;">
+	</a>
+  </div>
 
 <!-- Edit Slug -->
 <perch:blog id="postSlug" type="slug" editable="true" label="Blog Post Slug" help="This is the text that goes after your web address (ruska.co/articles/this-bit-is-the-slug). This is generated automatically and incorporates the article title. You won't normally need to change this. If you do need to change this use numbers, letters and hyphens only. If you use spaces the link won't work. If the slug is changed after the page has been published, links using the previous slug won't work anymore. Call us if this makes no sense!" for="postTitle" suppress="true" order="2">

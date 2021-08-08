@@ -204,14 +204,9 @@
   @include flex(column);
 }
 
-.blog-post-title {
-  order: 1;
-}
-
 .post-category-wrapper {
   width: 100%;
   text-align: center;
-  order: 2;
   margin: 0 auto $section-spacing-large;
   text-transform: uppercase;
 }
@@ -221,8 +216,6 @@
 //*=========================================
 
 .blog-post-body-wrapper {
-  order: 3;
-
   &:last-child {
     margin-bottom: 0;
   }
@@ -273,7 +266,6 @@
 .previous-and-next-posts {
   @include flex(row);
   justify-content: space-between;
-  order: 4;
 
   a {
     font-weight: 700;
