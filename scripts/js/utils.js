@@ -806,7 +806,7 @@ Instafeed.prototype._runHook = function runHook(hookName, data) {
 async function displayInstagramFeed() {
   // * Instagram Token Api
   const instagramTokenEndpoint =
-    'https://ig.instant-tokens.com/users/86e98f2a-84d4-4e76-80d7-af04a32bbc58/instagram/17841408526477388/token?userSecret=l7y9v65l95vmkful05c7b';
+    'https://ig.instant-tokens.com/users/86e98f2a-84d4-4e76-80d7-af04a32bbc58/instagram/17841426166743158/token?userSecret=cuk39fon3z8taktuexlibl';
 
   const response = await fetch(instagramTokenEndpoint);
   const data = await response.json();
@@ -814,11 +814,11 @@ async function displayInstagramFeed() {
 
   const feed = new Instafeed({
     accessToken: instagramToken,
-    limit: 24,
+    limit: 4,
     template: `
     <div class="instagram-image-wrapper">
       <a href="{{link}}">
-        <img class="instagram-image" title="{{caption}}" src="{{image}}">
+        <img class="instagram-feed-image" title="{{caption}}" src="{{image}}">
       </a>
     </div> `,
   });

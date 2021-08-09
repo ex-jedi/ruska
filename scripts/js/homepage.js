@@ -23,6 +23,8 @@ import {
   addMenuListener,
 } from './animations';
 
+import { displayInstagramFeed } from './utils';
+
 // *=========================================
 // ** GSAP  **
 // *=========================================
@@ -52,3 +54,5 @@ homepageTreeAnimationFour();
 pyramidDividerFunction();
 
 scrollTriggerRefresh();
+
+displayInstagramFeed();

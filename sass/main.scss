@@ -580,11 +580,9 @@ select {
   }
 }
 
-.instagram-feed-image {
+.instagram-image-wrapper {
   flex: 0 1 auto;
   width: 23%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
 
   @include breakpoint(1300) {
     width: 48%;
@@ -599,6 +597,11 @@ select {
     width: 100%;
     margin-bottom: $section-spacing-extra-tiny;
   }
+}
+
+.instagram-feed-image {
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 .instagram-feed-background-image {
