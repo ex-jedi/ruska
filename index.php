@@ -7,6 +7,27 @@
 	<?php perch_content("Section Three"); ?>
 	<?php perch_content("Contact Form"); ?>
 	<?php perch_content("Featured Articles"); ?>
+					<?php
+
+					perch_blog_custom(array(
+					'sort'=>'postDateTime',
+					'sort-order'=>'RAND',
+					'template'=>'blog/homepage_featured_posts.html',
+					'count'=>3,
+					'filter-mode' => 'ungrouped',
+					'filter' => array(
+					array(
+					'filter' => 'postSlug',
+					'match' => 'neq',
+					'value' => perch_get('s'),
+					),
+					array(
+					'filter' => 'featuredPosts',
+					'match' => 'eq',
+					'value' => 'yes'
+					)
+					)
+				)); ?>
 	<?php perch_content("Instagram Feed"); ?>
 </main>
 <?php perch_layout('footers/main-footer'); ?>
