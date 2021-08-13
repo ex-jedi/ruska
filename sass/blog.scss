@@ -353,6 +353,14 @@
 .featured-posts-heading {
   font-size: $font-size-medium;
   text-transform: uppercase;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-medium;
+  }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-small;
+  }
 }
 
 .featured-posts-section {
@@ -379,6 +387,14 @@
 
 .featured-posts-link {
   color: $font-colour-dark;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-tiny;
+  }
 }
 
 //*=========================================

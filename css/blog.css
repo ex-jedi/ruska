@@ -427,6 +427,16 @@
   font-size: 5rem;
   text-transform: uppercase;
 }
+@media (max-width: 1550px) {
+  .featured-posts-heading {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 1300px) {
+  .featured-posts-heading {
+    font-size: 3.8rem;
+  }
+}
 
 .featured-posts-section {
   display: -webkit-box;
@@ -460,6 +470,16 @@
 
 .featured-posts-link {
   color: #77442f;
+}
+@media (max-width: 1550px) {
+  .featured-posts-link {
+    font-size: 3.8rem;
+  }
+}
+@media (max-width: 1300px) {
+  .featured-posts-link {
+    font-size: 2.5rem;
+  }
 }
 
 .instagram-feed-heading {
