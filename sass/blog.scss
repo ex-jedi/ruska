@@ -300,6 +300,14 @@
   margin: 0 auto;
   text-align: center;
   max-width: 70%;
+
+  @include breakpoint(1100) {
+    max-width: 60%;
+  }
+
+  @include breakpoint(700) {
+    max-width: 100%;
+  }
 }
 
 .blog-embed {
