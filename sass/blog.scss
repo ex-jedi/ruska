@@ -1,10 +1,25 @@
 // *=======================================================================================
-// ** Blog  **
+// ** Imports & Mixins  **
 // *=======================================================================================
 
-//********** Imports **********
+//*=========================================
+//** Imports **
+//*=========================================
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*=========================================
+//** Mixins **
+//*=========================================
+
+// Bottom spacing
+@mixin bottom-spacing {
+  margin-bottom: $section-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
+}
 
 //*==============================================================================
 //** Index **
@@ -212,7 +227,9 @@
   width: 100%;
   text-align: center;
   text-transform: uppercase;
-  margin: 0 auto $section-spacing-large;
+  margin-top: 0;
+  margin-inline: auto;
+  @include bottom-spacing;
 }
 
 //*=========================================
@@ -230,6 +247,10 @@
   color: $font-colour-dark;
 }
 
+.blog-post-image-wrapper {
+  @include bottom-spacing;
+}
+
 .blog-post-image {
   width: auto;
   max-height: 95vh;
@@ -237,8 +258,15 @@
   margin: 0 auto;
 }
 
+.blog-text-block {
+  margin-top: 0;
+  margin-inline: auto;
+  @include bottom-spacing;
+}
+
 .blog-figure {
   width: 100%;
+  @include bottom-spacing;
 }
 
 .blog-figure-image {
@@ -257,7 +285,9 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 0 auto $paragraph-spacing-large;
+  margin-top: 0;
+  margin-inline: auto;
+  @include bottom-spacing;
 }
 
 .blog-general-embed {
@@ -277,6 +307,7 @@
 
 .previous-and-next-posts {
   @include flex(row);
+  @include bottom-spacing;
   justify-content: space-between;
 
   a {
@@ -326,21 +357,4 @@
 
 .instagram-feed-heading {
   margin-top: $section-spacing-medium;
-}
-
-//*=========================================
-//** Bottom spacing **
-//*=========================================
-
-.previous-and-next-posts,
-.post-category-wrapper,
-.blog-text-block,
-.blog-post-image-wrapper,
-.blog-figure,
-.blog-embed {
-  margin-bottom: $section-spacing-large;
-
-  @include breakpoint(1300) {
-    margin-bottom: $section-spacing-medium;
-  }
 }
