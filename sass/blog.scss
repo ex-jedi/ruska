@@ -266,6 +266,7 @@
 .previous-and-next-posts {
   @include flex(row);
   justify-content: space-between;
+  margin-bottom: $section-spacing-large;
 
   a {
     font-weight: 700;
@@ -274,10 +275,34 @@
 }
 
 //*=========================================
-//** FEWatured Posts **
+//** Featured Posts **
 //*=========================================
+
+.featured-posts-heading {
+  font-size: $font-size-medium;
+  text-transform: uppercase;
+}
+
 .featured-posts-section {
+  @include flex(column);
+  align-items: center;
   width: 100%;
+}
+
+.featured-posts-div:not(:last-of-type) {
+  margin-bottom: $section-spacing-small;
+}
+
+.featured-article-heading {
+  font-size: $font-size-medium;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+.featured-posts-link {
+  color: $font-colour-dark;
 }
 
 //*=========================================
