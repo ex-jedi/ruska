@@ -46,7 +46,7 @@
   <!-- Image with caption -->
 <perch:block type="imageWithCaption" icon="photo" label="Image with caption">
   <figure class="blog-figure">
-    <img class="blog-post-image figure-image" itemprop="image" loading="lazy" src="<perch:blog id="blogPostFigImage" type="image" width="1400" label="Blog Image With Caption" help="Image must be at least 1400px wide. This block can be dragged up or down to reorder">" alt="<perch:blog id="altTwo" type="text" label="Image Description">"
+    <img class="blog-post-image blog-figure-image" itemprop="image" loading="lazy" src="<perch:blog id="blogPostFigImage" type="image" width="1400" label="Blog Image With Caption" help="Image must be at least 1400px wide. This block can be dragged up or down to reorder">" alt="<perch:blog id="altTwo" type="text" label="Image Description">"
       sizes="(max-width: 800px) 100vw, 50vw"
       srcset="<perch:blog type="image" id="blogPostFigImage" width="1400"> 1400w,
       <perch:blog type="image" id="blogPostFigImage" width="1000"> 1000w,
@@ -54,7 +54,7 @@
       <perch:blog type="image" id="blogPostFigImage" width="600"> 600w,
       <perch:blog type="image" id="blogPostFigImage" width="400"> 400w">
     <perch:if exists="image-caption">
-      <figcaption class="blog-image-caption">
+      <figcaption class="blog-figure-caption">
         <perch:blog id="image-caption" type="text" label="Image Caption" help="Add optional caption below image." size="m">
       </figcaption>
     </perch:if>
@@ -85,6 +85,6 @@
 
 
   <!-- Featured Posts  -->
-  <perch:blog id="featuredPosts" label="Include in Featured Posts List." type="select" options="No|no,Yes|yes" suppress="true" order="7"></perch:blog>
+  <perch:blog id="featuredPosts" label="Include in Featured Posts List." type="select" options="No|no,Yes|yes" suppress="true" order="7">
 </div> <!-- post wrapper -->
 

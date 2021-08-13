@@ -239,15 +239,26 @@
   width: 100%;
 }
 
+.blog-figure-image {
+  margin-bottom: $section-spacing-extra-tiny;
+}
+
+.blog-figure-caption {
+  font-size: $font-size-tiny;
+}
+
 .blog-embed {
   @include flex(column);
   justify-content: center;
   align-items: center;
   width: 100%;
   margin: 0 auto $paragraph-spacing-large;
+}
 
+.blog-general-embed {
   iframe {
-    max-width: 750px !important;
+    width: 100%;
+    max-width: 800px !important;
   }
 }
 

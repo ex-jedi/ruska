@@ -257,6 +257,14 @@
   width: 100%;
 }
 
+.blog-figure-image {
+  margin-bottom: 2.5rem;
+}
+
+.blog-figure-caption {
+  font-size: 2.5rem;
+}
+
 .blog-embed {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -274,8 +282,10 @@
   width: 100%;
   margin: 0 auto 10rem;
 }
-.blog-embed iframe {
-  max-width: 750px !important;
+
+.blog-general-embed iframe {
+  width: 100%;
+  max-width: 800px !important;
 }
 
 .blog-post-date-author {
