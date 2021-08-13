@@ -306,10 +306,7 @@ a {
   text-transform: lowercase;
   transform: translateY(100px);
   opacity: 0;
-
-  &:not(:last-of-type) {
-    margin-bottom: $section-spacing-tiny;
-  }
+  margin-bottom: $section-spacing-extra-small;
 }
 
 #main-nav-current {
