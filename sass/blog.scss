@@ -198,6 +198,10 @@
 .blog-post-article {
   color: $font-colour-dark;
   padding: 0 $section-spacing-extra-large $section-spacing-large;
+
+  @include breakpoint(1550) {
+    padding: 0 $section-spacing-large $section-spacing-large;
+  }
 }
 
 .blog-post-section {
@@ -243,7 +247,7 @@
   margin: 0 auto $paragraph-spacing-large;
 
   iframe {
-    max-width: 100% !important;
+    max-width: 750px !important;
   }
 }
 
@@ -287,6 +291,10 @@
   @include flex(column);
   align-items: center;
   width: 100%;
+  background-image: url('/images/pale-pink-circle.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .featured-posts-div:not(:last-of-type) {

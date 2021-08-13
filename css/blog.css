@@ -216,6 +216,11 @@
   color: #77442f;
   padding: 0 40rem 20rem;
 }
+@media (max-width: 1550px) {
+  .blog-post-article {
+    padding: 0 20rem 20rem;
+  }
+}
 
 .blog-post-section {
   display: -webkit-box;
@@ -270,7 +275,7 @@
   margin: 0 auto 10rem;
 }
 .blog-embed iframe {
-  max-width: 100% !important;
+  max-width: 750px !important;
 }
 
 .blog-post-date-author {
@@ -319,6 +324,10 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  background-image: url("/images/pale-pink-circle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .featured-posts-div:not(:last-of-type) {
