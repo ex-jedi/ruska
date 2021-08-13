@@ -13,8 +13,8 @@
 <div class="blog-post-body-wrapper">
   <!-- TODO: Use Below to display Category. Remove flex order and stuff. -->
   <div class="post-category-wrapper">
-  	<a class="post-category-link body-text-medium" href="category/<perch:blog id="postCat" />">
-			<perch:blog id="postCat" replace="-|&nbsp;">
+  	<a class="post-category-link body-text-medium" href="category/<perch:categories id="categories" set="blog"><perch:category id="catSlug" type="text" urlify></perch:categories>">
+			<perch:categories id="categories" set="blog"><perch:category id="catSlug" type="text" replace="-|&nbsp;"></perch:categories>
 	</a>
   </div>
 

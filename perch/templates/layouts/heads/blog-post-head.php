@@ -8,15 +8,7 @@
 		<!-- Typekit -->
 	  <link rel="stylesheet" href="https://use.typekit.net/qpt3ahb.css">
 			<!-- Perch Meta -->
-
 			<?php
-				$categories = perch_blog_post_categories(perch_get('s'), array(
-				'skip-template' => 'true',
-				), true);
-				foreach($categories as $cat) {
-				$post_cat = $cat['catSlug'];
-				}
-				PerchSystem::set_var('postCat',$post_cat);
 			perch_blog_post_meta(perch_get('s'));
 			perch_page_attributes(array(
 				'template' => 'favicons.html'

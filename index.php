@@ -8,7 +8,6 @@
 	<?php perch_content("Contact Form"); ?>
 	<?php perch_content("Featured Articles"); ?>
 					<?php
-
 					perch_blog_custom(array(
 					'sort'=>'postDateTime',
 					'sort-order'=>'RAND',
@@ -27,7 +26,8 @@
 					'value' => 'yes'
 					)
 					)
-				)); ?>
+				));
+				?>
 	<?php perch_content("Instagram Feed"); ?>
 </main>
 <?php perch_layout('footers/main-footer'); ?>
