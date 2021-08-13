@@ -285,6 +285,8 @@
 
 .blog-figure {
   width: 100%;
+  margin-top: 0;
+  margin-inline: auto;
   margin-bottom: 20rem;
 }
 @media (max-width: 1300px) {
