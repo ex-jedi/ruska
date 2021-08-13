@@ -232,6 +232,8 @@
 
 .blog-post-image {
   width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
   margin: 0;
 }
 
@@ -245,6 +247,7 @@
 
 .blog-figure-caption {
   font-size: $font-size-tiny;
+  text-align: center;
 }
 
 .blog-embed {
