@@ -1,3 +1,4 @@
+<!-- TODO: Hide if no category -->
 <perch:before>
   <h2 class="featured-posts-heading">Related</h2>
 </perch:before>
@@ -5,7 +6,10 @@
   <h3 class="featured-article-heading">
     <a class="featured-posts-link" href="<perch:blog id="postURL">">
       <perch:blog id="postTitle">
-      in &quot;<perch:blog id="postCat" replace="-|&nbsp;">&quot;
+      in &quot;<perch:categories id="categories" set="blog"><perch:category id="catSlug" type="text" replace="-|&nbsp;"></perch:categories>&quot;
     </a>
   </h2>
+</div>
+<div style="width: 1000px;">
+  <perch:showall />
 </div>
