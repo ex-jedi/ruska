@@ -353,6 +353,10 @@ a {
     padding: $section-spacing-medium;
   }
 
+  @include breakpoint(950) {
+    padding: $section-spacing-medium $section-spacing-extra-small;
+  }
+
   @include breakpoint(700) {
     padding: $section-spacing-small $section-spacing-extra-tiny;
   }
