@@ -1,6 +1,6 @@
 <!-- Article Heading -->
 <h1 class="section-heading blog-heading blog-post-title" itemprop="headline">
-  <perch:blog id="postTitle" type="text" label="Article Heading" divider-before="Article Title" required="true" size="l" order="1" >
+  <perch:blog id="postTitle" type="text" label="Blog Heading And Slug" divider-before="Blog Heading" required="true" size="l" order="1" >
 </h1>
 
   <!-- Cover Image -->
@@ -19,21 +19,21 @@
   </div>
 
 <!-- Edit Slug -->
-<perch:blog id="postSlug" type="text" editable="true" label="Blog Post Slug" help="This is the text that goes after your web address (ruska.co/articles/this-bit-is-the-slug). This is generated automatically and incorporates the article title. You won't normally need to change this. If you do need to change this use numbers, letters and hyphens only. If you use spaces the link won't work. If the slug is changed after the page has been published, links using the previous slug won't work anymore. Call us if this makes no sense!" for="postTitle" suppress="true" order="2" urlify>
+<perch:blog id="postSlug" type="text" editable="true" label="Blog Post Slug" help="You won't normally need to change this. This is the text that goes after your web address (ruska.co/articles/this-bit-is-the-slug). This is generated automatically and incorporates the article title and date. If you do need to change this use numbers, letters and hyphens only. If you use spaces the link won't work. If you change this after the page has been published, links using the previous slug won't work anymore." for="postTitle" suppress="true" order="2" urlify>
 
 <!-- Perch Blocks -->
 <!-- Text block  -->
 <perch:blocks order="4">
   <perch:block type="textarea" icon="edit" label="Text Block">
     <div class="blog-text-block body-text-medium">
-      <perch:blog id="blog-post-text" type="textarea" editor="redactor" html="true" help="This block can be dragged up or down to reorder" count="words">
+      <perch:blog id="blog-post-text" type="textarea" editor="redactor" html="true" help="This block can be dragged up or down to reorder." count="words">
       </div>
     </perch:block>
 
   <!-- Image -->
   <perch:block type="image" icon="photo" label="Image">
     <div class="blog-post-image-wrapper">
-      <img class="blog-post-image" itemprop="image" loading="lazy" src="<perch:blog id="blogPostImage" type="image" width="1400" label="Blog Image" help="Image must be at least 1400px wide. This block can be dragged up or down to reorder">" alt="<perch:blog id="altOne" type="text" label="Image Description">"
+      <img class="blog-post-image" itemprop="image" loading="lazy" src="<perch:blog id="blogPostImage" type="image" width="1400" label="Blog Image" help="Image must be at least 1400px wide. This block can be dragged up or down to reorder.">" alt="<perch:blog id="altOne" type="text" label="Image Description">"
       sizes="(max-width: 800px) 100vw, 50vw"
       srcset="<perch:blog type="image" id="blogPostImage" width="1400"> 1400w,
       <perch:blog type="image" id="blogPostImage" width="1000"> 1000w,
@@ -46,7 +46,7 @@
   <!-- Image with caption -->
 <perch:block type="imageWithCaption" icon="photo" label="Image with caption">
   <figure class="blog-figure">
-    <img class="blog-post-image blog-figure-image" itemprop="image" loading="lazy" src="<perch:blog id="blogPostFigImage" type="image" width="1400" label="Blog Image With Caption" help="Image must be at least 1400px wide. This block can be dragged up or down to reorder">" alt="<perch:blog id="altTwo" type="text" label="Image Description">"
+    <img class="blog-post-image blog-figure-image" itemprop="image" loading="lazy" src="<perch:blog id="blogPostFigImage" type="image" width="1400" label="Blog Image With Caption" help="Image must be at least 1400px wide. This block can be dragged up or down to reorder.">" alt="<perch:blog id="altTwo" type="text" label="Image Description">"
       sizes="(max-width: 800px) 100vw, 50vw"
       srcset="<perch:blog type="image" id="blogPostFigImage" width="1400"> 1400w,
       <perch:blog type="image" id="blogPostFigImage" width="1000"> 1000w,
@@ -55,7 +55,7 @@
       <perch:blog type="image" id="blogPostFigImage" width="400"> 400w">
     <perch:if exists="image-caption">
       <figcaption class="blog-figure-caption">
-        <perch:blog id="image-caption" type="text" label="Image Caption" help="Add optional caption below image." size="m">
+        <perch:blog id="image-caption" type="text" label="Image Caption." help="Add optional caption below image." size="m">
       </figcaption>
     </perch:if>
   </figure>
@@ -65,30 +65,30 @@
   <!-- Video Embed  -->
   <perch:block type="embed" icon="video" label="Embed Videos">
     <div class="blog-embed blog-video-embed">
-      <perch:blog id="videoEmbedBlock" type="textarea" editor="markitup" html="true" help="Paste the embed code into the box. This block can be dragged up or down to reorder" size="m">
+      <perch:blog id="videoEmbedBlock" type="textarea" editor="markitup" html="true" help="Paste the embed code into the box. This block can be dragged up or down to reorder." size="m">
       </div>
   </perch:block>
 
   <!-- General Embed  -->
   <perch:block type="socialMediaEmbed" icon="chat" label="General Embeds">
   <div class="blog-embed blog-general-embed">
-    <perch:blog id="socialEmbedBlock" type="textarea" editor="markitup" html="true" help="For social media and other embedded content. Paste code into the box. This block can be dragged up or down to reorder" size="m">
+    <perch:blog id="socialEmbedBlock" type="textarea" editor="markitup" html="true" help="For social media and other embedded content. Paste code into the box. This block can be dragged up or down to reorder." size="m">
     </div>
 </perch:block>
 
   </perch:blocks> <!-- Perch blocks end -->
 
   <!-- Categories  -->
-  <perch:categories id="categories" set="blog" label="Categories" divider-before="Meta information" max="1" size="m" order="6">
+  <perch:categories id="categories" set="blog" label="Categories" divider-before="Meta information." max="1" size="m" order="6">
     <perch:category id="catTitle" type="text" suppress>
   </perch:categories>
 
 
   <!-- Featured Posts  -->
-  <perch:blog id="featuredPosts" label="Include in Featured Posts List." type="select" options="Yes|yes,No|no" suppress="true" order="7">
+  <perch:blog id="featuredPosts" label="Include in Featured Posts List" type="select" options="Yes|yes,No|no" suppress="true" order="7">
 </div> <!-- post wrapper -->
 
-<time class="dt-published" datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" order="7">">
+<time class="dt-published" datetime="<perch:blog id="postDateTime" type="date" label="Date &amp; Time Published" help="Can be set to a future date &amp; tile to delay publishing. Uses Greenwich Mean Time."  time="true" format="Y-m-d H:i:s" order="7">">
   <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" suppress>
 </time>
 
