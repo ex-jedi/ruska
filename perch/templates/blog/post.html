@@ -19,7 +19,7 @@
   </div>
 
 <!-- Edit Slug -->
-<perch:blog id="postSlug" type="slug" editable="true" label="Blog Post Slug" help="This is the text that goes after your web address (ruska.co/articles/this-bit-is-the-slug). This is generated automatically and incorporates the article title. You won't normally need to change this. If you do need to change this use numbers, letters and hyphens only. If you use spaces the link won't work. If the slug is changed after the page has been published, links using the previous slug won't work anymore. Call us if this makes no sense!" for="postTitle" suppress="true" order="2">
+<perch:blog id="postSlug" type="text" editable="true" label="Blog Post Slug" help="This is the text that goes after your web address (ruska.co/articles/this-bit-is-the-slug). This is generated automatically and incorporates the article title. You won't normally need to change this. If you do need to change this use numbers, letters and hyphens only. If you use spaces the link won't work. If the slug is changed after the page has been published, links using the previous slug won't work anymore. Call us if this makes no sense!" for="postTitle" suppress="true" order="2" urlify>
 
 <!-- Perch Blocks -->
 <!-- Text block  -->
@@ -88,7 +88,7 @@
   <perch:blog id="featuredPosts" label="Include in Featured Posts List." type="select" options="Yes|yes,No|no" suppress="true" order="7">
 </div> <!-- post wrapper -->
 
-  <time datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" order="7">">
-    <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" suppress>
-  </time>
+<time class="dt-published" datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" order="7">">
+  <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" suppress>
+</time>
 
