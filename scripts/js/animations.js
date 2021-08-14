@@ -73,7 +73,7 @@ function pyramidDividerFunction() {
       start: triggerPoint,
       end: 'top 50%',
       id: 'Pyramid Divider',
-      markers: true,
+      // markers: true,
       scrub: 1,
     },
   });
