@@ -79,12 +79,16 @@
   </perch:blocks> <!-- Perch blocks end -->
 
   <!-- Categories  -->
-  <perch:categories id="categories" set="blog" label="Categories" suppress="true" max="1" size="m" order="6">
-        <perch:category id="catTitle" type="text" suppress="true">
+  <perch:categories id="categories" set="blog" label="Categories" divider-before="Meta information" max="1" size="m" order="6">
+    <perch:category id="catTitle" type="text" suppress>
   </perch:categories>
 
 
   <!-- Featured Posts  -->
-  <perch:blog id="featuredPosts" label="Include in Featured Posts List." type="select" options="No|no,Yes|yes" suppress="true" order="7">
+  <perch:blog id="featuredPosts" label="Include in Featured Posts List." type="select" options="Yes|yes,No|no" suppress="true" order="7">
 </div> <!-- post wrapper -->
+
+  <time datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" order="7">">
+    <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" suppress>
+  </time>
 

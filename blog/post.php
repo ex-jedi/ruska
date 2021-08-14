@@ -16,10 +16,8 @@
 						'skip-template' => true,
 						'return-html'   => true
 					]);
-
 					// write the values from the array stored in $post to variables
 						$date  = $post[0]['postDateTime'];
-
 						$next = perch_blog_custom([
 								'count'=>1,
 								'filter'=>'postDateTime',
@@ -29,7 +27,6 @@
 								'value'=>$date,
 								'template'=>'blog/post_next.html'
 									], true); // stores prev post in a variable to use later
-
 					$prev = perch_blog_custom([
 								'count'=>1,
 								'filter'=>'postDateTime',
@@ -58,9 +55,7 @@
 				<!-- Allmost there
 				Filter through array below to cet cat then set to variables
 				https://www.cvwdesign.com/blog/how-to-show-related-posts-with-perch-blog -->
-
 				<?php
-
 					perch_blog_custom(array(
 					'sort'=>'postDateTime',
 					'sort-order'=>'RAND',
