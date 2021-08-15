@@ -411,15 +411,40 @@
 
 .blog-archive-meta-wrapper {
   padding: 0 $section-spacing-extra-large $section-spacing-large;
+
+  @include breakpoint(1700) {
+    padding-inline: $section-spacing-very-large;
+  }
+
+  @include breakpoint(1500) {
+    padding-inline: $section-spacing-large;
+  }
+
+  @include breakpoint(1300) {
+    padding-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(950) {
+    padding-inline: $section-spacing-tiny;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-extra-tiny $section-spacing-small;
+  }
 }
 
 .archive-categories-wrapper {
+  @include flex(row);
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   text-align: center;
 }
 
 .post-category-heading {
-  display: inline;
-  padding: 10px;
+  display: inline-block;
+  padding: 0 $section-spacing-extra-tiny;
+  margin: 0 0 $font-size-teeny-tiny;
+  text-transform: uppercase;
 }
 
 .archive-category-link {
