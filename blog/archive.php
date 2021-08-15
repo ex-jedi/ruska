@@ -1,7 +1,7 @@
 <?php include('../perch/runtime.php'); ?>
 <?php perch_layout('heads/blog-index-head'); ?>
 <?php perch_layout('headers/blog-index-header'); ?>
-<main class="blog-main-content archive-main-content" id="main-content">
+<main class="blog-main-content archive-main-content scrolltrigger-refresh-target" id="main-content">
 
 		    <?php
 		        // defaults for all modes
@@ -61,7 +61,7 @@
 		      	}
 
 		    ?>
-			<section class="blog-archive-meta-wrapper">
+			<section class="blog-archive-meta-wrapper scrolltrigger-refresh-target">
 		    <h2>Category Archive</h2>
 		    <!--  By category listing -->
 		    <?php
