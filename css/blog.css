@@ -545,6 +545,7 @@
   margin: 0 0 1.6rem;
   text-transform: uppercase;
   overflow-wrap: break-word;
+  font-weight: 400;
 }
 
 .archive-category-link {
