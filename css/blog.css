@@ -536,6 +536,7 @@
   padding: 0 2.5rem;
   margin: 0 0 1.6rem;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 
 .archive-category-link {

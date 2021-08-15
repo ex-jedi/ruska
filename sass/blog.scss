@@ -445,6 +445,7 @@
   padding: 0 $section-spacing-extra-tiny;
   margin: 0 0 $font-size-teeny-tiny;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 
 .archive-category-link {
