@@ -4,7 +4,7 @@
 </h1>
 
   <!-- Cover Image -->
-  <perch:blog id="blogIndexImage" type="image" label="Blog Listing Image - This image will appear on the blog homepage with the title." divider-before="Cover Image"  order="3" required="true" width="1400" height="1400" help="Please use an image over 1400px x 1400px. This image will be cropped to a square." required suppress crop>
+  <perch:blog id="blogIndexImage" type="image" label="Blog Listing Image" divider-before="Cover Image"  order="3" required="true" width="1400" height="1400" help="This image will appear on the blog homepage with the title. Image must be at least 1400px x 1400px. This image will be cropped to a square." required suppress crop>
     <perch:blog type="image" id="blogIndexImage" width="1000" height="1000" suppress crop>
     <perch:blog type="image" id="blogIndexImage" width="800" height="800" suppress crop>
     <perch:blog type="image" id="blogIndexImage" width="600" height="600" suppress crop>
@@ -79,7 +79,7 @@
   </perch:blocks> <!-- Perch blocks end -->
 
   <!-- Categories  -->
-  <perch:categories id="categories" set="blog" label="Categories" divider-before="Meta information." max="1" size="m" order="6">
+  <perch:categories id="categories" set="blog" label="Categories" divider-before="Meta information" max="1" size="m" order="6">
     <perch:category id="catTitle" type="text" suppress>
   </perch:categories>
 
