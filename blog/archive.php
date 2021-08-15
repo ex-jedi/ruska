@@ -1,8 +1,8 @@
 <?php include('../perch/runtime.php'); ?>
-<?php perch_layout('heads/blog-index-head'); ?>
+<?php perch_layout('heads/archive-index-head'); ?>
 <?php perch_layout('headers/blog-index-header'); ?>
 <main class="blog-main-content archive-main-content scrolltrigger-refresh-target" id="main-content">
-
+<!-- TODO: Show archive title in meta title. -->
 		    <?php
 		        // defaults for all modes
 		        $posts_per_page = 10;
