@@ -44,6 +44,7 @@
   @include flex(row);
   flex-wrap: wrap;
   justify-content: space-between;
+  //FIXME: These overlap when there aren't many blog posts
   background-image: url(/images/pale-pink-circle.svg),
     url(/images/pale-pink-circle.svg);
   background-position: center right #{$section-spacing-tiny},
