@@ -409,6 +409,17 @@
 //** Archive **
 //*==============================================================================
 
+.archive-main-content {
+  .blog-index-wrapper {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
 .blog-archive-meta-wrapper {
   padding: 0 $section-spacing-extra-large $section-spacing-large;
 

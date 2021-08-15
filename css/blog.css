@@ -486,6 +486,14 @@
   margin-top: 15rem;
 }
 
+.archive-main-content .blog-index-wrapper {
+  margin-top: 0;
+  padding-top: 0;
+}
+.archive-main-content h1 {
+  margin-bottom: 0;
+}
+
 .blog-archive-meta-wrapper {
   padding: 0 40rem 20rem;
 }
