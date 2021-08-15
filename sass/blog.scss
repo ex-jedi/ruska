@@ -404,3 +404,24 @@
 .instagram-feed-heading {
   margin-top: $section-spacing-medium;
 }
+
+//*==============================================================================
+//** Archive **
+//*==============================================================================
+
+.blog-archive-meta-wrapper {
+  padding: 0 $section-spacing-extra-large $section-spacing-large;
+}
+
+.archive-categories-wrapper {
+  text-align: center;
+}
+
+.post-category-heading {
+  display: inline;
+  padding: 10px;
+}
+
+.archive-category-link {
+  color: $font-colour-dark;
+}

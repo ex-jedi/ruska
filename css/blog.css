@@ -485,3 +485,20 @@
 .instagram-feed-heading {
   margin-top: 15rem;
 }
+
+.blog-archive-meta-wrapper {
+  padding: 0 40rem 20rem;
+}
+
+.archive-categories-wrapper {
+  text-align: center;
+}
+
+.post-category-heading {
+  display: inline;
+  padding: 10px;
+}
+
+.archive-category-link {
+  color: #77442f;
+}
