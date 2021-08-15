@@ -1,5 +1,6 @@
 <?php include('../perch/runtime.php'); ?>
-<?php perch_layout('blog-header'); ?>
+<?php perch_layout('heads/blog-index-head'); ?>
+<?php perch_layout('headers/blog-index-header'); ?>
 <main class="blog-main-content archive-main-content" id="main-content">
 
 		    <?php
@@ -118,4 +119,5 @@
 		    <!--  By year -->
 			</section>
 		</main>
-<?php perch_layout('blog-footer'); ?>
+<?php perch_layout('footers/main-footer'); ?>
+<?php perch_layout('footer-ends/blog-footer-end'); ?>
