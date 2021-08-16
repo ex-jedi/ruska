@@ -1,0 +1,25 @@
+<section class="shop-section">
+<h2 class="shop-page-heading">
+  <perch:content id="shopPageHeading" type="text" label="Shop Page Heading">
+</h2>
+<perch:repeater id="shopProduct" label="Shop">
+  <h3 class="product-heading body-text-large">
+      <perch:content id="productHeading" type="text" label="product-heading">
+  </h3>
+  <img class="product-image" itemprop="image" loading="lazy" src="<perch:content id="productImgOne" type="image" width="2000" label="Product Image">" alt="<perch:content id="altOne" type="text" label="Image Description">"
+  sizes="(max-width: 2000px) 100vw, 80vw"
+  srcset="<perch:content type="image" id="productImgOne" width="2000"> 2000w,
+  <perch:content type="image" id="productImgOne" width="1700"> 1700w,
+  <perch:content type="image" id="productImgOne" width="1200"> 1200w,
+  <perch:content type="image" id="productImgOne" width="800"> 800w,
+  <perch:content type="image" id="productImgOne" width="600"> 600w">
+  <div class="product-description body-text-medium">
+    <perch:content id="product-description" type="textarea" label="Product Description" html>
+  </div>
+  <div class="product-pricing body-text-medium">
+    <p class="product-price">
+      <perch:content id="productPrice" type="text" label="Product Price">
+    </p>
+  </div>
+</perch:repeater>
+</section>

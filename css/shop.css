@@ -1,0 +1,17 @@
+.legals-top-backround-image {
+  position: absolute;
+  top: 5rem;
+  left: 45%;
+}
+
+.shop-section {
+  position: relative;
+  color: #77442f;
+  padding: 20rem;
+}
+
+.product-heading,
+.product-image,
+.product-description {
+  margin-bottom: 5rem;
+}

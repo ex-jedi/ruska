@@ -1,0 +1,45 @@
+// *=======================================================================================
+// ** Imports & Mixins  **
+// *=======================================================================================
+
+//*=========================================
+//** Imports **
+//*=========================================
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*=========================================
+//** Mixins **
+//*=========================================
+
+// Bottom spacing
+@mixin bottom-spacing {
+  margin-bottom: $section-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
+}
+
+//FIXME: Temp
+.legals-top-backround-image {
+  position: absolute;
+  top: $section-spacing-tiny;
+  left: 45%;
+}
+
+.shop-section {
+  position: relative;
+  color: $font-colour-dark;
+  padding: $section-spacing-large;
+}
+
+.product-heading,
+.product-image,
+.product-description {
+  margin-bottom: $section-spacing-tiny;
+}
