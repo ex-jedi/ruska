@@ -1,10 +1,29 @@
 // *=======================================================================================
-// ** Blog  **
+// ** Imports & Mixins  **
 // *=======================================================================================
 
-//********** Imports **********
+//*=========================================
+//** Imports **
+//*=========================================
 
 @use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*=========================================
+//** Mixins **
+//*=========================================
+
+// Bottom spacing
+@mixin bottom-spacing {
+  margin-bottom: $section-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
+}
 
 //*==============================================================================
 //** Index **
@@ -25,6 +44,7 @@
   @include flex(row);
   flex-wrap: wrap;
   justify-content: space-between;
+  //FIXME: These overlap when there aren't many blog posts
   background-image: url(/images/pale-pink-circle.svg),
     url(/images/pale-pink-circle.svg);
   background-position: center right #{$section-spacing-tiny},
@@ -179,4 +199,268 @@
 .blog-index-image {
   width: 100%;
   margin-bottom: $section-spacing-extra-tiny;
+}
+
+//*==============================================================================
+//** Blog Post **
+//*==============================================================================
+
+//*=========================================
+//** Blog Top **
+//*=========================================
+
+.blog-post-top-backround-image {
+  position: absolute;
+  left: 50%;
+  top: $section-spacing-large;
+}
+
+.blog-post-article {
+  color: $font-colour-dark;
+  padding: 0 $section-spacing-extra-large $section-spacing-large;
+
+  @include breakpoint(1550) {
+    padding: 0 $section-spacing-large $section-spacing-large;
+  }
+
+  @include breakpoint(1300) {
+    padding: 0 $section-spacing-large $section-spacing-medium;
+  }
+
+  @include breakpoint(1100) {
+    padding: 0 $section-spacing-small $section-spacing-medium;
+  }
+
+  @include breakpoint(950) {
+    padding: 0 $section-spacing-extra-small $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-extra-tiny $section-spacing-small;
+  }
+}
+
+.blog-post-section {
+  @include flex(column);
+}
+
+.post-category-wrapper {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-inline: auto;
+  @include bottom-spacing;
+}
+
+//*=========================================
+//** Blog Body  **
+//*=========================================
+
+.blog-post-body-wrapper {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.post-category-link {
+  font-weight: bold;
+  color: $font-colour-dark;
+}
+
+.blog-post-image-wrapper {
+  @include bottom-spacing;
+}
+
+.blog-post-image {
+  width: auto;
+  max-height: 95vh;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.blog-text-block {
+  margin-top: 0;
+  margin-inline: auto;
+  @include bottom-spacing;
+}
+
+.blog-figure {
+  width: 100%;
+  margin-top: 0;
+  margin-inline: auto;
+  @include bottom-spacing;
+}
+
+.blog-figure-image {
+  margin-bottom: $section-spacing-extra-tiny;
+}
+
+.blog-figure-caption {
+  font-size: $font-size-tiny;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 70%;
+
+  @include breakpoint(1100) {
+    max-width: 60%;
+  }
+
+  @include breakpoint(700) {
+    max-width: 100%;
+  }
+}
+
+.blog-embed {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 0;
+  margin-inline: auto;
+  @include bottom-spacing;
+}
+
+.blog-general-embed {
+  iframe {
+    width: 100%;
+    max-width: 800px !important;
+  }
+}
+
+.blog-post-date-author {
+  font-size: $font-size-small;
+}
+
+//*=========================================
+//** Previous and Next Posts **
+//*=========================================
+
+.previous-and-next-posts {
+  @include flex(row);
+  @include bottom-spacing;
+  justify-content: space-between;
+
+  a {
+    font-weight: 700;
+    color: $font-colour-dark;
+  }
+}
+
+//*=========================================
+//** Featured Posts **
+//*=========================================
+
+.featured-posts-heading {
+  font-size: $font-size-medium;
+  text-transform: uppercase;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-medium;
+  }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-small;
+  }
+}
+
+.featured-posts-section {
+  @include flex(column);
+  align-items: center;
+  width: 100%;
+  background-image: url('/images/pale-pink-circle.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.featured-posts-div:not(:last-of-type) {
+  margin-bottom: $section-spacing-small;
+}
+
+.featured-article-heading {
+  font-size: $font-size-medium;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+.featured-posts-link {
+  color: $font-colour-dark;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-small;
+  }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-tiny;
+  }
+}
+
+//*=========================================
+//** Instagram Feed **
+//*=========================================
+
+.instagram-feed-heading {
+  margin-top: $section-spacing-medium;
+}
+
+//*==============================================================================
+//** Archive **
+//*==============================================================================
+
+.archive-main-content {
+  .blog-index-wrapper {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+.blog-archive-meta-wrapper {
+  padding: 0 $section-spacing-extra-large $section-spacing-large;
+
+  @include breakpoint(1700) {
+    padding-inline: $section-spacing-very-large;
+  }
+
+  @include breakpoint(1500) {
+    padding-inline: $section-spacing-large;
+  }
+
+  @include breakpoint(1300) {
+    padding-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(950) {
+    padding-inline: $section-spacing-tiny;
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-extra-tiny $section-spacing-small;
+  }
+}
+
+.archive-categories-wrapper {
+  @include flex(row);
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.post-category-heading {
+  display: inline-block;
+  padding: 0 $section-spacing-extra-tiny;
+  margin: 0 0 $font-size-teeny-tiny;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+  font-weight: 400;
+}
+
+.archive-category-link {
+  color: $font-colour-dark;
 }

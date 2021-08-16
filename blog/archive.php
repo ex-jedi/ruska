@@ -1,7 +1,8 @@
 <?php include('../perch/runtime.php'); ?>
-<?php perch_layout('blog-header'); ?>
-<main class="blog-main-content archive-main-content" id="main-content">
-
+<?php perch_layout('heads/archive-index-head'); ?>
+<?php perch_layout('headers/blog-index-header'); ?>
+<main class="blog-main-content archive-main-content scrolltrigger-refresh-target" id="main-content">
+<!-- TODO: Show archive title in meta title. -->
 		    <?php
 		        // defaults for all modes
 		        $posts_per_page = 10;
@@ -41,54 +42,6 @@
 		        }
 
 
-		        /* --------------------------- POSTS BY TAG --------------------------- */
-		        if (perch_get('tag')) {
-		            echo '<h1>'.perch_blog_tag(perch_get('tag'), true).'</h1>';
-
-		            perch_blog_custom(array(
-							'tag'   	 => perch_get('tag'),
-							'template'   => $template,
-							'count'      => $posts_per_page,
-							'sort'       => $sort_by,
-							'sort-order' => $sort_order,
-		                    ));
-
-		            $posts_displayed = true;
-		        }
-
-
-
-		        /* --------------------------- POSTS BY DATE RANGE --------------------------- */
-		        if (perch_get('year')) {
-
-					$year              = intval(perch_get('year'));
-					$date_from         = $year.'-01-01 00:00:00';
-					$date_to           = $year.'-12-31 23:59:59';
-					$title_date_format = '%Y';
-
-
-		            // Month and Year?
-		            if (perch_get('month')) {
-						$month             = intval(perch_get('month'));
-						$date_from         = $year.'-'.str_pad($month, 2, '0', STR_PAD_LEFT).'-01 00:00:00';
-						$date_to           = $year.'-'.str_pad($month, 2, '0', STR_PAD_LEFT).'-31 23:59:59';
-						$title_date_format = '%B, %Y';
-		            }
-
-		            echo '<h1>'.strftime($title_date_format, strtotime($date_from)).'</h1>';
-
-		            perch_blog_custom(array(
-							'filter'     => 'postDateTime',
-							'match'      => 'eqbetween',
-							'value'      => $date_from.','.$date_to,
-							'template'   => $template,
-							'count'      => $posts_per_page,
-							'sort'       => $sort_by,
-							'sort-order' => $sort_order,
-		                    ));
-
-		            $posts_displayed = true;
-		        }
 
 		      	/* --------------------------- DEFAULT: ALL POSTS --------------------------- */
 
@@ -105,17 +58,20 @@
 							'sort'       => $sort_by,
 							'sort-order' => $sort_order,
 		                    ));
-
 		      	}
 
 		    ?>
-			<section class="blog-section archive-meta">
-		    <h2>Category and Tag Archive</h2>
+			<section class="blog-archive-meta-wrapper scrolltrigger-refresh-target">
+		    <h2>Category Archive</h2>
 		    <!--  By category listing -->
-		    <?php perch_blog_categories(); ?>
-		    <!--  By tag -->
-		    <?php perch_blog_tags(); ?>
-		    <!--  By year -->
+		    <?php
+						perch_blog_categories(array(
+								'template' => 'archive_category_link.html',
+						));
+				?>
 			</section>
 		</main>
-<?php perch_layout('blog-footer'); ?>
+		<?php perch_content("Contact Form"); ?>
+		<?php perch_content("Instagram Feed"); ?>
+<?php perch_layout('footers/main-footer'); ?>
+<?php perch_layout('footer-ends/blog-archive-footer-end'); ?>

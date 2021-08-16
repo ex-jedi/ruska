@@ -60,7 +60,6 @@ h2 {
   text-align: center;
   margin: 0 auto $heading-spacing-large;
   color: $font-colour-dark;
-  line-height: 1;
 
   @include breakpoint(1550) {
     font-size: $heading-size-large;
@@ -307,10 +306,7 @@ a {
   text-transform: lowercase;
   transform: translateY(100px);
   opacity: 0;
-
-  &:not(:last-of-type) {
-    margin-bottom: $section-spacing-tiny;
-  }
+  margin-bottom: $section-spacing-extra-small;
 }
 
 #main-nav-current {
@@ -352,6 +348,10 @@ a {
 
   @include breakpoint(1300) {
     padding: $section-spacing-medium;
+  }
+
+  @include breakpoint(950) {
+    padding: $section-spacing-medium $section-spacing-extra-small;
   }
 
   @include breakpoint(700) {
@@ -549,19 +549,19 @@ select {
   @include breakpoint(500) {
     padding-bottom: calc(#{$section-spacing-small} + 40px);
   }
+}
 
-  .instagram-feed-heading {
-    color: $font-colour-medium;
-    margin: 0 auto $section-spacing-small;
-    text-align: center;
+.instagram-feed-heading {
+  color: $font-colour-medium;
+  margin: 0 auto $section-spacing-small;
+  text-align: center;
 
-    @include breakpoint(1300) {
-      margin-bottom: $section-spacing-extra-small;
-    }
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-extra-small;
+  }
 
-    @include breakpoint(700) {
-      margin-bottom: $section-spacing-tiny;
-    }
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-tiny;
   }
 }
 
@@ -581,11 +581,9 @@ select {
   }
 }
 
-.instagram-feed-image {
+.instagram-image-wrapper {
   flex: 0 1 auto;
   width: 23%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
 
   @include breakpoint(1300) {
     width: 48%;
@@ -600,6 +598,11 @@ select {
     width: 100%;
     margin-bottom: $section-spacing-extra-tiny;
   }
+}
+
+.instagram-feed-image {
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 .instagram-feed-background-image {
@@ -742,6 +745,16 @@ body:not(.user-is-tabbing) textarea:focus {
   textarea:focus {
     outline: 3px dashed #ff5e00;
   }
+}
+
+//********** Perch Debug **********
+
+//TODO: Remove debug styles
+
+html body table.perch-debug td,
+html body table.perch-debug th {
+  font-size: 20px !important;
+  padding: 5px;
 }
 
 //*=========================================
