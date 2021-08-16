@@ -66,7 +66,6 @@
   @include breakpoint(950) {
     padding-inline: $section-spacing-tiny;
     position: relative;
-    margin-top: -300px;
     transition: all 0.4s ease;
     background-position: center right 1rem,
       center bottom #{$section-spacing-large};
@@ -75,14 +74,13 @@
 
   @include breakpoint(700) {
     padding: 0 $section-spacing-extra-tiny $section-spacing-small;
-    margin-top: -250px;
     background-position: center right 1rem, center bottom 55rem;
     background-size: 50%;
   }
 }
 
 .category-push-down {
-  margin-top: 0;
+  height: 100%;
 }
 
 .cat-ul-heading {
@@ -94,10 +92,11 @@
     font-size: $font-size-small;
     color: $font-colour-dark;
     width: fit-content;
-    margin: 0 auto $section-spacing-extra-small;
+    margin: 0 auto;
     cursor: pointer;
     z-index: 5;
     position: relative;
+    transition: all 0.1s 0.4s ease;
 
     &::after {
       content: url('/images/down-arrow.svg');
@@ -112,6 +111,9 @@
 }
 
 .cat-ul-heading-reveal {
+  margin-bottom: $section-spacing-extra-small;
+  transition: all 0.4s ease;
+
   &::after {
     transform: rotate(0);
   }
@@ -123,9 +125,17 @@
   padding: 0;
   @include flex(row);
   justify-content: space-evenly;
+  flex-wrap: wrap;
 
   li {
     list-style-type: none;
+    text-align: center;
+    padding: 0 $font-size-teeny-tiny;
+    text-transform: uppercase;
+
+    &:not(:last-of-type) {
+      padding-bottom: $font-size-teeny-tiny;
+    }
   }
 
   a {
@@ -139,9 +149,12 @@
     align-items: center;
     clip-path: inset(0 0 100% 0);
     transition: all 0.4s ease;
+    height: 0;
+    opacity: 0;
 
     li:not(:last-of-type) {
       margin-bottom: $section-spacing-extra-tiny;
+      padding-bottom: 0;
     }
   }
 }
@@ -150,6 +163,8 @@
   clip-path: inset(0 0 0 0);
   opacity: 1;
   transform: translateY(0);
+  height: 100%;
+  opacity: 1;
 }
 
 .blog-index-subheading-link {
