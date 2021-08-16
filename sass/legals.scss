@@ -34,3 +34,9 @@
   top: $section-spacing-tiny;
   left: 45%;
 }
+
+.legals-section {
+  position: relative;
+  color: $font-colour-dark;
+  padding: 0 $section-spacing-extra-large calc(#{$section-spacing-large} + 265px);
+}

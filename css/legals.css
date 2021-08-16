@@ -3,3 +3,9 @@
   top: 5rem;
   left: 45%;
 }
+
+.legals-section {
+  position: relative;
+  color: #77442f;
+  padding: 0 40rem calc(20rem + 265px);
+}
