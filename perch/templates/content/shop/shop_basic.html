@@ -14,12 +14,25 @@
   <perch:content type="image" id="productImgOne" width="800"> 800w,
   <perch:content type="image" id="productImgOne" width="600"> 600w">
   <div class="product-description body-text-medium">
-    <perch:content id="product-description" type="textarea" label="Product Description" html>
+    <perch:content id="productDescription" type="textarea" label="Product Description" html>
   </div>
   <div class="product-pricing body-text-medium">
     <p class="product-price">
-      <perch:content id="productPrice" type="text" label="Product Price">
+      £<perch:content id="productPrice" type="text" label="Product Price">
     </p>
+  </div>
+  <button class="body-text-medium buy-button snipcart-add-item"
+  data-item-id="<perch:content id="perch_item_index" type="hidden">"
+  data-item-url="/"
+  data-item-price="<perch:content id="productPrice" type="price" filter="space">"
+  data-item-name="<perch:content id="productHeading">"
+  data-item-description="<perch:content id="productDescription">"
+  data-item-image="<perch:content id="productImgOne">"
+  >
+    Add To Cart
+  </button>
+  <div style="width: 100%;">
+  <perch:showall />
   </div>
 </perch:repeater>
 </section>

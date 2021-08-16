@@ -12,6 +12,13 @@
 
 .product-heading,
 .product-image,
-.product-description {
+.product-description,
+.product-pricing {
   margin-bottom: 5rem;
+}
+
+.buy-button {
+  border: 3px solid #77442f;
+  padding: 2.5rem 7.5rem;
+  background-color: #faf6f1;
 }

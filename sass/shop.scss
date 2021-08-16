@@ -40,6 +40,13 @@
 
 .product-heading,
 .product-image,
-.product-description {
+.product-description,
+.product-pricing {
   margin-bottom: $section-spacing-tiny;
+}
+
+.buy-button {
+  border: 3px solid $background-colour-dark;
+  padding: $section-spacing-extra-tiny $section-spacing-extra-small;
+  background-color: $background-colour-light;
 }
