@@ -1,11 +1,26 @@
 <perch:before>
-  <h2 class="featured-posts-heading">Related</h1>
+  <section class="homepage-featured-articles-section">
+    <img src="/images/pale-pink-circle.svg" alt="Pale pink backround" class="featured-articles-background-image">
+  <h2 class="homepage-featured-articles-section-heading">
+    articles
+  </h2>
+  <div class="homepage-featured-articles-wrapper">
 </perch:before>
-<div class="featured-posts-div">
-  <h3 class="featured-posts-title">
+<div class="homepage-featured-article">
+  <img class="homepage-featured-article-image" itemprop="image" loading="lazy" src="<perch:blog id="blogIndexImage" type="image" width="1400" height="1400" label="XXXX" crop>" alt="<perch:blog id="altOne" type="text" label="Image Description">"
+    sizes="(max-width: 1000px) 100vw, 40vw"
+    srcset="<perch:blog type="image" id="blogIndexImage" width="1400" height="1400" crop> 1400w,
+    <perch:blog type="image" id="blogIndexImage" width="1000" height="1000" crop> 1000w,
+    <perch:blog type="image" id="blogIndexImage" width="800" height="800" crop> 800w,
+    <perch:blog type="image" id="blogIndexImage" width="600" height="600" crop> 600w,
+    <perch:blog type="image" id="blogIndexImage" width="600" height="400" crop> 400w">
+  <h3 class="homepage-featured-article-heading body-text-medium">
     <a class="featured-posts-image-link" href="<perch:blog id="postURL">">
       <perch:blog id="postTitle">
-      in <perch:blog id="postCat" replace="-|&nbsp;">
     </a>
   </h2>
 </div>
+<perch:after>
+</div>
+</section>
+</perch:after>

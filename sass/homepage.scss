@@ -564,5 +564,8 @@
   word-break: break-word;
   text-align: center;
   font-weight: 400;
-  color: $font-colour-dark;
+
+  a {
+    color: $font-colour-dark;
+  }
 }
