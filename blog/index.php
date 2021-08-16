@@ -14,3 +14,6 @@
   </main>
 <?php perch_layout('footers/main-footer'); ?>
 <?php perch_layout('footer-ends/blog-footer-end'); ?>
+<!-- TODO: Remove debug -->
+<?php PerchUtil::output_debug(); ?>
+<!-- TODO: Validate HTML -->

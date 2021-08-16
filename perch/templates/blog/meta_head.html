@@ -1,12 +1,14 @@
-<title><perch:blog id="postTitle" escape> - <perch:setting id="perch_blog_site_name"></title>
+<title>
+  <perch:blog id="postTitle" escape> - <perch:setting id="perch_blog_site_name">
+</title>
 <meta name="description" content="<perch:blog id="page-meta-description">" >
 <meta property="og:site_name" content="<perch:setting id="perch_blog_site_name" >" >
 <meta property="og:url" content="<perch:blog id="domain" type="hidden"><perch:blog id="postURL">">
 <meta property="og:title" content="<perch:blog id="og_title" label="Social title" type="text" escape>">
 <meta property="og:description" content="<perch:blog id="page-meta-description">">
 <perch:if exists="og_image">
-  <meta property="og:image" content="<perch:blog id="domain"><perch:blog id="og_image" type="image" width="1200">">
-  <meta property="twitter:image" content="<perch:blog id="domain" type="hidden"><perch:blog id="og_image"  type="image" width="1200">">
+    <meta property="og:image" content="<perch:blog id="domain"><perch:blog id="og_image" type="image" width="1200">">
+    <meta property="twitter:image" content="<perch:blog id="domain" type="hidden"><perch:blog id="og_image"  type="image" width="1200">">
   <perch:else>
     <meta property="og:image" content="<perch:blog id="domain">/images/default-sharing-image.png>">
     <meta property="twitter:image" content="<perch:blog id="domain">/images/default-sharing-image.png">
@@ -27,4 +29,6 @@
 <meta name="twitter:description" content="<perch:blog id="page-meta-description">">
 <meta name="twitter:url" content="<perch:blog id="domain"><perch:blog id="postURL" >">
 <link rel="canonical" href="<perch:blog id="domain"><perch:blog id="postURL">" >
+<!-- Favicons -->
+<perch:template path="pages/attributes/favicons.html">
 <!-- TODO: Check these work with trailing slashes removed -->
