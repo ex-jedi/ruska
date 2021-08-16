@@ -28,7 +28,7 @@
 	PerchSystem::set_var('sharing_image',$sharing_image);
 	PerchSystem::set_var('archivePageMetaTitle',$cat_title);
 	perch_page_attributes(array(
-		'template' => 'blog_archive/blog_archive.html'
+		'template' => 'blog_archive.html'
 	));
 	?>
 	<?php perch_content("Analytics"); ?>
