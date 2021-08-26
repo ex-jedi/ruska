@@ -1,7 +1,8 @@
 <?php include('../perch/runtime.php'); ?>
 <?php perch_layout('heads/shop-head'); ?>
-<?php perch_layout('headers/main-header'); ?>
+<?php perch_layout('headers/shop-header'); ?>
 <main class="main-content about-me-main-content" id="main-content">
+	<section class="shop-section">
 		<!-- Create product region -->
 		<?php
 		perch_content_create('Products', array(
@@ -24,10 +25,11 @@
 			} else {
 			// List mode
 			perch_content_custom('Products', array(
-						'template' => 'shop/product_listing.html',
+				'template' => 'shop/product_listing.html',
      ));
 			}
 		?>
+		</section>
 	<?php perch_content("Contact Form"); ?>
 	<?php perch_content("Instagram Feed"); ?>
 </main>

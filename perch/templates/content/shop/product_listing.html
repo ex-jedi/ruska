@@ -1,12 +1,15 @@
-    <perch:before>
-    <ul>
-    </perch:before>
-    <li>
-     <a href="<perch:content id="slug" type="slug">">
-          <perch:content id="image" type="image" width="100" height="100" crop output="tag">
-          <perch:content id="title" type="text">
-     </a>
-    </li>
-    <perch:after>
-    </ul>
-    </perch:after>
+<perch:before>
+  <h1 class="shop-page-heading">
+    shop
+  </h1>
+<div class="shop-list-wrapper">
+</perch:before>
+<div class="shop-list-item">
+  <a href="<perch:content id="slug" type="slug">">
+    <perch:content id="shopCoverImage" type="image" width="400" height="400" crop output="tag">
+    <perch:content id="productHeading" type="text">
+  </a>
+</div>
+<perch:after>
+  </div>
+</perch:after>
