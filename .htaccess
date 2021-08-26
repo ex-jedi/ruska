@@ -56,9 +56,8 @@ RewriteRule ^blog/tag/([a-zA-Z0-9-/]+)$ /blog/archive.php?tag=$1 [L]
 #Main Blog Url
 RewriteRule ^blog/([a-zA-Z0-9-/]+)$ /blog/post.php?s=$1 [L]
 
-#Gallery URLs
-#RewriteRule ^gallery/page/([0-9]+)$ /gallery/?page=$1 [L]
-RewriteRule ^gallery/([a-zA-Z0-9-/]+)$ /gallery/album.php?s=$1 [L]
+#Shop URLs
+RewriteRule ^shop/([a-zA-Z0-9-/]+)$  /shop/index.php?s=$1 [L]
 
 
 </IfModule>
