@@ -4,7 +4,6 @@
 <!-- Cookie Warning -->
 <?php perch_content("Cookie Warning"); ?>
 	<!-- TODO: Maybe take 👇🏾 out of region and put here directly? -->
-	<?php perch_content("Header Content"); ?>
 	<div class="site-wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
 		<header class="header main-header">
 			<!-- Skip to main content link  -->

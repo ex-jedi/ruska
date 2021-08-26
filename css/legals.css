@@ -1,0 +1,31 @@
+.legals-top-backround-image {
+  position: absolute;
+  top: 5rem;
+  left: 45%;
+}
+
+.legals-section {
+  position: relative;
+  color: #77442f;
+  padding: 0 40rem calc(20rem + 265px);
+}
+@media (max-width: 1500px) {
+  .legals-section {
+    padding: 0 20rem calc(20rem + 265px);
+  }
+}
+@media (max-width: 1300px) {
+  .legals-section {
+    padding: 0 20rem calc(15rem + 174px);
+  }
+}
+@media (max-width: 950px) {
+  .legals-section {
+    padding: 0 10rem calc(15rem + 174px);
+  }
+}
+@media (max-width: 700px) {
+  .legals-section {
+    padding: 0 2.5rem calc(10rem + 75px);
+  }
+}

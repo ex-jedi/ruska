@@ -83,7 +83,3 @@
 	<?php perch_layout('footers/main-footer'); ?>
 <?php perch_layout('footer-ends/blog-post-footer-end'); ?>
 <!-- TODO: Validate HTML -->
-
-<!-- TODO: Remove debug -->
-<?php PerchUtil::output_debug(); ?>
-<!-- TODO: Validate HTML -->

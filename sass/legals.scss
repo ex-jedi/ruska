@@ -1,0 +1,58 @@
+// *=======================================================================================
+// ** Imports & Mixins  **
+// *=======================================================================================
+
+//*=========================================
+//** Imports **
+//*=========================================
+
+@use 'bits' as *; //Contains variables, media queries mixins etc.
+
+//*=========================================
+//** Mixins **
+//*=========================================
+
+// Bottom spacing
+@mixin bottom-spacing {
+  margin-bottom: $section-spacing-large;
+
+  @include breakpoint(1300) {
+    margin-bottom: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    margin-bottom: $section-spacing-small;
+  }
+}
+
+//*=========================================
+//** Page Styles **
+//*=========================================
+
+.legals-top-backround-image {
+  position: absolute;
+  top: $section-spacing-tiny;
+  left: 45%;
+}
+
+.legals-section {
+  position: relative;
+  color: $font-colour-dark;
+  padding: 0 $section-spacing-extra-large calc(#{$section-spacing-large} + 265px);
+
+  @include breakpoint(1500) {
+    padding: 0 $section-spacing-large calc(#{$section-spacing-large} + 265px);
+  }
+
+  @include breakpoint(1300) {
+    padding: 0 $section-spacing-large calc(#{$section-spacing-medium} + 174px);
+  }
+
+  @include breakpoint(950) {
+    padding: 0 $section-spacing-small calc(#{$section-spacing-medium} + 174px);
+  }
+
+  @include breakpoint(700) {
+    padding: 0 $section-spacing-extra-tiny calc(#{$section-spacing-small} + 75px);
+  }
+}

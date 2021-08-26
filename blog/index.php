@@ -6,10 +6,11 @@
       <?php
       $categories = perch_blog_categories(array(
         'template' => 'index_category_link.html',
-        'count' => '3'
+        'count' => '5'
       ));
       ?>
     <?php perch_blog_recent_posts(); ?>
+    <?php perch_content("Contact Form"); ?>
     <?php perch_content("Instagram Feed"); ?>
   </main>
 <?php perch_layout('footers/main-footer'); ?>
