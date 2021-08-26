@@ -15,6 +15,7 @@
 		<?php
 			if (perch_get('s')) {
 			// Detail mode
+			// Product
 				perch_content_custom('Products', array(
 					'template' => 'shop/product_detail.html',
 					'filter' => 'slug',
@@ -22,6 +23,14 @@
 					'value' => perch_get('s'),
 					'count' => 1,
 				));
+				//Additional items
+				perch_content_custom('Products', array(
+				'template' => 'shop/featured_items.html',
+				'filter' => 'slug',
+				'match' => 'neq',
+				'value' => perch_get('s'),
+				'count' => 2,
+     ));
 			} else {
 			// List mode
 			perch_content_custom('Products', array(
