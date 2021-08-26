@@ -1,7 +1,7 @@
 <div class="product">
 <!-- Product images -->
 <div class="product-images">
-  <perch:repeater id="productImagesRepeater" label="Product Images" max="5" order="3">
+  <perch:repeater id="productImagesRepeater" label="Product Images" max="5" order="4">
     <img class="Product Images" itemprop="image" loading="lazy" src="<perch:content id="productImages" type="image" width="1000" height="1000" label="Product Image" help="Image must be at least 1000px x 1000px. This image will be cropped to a square. Maximum 5 images" crop>" alt="<perch:content id="altOne" type="text" label="Image Description">"
     sizes="(max-width: 800px) 100vw, 30vw"
     srcset="<perch:content type="image" id="productImages" width="1000" height="1000" crop> 1000w,
@@ -17,13 +17,16 @@
   <perch:content id="productHeading" type="text" label="Product Heading" order="1" required title>
 </h1>
 
+<!-- slug  -->
+<perch:content id="slug" for="productHeading" type="slug" suppress>
+
 <!-- Price -->
-<p>&pound;<perch:content id="productPrice" type="text" label="Price"></p>
+<p>&pound;<perch:content id="productPrice" type="text" label="Product Price" order="2" required></p>
 
 <!-- Add to cart -->
-  <perch:content id="productDescription" type="textarea" label="Description" editor="redactor" html>
-  <perch:content id="cartDescription" type="text" label="Short Description For Cart" help="Brief product description for the shopping cart" count="words" size="l" suppress>
-  <perch:content id="slug" for="productHeading" type="slug" suppress>
+  <perch:content id="productDescription" type="textarea" label="Description" editor="redactor" order="5" html>
+
+
 <button class="body-text-medium buy-button snipcart-add-item"
 data-item-id="<perch:content id="slug" type="hidden">"
 data-item-url="/"
@@ -39,8 +42,11 @@ data-item-image="<perch:content id="shopCoverImage">"
 <!--* Items for listing Page Only *-->
 
 <!-- Cover Image -->
-<perch:content id="shopCoverImage" type="image" label="Product Cover Image" divider-before="Cover Image" order="2" required="true" width="1400" height="1400" help="This image will appear on the shop listing page with the title. Image must be at least 1400px x 1400px. This image will be cropped to a square." required suppress crop>
+<perch:content id="shopCoverImage" type="image" label="Product Cover Image" divider-before="Cover Image" order="3" required="true" width="1400" height="1400" help="This image will appear on the shop listing page with the title. Image must be at least 1400px x 1400px. This image will be cropped to a square." required suppress crop>
   <perch:content type="image" id="shopCoverImage" width="1000" height="1000" suppress crop>
   <perch:content type="image" id="shopCoverImage" width="800" height="800" suppress crop>
   <perch:content type="image" id="shopCoverImage" width="600" height="600" suppress crop>
   <perch:content type="image" id="shopCoverImage" width="400" height="400" suppress crop>
+
+<!-- Cart product description    -->
+<perch:content id="cartDescription" type="text" label="Short Description For Cart" help="Brief product description for the shopping cart" count="words" size="l" order="6" suppress>
