@@ -64,11 +64,13 @@
 .product-images-wrapper {
   @include flex(row);
   justify-content: space-between;
-  align-items: flex-start;
   overflow-x: scroll;
   padding-bottom: $section-spacing-small;
   gap: 0 $section-spacing-small;
   white-space: nowrap;
+  width: 100%;
+  flex-wrap: nowrap;
+  min-height: 70vh;
 
   @include styled-scrollbar(
     0.5rem,
@@ -77,6 +79,15 @@
     $background-colour-light,
     2rem
   );
+}
+
+.product-image {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
 }
 
 .product-price {
