@@ -34,43 +34,91 @@
   }
 }
 
-.blog-index-item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  width: 48%;
-  margin: 0;
+.shop-page-heading {
+  margin-bottom: 0;
 }
-.blog-index-item:nth-child(3n+1) {
+
+.shop-list-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0 10rem;
+}
+
+.shop-list-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  width: 40%;
+}
+.shop-list-item:nth-child(3n+1) {
   width: 100%;
   margin: 20rem auto;
 }
-.blog-index-item:nth-child(3n+1) img,
-.blog-index-item:nth-child(3n+1) h3 {
+.shop-list-item:nth-child(3n+1) img,
+.shop-list-item:nth-child(3n+1) h3,
+.shop-list-item:nth-child(3n+1) p {
   width: 48%;
-  margin: 0 auto;
 }
 @media (max-width: 1300px) {
-  .blog-index-item:nth-child(3n+1) {
+  .shop-list-item:nth-child(3n+1) {
     margin: 15rem auto;
   }
 }
 @media (max-width: 700px) {
-  .blog-index-item {
+  .shop-list-item {
     margin: 10rem auto 0;
     width: 100%;
   }
-  .blog-index-item:nth-child(3n+1) {
+  .shop-list-item:nth-child(3n+1) {
     margin: 10rem auto 0;
   }
-  .blog-index-item:nth-child(3n+1) img,
-.blog-index-item:nth-child(3n+1) h3 {
+  .shop-list-item:nth-child(3n+1) img,
+.shop-list-item:nth-child(3n+1) h3 {
     width: 100%;
     margin: 0 auto;
   }
 }
-.blog-index-item:last-of-type {
+.shop-list-item:last-of-type {
   margin-bottom: 0;
+}
+
+.shop-list-item-image {
+  width: 100%;
+  margin: 0 auto 2.5rem;
+}
+
+.shop-list-item-heading {
+  margin: 0 auto 5rem;
+  width: 100%;
+}
+.shop-list-item-heading a {
+  color: #77442f;
+}
+
+.shop-list-item-price {
+  margin: 0 auto;
+  width: 100%;
+  font-weight: 700;
 }
 
 .product-wrapper {

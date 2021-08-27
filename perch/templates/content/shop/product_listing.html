@@ -12,11 +12,14 @@
         <perch:content type="image" id="shopCoverImage" width="800" height="800" crop> 800w,
         <perch:content type="image" id="shopCoverImage" width="600" height="600" crop> 600w,
         <perch:content type="image" id="shopCoverImage" width="400" height="400" crop> 400w">
-        <h3 class="shop-list-item-heading">
+        <h3 class="shop-list-item-heading body-text-medium">
           <a href="<perch:content id="slug" type="slug">">
             <perch:content id="productHeading" type="text">
           </a>
         </h3>
+        <p class="shop-list-item-price body-text-medium">
+          &pound;<perch:content id="productPrice" type="text">
+        </p>
       </div>
 <perch:after>
     </div>

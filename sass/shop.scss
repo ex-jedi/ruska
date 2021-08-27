@@ -67,19 +67,31 @@
 //** Listing Page **
 //*==============================================================================
 
-.blog-index-item {
-  flex: 0 1 auto;
-  width: 48%;
-  margin: 0;
+.shop-page-heading {
+  margin-bottom: 0;
+}
+
+.shop-list-wrapper {
+  @include flex(row);
+  flex-wrap: wrap;
+  gap: 0 $section-spacing-small;
+}
+
+.shop-list-item {
+  @include flex(column);
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  width: 40%;
 
   &:nth-child(3n + 1) {
     width: 100%;
     margin: $section-spacing-large auto;
 
     img,
-    h3 {
+    h3,
+    p {
       width: 48%;
-      margin: 0 auto;
     }
   }
 
@@ -105,6 +117,25 @@
   &:last-of-type {
     margin-bottom: 0;
   }
+}
+
+.shop-list-item-image {
+  width: 100%;
+  margin: 0 auto $section-spacing-extra-tiny;
+}
+
+.shop-list-item-heading {
+  margin: 0 auto $section-spacing-tiny;
+  width: 100%;
+  a {
+    color: $font-colour-dark;
+  }
+}
+
+.shop-list-item-price {
+  margin: 0 auto;
+  width: 100%;
+  font-weight: 700;
 }
 
 //*==============================================================================
