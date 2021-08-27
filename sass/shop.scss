@@ -37,16 +37,30 @@
     top 50% right $section-spacing-extra-tiny;
 }
 
-//*==============================================================================
-//** Listing Page **
-//*==============================================================================
-
 .shop-section,
 .shop-featured-items-section {
   position: relative;
   color: $font-colour-dark;
   padding: 0 $section-spacing-extra-large $section-spacing-large;
+
+  @include breakpoint(1600) {
+    padding: 0 $section-spacing-very-large $section-spacing-large;
+  }
+
+  @include breakpoint(1300) {
+    padding: 0 $section-spacing-medium $section-spacing-medium;
+  }
 }
+
+.shop-section {
+  @include breakpoint(950) {
+    padding: 0 0 $section-spacing-medium;
+  }
+}
+
+//*==============================================================================
+//** Listing Page **
+//*==============================================================================
 
 //*==============================================================================
 //** Product Styles **
@@ -75,7 +89,7 @@
   @include styled-scrollbar(
     0.5rem,
     $background-colour-medium,
-    $background-colour-light,
+    transparent,
     $background-colour-light,
     2rem
   );
@@ -84,7 +98,7 @@
 .product-image {
   flex: 1 0 auto;
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
   height: 100%;
   object-fit: cover;
   margin: 0;
@@ -94,6 +108,10 @@
   font-size: $heading-size-extra-large;
   font-weight: 700;
   text-align: center;
+
+  @include breakpoint(1550) {
+    font-size: $font-size-large;
+  }
 }
 
 .add-to-cart-button {
@@ -116,6 +134,10 @@
   &:last-of-type {
     margin-bottom: 0;
   }
+
+  @include breakpoint(950) {
+    padding-inline: $section-spacing-extra-small;
+  }
 }
 
 .product-images-wrapper,
@@ -128,6 +150,10 @@
 //*=========================================
 //** Featured Items **
 //*=========================================
+
+.shop-featured-items-section {
+  padding: 0 $section-spacing-extra-small $section-spacing-medium;
+}
 
 .shop-featured-items-flex-wrapper {
   @include flex(row);
@@ -183,4 +209,8 @@
 .instagram-feed-section {
   padding-top: $section-spacing-large;
   overflow: hidden;
+
+  @include breakpoint(1300) {
+    padding-top: $section-spacing-medium;
+  }
 }
