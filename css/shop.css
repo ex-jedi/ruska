@@ -208,3 +208,8 @@
 .shop-featured-item-price {
   font-weight: 700;
 }
+
+.instagram-feed-section {
+  padding-top: 20rem;
+  overflow: hidden;
+}
