@@ -111,9 +111,9 @@
     &:nth-child(3n + 1) {
       margin: $section-spacing-small auto 0;
       img,
-      h3 {
+      h3,
+      p {
         width: 100%;
-        margin: 0 auto;
       }
     }
   }
@@ -204,6 +204,10 @@
 
   @include breakpoint(1550) {
     font-size: $font-size-large;
+  }
+
+  @include breakpoint(1300) {
+    font-size: $font-size-medium;
   }
 
   @include breakpoint(700) {

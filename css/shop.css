@@ -98,9 +98,9 @@
     margin: 10rem auto 0;
   }
   .shop-list-item:nth-child(3n+1) img,
-.shop-list-item:nth-child(3n+1) h3 {
+.shop-list-item:nth-child(3n+1) h3,
+.shop-list-item:nth-child(3n+1) p {
     width: 100%;
-    margin: 0 auto;
   }
 }
 .shop-list-item:last-of-type {
@@ -217,6 +217,11 @@
 @media (max-width: 1550px) {
   .product-price {
     font-size: 7.5rem;
+  }
+}
+@media (max-width: 1300px) {
+  .product-price {
+    font-size: 5rem;
   }
 }
 @media (max-width: 700px) {
