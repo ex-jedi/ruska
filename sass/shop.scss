@@ -61,6 +61,10 @@
   @include breakpoint(950) {
     padding: 0 0 $section-spacing-medium;
   }
+
+  @include breakpoint(700) {
+    padding: 0 0 $section-spacing-small;
+  }
 }
 
 //*==============================================================================
@@ -249,10 +253,12 @@
 //*=========================================
 
 .shop-featured-items-section {
-  padding: 0 $section-spacing-extra-small $section-spacing-medium;
+  @include breakpoint(950) {
+    padding: 0 $section-spacing-extra-small $section-spacing-medium;
+  }
 
   @include breakpoint(700) {
-    padding-inline: $section-spacing-extra-tiny;
+    padding: 0 $section-spacing-extra-tiny $section-spacing-small;
   }
 }
 

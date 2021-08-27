@@ -33,6 +33,11 @@
     padding: 0 0 15rem;
   }
 }
+@media (max-width: 700px) {
+  .shop-section {
+    padding: 0 0 10rem;
+  }
+}
 
 .shop-page-heading {
   margin-bottom: 0;
@@ -275,12 +280,14 @@
   }
 }
 
-.shop-featured-items-section {
-  padding: 0 7.5rem 15rem;
+@media (max-width: 950px) {
+  .shop-featured-items-section {
+    padding: 0 7.5rem 15rem;
+  }
 }
 @media (max-width: 700px) {
   .shop-featured-items-section {
-    padding-inline: 2.5rem;
+    padding: 0 2.5rem 10rem;
   }
 }
 
