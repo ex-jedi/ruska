@@ -144,7 +144,7 @@
   @include styled-scrollbar(
     0.5rem,
     $background-colour-medium,
-    $background-colour-light,
+    transparent,
     $background-colour-light,
     2rem
   );
@@ -158,4 +158,24 @@
   height: 100%;
   object-fit: cover;
   margin: 0;
+}
+
+.shop-featured-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  margin-bottom: $section-spacing-extra-tiny;
+}
+
+.shop-featured-item-heading {
+  margin-bottom: $section-spacing-tiny;
+
+  a {
+    color: $font-colour-dark;
+  }
+}
+
+.shop-featured-item-price {
+  font-weight: 700;
 }

@@ -165,7 +165,7 @@
   background-color: #d08a70;
 }
 .shop-featured-items-flex-wrapper::-webkit-scrollbar-track {
-  background: #faf6f1;
+  background: transparent;
   -webkit-box-shadow: inset 0 0 3px #faf6f1;
           box-shadow: inset 0 0 3px #faf6f1;
 }
@@ -187,4 +187,24 @@
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0;
+}
+
+.shop-featured-item-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
+  margin-bottom: 2.5rem;
+}
+
+.shop-featured-item-heading {
+  margin-bottom: 5rem;
+}
+.shop-featured-item-heading a {
+  color: #77442f;
+}
+
+.shop-featured-item-price {
+  font-weight: 700;
 }
