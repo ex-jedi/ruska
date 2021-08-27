@@ -199,6 +199,12 @@
     $background-colour-light,
     2rem
   );
+
+  @include breakpoint(700) {
+    @include flex(column);
+    padding-bottom: 0;
+    overflow: hidden;
+  }
 }
 
 .shop-featured-item-wrapper {
@@ -209,6 +215,14 @@
   height: 100%;
   object-fit: cover;
   margin: 0;
+
+  @include breakpoint(700) {
+    max-width: 100%;
+
+    &:not(:last-of-type) {
+      padding-bottom: $section-spacing-small;
+    }
+  }
 }
 
 .shop-featured-item-image {
