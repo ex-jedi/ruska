@@ -29,6 +29,11 @@
 //** General Styles **
 //*==============================================================================
 
+#main-nav-current {
+  display: block;
+  visibility: visible;
+}
+
 .shop-page {
   background-image: url('/images/pale-pink-circle.svg'),
     url('/images/pale-pink-circle.svg');
