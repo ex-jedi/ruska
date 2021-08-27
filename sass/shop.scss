@@ -67,6 +67,46 @@
 //** Listing Page **
 //*==============================================================================
 
+.blog-index-item {
+  flex: 0 1 auto;
+  width: 48%;
+  margin: 0;
+
+  &:nth-child(3n + 1) {
+    width: 100%;
+    margin: $section-spacing-large auto;
+
+    img,
+    h3 {
+      width: 48%;
+      margin: 0 auto;
+    }
+  }
+
+  @include breakpoint(1300) {
+    &:nth-child(3n + 1) {
+      margin: $section-spacing-medium auto;
+    }
+  }
+
+  @include breakpoint(700) {
+    margin: $section-spacing-small auto 0;
+    width: 100%;
+    &:nth-child(3n + 1) {
+      margin: $section-spacing-small auto 0;
+      img,
+      h3 {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 //*==============================================================================
 //** Product Styles **
 //*==============================================================================
