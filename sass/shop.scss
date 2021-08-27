@@ -52,7 +52,6 @@
 //*==============================================================================
 
 .product-wrapper {
-  margin-bottom: $section-spacing-extra-large;
   position: relative;
   @include flex(column);
   align-items: center;
@@ -111,10 +110,21 @@
   }
 }
 
+.product-description-wrapper {
+  margin-bottom: 0;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
 .product-images-wrapper,
+.product-wrapper,
 .product-heading,
-.product-description-wrapper,
 .add-to-cart-button,
 .product-price {
   @include bottom-spacing;
 }
+
+//*=========================================
+//** Featured Items **
+//*=========================================

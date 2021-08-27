@@ -2,7 +2,7 @@
 <!-- Product images -->
 <div class="product-images-wrapper scrolltrigger-refresh-target">
   <perch:repeater id="productImagesRepeater" label="Product Images" max="5" order="4">
-    <img class="product-image" draggable="false" itemprop="image" loading="lazy" src="<perch:content id="productImages" type="image" width="1000" height="1000" label="Product Image" help="Image must be at least 1000px x 1000px. This image will be cropped to a square. Maximum 5 images" crop>" alt="<perch:content id="altOne" type="text" label="Image Description">"
+    <img class="product-image" draggable="false" itemprop="image" src="<perch:content id="productImages" type="image" width="1000" height="1000" label="Product Image" help="Image must be at least 1000px x 1000px. This image will be cropped to a square. Maximum 5 images" crop>" alt="<perch:content id="altOne" type="text" label="Image Description">"
     sizes="(max-width: 800px) 100vw, 30vw"
     srcset="<perch:content type="image" id="productImages" width="1000" height="1000" crop> 1000w,
     <perch:content type="image" id="productImages" width="1000" height="1000" crop> 1000w,

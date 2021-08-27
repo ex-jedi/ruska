@@ -11,7 +11,6 @@
 }
 
 .product-wrapper {
-  margin-bottom: 40rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -100,17 +99,24 @@
   color: #77442f;
 }
 
+.product-description-wrapper {
+  margin-bottom: 0;
+}
+.product-description-wrapper:last-of-type {
+  margin-bottom: 0;
+}
+
 .product-images-wrapper,
+.product-wrapper,
 .product-heading,
-.product-description-wrapper,
 .add-to-cart-button,
 .product-price {
   margin-bottom: 20rem;
 }
 @media (max-width: 1300px) {
   .product-images-wrapper,
+.product-wrapper,
 .product-heading,
-.product-description-wrapper,
 .add-to-cart-button,
 .product-price {
     margin-bottom: 15rem;
@@ -118,8 +124,8 @@
 }
 @media (max-width: 700px) {
   .product-images-wrapper,
+.product-wrapper,
 .product-heading,
-.product-description-wrapper,
 .add-to-cart-button,
 .product-price {
     margin-bottom: 10rem;
