@@ -151,4 +151,11 @@
 }
 
 .shop-featured-item-wrapper {
+  @include flex(column);
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
 }

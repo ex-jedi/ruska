@@ -23,7 +23,7 @@
 					'value' => perch_get('s'),
 					'count' => 1,
 				));
-				//Additional items
+				//Featured items
 				perch_content_custom('Products', array(
 				'template' => 'shop/featured_items.html',
 				'sort'=>'slug',
@@ -31,7 +31,7 @@
 				'filter' => 'slug',
 				'match' => 'neq',
 				'value' => perch_get('s'),
-				'count' => 2,
+				'count' => 3,
      ));
 			} else {
 			// List mode
