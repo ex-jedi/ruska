@@ -84,7 +84,10 @@
   white-space: nowrap;
   width: 100%;
   flex-wrap: nowrap;
-  min-height: 70vh;
+
+  @include breakpoint(700) {
+    padding-bottom: $section-spacing-tiny;
+  }
 
   @include styled-scrollbar(
     0.5rem,
@@ -102,6 +105,10 @@
   height: 100%;
   object-fit: cover;
   margin: 0;
+
+  @include breakpoint(700) {
+    width: 98%;
+  }
 }
 
 .product-heading {
