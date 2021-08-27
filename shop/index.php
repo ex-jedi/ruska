@@ -2,7 +2,7 @@
 <?php perch_layout('heads/shop-head'); ?>
 <?php perch_layout('headers/shop-header'); ?>
 <main class="main-content about-me-main-content" id="main-content">
-	<section class="shop-section">
+
 		<!-- Create product region -->
 		<?php
 		perch_content_create('Products', array(
@@ -26,6 +26,8 @@
 				//Additional items
 				perch_content_custom('Products', array(
 				'template' => 'shop/featured_items.html',
+				'sort'=>'slug',
+				'sort-order'=>'RAND',
 				'filter' => 'slug',
 				'match' => 'neq',
 				'value' => perch_get('s'),
@@ -38,7 +40,6 @@
      ));
 			}
 		?>
-		</section>
 	<?php perch_content("Contact Form"); ?>
 	<?php perch_content("Instagram Feed"); ?>
 </main>

@@ -41,7 +41,8 @@
 //** Listing Page **
 //*==============================================================================
 
-.shop-section {
+.shop-section,
+.shop-featured-items-section {
   position: relative;
   color: $font-colour-dark;
   padding: 0 $section-spacing-extra-large $section-spacing-large;
@@ -118,7 +119,6 @@
 }
 
 .product-images-wrapper,
-.product-wrapper,
 .product-heading,
 .add-to-cart-button,
 .product-price {
@@ -128,3 +128,27 @@
 //*=========================================
 //** Featured Items **
 //*=========================================
+
+.shop-featured-items-flex-wrapper {
+  @include flex(row);
+  justify-content: space-between;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: $section-spacing-small;
+  gap: 0 $section-spacing-small;
+  white-space: nowrap;
+  width: 100%;
+  height: auto;
+  flex-wrap: nowrap;
+
+  @include styled-scrollbar(
+    0.5rem,
+    $background-colour-medium,
+    $background-colour-light,
+    $background-colour-light,
+    2rem
+  );
+}
+
+.shop-featured-item-wrapper {
+}

@@ -1,10 +1,11 @@
 <perch:before>
-  <h2 class="shop-featured-items-section-heading">
-    You may also like...
-  </h2>
-<div class="shop-featured-items-wrapper">
+  <section class="shop-featured-items-section">
+    <h2 class="shop-featured-items-section-heading">
+      You may also like...
+    </h2>
+    <div class="shop-featured-items-flex-wrapper">
 </perch:before>
-<div class="shop-list-item">
+<div class="shop-featured-item-wrapper">
   <img class="product-image" draggable="false" itemprop="image" loading="lazy" src="<perch:content id="shopCoverImage" type="image" width="1000" height="1000" crop>" alt="<perch:content id="altOne" type="text">"
   sizes="(max-width: 800px) 100vw, 30vw"
   srcset="<perch:content type="image" id="shopCoverImage" width="1000" height="1000" crop> 1000w,
@@ -21,5 +22,6 @@
   </p>
 </div>
 <perch:after>
-  </div>
+    </div>
+  </section>
 </perch:after>
