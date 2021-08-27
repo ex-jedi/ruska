@@ -1,0 +1,27 @@
+<perch:before>
+  <section class="shop-featured-items-section">
+    <h2 class="shop-featured-items-section-heading">
+      You may also like...
+    </h2>
+    <div class="shop-featured-items-flex-wrapper">
+</perch:before>
+<div class="shop-featured-item-wrapper">
+  <img class="shop-featured-item-image" draggable="false" itemprop="image" loading="lazy" src="<perch:content id="shopCoverImage" type="image" width="1000" height="1000" crop>" alt="<perch:content id="altOne" type="text">"
+  sizes="(max-width: 800px) 100vw, 30vw"
+  srcset="<perch:content type="image" id="shopCoverImage" width="1000" height="1000" crop> 1000w,
+  <perch:content type="image" id="shopCoverImage" width="800" height="800" crop> 800w,
+  <perch:content type="image" id="shopCoverImage" width="600" height="600" crop> 600w,
+  <perch:content type="image" id="shopCoverImage" width="400" height="400" crop> 400w">
+  <h3 class="shop-featured-item-heading body-text-medium">
+    <a class="shop-featured-item-link" href="<perch:content id="slug" type="slug">">
+      <perch:content id="productHeading" type="text">
+    </a>
+  </h3>
+  <p class="shop-featured-item-price body-text-medium">
+    &pound;<perch:content id="productPrice" type="text">
+  </p>
+</div>
+<perch:after>
+    </div>
+  </section>
+</perch:after>

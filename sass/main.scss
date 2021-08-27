@@ -333,7 +333,7 @@ a {
   }
 
   @include breakpoint(700) {
-    bottom: $section-spacing-small;
+    bottom: $section-spacing-extra-tiny;
   }
 }
 

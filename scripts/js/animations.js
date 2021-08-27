@@ -83,6 +83,16 @@ function pyramidDividerFunction() {
 // ** Main Nav  **
 // *=========================================
 
+// match media for nav animation timing
+const mediaSevenFifty = window.matchMedia('(max-width: 750px)');
+
+// Change trigger points on screen size
+let navAnimDuration = 0.8;
+if (mediaSevenFifty.matches) {
+  navAnimDuration = 0.5;
+}
+
+// Nav elements
 function getNavElements() {
   const mainNav = document.querySelector('.main-nav');
   const mainNavLinks = gsap.utils.toArray(document.querySelectorAll('.main-nav-link'));
@@ -100,7 +110,7 @@ function menuOpenAnimation(startPosition, endPosition) {
   const openMenuTl = gsap.timeline({
     paused: true,
     // onComplete: navTextPointerEvents,
-    defaults: { ease: 'power2.in', duration: 0.8, delay: 0 },
+    defaults: { ease: 'power2.in', duration: navAnimDuration, delay: 0 },
   });
 
   return openMenuTl
@@ -130,7 +140,7 @@ function closeMenuAnimation() {
   const { mainNav, mainNavLinks, mainNavCloser } = getNavElements();
   const closeMenuTl = gsap.timeline({
     paused: true,
-    defaults: { ease: 'power2.out', duration: 0.8, delay: 0 },
+    defaults: { ease: 'power2.out', duration: navAnimDuration, delay: 0 },
   });
 
   return closeMenuTl

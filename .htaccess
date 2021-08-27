@@ -59,5 +59,4 @@ RewriteRule ^blog/([a-zA-Z0-9-/]+)$ /blog/post.php?s=$1 [L]
 #Shop URLs
 RewriteRule ^shop/([a-zA-Z0-9-/]+)$  /shop/index.php?s=$1 [L]
 
-
 </IfModule>
