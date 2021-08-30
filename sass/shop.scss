@@ -521,21 +521,6 @@ section.snipcart-cart__content {
   border-bottom: 1px dotted #b8b8b8;
 }
 
-//********** Payment **********
-.snipcart-payment__form-container {
-  fieldset {
-    legend {
-      p {
-        outline: 2px dotted #f00;
-      }
-    }
-  }
-}
-
-#snipcart-payment-form > fieldset > div {
-  outline: 2px dotted #f00;
-}
-
 //*=========================================
 //** Empty Cart **
 //*=========================================
