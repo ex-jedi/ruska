@@ -455,6 +455,10 @@ section.snipcart-cart__content {
 // Items
 .snipcart-item-line {
   box-shadow: none;
+
+  select {
+    height: auto;
+  }
 }
 
 .snipcart-item-line__header {
@@ -499,6 +503,7 @@ section.snipcart-cart__content {
 //*=========================================
 //** Checkout **
 //*=========================================
+
 #snipcart-checkout-step-billing {
   label.snipcart-form__label {
     font-size: $font-size-tiny;

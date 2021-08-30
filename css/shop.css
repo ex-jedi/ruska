@@ -496,6 +496,9 @@ section.snipcart-cart__content {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
+.snipcart-item-line select {
+  height: auto;
+}
 
 .snipcart-item-line__header .snipcart-button-icon,
 .snipcart-item-line__header .snipcart__icon {
