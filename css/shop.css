@@ -406,11 +406,17 @@
   }
 }
 
-.snipcart-layout,
 .snipcart-modal,
+.snipcart-modal__container,
 .snipcart-cart-header,
-.snipcart-cart_content,
 .snipcart-cart__footer,
+.snipcart-cart__secondary-header,
+section.snipcart-cart__content,
 .snipcart-item-list--no-shadow {
   background-color: #faf6f1;
+}
+
+.snipcart-item-line_container {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }

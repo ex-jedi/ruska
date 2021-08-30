@@ -344,13 +344,17 @@
 //** Snipcart Customisation **
 //*==============================================================================
 
-// Background colour
-.snipcart-layout,
+// .snipcart-layout,
 .snipcart-modal,
+.snipcart-modal__container,
 .snipcart-cart-header,
-.snipcart-cart_content,
-// .snipcart-item-line__container,
 .snipcart-cart__footer,
+.snipcart-cart__secondary-header,
+section.snipcart-cart__content,
 .snipcart-item-list--no-shadow {
   background-color: $background-colour-light;
+}
+
+.snipcart-item-line_container {
+  box-shadow: none;
 }
