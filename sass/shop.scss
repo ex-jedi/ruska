@@ -490,6 +490,12 @@ section.snipcart-cart__content {
   background-color: $background-colour-light;
 }
 
+.snipcart-featured-payment-methods {
+  h3 {
+    background-color: $background-colour-light;
+  }
+}
+
 //*=========================================
 //** Checkout **
 //*=========================================
@@ -518,6 +524,49 @@ section.snipcart-cart__content {
 //********** Payment **********
 .snipcart-payment__form-container {
   fieldset {
-    outline: 2px dotted #f00;
+    legend {
+      p {
+        outline: 2px dotted #f00;
+      }
+    }
+  }
+}
+
+#snipcart-payment-form > fieldset > div {
+  outline: 2px dotted #f00;
+}
+
+//*=========================================
+//** Empty Cart **
+//*=========================================
+
+.snipcart-empty-cart {
+  h1 {
+    font-size: $font-size-small;
+  }
+
+  button {
+    background-color: $background-colour-medium;
+    border: 2px solid $background-colour-medium;
+    color: $font-colour-light;
+    box-shadow: none;
+
+    &:hover {
+      background-color: $background-colour-light;
+      color: $font-colour-dark;
+      border: 2px solid $background-colour-dark;
+      box-shadow: none;
+    }
+
+    .snipcart-base-button__label {
+      font-size: $font-size-tiny;
+      font-weight: 700;
+    }
+
+    .snipcart-base-button__icon,
+    .snipcart__icon {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
