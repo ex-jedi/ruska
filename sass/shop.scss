@@ -344,13 +344,9 @@
 //** Snipcart Customisation **
 //*==============================================================================
 
-//*==============================================================================
+//*=========================================
 //** General **
-//*==============================================================================
-
-.snipcart-cart-header__title {
-  font-size: $font-size-small;
-}
+//*=========================================
 
 //********** Fonts **********
 
@@ -360,6 +356,7 @@
 .snipcart__font--regular {
   @include main-font-stack;
   line-height: 1;
+  color: $font-colour-dark;
 }
 
 // Font size
@@ -368,11 +365,8 @@
   font-size: $font-size-tiny;
 }
 
-//*=========================================
-//** Main Cart Page **
-//*=========================================
+//********** Container **********
 
-// Containers
 .snipcart-modal,
 .snipcart-modal__container,
 .snipcart-cart-header,
@@ -381,8 +375,13 @@ section.snipcart-cart__content {
   background-color: $background-colour-light;
 }
 
-.snipcart-item-line_container {
-  box-shadow: none;
+//********** Header **********
+
+.snipcart-cart-header__title {
+  font-size: $font-size-small;
+}
+.snipcart-cart-header {
+  font-weight: 700;
 }
 
 // Header Icons
@@ -395,9 +394,27 @@ section.snipcart-cart__content {
 }
 
 .snipcart-cart-header__count {
+  font-weight: 700;
+
   .snipcart__icon {
     width: 40px;
     height: 40px;
+  }
+}
+
+//*=========================================
+//** Main Cart Page **
+//*=========================================
+
+.snipcart-item-line {
+  box-shadow: none;
+}
+
+.snipcart-item-line__header {
+  .snipcart-button-icon,
+  .snipcart__icon {
+    width: 30px;
+    height: 30px;
   }
 }
 
