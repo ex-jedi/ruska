@@ -500,3 +500,24 @@ section.snipcart-cart__content {
     font-weight: 400;
   }
 }
+
+#snipcart-checkout-step-payment {
+  .snipcart__box.snipcart__box--gray.snipcart__box--slim {
+    background-color: #fff;
+  }
+}
+
+.snipcart-cart-summary {
+  background-color: #fff;
+}
+
+.snipcart-cart-summary__content {
+  border-bottom: 1px dotted #b8b8b8;
+}
+
+//********** Payment **********
+.snipcart-payment__form-container {
+  fieldset {
+    outline: 2px dotted #f00;
+  }
+}
