@@ -409,17 +409,28 @@
 .snipcart__font--std,
 .snipcart__font--secondary,
 .snipcart__font--regular,
-.snipcart__font--tiny {
+.snipcart__font--tiny,
+.snipcart__font--subtitle,
+.snipcart__font--slim {
   font-family: "sofia-pro", sans-serif;
   font-style: normal;
   line-height: 1;
   color: #77442f;
 }
 
+.snipcart-button-link {
+  font-family: "sofia-pro", sans-serif;
+  font-style: normal;
+  line-height: 1;
+}
+
 .snipcart__font--std,
 .snipcart__font--secondary,
 .snipcart__font--regular,
-.snipcart__font--large {
+.snipcart__font--large,
+.snipcart__font--subtitle,
+.snipcart__font--slim,
+.snipcart-button-link {
   font-size: 2.5rem;
 }
 
@@ -443,6 +454,9 @@ section.snipcart-cart__content {
 .snipcart-cart-header {
   font-weight: 700;
 }
+.snipcart-cart-header h3 {
+  padding: 0 2.5rem;
+}
 
 .snipcart-cart-header__close-button .snipcart__icon {
   width: 40px;
@@ -454,8 +468,8 @@ section.snipcart-cart__content {
   font-weight: 700;
 }
 .snipcart-cart-header__count .snipcart__icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 #snipcart .snipcart-button-primary {
@@ -512,4 +526,10 @@ section.snipcart-cart__content {
 
 .snipcart-cart__secondary-header {
   background-color: #faf6f1;
+}
+
+#snipcart-checkout-step-billing label.snipcart-form__label {
+  font-size: 2.5rem;
+  color: #77442f;
+  font-weight: 400;
 }
