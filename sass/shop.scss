@@ -339,3 +339,18 @@
     padding-top: $section-spacing-medium;
   }
 }
+
+//*==============================================================================
+//** Snipcart Customisation **
+//*==============================================================================
+
+// Background colour
+.snipcart-layout,
+.snipcart-modal,
+.snipcart-cart-header,
+.snipcart-cart_content,
+// .snipcart-item-line__container,
+.snipcart-cart__footer,
+.snipcart-item-list--no-shadow {
+  background-color: $background-colour-light;
+}

@@ -405,3 +405,12 @@
     padding-top: 15rem;
   }
 }
+
+.snipcart-layout,
+.snipcart-modal,
+.snipcart-cart-header,
+.snipcart-cart_content,
+.snipcart-cart__footer,
+.snipcart-item-list--no-shadow {
+  background-color: #faf6f1;
+}

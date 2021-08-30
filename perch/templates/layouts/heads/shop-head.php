@@ -3,13 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Snipcart-->
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" />
 	<link rel="stylesheet" href="/css/main.css?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'].'/css/main.css');?>">
 	<?php $page_css_file	=  perch_page_attribute('css', array('template' => 'attribute_files/bits.html'), true); ?>
 	<link rel="stylesheet" href="<?php echo $page_css_file ?>?v=<?= filemtime($_SERVER['DOCUMENT_ROOT'].$page_css_file);?>">
 	<!-- Typekit  -->
 	<link rel="stylesheet" href="https://use.typekit.net/qpt3ahb.css">
-  <!-- Typekit -->
-  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.1/default/snipcart.css" />
 	<!-- Perch Meta -->
 	<?php
 	$domain = 'https://'.$_SERVER["HTTP_HOST"];
