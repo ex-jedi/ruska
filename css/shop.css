@@ -417,7 +417,9 @@
 }
 
 .snipcart__font--std,
-.snipcart__font--secondary {
+.snipcart__font--secondary,
+.snipcart__font--regular,
+.snipcart__font--large {
   font-size: 2.5rem;
 }
 
@@ -456,6 +458,26 @@ section.snipcart-cart__content {
   height: 40px;
 }
 
+#snipcart .snipcart-button-primary {
+  background-color: #d08a70;
+  border: 2px solid #d08a70;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+#snipcart .snipcart-button-primary .snipcart-base-button__label {
+  font-size: 2.5rem;
+}
+#snipcart .snipcart-button-primary .snipcart-base-button__icon,
+#snipcart .snipcart-button-primary .snipcart__icon {
+  width: 30px;
+  height: 30px;
+}
+#snipcart .snipcart-button-primary:hover {
+  background-color: #faf6f1;
+  color: #77442f;
+  border: 2px solid #77442f;
+}
+
 .snipcart-item-line {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -482,6 +504,10 @@ section.snipcart-cart__content {
 }
 .snipcart-item-quantity__quantity span {
   margin: 0 20px;
+}
+
+.snipcart-summary-fees {
+  margin-top: 2.5rem;
 }
 
 .snipcart-cart__secondary-header {

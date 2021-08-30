@@ -362,7 +362,9 @@
 
 // Font size
 .snipcart__font--std,
-.snipcart__font--secondary {
+.snipcart__font--secondary,
+.snipcart__font--regular,
+.snipcart__font--large {
   font-size: $font-size-tiny;
 }
 
@@ -407,6 +409,29 @@ section.snipcart-cart__content {
     height: 40px;
   }
 }
+#snipcart {
+  .snipcart-button-primary {
+    background-color: $background-colour-medium;
+    border: 2px solid $background-colour-medium;
+    box-shadow: none;
+
+    .snipcart-base-button__label {
+      font-size: $font-size-tiny;
+    }
+
+    .snipcart-base-button__icon,
+    .snipcart__icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    &:hover {
+      background-color: $background-colour-light;
+      color: $font-colour-dark;
+      border: 2px solid $background-colour-dark;
+    }
+  }
+}
 
 //*=========================================
 //** Main Cart Page **
@@ -439,6 +464,10 @@ section.snipcart-cart__content {
   span {
     margin: 0 20px;
   }
+}
+
+.snipcart-summary-fees {
+  margin-top: $section-spacing-extra-tiny;
 }
 
 // Secondary cart
