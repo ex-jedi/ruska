@@ -19,4 +19,12 @@
 			'hide-extensions' => true,
 			'levels'    => 1
 			)); ?>
+
+		<div class="snipcart-header body-text-medium">
+			<div class="snipcart-summary">
+				<p>Number of items: <span class="snipcart-total-items"></span></p>
+				<p>Total price: <span class="snipcart-total-price"></span></p>
+			</div>
+			<p><a href="#" class="snipcart-checkout">Click here to checkout</a></p>
+		</div>
 		</header>
