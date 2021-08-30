@@ -344,17 +344,64 @@
 //** Snipcart Customisation **
 //*==============================================================================
 
-// .snipcart-layout,
+//*==============================================================================
+//** General **
+//*==============================================================================
+
+.snipcart-cart-header__title {
+  font-size: $font-size-small;
+}
+
+//********** Fonts **********
+
+// Fonts family
+.snipcart__font--std,
+.snipcart__font--secondary,
+.snipcart__font--regular {
+  @include main-font-stack;
+  line-height: 1;
+}
+
+// Font size
+.snipcart__font--std,
+.snipcart__font--secondary {
+  font-size: $font-size-tiny;
+}
+
+//*=========================================
+//** Main Cart Page **
+//*=========================================
+
+// Containers
 .snipcart-modal,
 .snipcart-modal__container,
 .snipcart-cart-header,
 .snipcart-cart__footer,
-.snipcart-cart__secondary-header,
-section.snipcart-cart__content,
-.snipcart-item-list--no-shadow {
+section.snipcart-cart__content {
   background-color: $background-colour-light;
 }
 
 .snipcart-item-line_container {
   box-shadow: none;
+}
+
+// Header Icons
+.snipcart-cart-header__close-button {
+  .snipcart__icon {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+  }
+}
+
+.snipcart-cart-header__count {
+  .snipcart__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+// Secondary cart
+.snipcart-cart__secondary-header {
+  background-color: $background-colour-light;
 }
