@@ -353,7 +353,8 @@
 // Fonts family
 .snipcart__font--std,
 .snipcart__font--secondary,
-.snipcart__font--regular {
+.snipcart__font--regular,
+.snipcart__font--tiny {
   @include main-font-stack;
   line-height: 1;
   color: $font-colour-dark;
@@ -363,6 +364,11 @@
 .snipcart__font--std,
 .snipcart__font--secondary {
   font-size: $font-size-tiny;
+}
+
+.snipcart__font--tiny {
+  font-size: $font-size-teeny-tiny;
+  font-weight: 700;
 }
 
 //********** Container **********
@@ -406,6 +412,7 @@ section.snipcart-cart__content {
 //** Main Cart Page **
 //*=========================================
 
+// Items
 .snipcart-item-line {
   box-shadow: none;
 }
@@ -415,6 +422,22 @@ section.snipcart-cart__content {
   .snipcart__icon {
     width: 30px;
     height: 30px;
+  }
+}
+.snipcart-item-line__variants {
+  .snipcart-button-icon,
+  .snipcart__icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.snipcart-item-quantity__quantity {
+  border: 2px solid $background-colour-dark;
+  margin-right: 10px;
+  width: fit-content;
+  span {
+    margin: 0 20px;
   }
 }
 

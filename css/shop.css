@@ -408,7 +408,8 @@
 
 .snipcart__font--std,
 .snipcart__font--secondary,
-.snipcart__font--regular {
+.snipcart__font--regular,
+.snipcart__font--tiny {
   font-family: "sofia-pro", sans-serif;
   font-style: normal;
   line-height: 1;
@@ -418,6 +419,11 @@
 .snipcart__font--std,
 .snipcart__font--secondary {
   font-size: 2.5rem;
+}
+
+.snipcart__font--tiny {
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .snipcart-modal,
@@ -459,6 +465,23 @@ section.snipcart-cart__content {
 .snipcart-item-line__header .snipcart__icon {
   width: 30px;
   height: 30px;
+}
+
+.snipcart-item-line__variants .snipcart-button-icon,
+.snipcart-item-line__variants .snipcart__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.snipcart-item-quantity__quantity {
+  border: 2px solid #77442f;
+  margin-right: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.snipcart-item-quantity__quantity span {
+  margin: 0 20px;
 }
 
 .snipcart-cart__secondary-header {
