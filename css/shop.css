@@ -1,6 +1,11 @@
 .snipcart-header {
   margin: 0 auto;
 }
+.snipcart-header svg {
+  color: #77442f;
+  height: 40px;
+  width: 40px;
+}
 
 #main-nav-current {
   display: block;
@@ -468,10 +473,13 @@ section.snipcart-cart__content {
   margin-top: 10px;
 }
 
-.snipcart-cart-header__count {
+.snipcart-cart-header__count,
+.snipcart-checkout__header {
   font-weight: 700;
 }
-.snipcart-cart-header__count .snipcart__icon {
+.snipcart-cart-header__count .snipcart__icon,
+.snipcart-checkout__header .snipcart__icon {
+  color: #77442f;
   width: 30px;
   height: 30px;
 }

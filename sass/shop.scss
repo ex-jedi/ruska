@@ -32,6 +32,11 @@
 //********** Header **********
 .snipcart-header {
   margin: 0 auto;
+  svg {
+    color: $font-colour-dark;
+    height: 40px;
+    width: 40px;
+  }
 }
 
 #main-nav-current {
@@ -421,10 +426,12 @@ section.snipcart-cart__content {
   }
 }
 
-.snipcart-cart-header__count {
+.snipcart-cart-header__count,
+.snipcart-checkout__header {
   font-weight: 700;
 
   .snipcart__icon {
+    color: $font-colour-dark;
     width: 30px;
     height: 30px;
   }
