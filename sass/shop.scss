@@ -459,6 +459,10 @@ section.snipcart-cart__content {
   right: $section-spacing-extra-tiny;
   margin: 0 auto;
 
+  @include breakpoint(700) {
+    right: $header-spacing-tiny;
+  }
+
   svg {
     color: $font-colour-dark;
     height: 40px;
