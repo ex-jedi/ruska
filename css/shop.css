@@ -421,6 +421,7 @@
 .snipcart-button-link {
   font-family: "sofia-pro", sans-serif;
   font-style: normal;
+  color: #77442f;
   line-height: 1;
 }
 
@@ -529,7 +530,7 @@ section.snipcart-cart__content {
 }
 
 .snipcart-count-wrapper {
-  background-color: #ffdbcd;
+  background-color: #fae2d8;
   width: 35px;
   line-height: 30px;
   border-radius: 50%;
@@ -570,6 +571,9 @@ section.snipcart-cart__content {
   width: -moz-fit-content;
   width: fit-content;
 }
+.snipcart-item-quantity__quantity:hover {
+  border: 2px solid #f2bba7;
+}
 .snipcart-item-quantity__quantity span {
   margin: 0 20px;
 }
@@ -584,6 +588,15 @@ section.snipcart-cart__content {
 
 .snipcart-featured-payment-methods h3 {
   background-color: #faf6f1;
+}
+
+.snipcart-button-icon.is-secondary {
+  background-color: #fae2d8;
+  color: #77442f;
+}
+
+.snipcart-checkout__content .snipcart__icon {
+  color: #77442f;
 }
 
 #snipcart-checkout-step-billing label.snipcart-form__label {
@@ -602,6 +615,10 @@ section.snipcart-cart__content {
 
 .snipcart-cart-summary__content {
   border-bottom: 1px dotted #b8b8b8;
+}
+
+.snipcart__box--badge {
+  background-color: #fae2d8;
 }
 
 .snipcart-empty-cart h1 {

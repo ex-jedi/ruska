@@ -364,6 +364,7 @@
 
 .snipcart-button-link {
   @include main-font-stack;
+  color: $font-colour-dark;
   line-height: 1;
 }
 
@@ -526,6 +527,11 @@ section.snipcart-cart__content {
   border: 2px solid $background-colour-dark;
   margin-right: 10px;
   width: fit-content;
+
+  &:hover {
+    border: 2px solid $background-colour-medium-lighter;
+  }
+
   span {
     margin: 0 20px;
   }
@@ -546,9 +552,20 @@ section.snipcart-cart__content {
   }
 }
 
+.snipcart-button-icon.is-secondary {
+  background-color: $background-colour-very-light;
+  color: $font-colour-dark;
+}
+
 //*=========================================
 //** Checkout **
 //*=========================================
+
+.snipcart-checkout__content {
+  .snipcart__icon {
+    color: $font-colour-dark;
+  }
+}
 
 #snipcart-checkout-step-billing {
   label.snipcart-form__label {
@@ -570,6 +587,10 @@ section.snipcart-cart__content {
 
 .snipcart-cart-summary__content {
   border-bottom: 1px dotted #b8b8b8;
+}
+
+.snipcart__box--badge {
+  background-color: $background-colour-very-light;
 }
 
 //*=========================================
