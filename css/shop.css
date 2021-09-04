@@ -1,12 +1,3 @@
-.snipcart-header {
-  margin: 0 auto;
-}
-.snipcart-header svg {
-  color: #77442f;
-  height: 40px;
-  width: 40px;
-}
-
 #main-nav-current {
   display: block;
   visibility: visible;
@@ -502,6 +493,45 @@ section.snipcart-cart__content {
   background-color: #faf6f1;
   color: #77442f;
   border: 2px solid #77442f;
+}
+
+.snipcart-header-summary {
+  position: absolute;
+  top: 1rem;
+  right: 2.5rem;
+  margin: 0 auto;
+}
+.snipcart-header-summary svg {
+  color: #77442f;
+  height: 40px;
+  width: 40px;
+}
+.snipcart-header-summary a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #77442f;
+}
+
+.snipcart-count-wrapper {
+  background-color: #f2bba7;
+  width: 45px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+}
+
+.snipcart-items-count {
+  position: relative;
+  font-size: 2.5rem;
 }
 
 .snipcart-item-line {

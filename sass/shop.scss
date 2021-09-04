@@ -29,16 +29,6 @@
 //** General Styles **
 //*==============================================================================
 
-//********** Header **********
-.snipcart-header {
-  margin: 0 auto;
-  svg {
-    color: $font-colour-dark;
-    height: 40px;
-    width: 40px;
-  }
-}
-
 #main-nav-current {
   display: block;
   visibility: visible;
@@ -459,6 +449,42 @@ section.snipcart-cart__content {
       border: 2px solid $background-colour-dark;
     }
   }
+}
+
+//********** Summary **********
+
+.snipcart-header-summary {
+  position: absolute;
+  top: $header-spacing-tiny;
+  right: $section-spacing-extra-tiny;
+  margin: 0 auto;
+
+  svg {
+    color: $font-colour-dark;
+    height: 40px;
+    width: 40px;
+  }
+
+  a {
+    @include flex(row);
+    align-items: center;
+    color: $font-colour-dark;
+  }
+}
+
+.snipcart-count-wrapper {
+  background-color: $background-colour-medium-lighter;
+  width: 45px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  // top: 3px;
+}
+
+.snipcart-items-count {
+  position: relative;
+  font-size: $font-size-tiny;
 }
 
 //*=========================================
