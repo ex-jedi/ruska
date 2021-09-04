@@ -458,6 +458,9 @@ section.snipcart-cart__content {
 .snipcart-cart-header h3 {
   padding: 0 2.5rem;
 }
+.snipcart-cart-header .snipcart-modal__close-icon {
+  color: #77442f;
+}
 
 .snipcart-cart-header__close-button .snipcart__icon {
   width: 40px;
