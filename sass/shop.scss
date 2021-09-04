@@ -552,9 +552,16 @@ section.snipcart-cart__content {
   }
 }
 
+// Increment buttons
+
 .snipcart-button-icon.is-secondary {
   background-color: $background-colour-very-light;
   color: $font-colour-dark;
+
+  &:hover {
+    background-color: $background-colour-medium-lighter;
+    color: $font-colour-light;
+  }
 }
 
 //*=========================================

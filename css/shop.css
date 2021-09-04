@@ -594,6 +594,10 @@ section.snipcart-cart__content {
   background-color: #fae2d8;
   color: #77442f;
 }
+.snipcart-button-icon.is-secondary:hover {
+  background-color: #f2bba7;
+  color: #faf6f1;
+}
 
 .snipcart-checkout__content .snipcart__icon {
   color: #77442f;
