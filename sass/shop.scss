@@ -465,21 +465,24 @@ section.snipcart-cart__content {
     width: 40px;
   }
 
-  a {
+  button {
+    cursor: pointer;
     @include flex(row);
     align-items: center;
     color: $font-colour-dark;
+    background-color: transparent;
+    border: 0;
   }
 }
 
 .snipcart-count-wrapper {
-  background-color: $background-colour-medium-lighter;
-  width: 45px;
-  line-height: 40px;
+  background-color: $background-colour-very-light;
+  width: 35px;
+  line-height: 30px;
   border-radius: 50%;
   text-align: center;
   position: relative;
-  // top: 3px;
+  top: 3px;
 }
 
 .snipcart-items-count {

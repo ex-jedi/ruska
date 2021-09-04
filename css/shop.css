@@ -506,7 +506,8 @@ section.snipcart-cart__content {
   height: 40px;
   width: 40px;
 }
-.snipcart-header-summary a {
+.snipcart-header-summary button {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,15 +519,18 @@ section.snipcart-cart__content {
       -ms-flex-align: center;
           align-items: center;
   color: #77442f;
+  background-color: transparent;
+  border: 0;
 }
 
 .snipcart-count-wrapper {
-  background-color: #f2bba7;
-  width: 45px;
-  line-height: 40px;
+  background-color: #ffdbcd;
+  width: 35px;
+  line-height: 30px;
   border-radius: 50%;
   text-align: center;
   position: relative;
+  top: 3px;
 }
 
 .snipcart-items-count {
