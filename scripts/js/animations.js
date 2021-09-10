@@ -258,6 +258,21 @@ function fadeAndSwapThreeExport() {
 // ** Split Text Fade Up  **
 // *=========================================
 
+function splitTextTlFunction(targetOne, targetTwo, splitRevert) {
+  const splitTextFadeUpTl = gsap.timeline({
+    defaults: { duration: 2, ease: 'power4.out' },
+    onComplete: () => {
+      console.log(splitRevert);
+      splitRevert.revert();
+    },
+  });
+
+  splitTextFadeUpTl
+    .set(targetOne, { opacity: 1 })
+    .set(targetTwo, { opacity: 0, y: 100 })
+    .to(targetTwo, { opacity: 1, y: 0, stagger: 0.1 });
+}
+
 function splitTextFadeUpExport() {
   const splitTextFadeUpTargets = gsap.utils.toArray('.split-text-fade-up');
 
@@ -275,14 +290,7 @@ function splitTextFadeUpExport() {
       id: 'Split Text Animaton',
       once: true,
       markers: true,
-      onEnter: () => {
-        gsap.set(elem, { opacity: 1 });
-        gsap.fromTo(
-          splitTextLines,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 2, stagger: 0.1, ease: 'power4.out' }
-        );
-      },
+      onEnter: () => splitTextTlFunction(elem, splitTextLines, splitFadeUpElements),
     });
   });
 }
