@@ -266,7 +266,7 @@ function splitTextFadeUpExport() {
 
     const splitTextLines = splitFadeUpElements.lines;
 
-    gsap.set(splitTextLines, { opacity: 0, x: 20 });
+    gsap.set(splitTextLines, { opacity: 0, y: 20 });
 
     ScrollTrigger.create({
       trigger: elem,
@@ -276,10 +276,11 @@ function splitTextFadeUpExport() {
       once: true,
       markers: true,
       onEnter: () => {
+        gsap.set(elem, { opacity: 1 });
         gsap.fromTo(
           splitTextLines,
-          { opacity: 0, x: 20 },
-          { opacity: 1, x: 0, duration: 2, stagger: 0.1, ease: 'power4.out' }
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 2, stagger: 0.1, ease: 'power4.out' }
         );
       },
     });
