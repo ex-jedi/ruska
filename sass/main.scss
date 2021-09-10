@@ -667,6 +667,10 @@ select {
   margin: 0 auto $section-spacing-large;
   text-align: center;
 
+  a {
+    text-decoration: none;
+  }
+
   @include breakpoint(1300) {
     margin-bottom: $section-spacing-medium;
     font-size: $font-size-tiny;
@@ -681,6 +685,10 @@ select {
 
 .footer-legals {
   margin: 0 auto $section-spacing-large;
+
+  a {
+    text-decoration: none;
+  }
 
   @include breakpoint(1300) {
     margin-bottom: $section-spacing-medium;
