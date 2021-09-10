@@ -151,6 +151,7 @@ img {
 a {
   text-decoration: underline;
   color: $link-colour;
+  color: inherit;
 }
 
 //*=========================================
@@ -483,10 +484,6 @@ a {
   }
 }
 
-.contact-consent-link {
-  color: inherit;
-}
-
 .submit-wrapper {
   text-align: center;
 }
@@ -568,7 +565,6 @@ select {
 
 .instagram-profile-link {
   text-decoration: none;
-  color: inherit;
 }
 
 .instagram-feed-images-wrapper {
@@ -654,10 +650,6 @@ select {
   @include breakpoint(950) {
     padding: $section-spacing-medium $section-spacing-extra-tiny
       $section-spacing-medium;
-  }
-
-  a {
-    color: inherit;
   }
 }
 
@@ -816,7 +808,6 @@ html body table.perch-debug th {
 }
 
 .cookie-warning-link {
-  color: inherit;
   text-decoration: underline;
 }
 
