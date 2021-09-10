@@ -21,6 +21,7 @@ import {
   scrollTriggerRefresh,
   pyramidDividerFunction,
   addMenuListener,
+  fadeAndSwapThreeExport,
 } from './animations';
 
 import { displayInstagramFeed } from './utils';
@@ -56,3 +57,5 @@ pyramidDividerFunction();
 scrollTriggerRefresh();
 
 displayInstagramFeed();
+
+fadeAndSwapThreeExport();

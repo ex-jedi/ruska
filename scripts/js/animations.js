@@ -160,6 +160,98 @@ function addMenuListener() {
   mainNavCloser.addEventListener('click', navCloserHandler);
 }
 
+// *=========================================
+// ** Three image Wiper and Swapper **
+// *=========================================
+
+// ********** Three Image Swap **********
+
+// * Image swapping GSAP Function
+function swapThreeFunction(swapperImages) {
+  // Create timeline
+  const swapperThree = gsap.timeline({
+    defaults: { duration: 0, ease: 'none' },
+    paused: true,
+    repeat: -1,
+  });
+  const delay = '+=0.4';
+
+  // Populate timeline
+  swapperThree
+    .to(swapperImages[0], { autoAlpha: 0 }, delay)
+    .to(swapperImages[1], { autoAlpha: 1 })
+    .to(swapperImages[1], { autoAlpha: 0 }, delay)
+    .to(swapperImages[2], { autoAlpha: 1 })
+    .to(swapperImages[2], { autoAlpha: 0 }, delay)
+    .to(swapperImages[0], { autoAlpha: 1 });
+
+  return swapperThree;
+}
+
+// Swap on hover function
+function threeSwapCallback(elem, images) {
+  const swappingThree = swapThreeFunction(images);
+  elem.addEventListener('mouseover', () => {
+    swappingThree.resume();
+  });
+  elem.addEventListener('mouseleave', () => {
+    swappingThree.pause();
+  });
+}
+
+// Get elements to fade and swap
+function getFadeSwapThreeImages() {
+  const fadeAndSwapThreeElement = gsap.utils.toArray(document.querySelectorAll('.fade-and-swap-three'));
+  return fadeAndSwapThreeElement;
+}
+
+// * Initial Image fade and swap Function
+function fadeAndSwapThreeFunction(elem, swapperImages) {
+  const faderSwapperThree = gsap.timeline({
+    defaults: { duration: 0, ease: 'none' },
+    onComplete: () => {
+      threeSwapCallback(elem, swapperImages);
+    },
+  });
+  const delay = '+=0.4';
+
+  faderSwapperThree
+    .fromTo(
+      elem,
+      { clipPath: 'inset(0% 100% 0% 0%)' },
+      { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' },
+      '+=0.2'
+    )
+    .to(swapperImages[0], { autoAlpha: 0 })
+    .to(swapperImages[1], { autoAlpha: 1 })
+    .to(swapperImages[1], { autoAlpha: 0 }, delay)
+    .to(swapperImages[2], { autoAlpha: 1 })
+    .to(swapperImages[2], { autoAlpha: 0 }, delay)
+    .to(swapperImages[0], { autoAlpha: 1 });
+
+  return faderSwapperThree;
+}
+
+// Fade and swap three export function
+function fadeAndSwapThreeExport() {
+  // Get images
+  const fadeAndSwapThreeElement = getFadeSwapThreeImages();
+  fadeAndSwapThreeElement.forEach((images) => {
+    gsap.set(images, { clipPath: 'inset(0% 100% 0% 0%)' });
+
+    // Get sub images
+    const gsapImages = gsap.utils.toArray(images.querySelectorAll('img'));
+    ScrollTrigger.create({
+      trigger: images,
+      start: 'top 60%',
+      end: 'bottom bottom',
+      id: 'Three F & S Image',
+      once: true,
+      onEnter: () => fadeAndSwapThreeFunction(images, gsapImages).play(),
+    });
+  });
+}
+
 // *==============================================================================
 // ** Homepage  **
 // *==============================================================================
@@ -356,4 +448,5 @@ export {
   scrollTriggerRefresh,
   pyramidDividerFunction,
   addMenuListener,
+  fadeAndSwapThreeExport,
 };
