@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+import { SplitText } from 'gsap/SplitText';
 
 // *=========================================
 // ** GSAP  **
@@ -174,7 +175,7 @@ function swapThreeFunction(swapperImages) {
     paused: true,
     repeat: -1,
   });
-  const delay = '+=0.4';
+  const delay = '+=0.6';
 
   // Populate timeline
   swapperThree
@@ -249,6 +250,38 @@ function fadeAndSwapThreeExport() {
       id: 'Three F & S Image',
       once: true,
       onEnter: () => fadeAndSwapThreeFunction(images, gsapImages).play(),
+    });
+  });
+}
+
+// *=========================================
+// ** Split Text Fade Up  **
+// *=========================================
+
+function splitTextFadeUpExport() {
+  const splitTextFadeUpTargets = gsap.utils.toArray('.split-text-fade-up');
+
+  splitTextFadeUpTargets.forEach((elem) => {
+    const splitFadeUpElements = new SplitText(elem, { type: 'lines' });
+
+    const splitTextLines = splitFadeUpElements.lines;
+
+    gsap.set(splitTextLines, { opacity: 0, x: 20 });
+
+    ScrollTrigger.create({
+      trigger: elem,
+      start: 'top center',
+      end: 'bottom top',
+      id: 'Split Text Animaton',
+      once: true,
+      markers: true,
+      onEnter: () => {
+        gsap.fromTo(
+          splitTextLines,
+          { opacity: 0, x: 20 },
+          { opacity: 1, x: 0, duration: 2, stagger: 0.1, ease: 'power4.out' }
+        );
+      },
     });
   });
 }
@@ -415,24 +448,22 @@ function homepageTreeAnimationFour() {
 // ** Utilities  **
 // *==============================================================================
 // * ScrollTrigger Refresh Initial
-function scrollTriggerRefresh(time = 1000) {
+function scrollTriggerRefresh() {
   const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
   window.addEventListener('load', () => {
-    setTimeout(() => {
-      console.log(`✨ ScrollTrigger refresh created after ${time}ms ✨`);
-      scrollTriggerRefreshTarget.forEach((triggerElem) => {
-        ScrollTrigger.create({
-          trigger: triggerElem,
-          start: 'top bottom',
-          once: true,
-          id: 'ScrollTrigger Refresh',
-          onEnter: () => {
-            ScrollTrigger.refresh();
-            console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
-          },
-        });
+    console.log(`✨ ScrollTrigger refresh created ✨`);
+    scrollTriggerRefreshTarget.forEach((triggerElem) => {
+      ScrollTrigger.create({
+        trigger: triggerElem,
+        start: 'top bottom',
+        once: true,
+        id: 'ScrollTrigger Refresh',
+        onEnter: () => {
+          ScrollTrigger.refresh();
+          console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
+        },
       });
-    }, time);
+    });
   });
 }
 
@@ -450,4 +481,5 @@ export {
   pyramidDividerFunction,
   addMenuListener,
   fadeAndSwapThreeExport,
+  splitTextFadeUpExport,
 };
