@@ -111,6 +111,11 @@
   }
 }
 
+.homepage-header-image {
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
 .swapping-images {
   position: absolute;
   inset: 0;

@@ -213,13 +213,14 @@ function fadeAndSwapThreeFunction(elem, swapperImages) {
       threeSwapCallback(elem, swapperImages);
     },
   });
-  const delay = '+=0.4';
+  const delay = '+=0.6';
 
   faderSwapperThree
+    .set(elem, { opacity: 1 })
     .fromTo(
       elem,
       { clipPath: 'inset(0% 100% 0% 0%)' },
-      { duration: 0.75, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' },
+      { duration: 0.75, delay: 0.5, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' },
       '+=0.2'
     )
     .to(swapperImages[0], { autoAlpha: 0 })
