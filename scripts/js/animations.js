@@ -451,6 +451,7 @@ function homepageTreeAnimationFour() {
 function scrollTriggerRefresh() {
   const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
   window.addEventListener('load', () => {
+    ScrollTrigger.refresh();
     console.log(`✨ ScrollTrigger refresh created ✨`);
     scrollTriggerRefreshTarget.forEach((triggerElem) => {
       ScrollTrigger.create({
