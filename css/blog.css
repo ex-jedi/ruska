@@ -137,6 +137,7 @@
 .blog-categories-ul a {
   color: #77442f;
   font-weight: 700;
+  text-decoration: none;
 }
 @media (max-width: 950px) {
   .blog-categories-ul {
@@ -178,6 +179,7 @@
 
 .blog-index-subheading-link {
   color: #77442f;
+  text-decoration: none;
 }
 
 .blog-index-item {

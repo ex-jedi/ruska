@@ -141,6 +141,7 @@
   a {
     color: $font-colour-dark;
     font-weight: 700;
+    text-decoration: none;
   }
 
   @include breakpoint(950) {
@@ -169,6 +170,7 @@
 
 .blog-index-subheading-link {
   color: $font-colour-dark;
+  text-decoration: none;
 }
 
 .blog-index-item {
