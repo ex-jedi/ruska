@@ -149,7 +149,7 @@ img {
 // Better to leave underlining on by default and switch it off where you don't want it
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   color: $link-colour;
 }
 
@@ -307,6 +307,7 @@ a {
   transform: translateY(100px);
   opacity: 0;
   margin-bottom: $section-spacing-extra-small;
+  text-decoration: none;
 }
 
 #main-nav-current {
