@@ -40,6 +40,7 @@
   @include flex(row);
   justify-content: space-around;
   align-items: flex-start;
+  gap: 0 2rem;
 
   @include breakpoint(1750) {
     justify-content: space-between;

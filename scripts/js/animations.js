@@ -175,7 +175,7 @@ function swapThreeFunction(swapperImages) {
     paused: true,
     repeat: -1,
   });
-  const delay = '+=0.6';
+  const delay = '+=0.8';
 
   // Populate timeline
   swapperThree
@@ -214,17 +214,16 @@ function fadeAndSwapThreeFunction(elem, swapperImages) {
       threeSwapCallback(elem, swapperImages);
     },
   });
-  const delay = '+=0.6';
+  const delay = '+=1';
 
   faderSwapperThree
     .set(elem, { opacity: 1 })
     .fromTo(
       elem,
       { clipPath: 'inset(0% 100% 0% 0%)' },
-      { duration: 0.75, delay: 0.5, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' },
-      '+=0.2'
+      { duration: 0.75, delay: 2, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }
     )
-    .to(swapperImages[0], { autoAlpha: 0 })
+    .to(swapperImages[0], { autoAlpha: 0 }, delay)
     .to(swapperImages[1], { autoAlpha: 1 })
     .to(swapperImages[1], { autoAlpha: 0 }, delay)
     .to(swapperImages[2], { autoAlpha: 1 })
@@ -258,9 +257,31 @@ function fadeAndSwapThreeExport() {
 // ** Split Text Fade Up  **
 // *=========================================
 
+//
+function cleanText(e) {
+  if (typeof e === 'string') {
+    return cleanText(document.querySelectorAll(e));
+  }
+  if (e[0] && e[0].innerHTML) {
+    for (let i = 0; i < e.length; i++) {
+      cleanText(e[i]);
+    }
+    return;
+  }
+  e.innerHTML = e.innerHTML
+    .replace(/\-/g, '‑')
+    .replace(/V/g, '‌V‌')
+    .replace(/\./g, '‌.‌')
+    .replace(/,/g, '‌,‌')
+    .replace(/A/g, '‌A‌')
+    .replace(/fi/g, 'f‌i');
+}
+
+cleanText('.split-text-fade-up');
+
 function splitTextTlFunction(targetOne, targetTwo, splitRevert) {
   const splitTextFadeUpTl = gsap.timeline({
-    defaults: { duration: 2, ease: 'power4.out' },
+    defaults: { duration: 1, ease: 'power4.out' },
     onComplete: () => {
       console.log(splitRevert);
       splitRevert.revert();
@@ -270,7 +291,7 @@ function splitTextTlFunction(targetOne, targetTwo, splitRevert) {
   splitTextFadeUpTl
     .set(targetOne, { opacity: 1 })
     .set(targetTwo, { opacity: 0, y: 100 })
-    .to(targetTwo, { opacity: 1, y: 0, stagger: 0.1 });
+    .to(targetTwo, { opacity: 1, y: 0, stagger: 0.15, delay: 1 });
 }
 
 function splitTextFadeUpExport() {
