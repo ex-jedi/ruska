@@ -257,7 +257,7 @@ function fadeAndSwapThreeExport() {
 // ** Split Text Fade Up  **
 // *=========================================
 
-//
+// Cleaning up animation text
 function cleanText(e) {
   if (typeof e === 'string') {
     return cleanText(document.querySelectorAll(e));
@@ -277,7 +277,11 @@ function cleanText(e) {
     .replace(/fi/g, 'f‌i');
 }
 
-cleanText('.split-text-fade-up');
+const cleanTextCheck = document.querySelector('.split-text-fade-up');
+if (cleanTextCheck) {
+  console.log('Clean text cleanup!');
+  cleanText('.split-text-fade-up');
+}
 
 function splitTextTlFunction(targetOne, targetTwo, splitRevert) {
   const splitTextFadeUpTl = gsap.timeline({

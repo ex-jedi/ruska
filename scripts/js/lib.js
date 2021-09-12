@@ -1,4 +1,24 @@
-// ********** Cat subtitle show and hide **********
+// *==============================================================================
+// ** Global  **
+// *==============================================================================
+
+// *=========================================
+// ** Console Greeting  **
+// *=========================================
+
+function consoleGreeting() {
+  console.log(
+    "Well hello 👋🏾! Fancy seeing you here. As you're interested in this sort of thing why not have a look at my GitHub profile - 💻👉🏾 https://github.com/ex-jedi 👈🏾💻"
+  );
+}
+
+// *==============================================================================
+// ** Blog  **
+// *==============================================================================
+
+// *=========================================
+// ** Cat subtitle show and hide  **
+// *=========================================
 
 function blogCatsToggle() {
   const catTitle = document.querySelector('.cat-ul-heading');
@@ -14,4 +34,4 @@ function blogCatsToggle() {
   catTitle.addEventListener('click', categoryClickHandler);
 }
 
-export { blogCatsToggle };
+export { blogCatsToggle, consoleGreeting };

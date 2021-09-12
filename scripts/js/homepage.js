@@ -27,6 +27,8 @@ import {
 
 import { displayInstagramFeed } from './utils';
 
+import { consoleGreeting } from './lib';
+
 // *=========================================
 // ** GSAP  **
 // *=========================================
@@ -64,3 +66,5 @@ displayInstagramFeed();
 fadeAndSwapThreeExport();
 
 splitTextFadeUpExport();
+
+consoleGreeting();
