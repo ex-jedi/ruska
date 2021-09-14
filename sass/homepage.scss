@@ -350,11 +350,13 @@
 //*=========================================
 
 .section-two-flex-wrapper {
-  background-color: $background-colour-medium;
-  padding: $section-spacing-large;
   @include flex(row);
   justify-content: space-between;
   align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: $background-colour-medium;
+  padding: $section-spacing-large;
 
   @include breakpoint(1300) {
     padding: $section-spacing-medium;

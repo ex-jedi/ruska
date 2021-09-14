@@ -265,37 +265,9 @@ function simpleFadeIn() {
 // ** Split Text Fade Up  **
 // *=========================================
 
-// Cleaning up animation text
-function cleanText(e) {
-  if (typeof e === 'string') {
-    return cleanText(document.querySelectorAll(e));
-  }
-  if (e[0] && e[0].innerHTML) {
-    for (let i = 0; i < e.length; i++) {
-      cleanText(e[i]);
-    }
-    return;
-  }
-  e.innerHTML = e.innerHTML
-    .replace(/\-/g, '‑')
-    .replace(/V/g, '‌V‌')
-    .replace(/\./g, '‌.‌')
-    .replace(/,/g, '‌,‌')
-    .replace(/A/g, '‌A‌')
-    .replace(/fi/g, 'f‌i');
-}
-
-const cleanTextCheck = document.querySelector('.split-text-fade-up');
-if (cleanTextCheck) {
-  cleanText('.split-text-fade-up');
-}
-
-function splitTextTlFunction(targetOne, targetTwo, splitRevert) {
+function splitTextTlFunction(targetOne, targetTwo) {
   const splitTextFadeUpTl = gsap.timeline({
     defaults: { duration: 1, ease: 'power4.out' },
-    onComplete: () => {
-      splitRevert.revert();
-    },
   });
 
   splitTextFadeUpTl
@@ -321,7 +293,7 @@ function splitTextFadeUpExport() {
       id: 'Split Text Animaton',
       once: true,
       markers: true,
-      onEnter: () => splitTextTlFunction(elem, splitTextLines, splitFadeUpElements),
+      onEnter: () => splitTextTlFunction(elem, splitTextLines),
     });
   });
 }
