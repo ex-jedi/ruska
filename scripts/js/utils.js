@@ -836,8 +836,17 @@ async function displayInstagramFeed() {
 
 // console.log('Hi');
 
+// *=========================================
+// ** Add Class  **
+// *=========================================
+
+function addClass(selector, classToAdd) {
+  const target = document.querySelectorAll(selector);
+  target.forEach((elem) => elem.classList.add(classToAdd));
+}
+
 // *==============================================================================
 // ** Exports  **
 // *==============================================================================
 
-export { cookieWarning, handleFirstTab, reframe, displayInstagramFeed };
+export { cookieWarning, handleFirstTab, reframe, displayInstagramFeed, addClass };

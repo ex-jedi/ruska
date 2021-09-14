@@ -8,8 +8,15 @@ import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 // ** Imports  **
 // *=========================================
 
-import { pyramidDividerFunction, mainLogoAnimation, scrollTriggerRefresh, addMenuListener } from './animations';
+import {
+  pyramidDividerFunction,
+  mainLogoAnimation,
+  scrollTriggerRefresh,
+  addMenuListener,
+  simpleFadeIn,
+} from './animations';
 
+import { displayInstagramFeed, addClass } from './utils';
 // *=========================================
 // ** GSAP  **
 // *=========================================
@@ -27,6 +34,14 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 // ** Import Functions  **
 // *=========================================
 
+// ********** Utils **********
+
+displayInstagramFeed();
+
+addClass('.about-me-text-wrapper p', 'simple-fade-in');
+
+// ********** Animation **********
+
 mainLogoAnimation();
 
 pyramidDividerFunction();
@@ -34,3 +49,5 @@ pyramidDividerFunction();
 scrollTriggerRefresh();
 
 addMenuListener();
+
+simpleFadeIn();
