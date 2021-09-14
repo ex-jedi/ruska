@@ -262,7 +262,7 @@ function simpleFadeIn() {
     start: fadeInTrigger,
     end: 'bottom bottom',
     id: 'Fade In',
-    markers: true,
+    // markers: true,
     once: true,
     onEnter: (batch) => gsap.to(batch, { duration: 1, ease: 'power3.out', opacity: 1, y: 0, stagger: 0.15 }),
   });
