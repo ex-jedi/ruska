@@ -250,12 +250,19 @@ function fadeAndSwapThreeExport() {
 // *=========================================
 // ** Simple Fade In  **
 // *=========================================
+
 function simpleFadeIn() {
+  let fadeInTrigger = 'top 70%';
+
+  if (mediaNineFifty.matches) {
+    fadeInTrigger = 'top 80%';
+  }
+
   ScrollTrigger.batch('.simple-fade-in', {
-    start: 'top 60%',
+    start: fadeInTrigger,
     end: 'bottom bottom',
     id: 'Fade In',
-    // markers: true,
+    markers: true,
     once: true,
     onEnter: (batch) => gsap.to(batch, { duration: 1, ease: 'power3.out', opacity: 1, y: 0, stagger: 0.15 }),
   });

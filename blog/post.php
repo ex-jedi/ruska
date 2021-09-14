@@ -5,7 +5,7 @@
 		<article class="blog-post-article scrolltrigger-refresh-target" itemscope itemtype="https://schema.org/BlogPosting" itemprop="blogPost">
 			<section class="blog-post-section">
 				<?php perch_blog_post(perch_get('s')); ?>
-				<div class="previous-and-next-posts body-text-medium">
+				<div class="previous-and-next-posts body-text-medium simple-fade-in">
 					<!-- Data for previous and next posts  -->
 					<?php
 					// get the post data, put it into $post variable
