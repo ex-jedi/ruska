@@ -14,6 +14,7 @@ import {
   scrollTriggerRefresh,
   addMenuListener,
   simpleFadeIn,
+  splitTextFadeUpExport,
 } from './animations';
 
 import { displayInstagramFeed, addClass } from './utils';
@@ -51,3 +52,5 @@ scrollTriggerRefresh();
 addMenuListener();
 
 simpleFadeIn();
+
+splitTextFadeUpExport();

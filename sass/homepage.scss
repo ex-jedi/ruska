@@ -351,6 +351,10 @@
 //** Section Two **
 //*=========================================
 
+.homepage-section-two {
+  background-color: $background-colour-medium;
+}
+
 .section-two-flex-wrapper {
   @include flex(row);
   justify-content: space-between;
