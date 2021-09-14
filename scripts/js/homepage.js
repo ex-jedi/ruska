@@ -23,6 +23,7 @@ import {
   addMenuListener,
   fadeAndSwapThreeExport,
   splitTextFadeUpExport,
+  simpleFadeIn,
 } from './animations';
 
 import { displayInstagramFeed } from './utils';
@@ -68,3 +69,5 @@ fadeAndSwapThreeExport();
 splitTextFadeUpExport();
 
 consoleGreeting();
+
+simpleFadeIn();

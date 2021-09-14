@@ -144,12 +144,6 @@ img {
   display: block;
 }
 
-//********** Fade and swap three **********
-.fade-and-swap-three {
-  opacity: 0;
-  // display: none;
-}
-
 //********** Links **********
 
 // Better to leave underlining on by default and switch it off where you don't want it
@@ -700,8 +694,21 @@ select {
 //*=========================================
 //** Animations **
 //*=========================================
+
+//********** Starter Styles for GSAP animations **********
+
 .split-text-fade-up {
   opacity: 0;
+}
+
+.fade-and-swap-three {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.simple-fade-in {
+  opacity: 0;
+  transform: translateY(100px);
 }
 
 //*=========================================

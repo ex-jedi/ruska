@@ -264,7 +264,7 @@ Instafeed.prototype.run = function run() {
 
   // get access token
   this._debug('run', 'getting access token');
-  this._getAccessToken(function onTokenReceived(err, token) {
+  this._getAccessToken((err, token) => {
     if (err) {
       scope._debug('onTokenReceived', 'error', err);
       scope._fail(new Error(`error getting access token: ${err.message}`));
@@ -274,7 +274,7 @@ Instafeed.prototype.run = function run() {
     scope._debug('onTokenReceived', 'got token', token);
     scope._state.token = token;
 
-    scope._showNext(function onNextShown(err) {
+    scope._showNext((err) => {
       if (err) {
         scope._debug('onNextShown', 'error', err);
         scope._fail(err);
@@ -316,7 +316,7 @@ Instafeed.prototype.next = function next() {
   scope._start();
 
   // show next set
-  scope._showNext(function onNextShown(err) {
+  scope._showNext((err) => {
     if (err) {
       scope._debug('onNextShown', 'error', err);
       scope._fail(err);
@@ -379,7 +379,7 @@ Instafeed.prototype._showNext = function showNext(callback) {
     scope._debug('showNext', 'making request', url);
 
     // make network request
-    scope._makeApiRequest(url, function onResponseReceived(err, data) {
+    scope._makeApiRequest(url, (err, data) => {
       let processed = null;
 
       if (err) {
@@ -756,13 +756,13 @@ Instafeed.prototype._getAccessToken = function getAccessToken(callback) {
   if (typeof this._options.accessToken === 'function') {
     this._debug('getAccessToken', 'calling accessToken as function');
 
-    timeoutCheck = setTimeout(function accessTokenTimeoutCheck() {
+    timeoutCheck = setTimeout(() => {
       scope._debug('getAccessToken', 'timeout check', called);
       callbackOnce(new Error('accessToken timed out'), null);
     }, this._options.accessTokenTimeout);
 
     try {
-      this._options.accessToken(function accessTokenReceiver(err, value) {
+      this._options.accessToken((err, value) => {
         scope._debug('getAccessToken', 'received accessToken callback', called, err, value);
         callbackOnce(err, value);
       });

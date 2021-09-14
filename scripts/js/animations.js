@@ -201,6 +201,7 @@ function threeSwapCallback(elem, images) {
 }
 
 // Get elements to fade and swap
+// ? Could be re-written to get any element for GSAP
 function getFadeSwapThreeImages() {
   const fadeAndSwapThreeElement = gsap.utils.toArray(document.querySelectorAll('.fade-and-swap-three'));
   return fadeAndSwapThreeElement;
@@ -217,12 +218,7 @@ function fadeAndSwapThreeFunction(elem, swapperImages) {
   const delay = '+=1';
 
   faderSwapperThree
-    .set(elem, { opacity: 1 })
-    .fromTo(
-      elem,
-      { clipPath: 'inset(0% 100% 0% 0%)' },
-      { duration: 0.75, delay: 2, ease: 'circ.inOut', clipPath: 'inset(0% 0% 0% 0%)' }
-    )
+    .to(elem, { duration: 1, delay: 2, ease: 'power3.out', opacity: 1, y: 0 })
     .to(swapperImages[0], { autoAlpha: 0 }, delay)
     .to(swapperImages[1], { autoAlpha: 1 })
     .to(swapperImages[1], { autoAlpha: 0 }, delay)
@@ -238,8 +234,6 @@ function fadeAndSwapThreeExport() {
   // Get images
   const fadeAndSwapThreeElement = getFadeSwapThreeImages();
   fadeAndSwapThreeElement.forEach((images) => {
-    gsap.set(images, { clipPath: 'inset(0% 100% 0% 0%)' });
-
     // Get sub images
     const gsapImages = gsap.utils.toArray(images.querySelectorAll('img'));
     ScrollTrigger.create({
@@ -250,6 +244,20 @@ function fadeAndSwapThreeExport() {
       once: true,
       onEnter: () => fadeAndSwapThreeFunction(images, gsapImages).play(),
     });
+  });
+}
+
+// *=========================================
+// ** Simple Fade In  **
+// *=========================================
+function simpleFadeIn() {
+  ScrollTrigger.batch('.simple-fade-in', {
+    start: 'top 60%',
+    end: 'bottom bottom',
+    id: 'Fade In',
+    markers: true,
+    once: true,
+    onEnter: (batch) => gsap.to(batch, { duration: 1, ease: 'power3.out', opacity: 1, y: 0, stagger: 0.15 }),
   });
 }
 
@@ -279,7 +287,6 @@ function cleanText(e) {
 
 const cleanTextCheck = document.querySelector('.split-text-fade-up');
 if (cleanTextCheck) {
-  console.log('Clean text cleanup!');
   cleanText('.split-text-fade-up');
 }
 
@@ -287,7 +294,6 @@ function splitTextTlFunction(targetOne, targetTwo, splitRevert) {
   const splitTextFadeUpTl = gsap.timeline({
     defaults: { duration: 1, ease: 'power4.out' },
     onComplete: () => {
-      console.log(splitRevert);
       splitRevert.revert();
     },
   });
@@ -295,7 +301,7 @@ function splitTextTlFunction(targetOne, targetTwo, splitRevert) {
   splitTextFadeUpTl
     .set(targetOne, { opacity: 1 })
     .set(targetTwo, { opacity: 0, y: 100 })
-    .to(targetTwo, { opacity: 1, y: 0, stagger: 0.15, delay: 1 });
+    .to(targetTwo, { opacity: 1, y: 0, stagger: 0.15, delay: 0.25 });
 }
 
 function splitTextFadeUpExport() {
@@ -310,7 +316,7 @@ function splitTextFadeUpExport() {
 
     ScrollTrigger.create({
       trigger: elem,
-      start: 'top center',
+      start: 'top 75%',
       end: 'bottom top',
       id: 'Split Text Animaton',
       once: true,
@@ -517,4 +523,5 @@ export {
   addMenuListener,
   fadeAndSwapThreeExport,
   splitTextFadeUpExport,
+  simpleFadeIn,
 };
