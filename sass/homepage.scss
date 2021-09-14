@@ -249,6 +249,8 @@
   text-align: center;
   line-height: 1;
   margin: 0 auto;
+  // For GSAP animation
+  opacity: 0;
 
   a {
     color: inherit;

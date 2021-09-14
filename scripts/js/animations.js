@@ -255,7 +255,7 @@ function simpleFadeIn() {
     start: 'top 60%',
     end: 'bottom bottom',
     id: 'Fade In',
-    markers: true,
+    // markers: true,
     once: true,
     onEnter: (batch) => gsap.to(batch, { duration: 1, ease: 'power3.out', opacity: 1, y: 0, stagger: 0.15 }),
   });
@@ -292,7 +292,7 @@ function splitTextFadeUpExport() {
       end: 'bottom top',
       id: 'Split Text Animaton',
       once: true,
-      markers: true,
+      // markers: true,
       onEnter: () => splitTextTlFunction(elem, splitTextLines),
     });
   });
@@ -336,7 +336,6 @@ function homepageTreeAnimationOne() {
     },
   });
 
-  // TODO: Change name as they go the right way
   treeAnimationTimeline
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -361,6 +360,8 @@ function homepageTreeAnimationTwo() {
   const animationFive = document.querySelector('#homepage-tree-animation-two [data-name="Animation 5"]');
   const animationFivePaths = animationFive.querySelectorAll('path');
 
+  const text = document.querySelector('#homepage-tree-animation-two .tree-animation-text');
+
   // TODO: Remove markers
   const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
@@ -375,6 +376,7 @@ function homepageTreeAnimationTwo() {
   });
 
   treeAnimationTimeline
+    .to(text, { opacity: 1 })
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -398,6 +400,8 @@ function homepageTreeAnimationThree() {
   const animationFive = document.querySelector('#homepage-tree-animation-three [data-name="Animation 5"]');
   const animationFivePaths = animationFive.querySelectorAll('path');
 
+  const text = document.querySelector('#homepage-tree-animation-three .tree-animation-text');
+
   // TODO: Remove markers
   const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
@@ -412,6 +416,7 @@ function homepageTreeAnimationThree() {
   });
 
   treeAnimationTimeline
+    .to(text, { opacity: 1 })
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -435,6 +440,8 @@ function homepageTreeAnimationFour() {
   const animationFive = document.querySelector('#homepage-tree-animation-four [data-name="Animation 5"]');
   const animationFivePaths = animationFive.querySelectorAll('path');
 
+  const text = document.querySelector('#homepage-tree-animation-four .tree-animation-text');
+
   // TODO: Remove markers
   const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
@@ -449,6 +456,7 @@ function homepageTreeAnimationFour() {
   });
 
   treeAnimationTimeline
+    .to(text, { opacity: 1 })
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
