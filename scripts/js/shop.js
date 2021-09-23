@@ -12,7 +12,14 @@ import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
 // ** Imports  **
 // *=========================================
 
-import { pyramidDividerFunction, mainLogoAnimation, scrollTriggerRefresh, addMenuListener } from './animations';
+import {
+  pyramidDividerFunction,
+  mainLogoAnimation,
+  scrollTriggerRefresh,
+  addMenuListener,
+  splitTextFadeUpExport,
+  simpleFadeIn,
+} from './animations';
 
 import { displayInstagramFeed } from './utils';
 
@@ -42,6 +49,10 @@ pyramidDividerFunction();
 scrollTriggerRefresh();
 
 addMenuListener();
+
+splitTextFadeUpExport();
+
+simpleFadeIn();
 
 // ********** Lib **********
 displayInstagramFeed();

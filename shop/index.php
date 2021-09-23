@@ -40,7 +40,7 @@
      ));
 			}
 		?>
-	<?php perch_content("Contact Form"); ?>
+	<?php perch_mailchimp_form('forms/subscribe'); ?>
 	<?php perch_content("Instagram Feed"); ?>
 </main>
 <?php perch_layout('footers/main-footer'); ?>
