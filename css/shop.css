@@ -55,6 +55,11 @@
       flex-wrap: wrap;
   gap: 0 10rem;
 }
+@media (max-width: 700px) {
+  .shop-list-wrapper {
+    padding-inline: 2.5rem;
+  }
+}
 
 .shop-list-item {
   display: -webkit-box;

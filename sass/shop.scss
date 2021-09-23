@@ -79,6 +79,10 @@
   @include flex(row);
   flex-wrap: wrap;
   gap: 0 $section-spacing-small;
+
+  @include breakpoint(700) {
+    padding-inline: $section-spacing-extra-tiny;
+  }
 }
 
 .shop-list-item {
