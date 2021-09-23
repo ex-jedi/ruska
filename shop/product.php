@@ -1,6 +1,6 @@
 <?php include('../perch/runtime.php'); ?>
-<?php perch_layout('heads/shop-head'); ?>
-<?php perch_layout('headers/shop-header'); ?>
+<?php perch_layout('heads/product-head'); ?>
+<?php perch_layout('headers/product-header'); ?>
 <main class="main-content about-me-main-content" id="main-content">
 	<!-- Display product  -->
 	<?php
