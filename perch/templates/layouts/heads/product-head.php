@@ -29,8 +29,9 @@
 	PerchSystem::set_var('sharing_image',$sharing_image);
 
 	perch_page_attributes(array(
-		'template' => 'default.html'
+		'template' => 'product_detail.html'
 	));
 	?>
 	<?php perch_content("Analytics"); ?>
   <!-- Head end tag in relevant header file  -->
+
