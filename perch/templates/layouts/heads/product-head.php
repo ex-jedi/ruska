@@ -22,6 +22,21 @@
 	$pagetitlename = " - Ruska";
 	$sharing_image = '/images/default-sharing-image.png';
 
+	$product =  perch_content_custom('Products', array(
+		'page' => '/shop/index.php',
+		'skip-template' => 'true',
+		'filter' => 'slug',
+		'match' => 'eq',
+		'value' => perch_get('s'),
+		'count' => 1,
+));
+
+	$title= $product['0']['productHeading'];
+	$description = $product['0']['cartDescription'];
+
+
+	PerchSystem::set_var('productTitle',$title);
+	PerchSystem::set_var('productDescription',$description);
 	PerchSystem::set_var('domain',$domain);
 	PerchSystem::set_var('mainurl',$mainurl);
 	PerchSystem::set_var('mainsitename',$mainsitename);
