@@ -57,6 +57,6 @@ RewriteRule ^blog/tag/([a-zA-Z0-9-/]+)$ /blog/archive.php?tag=$1 [L]
 RewriteRule ^blog/([a-zA-Z0-9-/]+)$ /blog/post.php?s=$1 [L]
 
 #Shop URLs
-RewriteRule ^shop/([a-zA-Z0-9-/]+)$  /shop/index.php?s=$1 [L]
+RewriteRule ^shop/([a-zA-Z0-9-/]+)$  /shop/product.php?s=$1 [L]
 
 </IfModule>

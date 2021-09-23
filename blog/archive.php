@@ -71,7 +71,7 @@
 				?>
 			</section>
 		</main>
-		<?php perch_mailchimp_form('forms/subscribe'); ?>
+		<?php perch_content("Contact Form"); ?>
 		<?php perch_content("Instagram Feed"); ?>
 <?php perch_layout('footers/main-footer'); ?>
 <?php perch_layout('footer-ends/blog-archive-footer-end'); ?>

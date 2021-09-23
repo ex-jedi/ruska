@@ -2,44 +2,20 @@
 <?php perch_layout('heads/shop-head'); ?>
 <?php perch_layout('headers/shop-header'); ?>
 <main class="main-content about-me-main-content" id="main-content">
-
-		<!-- Create product region -->
-		<?php
+	<!-- Create product region -->
+	<?php
 		perch_content_create('Products', array(
 		'template'   => 'product_detail.html',
 		'multiple'    => true,
 		'edit-mode' => 'listdetail',
 		));
-		?>
-		<!-- Display list or detail content  -->
-		<?php
-			if (perch_get('s')) {
-			// Detail mode
-			// Product
-				perch_content_custom('Products', array(
-					'template' => 'shop/product_detail.html',
-					'filter' => 'slug',
-					'match' => 'eq',
-					'value' => perch_get('s'),
-					'count' => 1,
-				));
-				//Featured items
-				perch_content_custom('Products', array(
-				'template' => 'shop/featured_items.html',
-				'sort'=>'slug',
-				'sort-order'=>'RAND',
-				'filter' => 'slug',
-				'match' => 'neq',
-				'value' => perch_get('s'),
-				'count' => 3,
-     ));
-			} else {
-			// List mode
-			perch_content_custom('Products', array(
-				'template' => 'shop/product_listing.html',
-     ));
-			}
-		?>
+	?>
+	<!-- Display list  -->
+	<?php
+		perch_content_custom('Products', array(
+		'template' => 'shop/product_listing.html',
+		));
+	?>
 	<?php perch_mailchimp_form('forms/subscribe'); ?>
 	<?php perch_content("Instagram Feed"); ?>
 </main>
