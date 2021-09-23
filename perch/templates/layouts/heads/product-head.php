@@ -20,7 +20,7 @@
 									), true);
 	$mainsitename      = "Ruska";
 	$pagetitlename = " - Ruska";
-	$sharing_image = '/images/default-sharing-image.png';
+
 
 	$product =  perch_content_custom('Products', array(
 		'page' => '/shop/index.php',
@@ -33,7 +33,7 @@
 
 	$title= $product['0']['productHeading'];
 	$description = $product['0']['cartDescription'];
-
+	$sharing_image = $product['0']['shopCoverImage'];
 
 	PerchSystem::set_var('productTitle',$title);
 	PerchSystem::set_var('productDescription',$description);
