@@ -5,9 +5,17 @@
         <h2 class="contact-form-heading split-text-fade-up">
           Sign up to my mailing list to receive product updates and free tutorials
         </h2>
+          <div class="email-signup-form-input-wrapper first-name-input-wrapper">
+              <perch:label class="first-name-label" for="firstName">First name</perch:label>
+              <perch:input class="general-contact-form-input first-name-input" type="text" id="firstName" mailer="FNAME" required>
+          </div>
+          <div class="email-signup-form-input-wrapper last-name-input-wrapper">
+              <perch:label class="last-name-label" for="lastName">Last name</perch:label>
+              <perch:input class="general-contact-form-input last-name-input" type="text" id="lastName" mailer="LNAME" required>
+          </div>
           <div class="email-signup-form-input-wrapper email-input-wrapper">
-              <perch:label class="email-label" for="email">Your email address</perch:label>
-              <perch:input class="general-contact-form-input email-input" type="email" id="email" label="Email" mailer="email">
+              <perch:label class="email-label" for="email">Email address</perch:label>
+              <perch:input class="general-contact-form-input email-input" type="email" id="email" mailer="email" required>
           </div>
           <div class="form-identification-number">
               <perch:label for="messageAreaOne">Message: Leave this field blank if you are a human</perch:label>

@@ -389,7 +389,9 @@ a {
   }
 }
 
-.email-input-wrapper {
+.email-input-wrapper,
+.first-name-input-wrapper,
+.last-name-input-wrapper {
   @include flex(row);
   justify-content: space-around;
   align-items: flex-end;
