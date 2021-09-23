@@ -415,6 +415,12 @@
   font-size: 3.8rem;
 }
 
+.blog-video-embed iframe {
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: auto;
+}
+
 .previous-and-next-posts {
   display: -webkit-box;
   display: -ms-flexbox;

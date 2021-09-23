@@ -349,6 +349,13 @@
   font-size: $font-size-small;
 }
 
+.blog-video-embed {
+  iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+  }
+}
 //*=========================================
 //** Previous and Next Posts **
 //*=========================================
