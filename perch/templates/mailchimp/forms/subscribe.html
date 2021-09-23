@@ -1,13 +1,13 @@
 <!-- Includes consent check  -->
 <section class="email-signup-form-section scrolltrigger-refresh-target" id="contact-us">
-   <h2 class="contact-form-heading split-text-fade-up">
-     <perch:content id="contactFormHeading" type="text" label="Contact Form Heading" required>
-   </h2>
   <div class="email-signup-form-wrapper">
-      <perch:form class="email-signup-form" id="contact" method="post" app="perch_forms">
+      <perch:form id="subscribe" app="perch_mailchimp" double-optin="true">
+        <h2 class="contact-form-heading split-text-fade-up">
+          Sign up to my mailing list to receive product updates and free tutorials
+        </h2>
           <div class="email-signup-form-input-wrapper email-input-wrapper">
               <perch:label class="email-label" for="email">Your email address</perch:label>
-              <perch:input class="general-contact-form-input email-input"  type="email" id="email" label="Email">
+              <perch:input class="general-contact-form-input email-input" type="email" id="email" label="Email" mailer="email">
           </div>
           <div class="form-identification-number">
               <perch:label for="messageAreaOne">Message: Leave this field blank if you are a human</perch:label>
@@ -19,10 +19,12 @@
           </div>
           <div class="email-signup-form-input-wrapper submit-wrapper">
             <perch:input class="submit" type="submit" id="submit" value="Sign me up!">
+            <perch:input type="hidden" value="1" id="confirm" mailer="confirm_subscribe">
+            <perch:input type="hidden" id="list" value="a0e8652390" mailer="list">
           </div>
           <perch:success>
-              <div class="success">
-                  <perch:content id="success" type="textarea" label="Thank you message" html="true" editor="redactor" />
+              <div class="contact-form-success split-text-fade-up body-text-large">
+                <span class="success-span">Thanks for signing up.</span>You'll receive an email soon with a link to confirm your email address.
               </div>
           </perch:success>
       </perch:form>

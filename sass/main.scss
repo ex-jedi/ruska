@@ -502,6 +502,15 @@ a {
   }
 }
 
+.contact-form-success {
+  text-align: center;
+}
+
+.success-span {
+  display: block;
+  margin-bottom: $paragraph-spacing-medium;
+}
+
 //* Inherit fonts for inputs and buttons
 input,
 button,
