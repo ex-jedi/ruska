@@ -82,4 +82,3 @@
 	</main>
 	<?php perch_layout('footers/main-footer'); ?>
 <?php perch_layout('footer-ends/blog-post-footer-end'); ?>
-<!-- TODO: Validate HTML -->
