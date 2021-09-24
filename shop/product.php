@@ -2,7 +2,6 @@
 <?php perch_layout('heads/product-head'); ?>
 <?php perch_layout('headers/product-header'); ?>
 <main class="main-content about-me-main-content" id="main-content">
-  <?php perch_content("Temp"); ?>
 	<!-- Display product  -->
 	<?php
       perch_content_custom('Products', array(
