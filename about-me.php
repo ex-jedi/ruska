@@ -8,4 +8,3 @@
 </main>
 <?php perch_layout('footers/main-footer'); ?>
 <?php perch_layout('footer-ends/about-me-footer-end'); ?>
-<!-- TODO: Validate HTML -->
