@@ -34,14 +34,21 @@
 	$title= $product['0']['productHeading'];
 	$description = $product['0']['cartDescription'];
 	$sharing_image = $product['0']['shopCoverImage'];
+	$product_slug = $product['0']['slug'];
+	$product_url = $domain.'/shop/'.$product_slug;
+
 
 	PerchSystem::set_var('productTitle',$title);
 	PerchSystem::set_var('productDescription',$description);
+	PerchSystem::set_var('sharing_image',$sharing_image);
+	PerchSystem::set_var('productSlug',$product_slug);
+	PerchSystem::set_var('productURL',$product_url);
+
 	PerchSystem::set_var('domain',$domain);
 	PerchSystem::set_var('mainurl',$mainurl);
 	PerchSystem::set_var('mainsitename',$mainsitename);
 	PerchSystem::set_var('pagetitlename',$pagetitlename);
-	PerchSystem::set_var('sharing_image',$sharing_image);
+
 
 	perch_page_attributes(array(
 		'template' => 'product_detail.html'

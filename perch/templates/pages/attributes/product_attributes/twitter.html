@@ -5,11 +5,11 @@
 <perch:if exists="twitterCreator">
   <meta name="twitter:creator" content="<perch:pages id="twitterCreator" type="text" size="l" label="Your Personal Twitter ID - Optional" help="@Your_Personal_Twitter_ID">">
 </perch:if>
-<meta name="twitter:title" content="<perch:pages id="pageMetaTitle" type="hidden">">
-<meta name="twitter:description" content="<perch:pages id="pageMetaDescription" type="hidden">">
+<meta name="twitter:title" content="<perch:pages id="productTitle" type="hidden">">
+<meta name="twitter:description" content="<perch:pages id="productDescription" type="hidden">">
 <perch:if exists="og_image">
   <meta property="twitter:image" content="<perch:pages id="domain" type="hidden"><perch:pages id="og_image" type="image">">
   <perch:else/>
   <meta property="twitter:image" content="<perch:pages id="domain" type="hidden"><perch:pages id="sharing_image" type="hidden">">
 </perch:if>
-<meta name="twitter:url" content="<perch:pages id="mainurl" type="hidden">">
+<meta name="twitter:url" content="<perch:pages id="productURL" type="hidden">">
