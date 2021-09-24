@@ -252,10 +252,10 @@ function fadeAndSwapThreeExport() {
 // *=========================================
 
 function simpleFadeIn() {
-  let fadeInTrigger = 'top 70%';
+  let fadeInTrigger = 'top 80%';
 
   if (mediaNineFifty.matches) {
-    fadeInTrigger = 'top 80%';
+    fadeInTrigger = 'top 90%';
   }
 
   ScrollTrigger.batch('.simple-fade-in', {
