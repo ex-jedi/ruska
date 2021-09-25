@@ -1,7 +1,7 @@
 <section class="shop-section">
   <div class="product-wrapper">
   <!-- Product images -->
-  <div class="product-images-wrapper scrolltrigger-refresh-target">
+  <div class="product-images-wrapper scrolltrigger-refresh-target simple-fade-in">
     <perch:repeater id="productImagesRepeater" label="Product Images" max="5" order="6">
       <img class="product-image" draggable="false" itemprop="image" src="<perch:content id="productImages" type="image" width="1000" height="1000" label="Product Image" help="Image must be at least 1000px x 1000px. This image will be cropped to a square. Maximum 5 images" crop>" alt="<perch:content id="altOne" type="text" label="Image Description">"
       sizes="(max-width: 900px) 100vw, (max-width: 1300px) 60vw, 40vw"
@@ -13,7 +13,7 @@
   </div>
 
   <!-- Heading  -->
-  <h1 class="product-heading">
+  <h1 class="product-heading simple-fade-in">
     <perch:content id="productHeading" type="text" label="Product Heading" order="1" required title>
   </h1>
 
@@ -21,7 +21,7 @@
   <perch:content id="slug" for="productHeading" type="slug" suppress>
 
   <!-- Price -->
-  <div class="product-price">
+  <div class="product-price simple-fade-in">
     &pound;<perch:content id="productPrice" type="text" label="Product Price" order="2" required>
   </div>
 
@@ -52,7 +52,7 @@
   </button>
 
   <!-- Description -->
-  <div class="product-description-wrapper body-text-medium scrolltrigger-refresh-target">
+  <div class="product-description-wrapper body-text-medium scrolltrigger-refresh-target simple-fade-in">
     <perch:content id="productDescription" type="textarea" label="Description" editor="redactor" order="7" html>
   </div>
 
