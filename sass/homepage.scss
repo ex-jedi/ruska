@@ -40,6 +40,7 @@
   @include flex(row);
   justify-content: space-around;
   align-items: flex-start;
+  gap: 0 2rem;
 
   @include breakpoint(1750) {
     justify-content: space-between;
@@ -109,6 +110,11 @@
   @include breakpoint(800) {
     margin-bottom: 50rem;
   }
+}
+
+.homepage-header-image {
+  aspect-ratio: 4/5;
+  object-fit: cover;
 }
 
 .swapping-images {
@@ -243,6 +249,13 @@
   text-align: center;
   line-height: 1;
   margin: 0 auto;
+  // For GSAP animation
+  opacity: 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 
   @include breakpoint(1550) {
     font-size: $font-size-large;
@@ -338,12 +351,18 @@
 //** Section Two **
 //*=========================================
 
-.section-two-flex-wrapper {
+.homepage-section-two {
   background-color: $background-colour-medium;
-  padding: $section-spacing-large;
+}
+
+.section-two-flex-wrapper {
   @include flex(row);
   justify-content: space-between;
   align-items: center;
+  padding: 0;
+  margin: 0;
+  background-color: $background-colour-medium;
+  padding: $section-spacing-large;
 
   @include breakpoint(1300) {
     padding: $section-spacing-medium;
@@ -567,5 +586,6 @@
 
   a {
     color: $font-colour-dark;
+    text-decoration: none;
   }
 }

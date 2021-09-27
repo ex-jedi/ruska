@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
+import { SplitText } from 'gsap/SplitText';
 
 // *=========================================
 // ** GSAP  **
@@ -160,6 +161,150 @@ function addMenuListener() {
   mainNavCloser.addEventListener('click', navCloserHandler);
 }
 
+// *=========================================
+// ** Three image Wiper and Swapper **
+// *=========================================
+
+// ********** Three Image Swap **********
+
+// * Image swapping GSAP Function
+function swapThreeFunction(swapperImages) {
+  // Create timeline
+  const swapperThree = gsap.timeline({
+    defaults: { duration: 0, ease: 'none' },
+    paused: true,
+    repeat: -1,
+  });
+  const delay = '+=0.8';
+
+  // Populate timeline
+  swapperThree
+    .to(swapperImages[0], { autoAlpha: 0 }, delay)
+    .to(swapperImages[1], { autoAlpha: 1 })
+    .to(swapperImages[1], { autoAlpha: 0 }, delay)
+    .to(swapperImages[2], { autoAlpha: 1 })
+    .to(swapperImages[2], { autoAlpha: 0 }, delay)
+    .to(swapperImages[0], { autoAlpha: 1 });
+
+  return swapperThree;
+}
+
+// Swap on hover function
+function threeSwapCallback(elem, images) {
+  const swappingThree = swapThreeFunction(images);
+  elem.addEventListener('mouseover', () => {
+    swappingThree.resume();
+  });
+  elem.addEventListener('mouseleave', () => {
+    swappingThree.pause();
+  });
+}
+
+// Get elements to fade and swap
+// ? Could be re-written to get any element for GSAP
+function getFadeSwapThreeImages() {
+  const fadeAndSwapThreeElement = gsap.utils.toArray(document.querySelectorAll('.fade-and-swap-three'));
+  return fadeAndSwapThreeElement;
+}
+
+// * Initial Image fade and swap Function
+function fadeAndSwapThreeFunction(elem, swapperImages) {
+  const faderSwapperThree = gsap.timeline({
+    defaults: { duration: 0, ease: 'none' },
+    onComplete: () => {
+      threeSwapCallback(elem, swapperImages);
+    },
+  });
+  const delay = '+=1';
+
+  faderSwapperThree
+    .to(elem, { duration: 1, delay: 0.3, ease: 'power3.out', opacity: 1, y: 0 })
+    .to(swapperImages[0], { autoAlpha: 0 }, '+=0.1')
+    .to(swapperImages[1], { autoAlpha: 1 })
+    .to(swapperImages[1], { autoAlpha: 0 }, delay)
+    .to(swapperImages[2], { autoAlpha: 1 })
+    .to(swapperImages[2], { autoAlpha: 0 }, delay)
+    .to(swapperImages[0], { autoAlpha: 1 });
+
+  return faderSwapperThree;
+}
+
+// Fade and swap three export function
+function fadeAndSwapThreeExport() {
+  // Get images
+  const fadeAndSwapThreeElement = getFadeSwapThreeImages();
+  fadeAndSwapThreeElement.forEach((images) => {
+    // Get sub images
+    const gsapImages = gsap.utils.toArray(images.querySelectorAll('img'));
+    ScrollTrigger.create({
+      trigger: images,
+      start: 'top 60%',
+      end: 'bottom bottom',
+      id: 'Three F & S Image',
+      once: true,
+      onEnter: () => fadeAndSwapThreeFunction(images, gsapImages).play(),
+    });
+  });
+}
+
+// *=========================================
+// ** Simple Fade In  **
+// *=========================================
+
+function simpleFadeIn() {
+  let fadeInTrigger = 'top 80%';
+
+  if (mediaNineFifty.matches) {
+    fadeInTrigger = 'top 90%';
+  }
+
+  ScrollTrigger.batch('.simple-fade-in', {
+    start: fadeInTrigger,
+    end: 'bottom bottom',
+    id: 'Fade In',
+    // markers: true,
+    once: true,
+    onEnter: (batch) => gsap.to(batch, { duration: 1, ease: 'power3.out', opacity: 1, y: 0, stagger: 0.15 }),
+  });
+}
+
+// *=========================================
+// ** Split Text Fade Up  **
+// *=========================================
+
+function splitTextTlFunction(targetOne, targetTwo) {
+  const splitTextFadeUpTl = gsap.timeline({
+    defaults: { duration: 1, ease: 'power4.out' },
+  });
+
+  splitTextFadeUpTl
+    .set(targetOne, { opacity: 1 })
+    .set(targetTwo, { opacity: 0, y: 100 })
+    .to(targetTwo, { opacity: 1, y: 0, stagger: 0.15, delay: 0.25 });
+}
+
+function splitTextFadeUpExport() {
+  const splitTextFadeUpTargets = gsap.utils.toArray('.split-text-fade-up');
+
+  splitTextFadeUpTargets.forEach((elem) => {
+    const splitFadeUpElements = new SplitText(elem, { type: 'lines' });
+
+    const splitTextLines = splitFadeUpElements.lines;
+
+    gsap.set(splitTextLines, { opacity: 0, y: 20 });
+
+    ScrollTrigger.create({
+      trigger: elem,
+      start: 'top 75%',
+      end: 'bottom top',
+      id: 'Split Text Animaton',
+      once: true,
+      // markers: true,
+      onEnter: () => splitTextTlFunction(elem, splitTextLines),
+    });
+  });
+}
+
 // *==============================================================================
 // ** Homepage  **
 // *==============================================================================
@@ -198,7 +343,6 @@ function homepageTreeAnimationOne() {
     },
   });
 
-  // TODO: Change name as they go the right way
   treeAnimationTimeline
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -223,6 +367,8 @@ function homepageTreeAnimationTwo() {
   const animationFive = document.querySelector('#homepage-tree-animation-two [data-name="Animation 5"]');
   const animationFivePaths = animationFive.querySelectorAll('path');
 
+  const text = document.querySelector('#homepage-tree-animation-two .tree-animation-text');
+
   // TODO: Remove markers
   const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
@@ -237,6 +383,7 @@ function homepageTreeAnimationTwo() {
   });
 
   treeAnimationTimeline
+    .to(text, { opacity: 1 })
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -260,6 +407,8 @@ function homepageTreeAnimationThree() {
   const animationFive = document.querySelector('#homepage-tree-animation-three [data-name="Animation 5"]');
   const animationFivePaths = animationFive.querySelectorAll('path');
 
+  const text = document.querySelector('#homepage-tree-animation-three .tree-animation-text');
+
   // TODO: Remove markers
   const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
@@ -274,6 +423,7 @@ function homepageTreeAnimationThree() {
   });
 
   treeAnimationTimeline
+    .to(text, { opacity: 1 })
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -297,6 +447,8 @@ function homepageTreeAnimationFour() {
   const animationFive = document.querySelector('#homepage-tree-animation-four [data-name="Animation 5"]');
   const animationFivePaths = animationFive.querySelectorAll('path');
 
+  const text = document.querySelector('#homepage-tree-animation-four .tree-animation-text');
+
   // TODO: Remove markers
   const treeAnimationTimeline = gsap.timeline({
     defaults: { duration: 1, ease: 'power3.inOut' },
@@ -311,6 +463,7 @@ function homepageTreeAnimationFour() {
   });
 
   treeAnimationTimeline
+    .to(text, { opacity: 1 })
     .fromTo(animationOnePaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationTwoPaths, { drawSVG: 0 }, { drawSVG: '100%' })
     .fromTo(animationThreePaths, { drawSVG: 0 }, { drawSVG: '100%' })
@@ -322,24 +475,23 @@ function homepageTreeAnimationFour() {
 // ** Utilities  **
 // *==============================================================================
 // * ScrollTrigger Refresh Initial
-function scrollTriggerRefresh(time = 1000) {
+function scrollTriggerRefresh() {
   const scrollTriggerRefreshTarget = document.querySelectorAll('.scrolltrigger-refresh-target');
   window.addEventListener('load', () => {
-    setTimeout(() => {
-      console.log(`✨ ScrollTrigger refresh created after ${time}ms ✨`);
-      scrollTriggerRefreshTarget.forEach((triggerElem) => {
-        ScrollTrigger.create({
-          trigger: triggerElem,
-          start: 'top bottom',
-          once: true,
-          id: 'ScrollTrigger Refresh',
-          onEnter: () => {
-            ScrollTrigger.refresh();
-            console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
-          },
-        });
+    ScrollTrigger.refresh();
+    console.log(`✨ ScrollTrigger refresh created ✨`);
+    scrollTriggerRefreshTarget.forEach((triggerElem) => {
+      ScrollTrigger.create({
+        trigger: triggerElem,
+        start: 'top bottom',
+        once: true,
+        id: 'ScrollTrigger Refresh',
+        onEnter: () => {
+          ScrollTrigger.refresh();
+          console.log('⚡ ScrollTrigger Refresh Triggered ⚡');
+        },
       });
-    }, time);
+    });
   });
 }
 
@@ -356,4 +508,7 @@ export {
   scrollTriggerRefresh,
   pyramidDividerFunction,
   addMenuListener,
+  fadeAndSwapThreeExport,
+  splitTextFadeUpExport,
+  simpleFadeIn,
 };

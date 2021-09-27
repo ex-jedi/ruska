@@ -1,20 +1,19 @@
 <section class="shop-section">
   <div class="product-wrapper">
   <!-- Product images -->
-  <div class="product-images-wrapper scrolltrigger-refresh-target">
-    <perch:repeater id="productImagesRepeater" label="Product Images" max="5" order="4">
+  <div class="product-images-wrapper scrolltrigger-refresh-target simple-fade-in">
+    <perch:repeater id="productImagesRepeater" label="Product Images" max="5" order="6">
       <img class="product-image" draggable="false" itemprop="image" src="<perch:content id="productImages" type="image" width="1000" height="1000" label="Product Image" help="Image must be at least 1000px x 1000px. This image will be cropped to a square. Maximum 5 images" crop>" alt="<perch:content id="altOne" type="text" label="Image Description">"
-      sizes="(max-width: 800px) 100vw, 30vw"
+      sizes="(max-width: 900px) 100vw, (max-width: 1300px) 60vw, 40vw"
       srcset="<perch:content type="image" id="productImages" width="1000" height="1000" crop> 1000w,
-      <perch:content type="image" id="productImages" width="1000" height="1000" crop> 1000w,
       <perch:content type="image" id="productImages" width="800" height="800" crop> 800w,
       <perch:content type="image" id="productImages" width="600" height="600" crop> 600w,
       <perch:content type="image" id="productImages" width="400" height="400" crop> 400w">
     </perch:repeater>
   </div>
 
-  <!-- heading  -->
-  <h1 class="product-heading">
+  <!-- Heading  -->
+  <h1 class="product-heading simple-fade-in">
     <perch:content id="productHeading" type="text" label="Product Heading" order="1" required title>
   </h1>
 
@@ -22,25 +21,39 @@
   <perch:content id="slug" for="productHeading" type="slug" suppress>
 
   <!-- Price -->
-  <div class="product-price">
+  <div class="product-price simple-fade-in">
     &pound;<perch:content id="productPrice" type="text" label="Product Price" order="2" required>
   </div>
 
+  <!-- Colour variant  -->
+  <perch:content id="colorVariant" type="text-table" label="Optional Color Variant" order="3" help="Separate each option with a full stop, and don't use spaces. If you want to increase the price for an option add the amount in square brackets after the option. For example Purple.Red[+25].Green.Blue[+5]" suppress>
+
+  <!-- Thickness variant  -->
+  <perch:content id="thicknessVariant" type="text-table" label="Optional Tickness Variant" order="4" help="Separate each option with a full stop, and don't use spaces. If you want to increase the price for an option add the amount in square brackets after the option. For example 5mm.10mm.15mm[+5]"  suppress>
+
   <!-- Add to cart -->
-  <button class="body-text-medium add-to-cart-button snipcart-add-item"
+  <button class="body-text-medium add-to-cart-button snipcart-add-item simple-fade-in"
   data-item-id="<perch:content id="slug" type="hidden">"
   data-item-url="/"
   data-item-price="<perch:content id="productPrice" type="price" filter="space">"
   data-item-name="<perch:content id="productHeading">"
   data-item-description="<perch:content id="cartDescription">"
   data-item-image="<perch:content id="shopCoverImage">"
+  <perch:if exists="colorVariant">
+    data-item-custom1-name="Colour"
+    data-item-custom1-options="<perch:content id="colorVariant" type="text" replace=".|&#124;" >"
+  </perch:if>
+  <perch:if exists="thicknessVariant">
+    data-item-custom2-name="Thickness"
+    data-item-custom2-options="<perch:content id="thicknessVariant" type="text" replace=".|&#124;" >"
+  </perch:if>
   >
     Add To Cart
   </button>
 
   <!-- Description -->
-  <div class="product-description-wrapper body-text-medium scrolltrigger-refresh-target">
-    <perch:content id="productDescription" type="textarea" label="Description" editor="redactor" order="5" html>
+  <div class="product-description-wrapper body-text-medium scrolltrigger-refresh-target simple-fade-in">
+    <perch:content id="productDescription" type="textarea" label="Description" editor="redactor" order="7" html>
   </div>
 
   </div>
@@ -49,11 +62,11 @@
 <!--* Items for listing Page Only *-->
 
 <!-- Cover Image -->
-<perch:content id="shopCoverImage" type="image" label="Product Cover Image" divider-before="Cover Image" order="3" required="true" width="1400" height="1400" help="This image will appear on the shop listing page with the title. Image must be at least 1400px x 1400px. This image will be cropped to a square." required suppress crop>
+<perch:content id="shopCoverImage" type="image" label="Product Cover Image" divider-before="Cover Image" order="5" required="true" width="1400" height="1400" help="This image will appear on the shop listing page with the title. Image must be at least 1400px x 1400px. This image will be cropped to a square." required suppress crop>
   <perch:content type="image" id="shopCoverImage" width="1000" height="1000" suppress crop>
   <perch:content type="image" id="shopCoverImage" width="800" height="800" suppress crop>
   <perch:content type="image" id="shopCoverImage" width="600" height="600" suppress crop>
   <perch:content type="image" id="shopCoverImage" width="400" height="400" suppress crop>
 
 <!-- Cart product description    -->
-<perch:content id="cartDescription" type="text" label="Short Description For Cart" help="Brief product description for the shopping cart" count="words" size="l" order="6" suppress>
+<perch:content id="cartDescription" type="text" label="Short Description For Cart" help="Brief product description for the shopping cart" count="words" size="l" order="8" suppress>

@@ -1,7 +1,7 @@
 // *==============================================================================
 // ** Error Page  **
 // *==============================================================================
-import { mainLogoAnimation, addMenuListener } from './animations';
+import { mainLogoAnimation, addMenuListener, simpleFadeIn } from './animations';
 
 // *=========================================
 // ** Imported Functions  **
@@ -10,3 +10,5 @@ import { mainLogoAnimation, addMenuListener } from './animations';
 mainLogoAnimation();
 
 addMenuListener();
+
+simpleFadeIn();

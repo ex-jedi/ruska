@@ -13,19 +13,6 @@
 		        // Have we displayed any posts yet?
 		        $posts_displayed = false;
 
-		        /*
-		        	perch_get() is used to get options from the URL.
-
-					e.g. for the URL
-						/blog/archive.php?cat=news
-
-					perch_get('cat') would return 'news' because cat=news.
-
-
-					The code below looks for different options in the URL, and then displays different types of listings based on it.
-		        */
-
-
 		        /* --------------------------- POSTS BY CATEGORY --------------------------- */
 		        if (perch_get('cat')) {
 		            echo '<h1>'.perch_blog_category(perch_get('cat'), true).'</h1>';
@@ -71,7 +58,7 @@
 				?>
 			</section>
 		</main>
-		<?php perch_content("Contact Form"); ?>
+		<?php perch_mailchimp_form('forms/subscribe'); ?>
 		<?php perch_content("Instagram Feed"); ?>
 <?php perch_layout('footers/main-footer'); ?>
 <?php perch_layout('footer-ends/blog-archive-footer-end'); ?>

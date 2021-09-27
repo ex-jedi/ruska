@@ -28,7 +28,7 @@ function cookieWarning() {
 // *=========================================
 // ** Accessibility  **
 // *=========================================
-
+// TODO: Use or remove
 // * Adding focus outline class when tab key is used
 function handleFirstTab(e) {
   if (e.keyCode === 9) {
@@ -44,61 +44,6 @@ function handleMouseDownOnce() {
 
   window.removeEventListener('mousedown', handleMouseDownOnce);
   window.addEventListener('keydown', handleFirstTab);
-}
-
-// *=========================================
-// ** Reframe.js  **
-// *=========================================
-
-/*
-  reframe.js 🖼
-  -------------
-  takes 2 args:
-  => target: targeted <element>
-  => cname: optional custom classname
-  -------------
-  defines the height/width ratio of the targeted <element>
-*/
-function reframe(target, cName) {
-  let frames = typeof target === 'string' ? document.querySelectorAll(target) : target;
-  const c = cName || 'js-reframe';
-  if (!('length' in frames)) frames = [frames];
-  for (let i = 0; i < frames.length; i += 1) {
-    const frame = frames[i];
-    // makes sure reframe is not run more than 1x ✔️
-    const hasClass = frame.className.split(' ').indexOf(c) !== -1;
-
-    if (hasClass || frame.style.width.indexOf('%') > -1) continue;
-
-    // get height width attributes
-    const h = frame.getAttribute('height') || frame.offsetHeight;
-    const w = frame.getAttribute('width') || frame.offsetWidth;
-
-    // general targeted <element> sizes
-    const padding = (h / w) * 100;
-
-    // created element <wrapper> of general reframed item
-    // => set necessary styles of created element <wrapper>
-    const div = document.createElement('div');
-    div.className = c;
-    const divStyles = div.style;
-    divStyles.position = 'relative';
-    divStyles.width = '100%';
-    divStyles.paddingTop = `${padding}%`;
-
-    // set necessary styles of targeted <element>
-    const frameStyle = frame.style;
-    frameStyle.position = 'absolute';
-    frameStyle.width = '100%';
-    frameStyle.height = '100%';
-    frameStyle.left = '0';
-    frameStyle.top = '0';
-
-    // reframe targeted <element>
-    frame.parentNode.insertBefore(div, frame);
-    frame.parentNode.removeChild(frame);
-    div.appendChild(frame);
-  }
 }
 
 // *=========================================
@@ -264,7 +209,7 @@ Instafeed.prototype.run = function run() {
 
   // get access token
   this._debug('run', 'getting access token');
-  this._getAccessToken(function onTokenReceived(err, token) {
+  this._getAccessToken((err, token) => {
     if (err) {
       scope._debug('onTokenReceived', 'error', err);
       scope._fail(new Error(`error getting access token: ${err.message}`));
@@ -274,7 +219,7 @@ Instafeed.prototype.run = function run() {
     scope._debug('onTokenReceived', 'got token', token);
     scope._state.token = token;
 
-    scope._showNext(function onNextShown(err) {
+    scope._showNext((err) => {
       if (err) {
         scope._debug('onNextShown', 'error', err);
         scope._fail(err);
@@ -316,7 +261,7 @@ Instafeed.prototype.next = function next() {
   scope._start();
 
   // show next set
-  scope._showNext(function onNextShown(err) {
+  scope._showNext((err) => {
     if (err) {
       scope._debug('onNextShown', 'error', err);
       scope._fail(err);
@@ -379,7 +324,7 @@ Instafeed.prototype._showNext = function showNext(callback) {
     scope._debug('showNext', 'making request', url);
 
     // make network request
-    scope._makeApiRequest(url, function onResponseReceived(err, data) {
+    scope._makeApiRequest(url, (err, data) => {
       let processed = null;
 
       if (err) {
@@ -756,13 +701,13 @@ Instafeed.prototype._getAccessToken = function getAccessToken(callback) {
   if (typeof this._options.accessToken === 'function') {
     this._debug('getAccessToken', 'calling accessToken as function');
 
-    timeoutCheck = setTimeout(function accessTokenTimeoutCheck() {
+    timeoutCheck = setTimeout(() => {
       scope._debug('getAccessToken', 'timeout check', called);
       callbackOnce(new Error('accessToken timed out'), null);
     }, this._options.accessTokenTimeout);
 
     try {
-      this._options.accessToken(function accessTokenReceiver(err, value) {
+      this._options.accessToken((err, value) => {
         scope._debug('getAccessToken', 'received accessToken callback', called, err, value);
         callbackOnce(err, value);
       });
@@ -836,8 +781,17 @@ async function displayInstagramFeed() {
 
 // console.log('Hi');
 
+// *=========================================
+// ** Add Class  **
+// *=========================================
+
+function addClass(selector, classToAdd) {
+  const target = document.querySelectorAll(selector);
+  target.forEach((elem) => elem.classList.add(classToAdd));
+}
+
 // *==============================================================================
 // ** Exports  **
 // *==============================================================================
 
-export { cookieWarning, handleFirstTab, reframe, displayInstagramFeed };
+export { cookieWarning, handleFirstTab, displayInstagramFeed, addClass };

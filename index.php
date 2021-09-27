@@ -5,7 +5,7 @@
 	<?php perch_content("Section One"); ?>
 	<?php perch_content("Section Two"); ?>
 	<?php perch_content("Section Three"); ?>
-	<?php perch_content("Contact Form"); ?>
+	<?php perch_mailchimp_form('forms/subscribe'); ?>
 	<!-- Featured articles  -->
 	<?php
 		perch_blog_custom(array(
@@ -32,4 +32,3 @@
 </main>
 <?php perch_layout('footers/main-footer'); ?>
 <?php perch_layout('footer-ends/homepage-footer-end'); ?>
-<!-- TODO: Validate HTML -->

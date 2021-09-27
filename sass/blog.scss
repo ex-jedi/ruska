@@ -141,6 +141,7 @@
   a {
     color: $font-colour-dark;
     font-weight: 700;
+    text-decoration: none;
   }
 
   @include breakpoint(950) {
@@ -169,6 +170,7 @@
 
 .blog-index-subheading-link {
   color: $font-colour-dark;
+  text-decoration: none;
 }
 
 .blog-index-item {
@@ -347,6 +349,13 @@
   font-size: $font-size-small;
 }
 
+.blog-video-embed {
+  iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+    height: auto;
+  }
+}
 //*=========================================
 //** Previous and Next Posts **
 //*=========================================
@@ -432,7 +441,11 @@
   }
 
   h1 {
-    margin-bottom: 0;
+    margin: 0 $section-spacing-medium;
+
+    @include breakpoint(700) {
+      margin: 0 $section-spacing-extra-tiny;
+    }
   }
 }
 

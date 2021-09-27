@@ -79,6 +79,10 @@
   @include flex(row);
   flex-wrap: wrap;
   gap: 0 $section-spacing-small;
+
+  @include breakpoint(700) {
+    padding-inline: $section-spacing-extra-tiny;
+  }
 }
 
 .shop-list-item {
@@ -337,5 +341,304 @@
 
   @include breakpoint(1300) {
     padding-top: $section-spacing-medium;
+  }
+}
+
+//*==============================================================================
+//** Snipcart Customisation **
+//*==============================================================================
+
+//*=========================================
+//** General **
+//*=========================================
+
+//********** Fonts **********
+
+// Fonts family
+.snipcart__font--std,
+.snipcart__font--secondary,
+.snipcart__font--regular,
+.snipcart__font--tiny,
+.snipcart__font--subtitle,
+.snipcart__font--slim {
+  @include main-font-stack;
+  line-height: 1;
+  color: $font-colour-dark;
+}
+
+.snipcart-button-link {
+  @include main-font-stack;
+  color: $font-colour-dark;
+  line-height: 1;
+}
+
+// Font size
+.snipcart__font--std,
+.snipcart__font--secondary,
+.snipcart__font--regular,
+.snipcart__font--large,
+.snipcart__font--subtitle,
+.snipcart__font--slim,
+.snipcart-button-link {
+  font-size: $font-size-tiny;
+}
+
+.snipcart__font--tiny {
+  font-size: $font-size-teeny-tiny;
+  font-weight: 700;
+}
+
+//********** Container **********
+
+.snipcart-modal,
+.snipcart-modal__container,
+.snipcart-cart-header,
+.snipcart-cart__footer,
+section.snipcart-cart__content {
+  background-color: $background-colour-light;
+}
+
+//********** Header **********
+
+.snipcart-cart-header__title {
+  font-size: $font-size-small;
+}
+
+.snipcart-cart-header {
+  font-weight: 700;
+
+  h3 {
+    padding: 0 $section-spacing-extra-tiny;
+  }
+
+  .snipcart-modal__close-icon {
+    color: $font-colour-dark;
+  }
+}
+
+// Header Icons
+.snipcart-cart-header__close-button {
+  .snipcart__icon {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+  }
+}
+
+.snipcart-cart-header__count,
+.snipcart-checkout__header {
+  font-weight: 700;
+
+  .snipcart__icon {
+    color: $font-colour-dark;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+#snipcart {
+  .snipcart-button-primary {
+    background-color: $background-colour-medium;
+    border: 2px solid $background-colour-medium;
+    box-shadow: none;
+
+    .snipcart-base-button__label {
+      font-size: $font-size-tiny;
+    }
+
+    .snipcart-base-button__icon,
+    .snipcart__icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    &:hover {
+      background-color: $background-colour-light;
+      color: $font-colour-dark;
+      border: 2px solid $background-colour-dark;
+    }
+  }
+}
+
+//********** Summary **********
+
+.snipcart-header-summary {
+  position: absolute;
+  top: $header-spacing-tiny;
+  right: $section-spacing-extra-tiny;
+  margin: 0 auto;
+
+  @include breakpoint(700) {
+    right: $header-spacing-tiny;
+  }
+
+  svg {
+    color: $font-colour-dark;
+    height: 40px;
+    width: 40px;
+  }
+
+  button {
+    cursor: pointer;
+    @include flex(row);
+    align-items: center;
+    color: $font-colour-dark;
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+.snipcart-count-wrapper {
+  background-color: $background-colour-very-light;
+  width: 35px;
+  line-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  top: 3px;
+}
+
+.snipcart-items-count {
+  position: relative;
+  font-size: $font-size-tiny;
+}
+
+//*=========================================
+//** Main Cart Page **
+//*=========================================
+
+// Items
+.snipcart-item-line {
+  box-shadow: none;
+
+  select {
+    height: auto;
+  }
+}
+
+.snipcart-item-line__header {
+  .snipcart-button-icon,
+  .snipcart__icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+.snipcart-item-line__variants {
+  .snipcart-button-icon,
+  .snipcart__icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.snipcart-item-quantity__quantity {
+  border: 2px solid $background-colour-dark;
+  margin-right: 10px;
+  width: fit-content;
+
+  &:hover {
+    border: 2px solid $background-colour-medium-lighter;
+  }
+
+  span {
+    margin: 0 20px;
+  }
+}
+
+.snipcart-summary-fees {
+  margin-top: $section-spacing-extra-tiny;
+}
+
+// Secondary cart
+.snipcart-cart__secondary-header {
+  background-color: $background-colour-light;
+}
+
+.snipcart-featured-payment-methods {
+  h3 {
+    background-color: $background-colour-light;
+  }
+}
+
+// Increment buttons
+
+.snipcart-button-icon.is-secondary {
+  background-color: $background-colour-very-light;
+  color: $font-colour-dark;
+
+  &:hover {
+    background-color: $background-colour-medium-lighter;
+    color: $font-colour-light;
+  }
+}
+
+//*=========================================
+//** Checkout **
+//*=========================================
+
+.snipcart-checkout__content {
+  .snipcart__icon {
+    color: $font-colour-dark;
+  }
+}
+
+#snipcart-checkout-step-billing {
+  label.snipcart-form__label {
+    font-size: $font-size-tiny;
+    color: $font-colour-dark;
+    font-weight: 400;
+  }
+}
+
+#snipcart-checkout-step-payment {
+  .snipcart__box.snipcart__box--gray.snipcart__box--slim {
+    background-color: #fff;
+  }
+}
+
+.snipcart-cart-summary {
+  background-color: #fff;
+}
+
+.snipcart-cart-summary__content {
+  border-bottom: 1px dotted #b8b8b8;
+}
+
+.snipcart__box--badge {
+  background-color: $background-colour-very-light;
+}
+
+//*=========================================
+//** Empty Cart **
+//*=========================================
+
+.snipcart-empty-cart {
+  h1 {
+    font-size: $font-size-small;
+  }
+
+  button {
+    background-color: $background-colour-medium;
+    border: 2px solid $background-colour-medium;
+    color: $font-colour-light;
+    box-shadow: none;
+
+    &:hover {
+      background-color: $background-colour-light;
+      color: $font-colour-dark;
+      border: 2px solid $background-colour-dark;
+      box-shadow: none;
+    }
+
+    .snipcart-base-button__label {
+      font-size: $font-size-tiny;
+      font-weight: 700;
+    }
+
+    .snipcart-base-button__icon,
+    .snipcart__icon {
+      width: 30px;
+      height: 30px;
+    }
   }
 }

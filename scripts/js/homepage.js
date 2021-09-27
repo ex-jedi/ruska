@@ -21,9 +21,14 @@ import {
   scrollTriggerRefresh,
   pyramidDividerFunction,
   addMenuListener,
+  fadeAndSwapThreeExport,
+  splitTextFadeUpExport,
+  simpleFadeIn,
 } from './animations';
 
 import { displayInstagramFeed } from './utils';
+
+import { consoleGreeting } from './lib';
 
 // *=========================================
 // ** GSAP  **
@@ -42,6 +47,8 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 // ** Import Functions  **
 // *=========================================
 
+// TODO: Organise below 👇🏾
+
 addMenuListener();
 
 mainLogoAnimation();
@@ -56,3 +63,11 @@ pyramidDividerFunction();
 scrollTriggerRefresh();
 
 displayInstagramFeed();
+
+fadeAndSwapThreeExport();
+
+splitTextFadeUpExport();
+
+consoleGreeting();
+
+simpleFadeIn();

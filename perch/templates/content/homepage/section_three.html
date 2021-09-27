@@ -4,20 +4,22 @@
       <div class=" tree-animation-wrapper section-three-tree-animation-wrapper" id="homepage-tree-animation-four">
         <perch:template path="../svg/tree_svg.html">
         <p class="tree-animation-text section-three-tree-text">
-          blog
+          <a href="/blog" class="tree-animation-link">
+            blog
+          </a>
         </p>
       </div>
-      <h2 class="body-text-large homepage-section-three-text">
+      <h2 class="body-text-large homepage-section-three-text split-text-fade-up">
         <perch:content id="homepageSectionTwoText" type="textarea" size="s" label="Section Two Text - First" required>
       </h2>
     </div>
-    <p class="body-text-large homepage-section-three-text">
+    <p class="body-text-large homepage-section-three-text split-text-fade-up">
       <perch:content id="homepageSectionTwoTextTwo" type="textarea" size="s" label="Section Two Text - Second" required>
     </p>
   </div>
   <div class="homepage-full-width-image-wrapper-wrapper">
-    <img class="homepage-full-width-image-wrapper" itemprop="image" loading="lazy" src="<perch:content id="sectionThreeImage" type="image" width="2000" label="Section Two Image">" alt="<perch:content id="sectionThreeImgAlt" type="text" label="Image Description">"
-    sizes="(max-width: 100px) 100vw, 100vw"
+    <img class="homepage-full-width-image-wrapper simple-fade-in" itemprop="image" loading="lazy" src="<perch:content id="sectionThreeImage" type="image" width="2000" label="Section Two Image">" alt="<perch:content id="sectionThreeImgAlt" type="text" label="Image Description">"
+    sizes="100vw"
     srcset="<perch:content type="image" id="sectionThreeImage" width="2000"> 2000w,
     <perch:content type="image" id="sectionThreeImage" width="1500"> 1500w,
     <perch:content type="image" id="sectionThreeImage" width="1200"> 1200w,
