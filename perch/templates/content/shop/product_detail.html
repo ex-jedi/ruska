@@ -34,7 +34,7 @@
   <!-- Add to cart -->
   <button class="body-text-medium add-to-cart-button snipcart-add-item simple-fade-in"
   data-item-id="<perch:content id="slug" type="hidden">"
-  data-item-url="/"
+  data-item-url="<perch:content id="productURL">"
   data-item-price="<perch:content id="productPrice" type="price" filter="space">"
   data-item-name="<perch:content id="productHeading">"
   data-item-description="<perch:content id="cartDescription">"
@@ -70,3 +70,6 @@
 
 <!-- Cart product description    -->
 <perch:content id="cartDescription" type="text" label="Short Description For Cart" help="Brief product description for the shopping cart" count="words" size="l" order="8" suppress>
+  <div class="show-all">
+  <perch:showall />
+  </div>
