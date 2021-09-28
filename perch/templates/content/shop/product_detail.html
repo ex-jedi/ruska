@@ -29,10 +29,10 @@
   <perch:content id="colorVariant" type="text-table" label="Optional Color Variant" order="6" help="Separate each option with a full stop, and don't use spaces. If you want to increase the price for an option add the amount in square brackets after the option. For example Purple.Red[+25].Green.Blue[+5]" suppress>
 
   <!-- Thickness variant  -->
-  <perch:content id="thicknessVariant" type="text-table" label="Optional Tickness Variant" order="8" help="Separate each option with a full stop, and don't use spaces. If you want to increase the price for an option add the amount in square brackets after the option. For example 5mm.10mm.15mm[+5]"  suppress>
+  <perch:content id="thicknessVariant" type="text-table" label="Optional Tickness Variant" order="8" help="Separate each option with a full stop, and don't use spaces. If you want to increase the price for an option add the amount in square brackets after the option. For example 5mm.10mm.15mm[+5]" suppress>
 
   <!-- Weight  -->
-  <perch:content id="productWeight" type="text" label="Optional product weight" help="In grams. Use Numbers only. Weight is used to calculate custom shipping rates for a product." order="5">
+  <perch:content id="productWeight" type="text" label="Optional product weight" help="In grams. Use Numbers only. Weight is used to calculate custom shipping rates for a product." order="5" suppress>
 
   <!-- Add to cart -->
   <button class="body-text-medium add-to-cart-button snipcart-add-item simple-fade-in"
@@ -43,7 +43,7 @@
   data-item-description="<perch:content id="cartDescription">"
   data-item-image="<perch:content id="shopCoverImage">"
   <perch:if exists="productWeight">
-    data-item-weight="<perch:content id="productWeight">"
+    data-item-weight="<perch:content id="productWeight" type="hidden">"
   </perch:if>
   <perch:if exists="colorVariant">
     data-item-custom1-name="Colour"
