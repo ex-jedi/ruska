@@ -86,6 +86,14 @@
 
   <!-- Featured Posts  -->
   <perch:blog id="featuredPosts" label="Include in Featured Posts List" type="select" options="Yes|yes,No|no" suppress="true" order="7">
+
+ <!-- Hidden Author   -->
+<perch:if exists="authorGivenName">
+  <span class="author" itemprop="author">
+    <perch:blog id="authorGivenName" type="hidden">
+    <perch:blog id="authorFamilyName" type="hidden">
+  </span>
+</perch:if>
 </div> <!-- post wrapper -->
 
 <time class="dt-published" datetime="<perch:blog id="postDateTime" type="date" label="Date &amp; Time Published" help="Can be set to a future date &amp; time to delay publishing. Uses Greenwich Mean Time."  time="true" format="Y-m-d H:i:s" order="7">">
