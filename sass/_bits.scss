@@ -71,8 +71,6 @@ $paragraph-spacing-small: 2.5rem;
 //** Colours  **
 //*=========================================
 
-//TODO: Customise brand colours
-
 //Main brand Colours
 $background-colour-dark: #77442f;
 $background-colour-light: #faf6f1;
@@ -93,8 +91,6 @@ $link-visited: #8608fb;
 //*=========================================
 
 //********** Transition Timings**********
-
-//TODO: Customise Timings
 
 //* Timings
 
@@ -137,8 +133,6 @@ $transition-one: all 0.4s ease;
 //** Media Queries   **
 //*=========================================
 
-//TODO: Delete unused media queries
-
 //********** Max Width **********
 
 @mixin breakpoint($point) {
@@ -146,39 +140,6 @@ $transition-one: all 0.4s ease;
     $point: 1px * $point;
   }
   @media (max-width: $point) {
-    @content;
-  }
-}
-
-//********** Min Width **********
-
-@mixin min-breakpoint($point) {
-  @if unitless($point) {
-    $point: 1px * $point;
-  }
-  @media (min-width: $point) {
-    @content;
-  }
-}
-
-//********** Height **********
-
-@mixin height-breakpoint($point) {
-  @if unitless($point) {
-    $point: 1px * $point;
-  }
-  @media (max-height: $point) {
-    @content;
-  }
-}
-
-//********** Width and Orientation **********
-
-@mixin width-orientation-breakpoint($point, $orientation: portrait) {
-  @if unitless($point) {
-    $point: 1px * $point;
-  }
-  @media (max-height: $point) and (orientation: $orientation) {
     @content;
   }
 }

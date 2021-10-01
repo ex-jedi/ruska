@@ -614,7 +614,6 @@ select {
 }
 
 .instagram-feed-background-image {
-  //TODO: See if this can span two sections
   position: absolute;
   z-index: -1;
   top: -$section-spacing-tiny;
@@ -742,13 +741,12 @@ select {
   color: $font-colour-dark;
   background-color: $background-colour-light;
   padding: 10px;
-  //TODO: Add font size variable
-  font-size: 30px;
+  font-size: $font-size-small;
   top: 0;
   left: 0;
   width: 1px;
   height: 1px;
-  margin: 0.5rem 0 0 0.5rem;
+  margin: $paragraph-spacing-small 0 0 $paragraph-spacing-small;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   text-decoration: none;
