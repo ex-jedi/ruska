@@ -1,5 +1,5 @@
-<section class="shop-section">
-  <div class="product-wrapper" itemscope itemtype="https://schema.org/Product">
+<section class="shop-section" itemscope itemtype="https://schema.org/Product">
+  <div class="product-wrapper" itemscope itemtype="https://schema.org/Offer">
   <!-- Product images -->
   <div class="product-images-wrapper scrolltrigger-refresh-target simple-fade-in">
     <perch:repeater id="productImagesRepeater" label="Product Images" max="5" order="12">
@@ -13,7 +13,7 @@
   </div>
 
   <!-- Heading  -->
-  <h1 class="product-heading simple-fade-in" itemprop="name offers" >
+  <h1 class="product-heading simple-fade-in" itemprop="name">
     <perch:content id="productHeading" type="text" label="Product Heading" order="2" required title>
   </h1>
 
