@@ -511,7 +511,7 @@ section.snipcart-cart__content {
 
 //********** Summary Edit **********
 .snipcart-cart__content {
-  background-color: red;
+  background-color: $background-colour-light;
 }
 
 //*=========================================
@@ -523,6 +523,8 @@ section.snipcart-cart__content {
 .snipcart-item-line__container,
 .snipcart-item-line,
 .snipcart-item-list,
+.snipcart-cart--edit,
+.snipcart-cart__content,
 .snipcart-cart__footer {
   background-color: $background-colour-light !important;
 }
