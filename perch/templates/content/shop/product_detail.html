@@ -1,5 +1,5 @@
 <section class="shop-section">
-  <div class="product-wrapper">
+  <div class="product-wrapper" itemscope itemtype="https://schema.org/Product">
   <!-- Product images -->
   <div class="product-images-wrapper scrolltrigger-refresh-target simple-fade-in">
     <perch:repeater id="productImagesRepeater" label="Product Images" max="5" order="12">
@@ -13,7 +13,7 @@
   </div>
 
   <!-- Heading  -->
-  <h1 class="product-heading simple-fade-in">
+  <h1 class="product-heading simple-fade-in" itemprop="name">
     <perch:content id="productHeading" type="text" label="Product Heading" order="2" required title>
   </h1>
 
@@ -21,8 +21,8 @@
   <perch:content id="slug" for="productHeading" type="slug" suppress>
 
   <!-- Price -->
-  <div class="product-price simple-fade-in">
-    &pound;<perch:content id="productPrice" type="text" label="Product Price" order="4" required>
+  <div class="product-price simple-fade-in" itemprop="price" content="<perch:content id="productPrice" type="text" label="Product Price" order="4" required>">
+    &pound;<perch:content id="productPrice">
   </div>
 
   <!-- Colour variant  -->
@@ -58,7 +58,7 @@
   </button>
 
   <!-- Description -->
-  <div class="product-description-wrapper body-text-medium scrolltrigger-refresh-target simple-fade-in">
+  <div class="product-description-wrapper body-text-medium scrolltrigger-refresh-target simple-fade-in" itemprop="description">
     <perch:content id="productDescription" type="textarea" label="Description" editor="redactor" order="14" html>
   </div>
 
