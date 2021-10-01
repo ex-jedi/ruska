@@ -622,6 +622,21 @@ section.snipcart-cart__content {
       color: $font-colour-dark;
     }
   }
+
+  // Checkboxes
+
+  .snipcart-checkbox + label:before {
+    border: 1px solid $background-colour-dark;
+  }
+  background-color: $background-colour-light;
+
+  .snipcart-checkbox:checked + label:before {
+    background-color: $background-colour-light;
+  }
+
+  .snipcart-checkbox:checked + label:after {
+    color: $font-colour-dark;
+  }
 }
 
 .snipcart-checkout__content {
