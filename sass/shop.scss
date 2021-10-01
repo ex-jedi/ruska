@@ -513,6 +513,11 @@ section.snipcart-cart__content {
 //*=========================================
 
 // Items
+
+.snipcart-item-line__container {
+  background-color: $background-colour-light;
+}
+
 .snipcart-item-line {
   box-shadow: none;
 
@@ -540,9 +545,11 @@ section.snipcart-cart__content {
   border: 2px solid $background-colour-dark;
   margin-right: 10px;
   width: fit-content;
+  background-color: $background-colour-light;
 
   &:hover {
     border: 2px solid $background-colour-medium-lighter;
+    background-color: $background-colour-light;
   }
 
   span {
