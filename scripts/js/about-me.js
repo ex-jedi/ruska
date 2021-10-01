@@ -11,7 +11,7 @@ import {
   splitTextFadeUpExport,
 } from './animations';
 
-import { displayInstagramFeed, addClass } from './utils';
+import { displayInstagramFeed, addClass, cookieWarning } from './utils';
 
 // *=========================================
 // ** Import Functions  **
@@ -22,6 +22,8 @@ import { displayInstagramFeed, addClass } from './utils';
 displayInstagramFeed();
 
 addClass('.about-me-text-wrapper p', 'simple-fade-in');
+
+cookieWarning();
 
 // ********** Animation **********
 

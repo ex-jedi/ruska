@@ -15,7 +15,7 @@ import {
   simpleFadeIn,
 } from './animations';
 
-import { displayInstagramFeed } from './utils';
+import { displayInstagramFeed, cookieWarning } from './utils';
 
 // *=========================================
 // ** Import Functions  **
@@ -37,3 +37,5 @@ simpleFadeIn();
 
 // ********** Lib **********
 displayInstagramFeed();
+
+cookieWarning();
