@@ -26,27 +26,6 @@ function cookieWarning() {
 }
 
 // *=========================================
-// ** Accessibility  **
-// *=========================================
-// TODO: Use or remove
-// * Adding focus outline class when tab key is used
-function handleFirstTab(e) {
-  if (e.keyCode === 9) {
-    document.body.classList.add('user-is-tabbing');
-
-    window.removeEventListener('keydown', handleFirstTab);
-    window.addEventListener('mousedown', handleMouseDownOnce);
-  }
-}
-
-function handleMouseDownOnce() {
-  document.body.classList.remove('user-is-tabbing');
-
-  window.removeEventListener('mousedown', handleMouseDownOnce);
-  window.addEventListener('keydown', handleFirstTab);
-}
-
-// *=========================================
 // ** Instafeed  **
 // *=========================================
 
@@ -770,17 +749,6 @@ async function displayInstagramFeed() {
   feed.run();
 }
 
-// ********** Console Log Elements Wider Then Viewport **********
-// const docWidth = document.documentElement.offsetWidth;
-
-// [].forEach.call(document.querySelectorAll('*'), function (el) {
-//   if (el.offsetWidth > docWidth) {
-//     console.log(el);
-//   }
-// });
-
-// console.log('Hi');
-
 // *=========================================
 // ** Add Class  **
 // *=========================================
@@ -794,4 +762,4 @@ function addClass(selector, classToAdd) {
 // ** Exports  **
 // *==============================================================================
 
-export { cookieWarning, handleFirstTab, displayInstagramFeed, addClass };
+export { cookieWarning, displayInstagramFeed, addClass };

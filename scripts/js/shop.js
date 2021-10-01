@@ -2,12 +2,6 @@
 // ** Shop  **
 // *==============================================================================
 
-// TODO: Remove GSAP Imports
-import { gsap } from 'gsap';
-import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
-
 // *=========================================
 // ** Imports  **
 // *=========================================
@@ -21,20 +15,7 @@ import {
   simpleFadeIn,
 } from './animations';
 
-import { displayInstagramFeed } from './utils';
-
-// *=========================================
-// ** GSAP  **
-// *=========================================
-gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
-
-// !==============================================================================
-// FIXME: Temp Building 👇🏾
-// !==============================================================================
-
-// !==============================================================================
-// FIXME: Temp Building 👆🏾
-// !==============================================================================
+import { displayInstagramFeed, cookieWarning } from './utils';
 
 // *=========================================
 // ** Import Functions  **
@@ -56,3 +37,5 @@ simpleFadeIn();
 
 // ********** Lib **********
 displayInstagramFeed();
+
+cookieWarning();

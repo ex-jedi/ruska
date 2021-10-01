@@ -11,7 +11,7 @@ import {
   simpleFadeIn,
 } from './animations';
 
-import { displayInstagramFeed } from './utils';
+import { displayInstagramFeed, cookieWarning } from './utils';
 // ********** Animations **********
 mainLogoAnimation();
 addMenuListener();
@@ -22,3 +22,4 @@ simpleFadeIn();
 
 // ********** Utils **********
 displayInstagramFeed();
+cookieWarning();

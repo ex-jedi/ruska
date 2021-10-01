@@ -614,7 +614,6 @@ select {
 }
 
 .instagram-feed-background-image {
-  //TODO: See if this can span two sections
   position: absolute;
   z-index: -1;
   top: -$section-spacing-tiny;
@@ -742,13 +741,12 @@ select {
   color: $font-colour-dark;
   background-color: $background-colour-light;
   padding: 10px;
-  //TODO: Add font size variable
-  font-size: 30px;
+  font-size: $font-size-small;
   top: 0;
   left: 0;
   width: 1px;
   height: 1px;
-  margin: 0.5rem 0 0 0.5rem;
+  margin: $paragraph-spacing-small 0 0 $paragraph-spacing-small;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   text-decoration: none;
@@ -798,22 +796,19 @@ html body table.perch-debug th {
 //*=========================================
 
 .cookie-warning-wrapper {
-  display: none;
-  pointer-events: none;
-
   @include flex(row);
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 1rem;
-  font-size: 30px;
+  padding: $section-spacing-tiny;
+  font-size: $font-size-tiny;
   //TODO: Add variables for cookie warning colour
-  background-color: #fff;
+  background-color: $background-colour-medium;
   opacity: 0;
-  z-index: 10;
+  z-index: 100;
   transition: all 0.5s 0.25s;
 
   @include breakpoint(1100) {
@@ -822,23 +817,19 @@ html body table.perch-debug th {
 
   @include breakpoint(850) {
     @include flex(column);
+    padding: $section-spacing-extra-tiny;
   }
 }
 
 .cookie-warning-paragraph {
-  //TODO: Add variables for cookie warning spacing
-  margin: 0 $section-spacing-large 0 0;
-  color: #000;
+  margin: 0 $paragraph-spacing-large 0 0;
+  color: $font-colour-light;
 
-  @include breakpoint(1300) {
-    //TODO: Add variables for cookie warning spacing
-    margin: 0 $paragraph-spacing-large 0 0;
-  }
-
-  @include breakpoint(850) {
-    text-align: center;
-    //TODO: Add variables for cookie warning spacing
-    margin: 0 0 $paragraph-spacing-large;
+  &:last-of-type {
+    @include breakpoint(850) {
+      text-align: center;
+      margin: 0 0 $section-spacing-tiny;
+    }
   }
 }
 
@@ -847,11 +838,9 @@ html body table.perch-debug th {
 }
 
 .cookie-warning-button {
-  //TODO: Add variables for cookie warning spacing & colour
-
   background-color: transparent;
-  border: 2px solid #000;
-  color: #000;
+  border: 2px solid $background-colour-light;
+  color: $font-colour-light;
   font-size: inherit;
   padding: 5px 20px;
   width: fit-content;

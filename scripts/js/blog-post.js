@@ -11,11 +11,12 @@ import {
   simpleFadeIn,
 } from './animations';
 
-import { displayInstagramFeed, addClass } from './utils';
+import { displayInstagramFeed, addClass, cookieWarning } from './utils';
 
 // ********** Utils **********
 displayInstagramFeed();
 addClass('.blog-text-block p', 'simple-fade-in');
+cookieWarning();
 
 // ********** Animations **********
 mainLogoAnimation();

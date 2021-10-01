@@ -6,12 +6,6 @@
 // ** Imports  **
 // *==============================================================================
 
-// TODO: Remove GSAP Imports
-import { gsap } from 'gsap';
-import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
-
 import {
   mainLogoAnimation,
   homepageTreeAnimationOne,
@@ -26,28 +20,13 @@ import {
   simpleFadeIn,
 } from './animations';
 
-import { displayInstagramFeed } from './utils';
+import { displayInstagramFeed, cookieWarning } from './utils';
 
 import { consoleGreeting } from './lib';
 
 // *=========================================
-// ** GSAP  **
-// *=========================================
-gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
-
-// !==============================================================================
-// FIXME: Temp Building 👇🏾
-// !==============================================================================
-
-// !==============================================================================
-// FIXME: Temp Building 👆🏾
-// !==============================================================================
-
-// *=========================================
 // ** Import Functions  **
 // *=========================================
-
-// TODO: Organise below 👇🏾
 
 addMenuListener();
 
@@ -71,3 +50,5 @@ splitTextFadeUpExport();
 consoleGreeting();
 
 simpleFadeIn();
+
+cookieWarning();

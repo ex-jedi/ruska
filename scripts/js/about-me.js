@@ -1,9 +1,3 @@
-// TODO: Remove GSAP Imports
-import { gsap } from 'gsap';
-import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { DrawSVGPlugin } from 'gsap/DrawSVGPlugin';
-
 // *=========================================
 // ** Imports  **
 // *=========================================
@@ -17,19 +11,7 @@ import {
   splitTextFadeUpExport,
 } from './animations';
 
-import { displayInstagramFeed, addClass } from './utils';
-// *=========================================
-// ** GSAP  **
-// *=========================================
-gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
-
-// !==============================================================================
-// FIXME: Temp Building 👇🏾
-// !==============================================================================
-
-// !==============================================================================
-// FIXME: Temp Building 👆🏾
-// !==============================================================================
+import { displayInstagramFeed, addClass, cookieWarning } from './utils';
 
 // *=========================================
 // ** Import Functions  **
@@ -40,6 +22,8 @@ gsap.registerPlugin(CSSRulePlugin, ScrollTrigger, DrawSVGPlugin);
 displayInstagramFeed();
 
 addClass('.about-me-text-wrapper p', 'simple-fade-in');
+
+cookieWarning();
 
 // ********** Animation **********
 
