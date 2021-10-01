@@ -513,6 +513,11 @@ section.snipcart-cart__content {
 //*=========================================
 
 // Items
+
+.snipcart-item-line__container {
+  background-color: $background-colour-light;
+}
+
 .snipcart-item-line {
   box-shadow: none;
 
@@ -540,9 +545,11 @@ section.snipcart-cart__content {
   border: 2px solid $background-colour-dark;
   margin-right: 10px;
   width: fit-content;
+  background-color: $background-colour-light;
 
   &:hover {
     border: 2px solid $background-colour-medium-lighter;
+    background-color: $background-colour-light;
   }
 
   span {
@@ -581,6 +588,67 @@ section.snipcart-cart__content {
 //** Checkout **
 //*=========================================
 
+// Billing
+.snipcart-form {
+  box-shadow: none;
+
+  .snipcart__box {
+    background-color: $background-colour-light;
+  }
+
+  .snipcart-input,
+  .snipcart-form__select,
+  .snipcart-typeahead__suggestions {
+    background-color: $background-colour-light;
+    border: 1px solid $background-colour-dark;
+    box-shadow: none;
+
+    .snipcart__icon {
+      color: $font-colour-dark;
+
+      &:focus-within {
+        color: $font-colour-dark;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $background-colour-medium-lighter;
+    }
+  }
+
+  .snipcart-form__select-wrapper:focus-within {
+    .snipcart__icon {
+      color: $font-colour-dark;
+    }
+  }
+
+  // Checkboxes
+
+  .snipcart-checkbox + label:before {
+    border: 1px solid $background-colour-dark;
+    background-color: $background-colour-light;
+  }
+
+  .snipcart-checkbox:checked + label:before {
+    background-color: $background-colour-light;
+  }
+
+  .snipcart-checkbox:checked + label:after {
+    color: $font-colour-dark;
+  }
+}
+
+// Shipping step
+#snipcart-checkout-step-shipping,
+#snipcart-checkout-step-payment {
+  .snipcart__box,
+  .snipcart__box--gray,
+  .snipcart__box--slim {
+    background-color: $background-colour-light;
+  }
+}
+
 .snipcart-checkout__content {
   .snipcart__icon {
     color: $font-colour-dark;
@@ -588,6 +656,9 @@ section.snipcart-cart__content {
 }
 
 #snipcart-checkout-step-billing {
+  .snipcart__box {
+    background-color: $background-colour-light;
+  }
   label.snipcart-form__label {
     font-size: $font-size-tiny;
     color: $font-colour-dark;
@@ -595,22 +666,65 @@ section.snipcart-cart__content {
   }
 }
 
-#snipcart-checkout-step-payment {
-  .snipcart__box.snipcart__box--gray.snipcart__box--slim {
-    background-color: #fff;
-  }
-}
+//Summary
 
 .snipcart-cart-summary {
-  background-color: #fff;
+  background-color: $background-colour-light;
 }
 
 .snipcart-cart-summary__content {
+  background-color: $background-colour-light;
   border-bottom: 1px dotted #b8b8b8;
+}
+
+.snipcart-form__select-wrapper {
+  .snipcart__icon {
+    color: $font-colour-dark;
+  }
+
+  &:focus-within {
+    .snipcart__icon {
+      color: $font-colour-dark;
+    }
+  }
+}
+
+.snipcart-form__select {
+  border: 1px solid $background-colour-dark;
+  background-color: $background-colour-light;
+  color: $font-colour-dark;
+  box-shadow: none;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border: 1px solid $background-colour-dark;
+    background-color: $background-colour-light;
+    color: $font-colour-dark;
+    box-shadow: none;
+  }
 }
 
 .snipcart__box--badge {
   background-color: $background-colour-very-light;
+}
+
+.snipcart-shipping-rates-list-item--highlight {
+  background-color: $background-colour-very-light;
+  border: 1px solid $background-colour-very-light;
+}
+
+.snipcart-form-radio:checked + label:before {
+  background-color: $background-colour-dark;
+  border: 1px solid $background-colour-dark;
+  columns: $font-colour-light;
+}
+
+.snipcart-form-radio:checked + label:after {
+  top: 0;
+  left: -4px;
+  height: 26px;
+  width: 26px;
 }
 
 //*=========================================
