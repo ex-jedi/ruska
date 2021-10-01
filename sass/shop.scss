@@ -507,11 +507,15 @@ section.snipcart-cart__content {
 //********** Order **********
 .snipcart-order__details {
   max-width: 1200px;
+
+  .snipcart__box {
+    background-color: $background-colour-light;
+  }
 }
 
 //********** Summary Edit **********
 .snipcart-cart__content {
-  background-color: red;
+  background-color: $background-colour-light;
 }
 
 //*=========================================
@@ -523,6 +527,8 @@ section.snipcart-cart__content {
 .snipcart-item-line__container,
 .snipcart-item-line,
 .snipcart-item-list,
+.snipcart-cart--edit,
+.snipcart-cart__content,
 .snipcart-cart__footer {
   background-color: $background-colour-light !important;
 }
@@ -718,6 +724,11 @@ section.snipcart-cart__content {
   background-color: $background-colour-very-light;
 }
 
+.snipcart-shipping-rates-list-item {
+  background-color: $background-colour-light;
+  border: 1px solid $background-colour-very-light;
+}
+
 .snipcart-shipping-rates-list-item--highlight {
   background-color: $background-colour-very-light;
   border: 1px solid $background-colour-very-light;
@@ -734,6 +745,10 @@ section.snipcart-cart__content {
   left: -4px;
   height: 26px;
   width: 26px;
+}
+
+.snipcart-form-radio:hover + label:before {
+  border-color: $font-colour-dark;
 }
 
 //*=========================================
