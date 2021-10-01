@@ -588,6 +588,42 @@ section.snipcart-cart__content {
 //** Checkout **
 //*=========================================
 
+// Billing
+.snipcart-form {
+  box-shadow: none;
+
+  .snipcart__box {
+    background-color: $background-colour-light;
+  }
+
+  .snipcart-input,
+  .snipcart-form__select,
+  .snipcart-typeahead__suggestions {
+    background-color: $background-colour-light;
+    border: 1px solid $background-colour-dark;
+    box-shadow: none;
+
+    .snipcart__icon {
+      color: $font-colour-dark;
+
+      &:focus-within {
+        color: $font-colour-dark;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $background-colour-medium-lighter;
+    }
+  }
+
+  .snipcart-form__select-wrapper:focus-within {
+    .snipcart__icon {
+      color: $font-colour-dark;
+    }
+  }
+}
+
 .snipcart-checkout__content {
   .snipcart__icon {
     color: $font-colour-dark;
