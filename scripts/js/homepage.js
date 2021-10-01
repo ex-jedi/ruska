@@ -20,7 +20,7 @@ import {
   simpleFadeIn,
 } from './animations';
 
-import { displayInstagramFeed } from './utils';
+import { displayInstagramFeed, cookieWarning } from './utils';
 
 import { consoleGreeting } from './lib';
 
@@ -50,3 +50,5 @@ splitTextFadeUpExport();
 consoleGreeting();
 
 simpleFadeIn();
+
+cookieWarning();
