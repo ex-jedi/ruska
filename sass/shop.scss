@@ -71,8 +71,23 @@
 //** Listing Page **
 //*==============================================================================
 
-.shop-page-heading {
-  margin-bottom: 0;
+.shop-page-title-wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+
+  svg {
+    opacity: 0.6;
+  }
+}
+
+.shop-listing-page-title {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .shop-list-wrapper {
