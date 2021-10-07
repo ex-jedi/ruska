@@ -197,6 +197,7 @@
 
   @include breakpoint(700) {
     padding-bottom: $section-spacing-tiny;
+    gap: 0 $section-spacing-extra-tiny;
   }
 
   @include styled-scrollbar(
