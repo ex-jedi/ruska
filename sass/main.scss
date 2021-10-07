@@ -434,6 +434,7 @@ a {
     border-left: 0;
     border-right: 0;
     border-bottom: 3px solid $font-colour-dark;
+    border-radius: 0;
 
     @include breakpoint(1100) {
       margin: 0;

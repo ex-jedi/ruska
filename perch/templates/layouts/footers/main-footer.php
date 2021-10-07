@@ -1,6 +1,6 @@
 <footer class="main-footer">
 		<?php perch_content("Footer Contact"); ?>
-		<div class="footer-legals">
+		<div class="footer-legals simple-fade-in">
 			<p class="footer-copyright" >
 				&copy; <?php echo date("Y"); ?> <span itemprop="name">Hannah Garrido</span>
 			</p>
@@ -11,7 +11,7 @@
 				<a href="/privacy-and-cookie-policy.php">Privacy &amp; cookie policy</a>
 			</p>
 		</div>
-		<p class="footer-credit">
+		<p class="footer-credit simple-fade-in">
 			Web design & development, brand design & illustration by <a href="" class="promo-link">phoenix & phoenix</a>
 		</p>
 </footer>
