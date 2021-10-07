@@ -336,6 +336,8 @@ a {
 
   @include breakpoint(700) {
     bottom: $section-spacing-extra-tiny;
+    height: 60px;
+    width: 60px;
   }
 }
 
