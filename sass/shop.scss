@@ -106,6 +106,10 @@
   flex-wrap: wrap;
   gap: 0 $section-spacing-small;
 
+  @include breakpoint(950) {
+    padding-inline: $section-spacing-tiny;
+  }
+
   @include breakpoint(700) {
     padding-inline: $section-spacing-extra-tiny;
   }

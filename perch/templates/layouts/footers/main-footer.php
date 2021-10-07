@@ -11,7 +11,7 @@
 				<a href="/privacy-and-cookie-policy.php">Privacy &amp; cookie policy</a>
 			</p>
 		</div>
-		<p class="footer-credit simple-fade-in">
+		<p class="footer-credit">
 			Web design & development, brand design & illustration by <a href="" class="promo-link">phoenix & phoenix</a>
 		</p>
 </footer>
