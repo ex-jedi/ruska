@@ -115,6 +115,12 @@
 .homepage-header-image {
   aspect-ratio: 4/5;
   object-fit: cover;
+  width: 90%;
+  margin: 0 auto;
+
+  @include breakpoint(700) {
+    width: 100%;
+  }
 }
 
 .swapping-images {
@@ -162,11 +168,11 @@
   }
 
   @include breakpoint(1100) {
-    top: 925px;
+    top: 1050px;
   }
 
   @include breakpoint(800) {
-    top: 1320px;
+    top: 1150px;
     right: $section-spacing-tiny;
   }
 
