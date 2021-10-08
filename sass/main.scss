@@ -336,6 +336,8 @@ a {
 
   @include breakpoint(700) {
     bottom: $section-spacing-extra-tiny;
+    height: 60px;
+    width: 60px;
   }
 }
 
@@ -344,11 +346,15 @@ a {
 // *=========================================
 
 .email-signup-form-section {
-  padding: $section-spacing-large;
+  padding: $section-spacing-large 0;
   background-color: $background-colour-medium-lighter;
   color: $font-colour-dark;
 
   @include breakpoint(1300) {
+    padding: $section-spacing-medium 0;
+  }
+
+  @include breakpoint(1100) {
     padding: $section-spacing-medium;
   }
 
@@ -361,10 +367,16 @@ a {
   }
 }
 
-.email-signup-form {
-  padding: 0 $section-spacing-tiny;
-  @include breakpoint(1550) {
-    padding: 0;
+.email-signup-form-wrapper {
+  width: 60%;
+  margin: 0 auto;
+
+  @include breakpoint(1300) {
+    // width: 70%;
+  }
+
+  @include breakpoint(1100) {
+    width: 100%;
   }
 }
 
@@ -424,6 +436,7 @@ a {
     border-left: 0;
     border-right: 0;
     border-bottom: 3px solid $font-colour-dark;
+    border-radius: 0;
 
     @include breakpoint(1100) {
       margin: 0;

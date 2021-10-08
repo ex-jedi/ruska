@@ -44,12 +44,6 @@
   @include flex(row);
   flex-wrap: wrap;
   justify-content: space-between;
-  //FIXME: These overlap when there aren't many blog posts
-  background-image: url(/images/pale-pink-circle.svg),
-    url(/images/pale-pink-circle.svg);
-  background-position: center right #{$section-spacing-tiny},
-    center bottom #{$section-spacing-extra-large};
-  background-repeat: no-repeat;
 
   @include breakpoint(1700) {
     padding-inline: $section-spacing-very-large;
@@ -77,6 +71,21 @@
     background-position: center right 1rem, center bottom 55rem;
     background-size: 50%;
   }
+}
+
+//Bubble backgrounds for blog index
+.blog-index-single-background {
+  background-image: url(/images/pale-pink-circle.svg);
+  background-position: center right #{$section-spacing-tiny};
+  background-repeat: no-repeat;
+}
+
+.blog-index-double-background {
+  background-image: url(/images/pale-pink-circle.svg),
+    url(/images/pale-pink-circle.svg);
+  background-position: center right #{$section-spacing-tiny},
+    center bottom #{$section-spacing-extra-large};
+  background-repeat: no-repeat;
 }
 
 .category-push-down {
@@ -131,7 +140,7 @@
     list-style-type: none;
     text-align: center;
     padding: 0 $font-size-teeny-tiny;
-    text-transform: uppercase;
+    text-transform: capitalize;
 
     &:not(:last-of-type) {
       padding-bottom: $font-size-teeny-tiny;
@@ -170,7 +179,7 @@
 
 .blog-index-subheading-link {
   color: $font-colour-dark;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 .blog-index-item {

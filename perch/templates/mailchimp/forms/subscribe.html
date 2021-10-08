@@ -5,15 +5,15 @@
         <h2 class="contact-form-heading split-text-fade-up">
           Sign up to my mailing list to receive product updates and free tutorials
         </h2>
-          <div class="email-signup-form-input-wrapper first-name-input-wrapper">
+          <div class="email-signup-form-input-wrapper first-name-input-wrapper simple-fade-in">
               <perch:label class="first-name-label" for="firstName">First name</perch:label>
               <perch:input class="general-contact-form-input first-name-input" type="text" id="firstName" mailer="FNAME" required>
           </div>
-          <div class="email-signup-form-input-wrapper last-name-input-wrapper">
+          <div class="email-signup-form-input-wrapper last-name-input-wrapper simple-fade-in">
               <perch:label class="last-name-label" for="lastName">Last name</perch:label>
               <perch:input class="general-contact-form-input last-name-input" type="text" id="lastName" mailer="LNAME" required>
           </div>
-          <div class="email-signup-form-input-wrapper email-input-wrapper">
+          <div class="email-signup-form-input-wrapper email-input-wrapper simple-fade-in">
               <perch:label class="email-label" for="email">Email address</perch:label>
               <perch:input class="general-contact-form-input email-input" type="email" id="email" mailer="email" required>
           </div>
@@ -21,11 +21,11 @@
               <perch:label for="messageAreaOne">Message: Leave this field blank if you are a human</perch:label>
               <perch:input type="textarea" id="messageAreaOne" aria-hidden="true" autocomplete="off" antispam="honeypot"/>
           </div>
-          <div class="checkbox-div consent-checkbox-div">
+          <div class="checkbox-div consent-checkbox-div simple-fade-in">
             <perch:label class="contact-form-consent" for="contactListConsent">By checking this box you accept the <a class="contact-consent-link"  target="_blank" title="Opens in new window" href="/privacy-and-cookie-policy">ruska Privacy and Cookie Policy</a>&nbsp;&gt;</perch:label>
             <perch:input class="mailing-list-check-checkbox contact-form-consent" id="contactListConsent" type="checkbox" label="Contact Form Consent" value="Yes" required>
           </div>
-          <div class="email-signup-form-input-wrapper submit-wrapper">
+          <div class="email-signup-form-input-wrapper submit-wrapper simple-fade-in">
             <perch:input class="submit" type="submit" id="submit" value="Sign me up!">
             <perch:input type="hidden" value="1" id="confirm" mailer="confirm_subscribe">
             <perch:input type="hidden" id="list" value="ff8a38de4f" mailer="list">

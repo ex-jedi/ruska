@@ -13,7 +13,7 @@ import {
 
 import { blogCatsToggle } from './lib';
 
-import { displayInstagramFeed, cookieWarning } from './utils';
+import { displayInstagramFeed, cookieWarning, blogIndexBackgrounds } from './utils';
 // ********** Animations **********
 mainLogoAnimation();
 addMenuListener();
@@ -28,3 +28,4 @@ blogCatsToggle();
 // ********** Utils **********
 displayInstagramFeed();
 cookieWarning();
+blogIndexBackgrounds();

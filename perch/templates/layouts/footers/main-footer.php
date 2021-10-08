@@ -1,6 +1,6 @@
 <footer class="main-footer">
 		<?php perch_content("Footer Contact"); ?>
-		<div class="footer-legals">
+		<div class="footer-legals simple-fade-in">
 			<p class="footer-copyright" >
 				&copy; <?php echo date("Y"); ?> <span itemprop="name">Hannah Garrido</span>
 			</p>

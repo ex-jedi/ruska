@@ -40,7 +40,8 @@
   @include flex(row);
   justify-content: space-around;
   align-items: flex-start;
-  gap: 0 2rem;
+  gap: 0 0.5rem;
+  margin-left: 85px;
 
   @include breakpoint(1750) {
     justify-content: space-between;
@@ -53,6 +54,7 @@
 
   @include breakpoint(950) {
     justify-content: space-between;
+    margin: 0 $section-spacing-extra-tiny;
   }
 
   @include breakpoint(800) {
@@ -63,11 +65,7 @@
 .header-image-wrapper,
 .header-subheading-wrapper {
   flex: 0 1 auto;
-  width: 40%;
-
-  @include breakpoint(1750) {
-    width: 45%;
-  }
+  width: 45%;
 
   @include breakpoint(1300) {
     width: 40%;
@@ -99,14 +97,6 @@
 .header-image-wrapper {
   position: relative;
 
-  @include breakpoint(1750) {
-    margin-left: 8.5rem;
-  }
-
-  @include breakpoint(950) {
-    margin-left: 0;
-  }
-
   @include breakpoint(800) {
     margin-bottom: 50rem;
   }
@@ -115,6 +105,16 @@
 .homepage-header-image {
   aspect-ratio: 4/5;
   object-fit: cover;
+  width: 100%;
+
+  @include breakpoint(800) {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  @include breakpoint(700) {
+    width: 100%;
+  }
 }
 
 .swapping-images {
@@ -162,11 +162,11 @@
   }
 
   @include breakpoint(1100) {
-    top: 925px;
+    top: 1050px;
   }
 
   @include breakpoint(800) {
-    top: 1320px;
+    top: 1150px;
     right: $section-spacing-tiny;
   }
 
@@ -586,6 +586,6 @@
 
   a {
     color: $font-colour-dark;
-    text-decoration: none;
+    text-decoration: underline;
   }
 }
