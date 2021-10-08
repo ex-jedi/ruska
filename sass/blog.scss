@@ -93,29 +93,25 @@
 }
 
 .cat-ul-heading {
-  display: none;
+  @include flex(row);
+  display: block;
+  font-size: $font-size-small;
+  color: $font-colour-dark;
+  width: fit-content;
+  margin: 0 auto;
+  cursor: pointer;
+  z-index: 5;
+  position: relative;
+  transition: all 0.1s 0.4s ease;
 
-  @include breakpoint(950) {
-    @include flex(row);
-    display: block;
-    font-size: $font-size-small;
-    color: $font-colour-dark;
-    width: fit-content;
-    margin: 0 auto;
-    cursor: pointer;
-    z-index: 5;
-    position: relative;
-    transition: all 0.1s 0.4s ease;
-
-    &::after {
-      content: url('/images/down-arrow.svg');
-      display: inline-block;
-      margin-left: $font-size-teeny-tiny;
-      width: $font-size-teeny-tiny;
-      transform: rotate(180deg);
-      transform-origin: center 65%;
-      transition: all 0.4s ease;
-    }
+  &::after {
+    content: url('/images/down-arrow.svg');
+    display: inline-block;
+    margin-left: $font-size-teeny-tiny;
+    width: $font-size-teeny-tiny;
+    transform: rotate(180deg);
+    transform-origin: center 65%;
+    transition: all 0.4s ease;
   }
 }
 
@@ -129,17 +125,21 @@
 }
 
 .blog-categories-ul {
+  @include flex(column);
+  justify-content: center;
+  align-items: center;
+  clip-path: inset(0 0 100% 0);
+  transition: all 0.4s ease;
+  height: 0;
+  opacity: 0;
   width: 70%;
   margin: 0 auto;
   padding: 0;
-  @include flex(row);
-  justify-content: space-evenly;
   flex-wrap: wrap;
 
   li {
     list-style-type: none;
     text-align: center;
-    padding: 0 $font-size-teeny-tiny;
     text-transform: capitalize;
 
     &:not(:last-of-type) {
@@ -151,21 +151,6 @@
     color: $font-colour-dark;
     font-weight: 700;
     text-decoration: none;
-  }
-
-  @include breakpoint(950) {
-    @include flex(column);
-    justify-content: center;
-    align-items: center;
-    clip-path: inset(0 0 100% 0);
-    transition: all 0.4s ease;
-    height: 0;
-    opacity: 0;
-
-    li:not(:last-of-type) {
-      margin-bottom: $section-spacing-extra-tiny;
-      padding-bottom: 0;
-    }
   }
 }
 
