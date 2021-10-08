@@ -95,7 +95,6 @@
 .cat-ul-heading {
   @include flex(row);
   display: block;
-  font-size: $font-size-small;
   color: $font-colour-dark;
   width: fit-content;
   margin: 0 auto;
