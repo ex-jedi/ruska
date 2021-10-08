@@ -26,6 +26,23 @@ function cookieWarning() {
 }
 
 // *=========================================
+// ** Blog Index Backgrounds  **
+// *=========================================
+
+function blogIndexBackgrounds() {
+  const blogPosts = document.querySelectorAll('.blog-index-item');
+  const blogListWrapper = document.querySelector('.blog-index-wrapper');
+
+  setTimeout(() => {
+    if (blogPosts.length > 1 && blogPosts.length <= 3) {
+      blogListWrapper.classList.add('blog-index-single-background');
+    } else if (blogPosts.length > 3) {
+      blogListWrapper.classList.add('blog-index-double-background');
+    }
+  }, 500);
+}
+
+// *=========================================
 // ** Instafeed  **
 // *=========================================
 
@@ -762,4 +779,4 @@ function addClass(selector, classToAdd) {
 // ** Exports  **
 // *==============================================================================
 
-export { cookieWarning, displayInstagramFeed, addClass };
+export { cookieWarning, displayInstagramFeed, addClass, blogIndexBackgrounds };
