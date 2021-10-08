@@ -43,10 +43,6 @@
   gap: 0 0.5rem;
   margin-left: 85px;
 
-  @include breakpoint(1750) {
-    justify-content: space-between;
-  }
-
   @include breakpoint(1300) {
     justify-content: space-around;
     align-items: center;
@@ -65,11 +61,7 @@
 .header-image-wrapper,
 .header-subheading-wrapper {
   flex: 0 1 auto;
-  width: 45%;
-
-  @include breakpoint(1300) {
-    width: 40%;
-  }
+  width: 48%;
 
   @include breakpoint(950) {
     width: 48%;
