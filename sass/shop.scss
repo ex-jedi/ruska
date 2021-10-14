@@ -284,6 +284,18 @@
 .shop-returns-wrapper,
 .shop-delivery-wrapper {
   margin-top: $section-spacing-small;
+
+  @include breakpoint(1300) {
+    margin-top: $section-spacing-tiny;
+  }
+
+  @include breakpoint(950) {
+    padding-inline: $section-spacing-extra-small;
+  }
+
+  @include breakpoint(700) {
+    padding-inline: $section-spacing-extra-tiny;
+  }
 }
 
 .shop-dropdown-trigger {
@@ -296,6 +308,10 @@
     transform: rotate(180deg);
     transform-origin: center 65%;
     transition: all 0.4s ease;
+
+    @include breakpoint(1300) {
+      width: 1rem;
+    }
   }
 }
 
@@ -323,6 +339,10 @@
   height: auto;
   padding-top: $section-spacing-small;
   clip-path: inset(0 0 0 0);
+
+  @include breakpoint(1300) {
+    padding-top: $section-spacing-tiny;
+  }
 }
 
 //*=========================================
