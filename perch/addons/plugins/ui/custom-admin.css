@@ -72,13 +72,14 @@ header a,
   opacity: 1;
 }
 
-/* Makes text in text fields a bit larger */
+/* Makes text in text fields a bit larger & non bold */
 div.form-entry,
 input.input-simple {
   font-size: 0.9rem !important;
+  font-weight: var(--font-family-main-weight-normal) !important;
 }
 
-/* Text is black on black background when redactor source is open. This fixess it */
+/* Text is black on black background when redactor source is open. This fixes it */
 textarea.redactor-source-open {
   color: #fff !important;
 }
