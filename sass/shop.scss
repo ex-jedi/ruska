@@ -283,11 +283,11 @@
 // Delivery and returns dropdown
 .shop-returns-wrapper,
 .shop-delivery-wrapper {
-  margin-top: $section-spacing-large;
+  margin-top: $section-spacing-small;
 }
 
-.product-delivery-title,
-.product-returns-title {
+.shop-dropdown-trigger {
+  cursor: pointer;
   &::after {
     content: url('/images/down-arrow.svg');
     display: inline-block;
@@ -296,6 +296,12 @@
     transform: rotate(180deg);
     transform-origin: center 65%;
     transition: all 0.4s ease;
+  }
+}
+
+.shop-dropdown-trigger-reveal {
+  &::after {
+    transform: rotate(0);
   }
 }
 
@@ -315,7 +321,7 @@
 
 .dropdown-panel-reveal {
   height: auto;
-  padding-top: $section-spacing-large;
+  padding-top: $section-spacing-small;
   clip-path: inset(0 0 0 0);
 }
 

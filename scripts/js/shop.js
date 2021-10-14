@@ -45,6 +45,7 @@ const dropdownTrigger = document.querySelectorAll('.shop-dropdown-trigger');
 dropdownTrigger.forEach((trigger) => {
   trigger.addEventListener('click', (e) => {
     const clickedPanel = e.currentTarget.dataset.name;
+    trigger.classList.toggle('shop-dropdown-trigger-reveal');
     console.log(`${clickedPanel} clicked!`);
 
     dropdownPanels.forEach((panel) => {
