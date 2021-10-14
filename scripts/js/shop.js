@@ -39,3 +39,18 @@ simpleFadeIn();
 displayInstagramFeed();
 
 cookieWarning();
+const dropdownPanels = document.querySelectorAll('.dropdown-panel');
+console.log(dropdownPanels);
+const dropdownTrigger = document.querySelectorAll('.shop-dropdown-trigger');
+dropdownTrigger.forEach((trigger) => {
+  trigger.addEventListener('click', (e) => {
+    const clickedPanel = e.currentTarget.dataset.name;
+    console.log(`${clickedPanel} clicked!`);
+
+    dropdownPanels.forEach((panel) => {
+      if (panel.id === clickedPanel) {
+        panel.classList.toggle('dropdown-panel-reveal');
+      }
+    });
+  });
+});

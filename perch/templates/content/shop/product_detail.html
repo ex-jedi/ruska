@@ -58,11 +58,28 @@
   </button>
 
   <!-- Description -->
-  <div class="product-description-wrapper body-text-medium scrolltrigger-refresh-target simple-fade-in">
-    <perch:content id="productDescription" type="textarea" label="Description" editor="redactor" order="14" html>
-  </div>
-
-  </div>
+    <div class="product-description-wrapper body-text-medium scrolltrigger-refresh-target simple-fade-in">
+      <perch:content id="productDescription" type="textarea" label="Description" editor="redactor" order="14" html>
+    </div>
+    <!-- Delivery -->
+    <div class="shop-delivery-wrapper body-text-medium scrolltrigger-refresh-target simple-fade-in">
+      <h3 class="product-delivery-title body-text-medium shop-dropdown-trigger" data-name="delivery-panel">
+        Delivery
+      </h3>
+      <div id="delivery-panel" class="dropdown-panel">
+        <perch:content id="productDeliveryText" type="textarea" editor="redactor" label="Delivery Text" order="16" required html>
+      </div>
+    </div>
+    <!-- Returns  -->
+    <div class="shop-returns-wrapper body-text-medium scrolltrigger-refresh-target simple-fade-in">
+      <h3 class="product-returns-title body-text-medium shop-dropdown-trigger" data-name="returns-panel">
+        Returns
+      </h3>
+      <div id="returns-panel" class="dropdown-panel">
+        <perch:content id="productReturnsText" type="textarea" editor="redactor" label="Product Return Text" order="17" required html>
+      </div>
+    </div>
+  </div> <!-- Product wrapper -->
 </section>
 
 <!--* Items for listing Page Only *-->
@@ -75,4 +92,4 @@
   <perch:content type="image" id="shopCoverImage" width="400" height="400" suppress crop>
 
 <!-- Cart product description    -->
-<perch:content id="cartDescription" type="text" label="Short Description For Cart" help="Brief product description for the shopping cart" count="words" size="l" order="16" suppress>
+<perch:content id="cartDescription" type="text" label="Short Description For Cart" help="Brief product description for the shopping cart" count="words" size="l" order="15" suppress>

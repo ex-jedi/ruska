@@ -280,11 +280,43 @@
   }
 }
 
+// Delivery and returns dropdown
+.shop-returns-wrapper,
+.shop-delivery-wrapper {
+  margin-top: $section-spacing-large;
+}
+
+.product-delivery-title,
+.product-returns-title {
+  &::after {
+    content: url('/images/down-arrow.svg');
+    display: inline-block;
+    margin-left: $font-size-teeny-tiny;
+    width: $font-size-teeny-tiny;
+    transform: rotate(180deg);
+    transform-origin: center 65%;
+    transition: all 0.4s ease;
+  }
+}
+
 .product-images-wrapper,
 .product-heading,
 .add-to-cart-button,
 .product-price {
   @include bottom-spacing;
+}
+
+.dropdown-panel {
+  height: 0;
+  overflow: hidden;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.3s ease-out;
+}
+
+.dropdown-panel-reveal {
+  height: auto;
+  padding-top: $section-spacing-large;
+  clip-path: inset(0 0 0 0);
 }
 
 //*=========================================
