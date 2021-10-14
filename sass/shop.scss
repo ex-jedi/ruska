@@ -280,11 +280,69 @@
   }
 }
 
+// Delivery and returns dropdown
+.shop-returns-wrapper,
+.shop-delivery-wrapper {
+  margin-top: $section-spacing-small;
+
+  @include breakpoint(1300) {
+    margin-top: $section-spacing-tiny;
+  }
+
+  @include breakpoint(950) {
+    padding-inline: $section-spacing-extra-small;
+  }
+
+  @include breakpoint(700) {
+    padding-inline: $section-spacing-extra-tiny;
+  }
+}
+
+.shop-dropdown-trigger {
+  cursor: pointer;
+  &::after {
+    content: url('/images/down-arrow.svg');
+    display: inline-block;
+    margin-left: $font-size-teeny-tiny;
+    width: $font-size-teeny-tiny;
+    transform: rotate(180deg);
+    transform-origin: center 65%;
+    transition: all 0.4s ease;
+
+    @include breakpoint(1300) {
+      width: 1rem;
+    }
+  }
+}
+
+.shop-dropdown-trigger-reveal {
+  &::after {
+    transform: rotate(0);
+  }
+}
+
 .product-images-wrapper,
 .product-heading,
 .add-to-cart-button,
 .product-price {
   @include bottom-spacing;
+}
+
+.dropdown-panel {
+  height: 0;
+  overflow: hidden;
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.3s ease-out;
+}
+
+.dropdown-panel-reveal {
+  height: auto;
+  padding-top: $section-spacing-small;
+  clip-path: inset(0 0 0 0);
+
+  @include breakpoint(1300) {
+    padding-top: $section-spacing-tiny;
+  }
 }
 
 //*=========================================
