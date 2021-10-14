@@ -74,8 +74,15 @@ header a,
 
 /* Makes text in text fields a bit larger & non bold */
 div.form-entry,
-input.input-simple {
+input.input-simple,
+textarea.input-simple {
   font-size: 0.9rem !important;
+  font-weight: var(--font-family-main-weight-normal) !important;
+
+}
+
+/* Non-bolds inline help */
+.inline-help {
   font-weight: var(--font-family-main-weight-normal) !important;
 }
 
