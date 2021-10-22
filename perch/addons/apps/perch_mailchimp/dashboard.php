@@ -12,15 +12,15 @@
 
 		    $Settings = $API->get('Settings');
 		    $api_key  = $Settings->get('perch_mailchimp_api_key')->val();
-		    
+
 		    $Lists = new PerchMailChimp_Lists($API);
 		    $Subscribers = new PerchMailChimp_Subscribers($API);
 		    $lists = [];
-		    
+
 		    $msg = false;
 		    if(!$api_key || $api_key == '') {
 		    	return;
-		    }else{    	
+		    }else{
 		    	$lists = $Lists->all();
 		    }
 
@@ -30,7 +30,7 @@
 
 		    if (PerchUtil::count($lists)) {
 
-		    	$items = '';
+		    	$items = [];
 
 		    	foreach($lists as $List) {
 
@@ -41,13 +41,13 @@
 		    		$subs = $Subscribers->get_latest_for_list($List);
 
 		    		if(is_array($subs) && PerchUtil::count($subs)>0) {
-						
+
 						$sublis = '';
-							
+
 						foreach($subs as $Subscriber) {
 							$sublis .= $HTML->wrap('li', $HTML->encode($Subscriber->subscriberEmail()).' <span class="note">'.strftime('%d %b %Y', strtotime($Subscriber->subCreated()))).'</span>'."\n";
 						}
-						
+
 						$s .= $HTML->wrap('ul.dash-list', $sublis);
 					}
 
