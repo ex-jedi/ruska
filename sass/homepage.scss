@@ -153,16 +153,17 @@
 .homepage-tree-animation-one {
   width: 350px;
   position: absolute;
-  top: 1500px;
+  top: 1200px;
   right: $section-spacing-extra-large;
   z-index: 2;
 
   @include breakpoint(1800) {
+    top: 1100px;
     right: 30rem;
   }
 
   @include breakpoint(1550) {
-    top: 1300px;
+    top: 1000px;
     right: $section-spacing-large;
   }
 
@@ -173,37 +174,37 @@
   }
 
   @include breakpoint(1100) {
-    top: 1050px;
+    top: 850px;
   }
 
   @include breakpoint(800) {
-    top: 1150px;
-    right: $section-spacing-tiny;
-  }
-
-  @include breakpoint(700) {
-    top: 1025px;
-    right: $section-spacing-tiny;
-  }
-
-  @include breakpoint(625) {
     top: 950px;
     right: $section-spacing-tiny;
   }
 
-  @include breakpoint(530) {
+  @include breakpoint(700) {
     top: 850px;
     right: $section-spacing-tiny;
   }
 
-  @include breakpoint(430) {
+  @include breakpoint(625) {
     top: 750px;
+    right: $section-spacing-tiny;
+  }
+
+  @include breakpoint(530) {
+    top: 700px;
+    right: $section-spacing-tiny;
+  }
+
+  @include breakpoint(450) {
+    top: 625px;
     right: 50%;
     transform: translateX(50%);
   }
 
-  @include breakpoint(350) {
-    top: 650px;
+  @include breakpoint(375) {
+    top: 550px;
   }
 }
 
@@ -311,6 +312,7 @@
 .homepage-section-one-double-image {
   flex: 0 1 auto;
   width: 47%;
+  aspect-ratio: 1/1;
 
   @include breakpoint(1300) {
     width: 60%;
@@ -319,7 +321,6 @@
   @include breakpoint(700) {
     flex: 1 0 auto;
     width: 400px;
-    aspect-ratio: 2.5/3;
     object-fit: cover;
   }
 }
@@ -351,9 +352,11 @@
 
 .homepage-section-one-single-image {
   margin: 0 auto;
+  width: auto;
+  max-height: 90vh;
+  object-fit: cover;
 
   @include breakpoint(700) {
-    aspect-ratio: 2.5/3;
     object-fit: cover;
   }
 }
@@ -599,4 +602,24 @@
     color: $font-colour-dark;
     text-decoration: underline;
   }
+}
+
+//*=========================================
+//** Instagram Feed **
+//*=========================================
+.instagram-feed-section {
+  padding-top: $section-spacing-large;
+  background-position: center;
+
+  @include breakpoint(1300) {
+    padding-top: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    padding-top: $section-spacing-small;
+  }
+}
+
+.instagram-feed-background-image {
+  top: $paragraph-spacing-small;
 }
