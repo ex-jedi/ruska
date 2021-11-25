@@ -45,7 +45,6 @@
 
   @include breakpoint(1300) {
     justify-content: space-around;
-    align-items: center;
   }
 
   @include breakpoint(950) {
@@ -95,7 +94,7 @@
 }
 
 .homepage-header-image {
-  aspect-ratio: 4/5;
+  aspect-ratio: 1/1;
   object-fit: cover;
   width: 100%;
 
