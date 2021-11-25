@@ -311,6 +311,7 @@
 .homepage-section-one-double-image {
   flex: 0 1 auto;
   width: 47%;
+  aspect-ratio: 1/1;
 
   @include breakpoint(1300) {
     width: 60%;
@@ -319,7 +320,6 @@
   @include breakpoint(700) {
     flex: 1 0 auto;
     width: 400px;
-    aspect-ratio: 2.5/3;
     object-fit: cover;
   }
 }
@@ -351,9 +351,11 @@
 
 .homepage-section-one-single-image {
   margin: 0 auto;
+  width: auto;
+  max-height: 90vh;
+  object-fit: cover;
 
   @include breakpoint(700) {
-    aspect-ratio: 2.5/3;
     object-fit: cover;
   }
 }
