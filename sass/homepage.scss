@@ -38,10 +38,11 @@
 
 .header-content-wrapper {
   @include flex(row);
-  justify-content: space-around;
+  margin: 0 $section-spacing-small 0
+    calc(#{$section-spacing-extra-small} + 85px);
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 0 0.5rem;
-  margin-left: 85px;
+  gap: 0 5rem;
 
   @include breakpoint(1300) {
     justify-content: space-around;
@@ -72,7 +73,7 @@
 }
 
 .header-subheading-wrapper {
-  line-height: 1.2;
+  line-height: 1.5;
 
   @include breakpoint(1800) {
     line-height: 1.1;
@@ -118,6 +119,12 @@
 .header-subheading-wrapper {
   color: $font-colour-dark;
   margin: 0;
+  font-size: $heading-size-large;
+  // line-height: 1.5;
+
+  @include breakpoint(1800) {
+    // font-size: $font-size-larger;
+  }
 }
 
 //********** Image **********
