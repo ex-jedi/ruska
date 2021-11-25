@@ -6,8 +6,9 @@
 	<?php perch_content("Section Two"); ?>
 	<?php perch_content("Section Three"); ?>
 	<?php perch_mailchimp_form('forms/subscribe'); ?>
-	<!-- Featured articles  -->
-	<?php
+	<!-- Featured articles.  -->
+	<!-- TODO: Restore when there are some blog articles -->
+	<!-- <?php
 		perch_blog_custom(array(
 			'sort'=>'postDateTime',
 			'sort-order'=>'RAND',
@@ -27,7 +28,7 @@
 			)
 			)
 		));
-	?>
+	?> -->
 	<?php perch_content("Instagram Feed"); ?>
 </main>
 <?php perch_layout('footers/main-footer'); ?>

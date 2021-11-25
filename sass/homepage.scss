@@ -603,3 +603,23 @@
     text-decoration: underline;
   }
 }
+
+//*=========================================
+//** Instagram Feed **
+//*=========================================
+.instagram-feed-section {
+  padding-top: $section-spacing-large;
+  background-position: center;
+
+  @include breakpoint(1300) {
+    padding-top: $section-spacing-medium;
+  }
+
+  @include breakpoint(700) {
+    padding-top: $section-spacing-small;
+  }
+}
+
+.instagram-feed-background-image {
+  top: $paragraph-spacing-small;
+}
