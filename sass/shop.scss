@@ -105,6 +105,7 @@
   @include flex(row);
   flex-wrap: wrap;
   gap: 0 $section-spacing-small;
+  justify-content: space-between;
 
   @include breakpoint(950) {
     padding-inline: $section-spacing-tiny;
@@ -119,7 +120,7 @@
   @include flex(column);
   justify-content: flex-start;
   align-items: flex-start;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   width: 40%;
 
   &:nth-child(3n + 1) {
@@ -160,6 +161,7 @@
 .shop-list-item-image {
   width: 100%;
   margin: 0 auto $section-spacing-extra-tiny;
+  aspect-ratio: 1/1;
 }
 
 .shop-list-item-heading {
